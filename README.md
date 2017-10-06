@@ -6,7 +6,7 @@ and various tutorials and guides.
 
 ## How to run a demo
 
-All demos can need to be run via HTTPS. On Mac or Linux, run
+All React demos can need to be run via HTTPS. On Mac or Linux, run
 
 `HTTPS=true yarn start`
 
@@ -21,6 +21,9 @@ On Windows, run
  or
 
 `set HTTPS=true&&npm start`
+
+See the [angular-v4.x demo README](angular-v4.x/README.md) for details
+about running the Angular 4.x demo.
 
 ## Limitations
 
