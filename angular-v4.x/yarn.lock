@@ -158,12 +158,13 @@
   dependencies:
     tsickle "^0.21.0"
 
-"@gooddata/data-layer@3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/data-layer/-/data-layer-3.2.0.tgz#38ec451cee3cac555a2cd94ca90654adf79add3d"
+"@gooddata/data-layer@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@gooddata/data-layer/-/data-layer-4.0.1.tgz#8162adcf48d8cc35c9e98b2c018d9e80ea860549"
   dependencies:
     json-stable-stringify "1.0.1"
     lodash "4.17.4"
+    rxjs "5.4.3"
 
 "@gooddata/goodstrap@53.0.1":
   version "53.0.1"
@@ -191,9 +192,9 @@
     react-textarea-autosize "4.0.5"
     rxjs "5.4.3"
 
-"@gooddata/indigo-visualizations@0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/indigo-visualizations/-/indigo-visualizations-0.12.0.tgz#d4232800a4126d988def96e9a52f8567b4aa45f8"
+"@gooddata/indigo-visualizations@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/indigo-visualizations/-/indigo-visualizations-0.13.0.tgz#26148982da0b74bd965a7c56e0c829200955bb3a"
   dependencies:
     "@gooddata/goodstrap" "53.0.1"
     "@gooddata/js-utils" "0.7.1"
@@ -215,21 +216,32 @@
     moment "2.17.1"
     moment-timezone "0.5.11"
 
+"@gooddata/js-utils@0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/js-utils/-/js-utils-0.9.0.tgz#ac630fde7d2fad8c3d328519255e31446df6fb34"
+  dependencies:
+    js-cookie "2.1.4"
+    lodash "4.17.4"
+    moment "2.17.1"
+    moment-timezone "0.5.11"
+
 "@gooddata/numberjs@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@gooddata/numberjs/-/numberjs-3.0.0.tgz#9d646f1f9c05614d18e08ac5024b2ba2f7139396"
 
-"@gooddata/react-components@^2.5.3":
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-2.5.3.tgz#4605b08bf1e380227794da169e74429003ec5fd1"
+"@gooddata/react-components@^2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-2.6.1.tgz#fb6b81f36070ef9e485d6e6afe19714369a89e99"
   dependencies:
-    "@gooddata/data-layer" "3.2.0"
+    "@gooddata/data-layer" "4.0.1"
     "@gooddata/goodstrap" "53.0.1"
-    "@gooddata/indigo-visualizations" "0.12.0"
+    "@gooddata/indigo-visualizations" "0.13.0"
+    "@gooddata/js-utils" "0.9.0"
     classnames "2.2.5"
-    gooddata "4.0.0"
+    gooddata "4.1.0"
     lodash "4.17.4"
     numeral "2.0.6"
+    prop-types "15.6.0"
     react-intl "2.2.3"
     rxjs "5.4.3"
     uuid "3.0.1"
@@ -261,13 +273,21 @@
   dependencies:
     "@types/jasmine" "*"
 
-"@types/node@^6.0.46", "@types/node@~6.0.60":
+"@types/node@7.0.8":
+  version "7.0.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.8.tgz#25e4dd804b630c916ae671233e6d71f6ce18124a"
+
+"@types/node@^6.0.46":
   version "6.0.88"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.88.tgz#f618f11a944f6a18d92b5c472028728a3e3d4b66"
 
 "@types/q@^0.0.32":
   version "0.0.32"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-0.0.32.tgz#bd284e57c84f1325da702babfc82a5328190c0c5"
+
+"@types/react@^16.0.10":
+  version "16.0.10"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.10.tgz#a24b630f5f1f170866a148a147d4fc8636ea88e0"
 
 "@types/selenium-webdriver@^2.53.35", "@types/selenium-webdriver@~2.53.39":
   version "2.53.42"
@@ -2331,9 +2351,9 @@ globule@^1.0.0:
     lodash "~4.17.4"
     minimatch "~3.0.2"
 
-gooddata@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/gooddata/-/gooddata-4.0.0.tgz#5cdaa913aa60533117b8cc46617eda3dd2d32fd5"
+gooddata@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/gooddata/-/gooddata-4.1.0.tgz#48bb8dc35265d027b7458015503157551132bd76"
   dependencies:
     es6-promise "3.0.2"
     fetch-cookie "0.4.0"
@@ -4386,7 +4406,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.6, prop-types@^15.6.0:
+prop-types@15.6.0, prop-types@^15.5.6, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
