@@ -51,7 +51,6 @@ export class KpiComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit
     }
  
     protected render() {
-        invariant(this.component, `Component is not specified!`);
         if (this.isMounted()) {
             ReactDOM.render(React.createElement(Kpi, this.getProps()), this.getRootDomNode());
         }
