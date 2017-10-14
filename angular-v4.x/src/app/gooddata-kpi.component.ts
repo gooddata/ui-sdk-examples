@@ -6,6 +6,15 @@ import * as invariant from 'invariant';
 import { Component, Input, OnInit, OnDestroy, OnChanges, AfterViewInit } from '@angular/core';
 import { Kpi } from '@gooddata/react-components';
 
+interface KpiProps {
+    measure: string;
+    projectId: string;
+    format?: string;
+    filters?: any[];
+    onLoadingChanged?: (any);
+    onError?: (any);
+}
+
 @Component({
     selector: 'app-kpi',
     template: '<span [id]="rootDomID"></span>'
