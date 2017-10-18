@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This repository includes various demos for GoodData UI SDK.
 
 Please see TODO TODO for the documentation including reference
@@ -35,3 +36,6 @@ accessing the GoodData platform using a local proxy.
 Please refer to [this documentation](https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/How+to+Access+the+GoodData+API+Directly) to see what needs to be set up
 for your app to be able to call GoodData API directly without a proxy
 (this is necessary to deploy your app in production).
+=======
+# ui-sdk-examples
+Frontend data layer
