@@ -1,0 +1,2476 @@
+{
+  "metrics": {
+    "_Close [BOP]": {
+      "identifier": "aaeb7jTCfexV",
+      "tags": ""
+    },
+    "_Snapshot [BOP]": {
+      "identifier": "aazV2yX2gz2z",
+      "tags": ""
+    },
+    "_Snapshot [EOP-1]": {
+      "identifier": "aeTdhRNid95F",
+      "tags": ""
+    },
+    "_Snapshot [EOP]": {
+      "identifier": "aa5EuXigaJAx",
+      "tags": ""
+    },
+    "_Timeline [BOP]": {
+      "identifier": "aiTEuXhZaJw5",
+      "tags": ""
+    },
+    "_Timeline [EOP]": {
+      "identifier": "ahUEuUVTefyt",
+      "tags": ""
+    },
+    "# Deals Need Attention": {
+      "identifier": "aaiHnPscdaSh",
+      "tags": ""
+    },
+    "# Deals off Pace": {
+      "identifier": "ai7HmobYcGr8",
+      "tags": ""
+    },
+    "# of Activities": {
+      "identifier": "acKjadJIgZUN",
+      "tags": ""
+    },
+    "# of Lost Opps.": {
+      "identifier": "adjh3LoXhPXZ",
+      "tags": ""
+    },
+    "# of Open Opps.": {
+      "identifier": "aaYh6Voua2yj",
+      "tags": ""
+    },
+    "# of Opportunities": {
+      "identifier": "afdV48ABh8CN",
+      "tags": ""
+    },
+    "# of Opportunities [BOP]": {
+      "identifier": "aamV6GqBeqJE",
+      "tags": ""
+    },
+    "# of Won Opps.": {
+      "identifier": "abf0d42yaIkL",
+      "tags": ""
+    },
+    "% of All Open": {
+      "identifier": "azNP8JWrcSVN",
+      "tags": ""
+    },
+    "% of All Won": {
+      "identifier": "avAP7qjYc682",
+      "tags": ""
+    },
+    "% Quarter to Date": {
+      "identifier": "aau1CwKva1tH",
+      "tags": ""
+    },
+    "Activity (Date)": {
+      "identifier": "dt.activity_monitoring.activity_date",
+      "tags": ""
+    },
+    "Actual % of Goal": {
+      "identifier": "aau7DWc4aOY9",
+      "tags": ""
+    },
+    "Amount": {
+      "identifier": "ah1EuQxwaCqs",
+      "tags": ""
+    },
+    "Amount(1)": {
+      "identifier": "fact.opp_records.amount",
+      "tags": ""
+    },
+    "Amount [BOP]": {
+      "identifier": "aagV61RmaPTt",
+      "tags": ""
+    },
+    "Amount [Max]": {
+      "identifier": "asFfXEinfJUl",
+      "tags": ""
+    },
+    "Amount Snapshot": {
+      "identifier": "fact.opp_snapshot.amount",
+      "tags": ""
+    },
+    "Avg Activities per Rep": {
+      "identifier": "akoJB9OFaGaS",
+      "tags": ""
+    },
+    "Avg Created Opps": {
+      "identifier": "aF0JDr61a78c",
+      "tags": ""
+    },
+    "Avg Deal Size": {
+      "identifier": "atSHqCtAePe4",
+      "tags": ""
+    },
+    "Avg Duration for a Winning Deal": {
+      "identifier": "aGUHjLqzbOuw",
+      "tags": ""
+    },
+    "Avg Open by Rep": {
+      "identifier": "aeDZIYida4hX",
+      "tags": ""
+    },
+    "Avg Win Rate Across Reps": {
+      "identifier": "aDIJDt6RbGWA",
+      "tags": ""
+    },
+    "Avg Won Duration": {
+      "identifier": "ahgHwzuJbMQo",
+      "tags": ""
+    },
+    "Avg Won per Rep": {
+      "identifier": "aaYJBVsjbakb",
+      "tags": ""
+    },
+    "Avg. Won": {
+      "identifier": "agEEuYDOefRs",
+      "tags": ""
+    },
+    "Conversion Rate": {
+      "identifier": "bgXTsBjqdU6K",
+      "tags": ""
+    },
+    "Count Opps (Stage = 1)": {
+      "identifier": "a72TrRadaQhu",
+      "tags": ""
+    },
+    "Count Opps (Stage = Closed Won)": {
+      "identifier": "aviTsBABa7II",
+      "tags": ""
+    },
+    "Count Opps (Stage)": {
+      "identifier": "a29TmwhQbONk",
+      "tags": ""
+    },
+    "Daily Change in Expected + Won": {
+      "identifier": "aAhMk40GilAJ",
+      "tags": ""
+    },
+    "Daily Change in Potential + Won": {
+      "identifier": "alEMprSXbr87",
+      "tags": ""
+    },
+    "Ending Pipeline": {
+      "identifier": "abCBwqoXhOMv",
+      "tags": ""
+    },
+    "Expected": {
+      "identifier": "alUEwmBtbwSh",
+      "tags": ""
+    },
+    "Expected + Won": {
+      "identifier": "abpEF3QAhrxq",
+      "tags": ""
+    },
+    "Expected + Won vs. Quota": {
+      "identifier": "adIEF3jFhrus",
+      "tags": ""
+    },
+    "Lost": {
+      "identifier": "af2Ewj9Re2vK",
+      "tags": ""
+    },
+    "Moved In": {
+      "identifier": "abbFbrDmdalY",
+      "tags": ""
+    },
+    "New Pipeline": {
+      "identifier": "adhFGzPkgiCH",
+      "tags": ""
+    },
+    "Opp. Close (Date)": {
+      "identifier": "dt.opp_records.close_date",
+      "tags": ""
+    },
+    "Opp. Close (Date) for Activity": {
+      "identifier": "dt.activity_monitoring.opp_close_date",
+      "tags": ""
+    },
+    "Opp. Close (Date) for Stage History": {
+      "identifier": "dt.stage_history.opp_close_date",
+      "tags": ""
+    },
+    "Opp. Close (Date) Snapshot": {
+      "identifier": "dt.opp_snapshot.close_date",
+      "tags": ""
+    },
+    "Opp. Created (Date)": {
+      "identifier": "dt.opp_records.created_date",
+      "tags": ""
+    },
+    "Opp. Created (Date) for Activity": {
+      "identifier": "dt.activity_monitoring.opp_created_date",
+      "tags": ""
+    },
+    "Opp. Created (Date) for Stage History": {
+      "identifier": "dt.stage_history.opp_created_date",
+      "tags": ""
+    },
+    "Opp. Created (Date) Snapshot": {
+      "identifier": "dt.opp_snapshot.created_date",
+      "tags": ""
+    },
+    "Opp. Snapshot (Date)": {
+      "identifier": "dt.opp_snapshot.snapshot_date",
+      "tags": ""
+    },
+    "Pipeline Adjusted": {
+      "identifier": "agYFN71ddcSl",
+      "tags": ""
+    },
+    "Pipeline Lost": {
+      "identifier": "aedBvH06hi4M",
+      "tags": ""
+    },
+    "Pipeline Reforecast": {
+      "identifier": "aajBwpPbhNYk",
+      "tags": ""
+    },
+    "Pipeline Won": {
+      "identifier": "agfBvrvmiklQ",
+      "tags": ""
+    },
+    "Potential": {
+      "identifier": "ac3EwmqvbxcX",
+      "tags": ""
+    },
+    "Potential [BOP]": {
+      "identifier": "agWV63OeeLzZ",
+      "tags": ""
+    },
+    "Potential + Won": {
+      "identifier": "afrEHo1vdgPX",
+      "tags": ""
+    },
+    "Potential + Won above Quota": {
+      "identifier": "aguEHnQddgJQ",
+      "tags": ""
+    },
+    "Potential +/-": {
+      "identifier": "ahXWbcuRdnVX",
+      "tags": ""
+    },
+    "Probability": {
+      "identifier": "acfWntEMcom0",
+      "tags": ""
+    },
+    "Probability(1)": {
+      "identifier": "fact.opp_records.probability",
+      "tags": ""
+    },
+    "Probability [BOP]": {
+      "identifier": "apjWnFTTgjIi",
+      "tags": ""
+    },
+    "Probability +/-": {
+      "identifier": "ahkWnukTcoIW",
+      "tags": ""
+    },
+    "Probability Snapshot": {
+      "identifier": "fact.opp_snapshot.probability",
+      "tags": ""
+    },
+    "Quarter To Date": {
+      "identifier": "aNhByhpKgek7",
+      "tags": ""
+    },
+    "Quota": {
+      "identifier": "abFKeoNocsN0",
+      "tags": ""
+    },
+    "rank (does not work)": {
+      "identifier": "adfdZOKDb9OT",
+      "tags": ""
+    },
+    "Remaining Quota": {
+      "identifier": "ab4EFOAmhjOx",
+      "tags": ""
+    },
+    "Stage Duration": {
+      "identifier": "fact.stage_history.stage_duration",
+      "tags": ""
+    },
+    "Stage Duration(1)": {
+      "identifier": "ae8zDprJiBLY",
+      "tags": ""
+    },
+    "Stage Velocity": {
+      "identifier": "fact.stage_history.stage_velocity",
+      "tags": ""
+    },
+    "Stage Velocity(1)": {
+      "identifier": "amlzCOoUe2Q0",
+      "tags": ""
+    },
+    "Start of Period Opps": {
+      "identifier": "afFV2QaOgIVn",
+      "tags": ""
+    },
+    "Starting Pipeline": {
+      "identifier": "aasFNEAUcOpo",
+      "tags": ""
+    },
+    "Timeline (Date)": {
+      "identifier": "dt.timeline.timeline",
+      "tags": ""
+    },
+    "Total Lost in Selected Quarter": {
+      "identifier": "aaRFycrtbhj6",
+      "tags": ""
+    },
+    "Total Won in Selected Quarter": {
+      "identifier": "abyFx5OxbaQ2",
+      "tags": ""
+    },
+    "Win Rate": {
+      "identifier": "aaX0PIUzg7nF",
+      "tags": ""
+    },
+    "Winning Momentum": {
+      "identifier": "aeE6Y45geVOe",
+      "tags": ""
+    },
+    "Won": {
+      "identifier": "afSEwRwdbMeQ",
+      "tags": ""
+    },
+    "Won Snapshot": {
+      "identifier": "atX3I1GYg85J",
+      "tags": ""
+    }
+  },
+  "attributes": {
+    "Account": {
+      "identifier": "attr.account.id",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.account.id.name",
+        "tags": ""
+      },
+      "displayForms": {
+        "Account Name": {
+          "dfIdentifier": "label.account.id.name",
+          "dfTags": ""
+        },
+        "Account": {
+          "dfIdentifier": "label.account.id",
+          "dfTags": ""
+        },
+        "Account Url": {
+          "dfIdentifier": "label.account.id.url",
+          "dfTags": ""
+        }
+      }
+    },
+    "Account Region": {
+      "identifier": "attr.account.region",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.account.region",
+        "tags": ""
+      },
+      "displayForms": {
+        "Account Region": {
+          "dfIdentifier": "label.account.region",
+          "dfTags": ""
+        }
+      }
+    },
+    "Act. Owner": {
+      "identifier": "attr.activity_owner.id",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.activity_owner.id.name",
+        "tags": ""
+      },
+      "displayForms": {
+        "Act. Owner Name": {
+          "dfIdentifier": "label.activity_owner.id.name",
+          "dfTags": ""
+        },
+        "Act. Owner": {
+          "dfIdentifier": "label.activity_owner.id",
+          "dfTags": ""
+        },
+        "Act. Owner Url": {
+          "dfIdentifier": "label.activity_owner.id.url",
+          "dfTags": ""
+        }
+      }
+    },
+    "Act. Owner Department": {
+      "identifier": "attr.activity_owner.department",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.activity_owner.department",
+        "tags": ""
+      },
+      "displayForms": {
+        "Act. Owner Department": {
+          "dfIdentifier": "label.activity_owner.department",
+          "dfTags": ""
+        }
+      }
+    },
+    "Act. Owner Region": {
+      "identifier": "attr.activity_owner.region",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.activity_owner.region",
+        "tags": ""
+      },
+      "displayForms": {
+        "Act. Owner Region": {
+          "dfIdentifier": "label.activity_owner.region",
+          "dfTags": ""
+        }
+      }
+    },
+    "Activity": {
+      "identifier": "attr.activity.id",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.activity.id.subject",
+        "tags": ""
+      },
+      "displayForms": {
+        "Activity Subject": {
+          "dfIdentifier": "label.activity.id.subject",
+          "dfTags": ""
+        },
+        "Activity": {
+          "dfIdentifier": "label.activity.id",
+          "dfTags": ""
+        }
+      }
+    },
+    "Activity Status": {
+      "identifier": "attr.activity.status",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.activity.status",
+        "tags": ""
+      },
+      "displayForms": {
+        "Activity Status": {
+          "dfIdentifier": "label.activity.status",
+          "dfTags": ""
+        }
+      }
+    },
+    "Activity Type": {
+      "identifier": "attr.activity.type",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.activity.type",
+        "tags": ""
+      },
+      "displayForms": {
+        "Activity Type": {
+          "dfIdentifier": "label.activity.type",
+          "dfTags": ""
+        }
+      }
+    },
+    "Forecast Category": {
+      "identifier": "attr.forecast.id",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.forecast.id",
+        "tags": ""
+      },
+      "displayForms": {
+        "Forecast Category": {
+          "dfIdentifier": "label.forecast.id",
+          "dfTags": ""
+        }
+      }
+    },
+    "Is Active?": {
+      "identifier": "attr.stage.is_active",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.stage.is_active",
+        "tags": ""
+      },
+      "displayForms": {
+        "Is Active?": {
+          "dfIdentifier": "label.stage.is_active",
+          "dfTags": ""
+        }
+      }
+    },
+    "Is Closed?": {
+      "identifier": "attr.stage.is_closed",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.stage.is_closed",
+        "tags": ""
+      },
+      "displayForms": {
+        "Is Closed?": {
+          "dfIdentifier": "label.stage.is_closed",
+          "dfTags": ""
+        }
+      }
+    },
+    "Is Won?": {
+      "identifier": "attr.stage.is_won",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.stage.is_won",
+        "tags": ""
+      },
+      "displayForms": {
+        "Is Won?": {
+          "dfIdentifier": "label.stage.is_won",
+          "dfTags": ""
+        }
+      }
+    },
+    "Opp. Owner": {
+      "identifier": "attr.opp_owner.id",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.opp_owner.id.name",
+        "tags": ""
+      },
+      "displayForms": {
+        "Opp. Owner Name": {
+          "dfIdentifier": "label.opp_owner.id.name",
+          "dfTags": ""
+        },
+        "Opp. Owner": {
+          "dfIdentifier": "label.opp_owner.id",
+          "dfTags": ""
+        },
+        "Opp. Owner Url": {
+          "dfIdentifier": "label.opp_owner.id.url",
+          "dfTags": ""
+        }
+      }
+    },
+    "Opp. Owner Department": {
+      "identifier": "attr.opp_owner.department",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.opp_owner.department",
+        "tags": ""
+      },
+      "displayForms": {
+        "Opp. Owner Department": {
+          "dfIdentifier": "label.opp_owner.department",
+          "dfTags": ""
+        }
+      }
+    },
+    "Opp. Owner Region": {
+      "identifier": "attr.opp_owner.region",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.opp_owner.region",
+        "tags": ""
+      },
+      "displayForms": {
+        "Opp. Owner Region": {
+          "dfIdentifier": "label.opp_owner.region",
+          "dfTags": ""
+        }
+      }
+    },
+    "Opportunity": {
+      "identifier": "attr.opportunity.id",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.opportunity.id.name",
+        "tags": ""
+      },
+      "displayForms": {
+        "Opp. Name": {
+          "dfIdentifier": "label.opportunity.id.name",
+          "dfTags": ""
+        },
+        "Opportunity": {
+          "dfIdentifier": "label.opportunity.id",
+          "dfTags": ""
+        },
+        "Opp. Url": {
+          "dfIdentifier": "label.opportunity.id.url",
+          "dfTags": ""
+        }
+      }
+    },
+    "Product": {
+      "identifier": "attr.product.id",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.product.id.name",
+        "tags": ""
+      },
+      "displayForms": {
+        "Product Name": {
+          "dfIdentifier": "label.product.id.name",
+          "dfTags": ""
+        },
+        "Product": {
+          "dfIdentifier": "label.product.id",
+          "dfTags": ""
+        }
+      }
+    },
+    "Product Type": {
+      "identifier": "attr.product.product_type",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.product.product_type",
+        "tags": ""
+      },
+      "displayForms": {
+        "Product Type": {
+          "dfIdentifier": "label.product.product_type",
+          "dfTags": ""
+        }
+      }
+    },
+    "Stage": {
+      "identifier": "attr.stage.id",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.stage.id.name",
+        "tags": ""
+      },
+      "displayForms": {
+        "Stage Name": {
+          "dfIdentifier": "label.stage.id.name",
+          "dfTags": ""
+        },
+        "Order": {
+          "dfIdentifier": "label.stage.id.order",
+          "dfTags": ""
+        },
+        "Stage": {
+          "dfIdentifier": "label.stage.id",
+          "dfTags": ""
+        }
+      }
+    },
+    "Status": {
+      "identifier": "attr.stage.status",
+      "tags": "",
+      "defaultDisplayForm": {
+        "identifier": "label.stage.status",
+        "tags": ""
+      },
+      "displayForms": {
+        "Status": {
+          "dfIdentifier": "label.stage.status",
+          "dfTags": ""
+        }
+      }
+    }
+  },
+  "visualizations": {
+    "xcc": {
+      "identifier": "aacazJtwbLyX",
+      "tags": ""
+    },
+    "xxx": {
+      "identifier": "aaKgEQrWd2G8",
+      "tags": ""
+    },
+    "TEST": {
+      "identifier": "acut9vUjbq6e",
+      "tags": ""
+    },
+    "Revenue by Product (%)": {
+      "identifier": "aan1J9TueFZI",
+      "tags": ""
+    },
+    "Win Rate by Year": {
+      "identifier": "aaB3qSo3gDMP",
+      "tags": ""
+    },
+    "Revenue by Region": {
+      "identifier": "aby3polcaFxy",
+      "tags": ""
+    }
+  },
+  "dateDataSets": {
+    "Date (Timeline)": {
+      "identifier": "timeline.dataset.dt",
+      "tags": "",
+      "attributes": {
+        "Date (Timeline)": {
+          "identifier": "timeline.date",
+          "tags": "date",
+          "defaultDisplayForm": {
+            "identifier": "timeline.date.mmddyyyy",
+            "tags": ""
+          },
+          "displayForms": {
+            "mm/dd/yyyy (Timeline)": {
+              "identifier": "timeline.date.mmddyyyy",
+              "tags": ""
+            },
+            "yyyy-mm-dd (Timeline)": {
+              "identifier": "timeline.date.yyyymmdd",
+              "tags": ""
+            },
+            "m/d/yy (no leading zeroes) (Timeline)": {
+              "identifier": "timeline.date.mdyy",
+              "tags": ""
+            },
+            "Long (Mon, Jan 1, 2010) (Timeline)": {
+              "identifier": "timeline.date.long",
+              "tags": ""
+            },
+            "dd/mm/yyyy (Timeline)": {
+              "identifier": "timeline.date.ddmmyyyy",
+              "tags": ""
+            },
+            "dd-mm-yyyy (Timeline)": {
+              "identifier": "timeline.date.eddmmyyyy",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Week (Mon-Sun) (Timeline)": {
+          "identifier": "timeline.day.in.euweek",
+          "tags": "date day eu week",
+          "defaultDisplayForm": {
+            "identifier": "timeline.abU81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Mon) (Timeline)": {
+              "identifier": "timeline.abU81lMifn6q",
+              "tags": ""
+            },
+            "Long (Monday) (Timeline)": {
+              "identifier": "timeline.abY81lMifn6q",
+              "tags": ""
+            },
+            "Number (1=Monday) (Timeline)": {
+              "identifier": "timeline.abW81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month/Year (Timeline)": {
+          "identifier": "timeline.month",
+          "tags": "date month",
+          "defaultDisplayForm": {
+            "identifier": "timeline.act81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Jan 2010) (Timeline)": {
+              "identifier": "timeline.act81lMifn6q",
+              "tags": ""
+            },
+            "Long (January 2010) (Timeline)": {
+              "identifier": "timeline.acx81lMifn6q",
+              "tags": ""
+            },
+            "Number (1/2010) (Timeline)": {
+              "identifier": "timeline.acv81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month (Timeline)": {
+          "identifier": "timeline.month.in.year",
+          "tags": "date month year",
+          "defaultDisplayForm": {
+            "identifier": "timeline.abm81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Jan) (Timeline)": {
+              "identifier": "timeline.abm81lMifn6q",
+              "tags": ""
+            },
+            "Long (January) (Timeline)": {
+              "identifier": "timeline.abs81lMifn6q",
+              "tags": ""
+            },
+            "Number (M1) (Timeline)": {
+              "identifier": "timeline.abq81lMifn6q",
+              "tags": ""
+            },
+            "M/Q (M1/Q1) (Timeline)": {
+              "identifier": "timeline.abo81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun) (Timeline)": {
+          "identifier": "timeline.euweek.in.year",
+          "tags": "date eu week year",
+          "defaultDisplayForm": {
+            "identifier": "timeline.aba81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number EU (Timeline)": {
+              "identifier": "timeline.aba81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun)/Year (Timeline)": {
+          "identifier": "timeline.euweek",
+          "tags": "date eu week",
+          "defaultDisplayForm": {
+            "identifier": "timeline.aa281lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Week #/Year (W1/2010) (Timeline)": {
+              "identifier": "timeline.aa281lMifn6q",
+              "tags": ""
+            },
+            "Week Starting (Timeline)": {
+              "identifier": "timeline.aaY81lMifn6q",
+              "tags": ""
+            },
+            "From - To (Timeline)": {
+              "identifier": "timeline.aaW81lMifn6q",
+              "tags": ""
+            },
+            "Week #/Year (Cont.) (Timeline)": {
+              "identifier": "timeline.aa081lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Cont.) (Timeline)": {
+              "identifier": "timeline.aa481lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Timeline)": {
+              "identifier": "timeline.aaU81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Quarter/Year (Timeline)": {
+          "identifier": "timeline.quarter",
+          "tags": "date quarter",
+          "defaultDisplayForm": {
+            "identifier": "timeline.aci81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "US Short (Timeline)": {
+              "identifier": "timeline.aci81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Month (Timeline)": {
+          "identifier": "timeline.day.in.month",
+          "tags": "date day month",
+          "defaultDisplayForm": {
+            "identifier": "timeline.aca81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Timeline)": {
+              "identifier": "timeline.aca81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat) of Qtr (Timeline)": {
+          "identifier": "timeline.week.in.quarter",
+          "tags": "date quarter week",
+          "defaultDisplayForm": {
+            "identifier": "timeline.aaO81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number US (Timeline)": {
+              "identifier": "timeline.aaO81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Quarter (Timeline)": {
+          "identifier": "timeline.quarter.in.year",
+          "tags": "date quarter year",
+          "defaultDisplayForm": {
+            "identifier": "timeline.aam81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Timeline)": {
+              "identifier": "timeline.aam81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat)/Year (Timeline)": {
+          "identifier": "timeline.week",
+          "tags": "date week",
+          "defaultDisplayForm": {
+            "identifier": "timeline.aaA81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Week #/Year (W1/2010) (Timeline)": {
+              "identifier": "timeline.aaA81lMifn6q",
+              "tags": ""
+            },
+            "Week Starting (Timeline)": {
+              "identifier": "timeline.aaw81lMifn6q",
+              "tags": ""
+            },
+            "From - To (Timeline)": {
+              "identifier": "timeline.aau81lMifn6q",
+              "tags": ""
+            },
+            "Week #/Year (Cont.) (Timeline)": {
+              "identifier": "timeline.aay81lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Cont.) (Timeline)": {
+              "identifier": "timeline.aaC81lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Timeline)": {
+              "identifier": "timeline.aas81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Year (Timeline)": {
+          "identifier": "timeline.day.in.year",
+          "tags": "date day year",
+          "defaultDisplayForm": {
+            "identifier": "timeline.abE81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Timeline)": {
+              "identifier": "timeline.abE81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Week (Sun-Sat) (Timeline)": {
+          "identifier": "timeline.day.in.week",
+          "tags": "date day week",
+          "defaultDisplayForm": {
+            "identifier": "timeline.abK81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Sun) (Timeline)": {
+              "identifier": "timeline.abK81lMifn6q",
+              "tags": ""
+            },
+            "Long (Sunday) (Timeline)": {
+              "identifier": "timeline.abO81lMifn6q",
+              "tags": ""
+            },
+            "Number (1=Sunday) (Timeline)": {
+              "identifier": "timeline.abM81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat) (Timeline)": {
+          "identifier": "timeline.week.in.year",
+          "tags": "date week year",
+          "defaultDisplayForm": {
+            "identifier": "timeline.aaI81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number US (Timeline)": {
+              "identifier": "timeline.aaI81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun) of Qtr (Timeline)": {
+          "identifier": "timeline.euweek.in.quarter",
+          "tags": "date eu quarter week",
+          "defaultDisplayForm": {
+            "identifier": "timeline.abg81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number EU (Timeline)": {
+              "identifier": "timeline.abg81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Quarter (Timeline)": {
+          "identifier": "timeline.day.in.quarter",
+          "tags": "date day quarter",
+          "defaultDisplayForm": {
+            "identifier": "timeline.ab481lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Timeline)": {
+              "identifier": "timeline.ab481lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Year (Timeline)": {
+          "identifier": "timeline.year",
+          "tags": "date year",
+          "defaultDisplayForm": {
+            "identifier": "timeline.aag81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Year (Timeline)": {
+              "identifier": "timeline.aag81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month of Quarter (Timeline)": {
+          "identifier": "timeline.month.in.quarter",
+          "tags": "date month quarter",
+          "defaultDisplayForm": {
+            "identifier": "timeline.aby81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number (Timeline)": {
+              "identifier": "timeline.aby81lMifn6q",
+              "tags": ""
+            }
+          }
+        }
+      }
+    },
+    "Date (Opp. Close)": {
+      "identifier": "oppclose.dataset.dt",
+      "tags": "",
+      "attributes": {
+        "Date (Opp. Close)": {
+          "identifier": "oppclose.date",
+          "tags": "date",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.date.mmddyyyy",
+            "tags": ""
+          },
+          "displayForms": {
+            "mm/dd/yyyy (Opp. Close)": {
+              "identifier": "oppclose.date.mmddyyyy",
+              "tags": ""
+            },
+            "yyyy-mm-dd (Opp. Close)": {
+              "identifier": "oppclose.date.yyyymmdd",
+              "tags": ""
+            },
+            "m/d/yy (no leading zeroes) (Opp. Close)": {
+              "identifier": "oppclose.date.mdyy",
+              "tags": ""
+            },
+            "Long (Mon, Jan 1, 2010) (Opp. Close)": {
+              "identifier": "oppclose.date.long",
+              "tags": ""
+            },
+            "dd/mm/yyyy (Opp. Close)": {
+              "identifier": "oppclose.date.ddmmyyyy",
+              "tags": ""
+            },
+            "dd-mm-yyyy (Opp. Close)": {
+              "identifier": "oppclose.date.eddmmyyyy",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Week (Mon-Sun) (Opp. Close)": {
+          "identifier": "oppclose.day.in.euweek",
+          "tags": "date day eu week",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.abU81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Mon) (Opp. Close)": {
+              "identifier": "oppclose.abU81lMifn6q",
+              "tags": ""
+            },
+            "Long (Monday) (Opp. Close)": {
+              "identifier": "oppclose.abY81lMifn6q",
+              "tags": ""
+            },
+            "Number (1=Monday) (Opp. Close)": {
+              "identifier": "oppclose.abW81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month/Year (Opp. Close)": {
+          "identifier": "oppclose.month",
+          "tags": "date month",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.act81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Jan 2010) (Opp. Close)": {
+              "identifier": "oppclose.act81lMifn6q",
+              "tags": ""
+            },
+            "Long (January 2010) (Opp. Close)": {
+              "identifier": "oppclose.acx81lMifn6q",
+              "tags": ""
+            },
+            "Number (1/2010) (Opp. Close)": {
+              "identifier": "oppclose.acv81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month (Opp. Close)": {
+          "identifier": "oppclose.month.in.year",
+          "tags": "date month year",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.abm81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Jan) (Opp. Close)": {
+              "identifier": "oppclose.abm81lMifn6q",
+              "tags": ""
+            },
+            "Long (January) (Opp. Close)": {
+              "identifier": "oppclose.abs81lMifn6q",
+              "tags": ""
+            },
+            "Number (M1) (Opp. Close)": {
+              "identifier": "oppclose.abq81lMifn6q",
+              "tags": ""
+            },
+            "M/Q (M1/Q1) (Opp. Close)": {
+              "identifier": "oppclose.abo81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun) (Opp. Close)": {
+          "identifier": "oppclose.euweek.in.year",
+          "tags": "date eu week year",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.aba81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number EU (Opp. Close)": {
+              "identifier": "oppclose.aba81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun)/Year (Opp. Close)": {
+          "identifier": "oppclose.euweek",
+          "tags": "date eu week",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.aa281lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Week #/Year (W1/2010) (Opp. Close)": {
+              "identifier": "oppclose.aa281lMifn6q",
+              "tags": ""
+            },
+            "Week Starting (Opp. Close)": {
+              "identifier": "oppclose.aaY81lMifn6q",
+              "tags": ""
+            },
+            "From - To (Opp. Close)": {
+              "identifier": "oppclose.aaW81lMifn6q",
+              "tags": ""
+            },
+            "Week #/Year (Cont.) (Opp. Close)": {
+              "identifier": "oppclose.aa081lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Cont.) (Opp. Close)": {
+              "identifier": "oppclose.aa481lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Opp. Close)": {
+              "identifier": "oppclose.aaU81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Quarter/Year (Opp. Close)": {
+          "identifier": "oppclose.quarter",
+          "tags": "date quarter",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.aci81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "US Short (Opp. Close)": {
+              "identifier": "oppclose.aci81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Month (Opp. Close)": {
+          "identifier": "oppclose.day.in.month",
+          "tags": "date day month",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.aca81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Opp. Close)": {
+              "identifier": "oppclose.aca81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat) of Qtr (Opp. Close)": {
+          "identifier": "oppclose.week.in.quarter",
+          "tags": "date quarter week",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.aaO81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number US (Opp. Close)": {
+              "identifier": "oppclose.aaO81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Quarter (Opp. Close)": {
+          "identifier": "oppclose.quarter.in.year",
+          "tags": "date quarter year",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.aam81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Opp. Close)": {
+              "identifier": "oppclose.aam81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat)/Year (Opp. Close)": {
+          "identifier": "oppclose.week",
+          "tags": "date week",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.aaA81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Week #/Year (W1/2010) (Opp. Close)": {
+              "identifier": "oppclose.aaA81lMifn6q",
+              "tags": ""
+            },
+            "Week Starting (Opp. Close)": {
+              "identifier": "oppclose.aaw81lMifn6q",
+              "tags": ""
+            },
+            "From - To (Opp. Close)": {
+              "identifier": "oppclose.aau81lMifn6q",
+              "tags": ""
+            },
+            "Week #/Year (Cont.) (Opp. Close)": {
+              "identifier": "oppclose.aay81lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Cont.) (Opp. Close)": {
+              "identifier": "oppclose.aaC81lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Opp. Close)": {
+              "identifier": "oppclose.aas81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Year (Opp. Close)": {
+          "identifier": "oppclose.day.in.year",
+          "tags": "date day year",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.abE81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Opp. Close)": {
+              "identifier": "oppclose.abE81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Week (Sun-Sat) (Opp. Close)": {
+          "identifier": "oppclose.day.in.week",
+          "tags": "date day week",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.abK81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Sun) (Opp. Close)": {
+              "identifier": "oppclose.abK81lMifn6q",
+              "tags": ""
+            },
+            "Long (Sunday) (Opp. Close)": {
+              "identifier": "oppclose.abO81lMifn6q",
+              "tags": ""
+            },
+            "Number (1=Sunday) (Opp. Close)": {
+              "identifier": "oppclose.abM81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat) (Opp. Close)": {
+          "identifier": "oppclose.week.in.year",
+          "tags": "date week year",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.aaI81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number US (Opp. Close)": {
+              "identifier": "oppclose.aaI81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun) of Qtr (Opp. Close)": {
+          "identifier": "oppclose.euweek.in.quarter",
+          "tags": "date eu quarter week",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.abg81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number EU (Opp. Close)": {
+              "identifier": "oppclose.abg81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Quarter (Opp. Close)": {
+          "identifier": "oppclose.day.in.quarter",
+          "tags": "date day quarter",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.ab481lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Opp. Close)": {
+              "identifier": "oppclose.ab481lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Year (Opp. Close)": {
+          "identifier": "oppclose.year",
+          "tags": "date year",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.aag81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Year (Opp. Close)": {
+              "identifier": "oppclose.aag81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month of Quarter (Opp. Close)": {
+          "identifier": "oppclose.month.in.quarter",
+          "tags": "date month quarter",
+          "defaultDisplayForm": {
+            "identifier": "oppclose.aby81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number (Opp. Close)": {
+              "identifier": "oppclose.aby81lMifn6q",
+              "tags": ""
+            }
+          }
+        }
+      }
+    },
+    "Date (Opp. Created)": {
+      "identifier": "oppcreated.dataset.dt",
+      "tags": "",
+      "attributes": {
+        "Date (Opp. Created)": {
+          "identifier": "oppcreated.date",
+          "tags": "date",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.date.mmddyyyy",
+            "tags": ""
+          },
+          "displayForms": {
+            "mm/dd/yyyy (Opp. Created)": {
+              "identifier": "oppcreated.date.mmddyyyy",
+              "tags": ""
+            },
+            "yyyy-mm-dd (Opp. Created)": {
+              "identifier": "oppcreated.date.yyyymmdd",
+              "tags": ""
+            },
+            "m/d/yy (no leading zeroes) (Opp. Created)": {
+              "identifier": "oppcreated.date.mdyy",
+              "tags": ""
+            },
+            "Long (Mon, Jan 1, 2010) (Opp. Created)": {
+              "identifier": "oppcreated.date.long",
+              "tags": ""
+            },
+            "dd/mm/yyyy (Opp. Created)": {
+              "identifier": "oppcreated.date.ddmmyyyy",
+              "tags": ""
+            },
+            "dd-mm-yyyy (Opp. Created)": {
+              "identifier": "oppcreated.date.eddmmyyyy",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Week (Mon-Sun) (Opp. Created)": {
+          "identifier": "oppcreated.day.in.euweek",
+          "tags": "date day eu week",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.abU81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Mon) (Opp. Created)": {
+              "identifier": "oppcreated.abU81lMifn6q",
+              "tags": ""
+            },
+            "Long (Monday) (Opp. Created)": {
+              "identifier": "oppcreated.abY81lMifn6q",
+              "tags": ""
+            },
+            "Number (1=Monday) (Opp. Created)": {
+              "identifier": "oppcreated.abW81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month/Year (Opp. Created)": {
+          "identifier": "oppcreated.month",
+          "tags": "date month",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.act81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Jan 2010) (Opp. Created)": {
+              "identifier": "oppcreated.act81lMifn6q",
+              "tags": ""
+            },
+            "Long (January 2010) (Opp. Created)": {
+              "identifier": "oppcreated.acx81lMifn6q",
+              "tags": ""
+            },
+            "Number (1/2010) (Opp. Created)": {
+              "identifier": "oppcreated.acv81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month (Opp. Created)": {
+          "identifier": "oppcreated.month.in.year",
+          "tags": "date month year",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.abm81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Jan) (Opp. Created)": {
+              "identifier": "oppcreated.abm81lMifn6q",
+              "tags": ""
+            },
+            "Long (January) (Opp. Created)": {
+              "identifier": "oppcreated.abs81lMifn6q",
+              "tags": ""
+            },
+            "Number (M1) (Opp. Created)": {
+              "identifier": "oppcreated.abq81lMifn6q",
+              "tags": ""
+            },
+            "M/Q (M1/Q1) (Opp. Created)": {
+              "identifier": "oppcreated.abo81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun) (Opp. Created)": {
+          "identifier": "oppcreated.euweek.in.year",
+          "tags": "date eu week year",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.aba81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number EU (Opp. Created)": {
+              "identifier": "oppcreated.aba81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun)/Year (Opp. Created)": {
+          "identifier": "oppcreated.euweek",
+          "tags": "date eu week",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.aa281lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Week #/Year (W1/2010) (Opp. Created)": {
+              "identifier": "oppcreated.aa281lMifn6q",
+              "tags": ""
+            },
+            "Week Starting (Opp. Created)": {
+              "identifier": "oppcreated.aaY81lMifn6q",
+              "tags": ""
+            },
+            "From - To (Opp. Created)": {
+              "identifier": "oppcreated.aaW81lMifn6q",
+              "tags": ""
+            },
+            "Week #/Year (Cont.) (Opp. Created)": {
+              "identifier": "oppcreated.aa081lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Cont.) (Opp. Created)": {
+              "identifier": "oppcreated.aa481lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Opp. Created)": {
+              "identifier": "oppcreated.aaU81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Quarter/Year (Opp. Created)": {
+          "identifier": "oppcreated.quarter",
+          "tags": "date quarter",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.aci81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "US Short (Opp. Created)": {
+              "identifier": "oppcreated.aci81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Month (Opp. Created)": {
+          "identifier": "oppcreated.day.in.month",
+          "tags": "date day month",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.aca81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Opp. Created)": {
+              "identifier": "oppcreated.aca81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat) of Qtr (Opp. Created)": {
+          "identifier": "oppcreated.week.in.quarter",
+          "tags": "date quarter week",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.aaO81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number US (Opp. Created)": {
+              "identifier": "oppcreated.aaO81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Quarter (Opp. Created)": {
+          "identifier": "oppcreated.quarter.in.year",
+          "tags": "date quarter year",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.aam81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Opp. Created)": {
+              "identifier": "oppcreated.aam81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat)/Year (Opp. Created)": {
+          "identifier": "oppcreated.week",
+          "tags": "date week",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.aaA81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Week #/Year (W1/2010) (Opp. Created)": {
+              "identifier": "oppcreated.aaA81lMifn6q",
+              "tags": ""
+            },
+            "Week Starting (Opp. Created)": {
+              "identifier": "oppcreated.aaw81lMifn6q",
+              "tags": ""
+            },
+            "From - To (Opp. Created)": {
+              "identifier": "oppcreated.aau81lMifn6q",
+              "tags": ""
+            },
+            "Week #/Year (Cont.) (Opp. Created)": {
+              "identifier": "oppcreated.aay81lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Cont.) (Opp. Created)": {
+              "identifier": "oppcreated.aaC81lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Opp. Created)": {
+              "identifier": "oppcreated.aas81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Year (Opp. Created)": {
+          "identifier": "oppcreated.day.in.year",
+          "tags": "date day year",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.abE81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Opp. Created)": {
+              "identifier": "oppcreated.abE81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Week (Sun-Sat) (Opp. Created)": {
+          "identifier": "oppcreated.day.in.week",
+          "tags": "date day week",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.abK81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Sun) (Opp. Created)": {
+              "identifier": "oppcreated.abK81lMifn6q",
+              "tags": ""
+            },
+            "Long (Sunday) (Opp. Created)": {
+              "identifier": "oppcreated.abO81lMifn6q",
+              "tags": ""
+            },
+            "Number (1=Sunday) (Opp. Created)": {
+              "identifier": "oppcreated.abM81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat) (Opp. Created)": {
+          "identifier": "oppcreated.week.in.year",
+          "tags": "date week year",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.aaI81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number US (Opp. Created)": {
+              "identifier": "oppcreated.aaI81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun) of Qtr (Opp. Created)": {
+          "identifier": "oppcreated.euweek.in.quarter",
+          "tags": "date eu quarter week",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.abg81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number EU (Opp. Created)": {
+              "identifier": "oppcreated.abg81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Quarter (Opp. Created)": {
+          "identifier": "oppcreated.day.in.quarter",
+          "tags": "date day quarter",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.ab481lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Opp. Created)": {
+              "identifier": "oppcreated.ab481lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Year (Opp. Created)": {
+          "identifier": "oppcreated.year",
+          "tags": "date year",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.aag81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Year (Opp. Created)": {
+              "identifier": "oppcreated.aag81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month of Quarter (Opp. Created)": {
+          "identifier": "oppcreated.month.in.quarter",
+          "tags": "date month quarter",
+          "defaultDisplayForm": {
+            "identifier": "oppcreated.aby81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number (Opp. Created)": {
+              "identifier": "oppcreated.aby81lMifn6q",
+              "tags": ""
+            }
+          }
+        }
+      }
+    },
+    "Date (Activity)": {
+      "identifier": "activity.dataset.dt",
+      "tags": "",
+      "attributes": {
+        "Date (Activity)": {
+          "identifier": "activity.date",
+          "tags": "date",
+          "defaultDisplayForm": {
+            "identifier": "activity.date.mmddyyyy",
+            "tags": ""
+          },
+          "displayForms": {
+            "mm/dd/yyyy (Activity)": {
+              "identifier": "activity.date.mmddyyyy",
+              "tags": ""
+            },
+            "yyyy-mm-dd (Activity)": {
+              "identifier": "activity.date.yyyymmdd",
+              "tags": ""
+            },
+            "m/d/yy (no leading zeroes) (Activity)": {
+              "identifier": "activity.date.mdyy",
+              "tags": ""
+            },
+            "Long (Mon, Jan 1, 2010) (Activity)": {
+              "identifier": "activity.date.long",
+              "tags": ""
+            },
+            "dd/mm/yyyy (Activity)": {
+              "identifier": "activity.date.ddmmyyyy",
+              "tags": ""
+            },
+            "dd-mm-yyyy (Activity)": {
+              "identifier": "activity.date.eddmmyyyy",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Week (Mon-Sun) (Activity)": {
+          "identifier": "activity.day.in.euweek",
+          "tags": "date day eu week",
+          "defaultDisplayForm": {
+            "identifier": "activity.abU81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Mon) (Activity)": {
+              "identifier": "activity.abU81lMifn6q",
+              "tags": ""
+            },
+            "Long (Monday) (Activity)": {
+              "identifier": "activity.abY81lMifn6q",
+              "tags": ""
+            },
+            "Number (1=Monday) (Activity)": {
+              "identifier": "activity.abW81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month/Year (Activity)": {
+          "identifier": "activity.month",
+          "tags": "date month",
+          "defaultDisplayForm": {
+            "identifier": "activity.act81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Jan 2010) (Activity)": {
+              "identifier": "activity.act81lMifn6q",
+              "tags": ""
+            },
+            "Long (January 2010) (Activity)": {
+              "identifier": "activity.acx81lMifn6q",
+              "tags": ""
+            },
+            "Number (1/2010) (Activity)": {
+              "identifier": "activity.acv81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month (Activity)": {
+          "identifier": "activity.month.in.year",
+          "tags": "date month year",
+          "defaultDisplayForm": {
+            "identifier": "activity.abm81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Jan) (Activity)": {
+              "identifier": "activity.abm81lMifn6q",
+              "tags": ""
+            },
+            "Long (January) (Activity)": {
+              "identifier": "activity.abs81lMifn6q",
+              "tags": ""
+            },
+            "Number (M1) (Activity)": {
+              "identifier": "activity.abq81lMifn6q",
+              "tags": ""
+            },
+            "M/Q (M1/Q1) (Activity)": {
+              "identifier": "activity.abo81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun) (Activity)": {
+          "identifier": "activity.euweek.in.year",
+          "tags": "date eu week year",
+          "defaultDisplayForm": {
+            "identifier": "activity.aba81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number EU (Activity)": {
+              "identifier": "activity.aba81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun)/Year (Activity)": {
+          "identifier": "activity.euweek",
+          "tags": "date eu week",
+          "defaultDisplayForm": {
+            "identifier": "activity.aa281lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Week #/Year (W1/2010) (Activity)": {
+              "identifier": "activity.aa281lMifn6q",
+              "tags": ""
+            },
+            "Week Starting (Activity)": {
+              "identifier": "activity.aaY81lMifn6q",
+              "tags": ""
+            },
+            "From - To (Activity)": {
+              "identifier": "activity.aaW81lMifn6q",
+              "tags": ""
+            },
+            "Week #/Year (Cont.) (Activity)": {
+              "identifier": "activity.aa081lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Cont.) (Activity)": {
+              "identifier": "activity.aa481lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Activity)": {
+              "identifier": "activity.aaU81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Quarter/Year (Activity)": {
+          "identifier": "activity.quarter",
+          "tags": "date quarter",
+          "defaultDisplayForm": {
+            "identifier": "activity.aci81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "US Short (Activity)": {
+              "identifier": "activity.aci81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Month (Activity)": {
+          "identifier": "activity.day.in.month",
+          "tags": "date day month",
+          "defaultDisplayForm": {
+            "identifier": "activity.aca81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Activity)": {
+              "identifier": "activity.aca81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat) of Qtr (Activity)": {
+          "identifier": "activity.week.in.quarter",
+          "tags": "date quarter week",
+          "defaultDisplayForm": {
+            "identifier": "activity.aaO81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number US (Activity)": {
+              "identifier": "activity.aaO81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Quarter (Activity)": {
+          "identifier": "activity.quarter.in.year",
+          "tags": "date quarter year",
+          "defaultDisplayForm": {
+            "identifier": "activity.aam81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Activity)": {
+              "identifier": "activity.aam81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat)/Year (Activity)": {
+          "identifier": "activity.week",
+          "tags": "date week",
+          "defaultDisplayForm": {
+            "identifier": "activity.aaA81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Week #/Year (W1/2010) (Activity)": {
+              "identifier": "activity.aaA81lMifn6q",
+              "tags": ""
+            },
+            "Week Starting (Activity)": {
+              "identifier": "activity.aaw81lMifn6q",
+              "tags": ""
+            },
+            "From - To (Activity)": {
+              "identifier": "activity.aau81lMifn6q",
+              "tags": ""
+            },
+            "Week #/Year (Cont.) (Activity)": {
+              "identifier": "activity.aay81lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Cont.) (Activity)": {
+              "identifier": "activity.aaC81lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Activity)": {
+              "identifier": "activity.aas81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Year (Activity)": {
+          "identifier": "activity.day.in.year",
+          "tags": "date day year",
+          "defaultDisplayForm": {
+            "identifier": "activity.abE81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Activity)": {
+              "identifier": "activity.abE81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Week (Sun-Sat) (Activity)": {
+          "identifier": "activity.day.in.week",
+          "tags": "date day week",
+          "defaultDisplayForm": {
+            "identifier": "activity.abK81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Sun) (Activity)": {
+              "identifier": "activity.abK81lMifn6q",
+              "tags": ""
+            },
+            "Long (Sunday) (Activity)": {
+              "identifier": "activity.abO81lMifn6q",
+              "tags": ""
+            },
+            "Number (1=Sunday) (Activity)": {
+              "identifier": "activity.abM81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat) (Activity)": {
+          "identifier": "activity.week.in.year",
+          "tags": "date week year",
+          "defaultDisplayForm": {
+            "identifier": "activity.aaI81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number US (Activity)": {
+              "identifier": "activity.aaI81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun) of Qtr (Activity)": {
+          "identifier": "activity.euweek.in.quarter",
+          "tags": "date eu quarter week",
+          "defaultDisplayForm": {
+            "identifier": "activity.abg81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number EU (Activity)": {
+              "identifier": "activity.abg81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Quarter (Activity)": {
+          "identifier": "activity.day.in.quarter",
+          "tags": "date day quarter",
+          "defaultDisplayForm": {
+            "identifier": "activity.ab481lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Activity)": {
+              "identifier": "activity.ab481lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Year (Activity)": {
+          "identifier": "activity.year",
+          "tags": "date year",
+          "defaultDisplayForm": {
+            "identifier": "activity.aag81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Year (Activity)": {
+              "identifier": "activity.aag81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month of Quarter (Activity)": {
+          "identifier": "activity.month.in.quarter",
+          "tags": "date month quarter",
+          "defaultDisplayForm": {
+            "identifier": "activity.aby81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number (Activity)": {
+              "identifier": "activity.aby81lMifn6q",
+              "tags": ""
+            }
+          }
+        }
+      }
+    },
+    "Date (Snapshot)": {
+      "identifier": "snapshot.dataset.dt",
+      "tags": "",
+      "attributes": {
+        "Date (Snapshot)": {
+          "identifier": "snapshot.date",
+          "tags": "date",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.date.mmddyyyy",
+            "tags": ""
+          },
+          "displayForms": {
+            "mm/dd/yyyy (Snapshot)": {
+              "identifier": "snapshot.date.mmddyyyy",
+              "tags": ""
+            },
+            "yyyy-mm-dd (Snapshot)": {
+              "identifier": "snapshot.date.yyyymmdd",
+              "tags": ""
+            },
+            "m/d/yy (no leading zeroes) (Snapshot)": {
+              "identifier": "snapshot.date.mdyy",
+              "tags": ""
+            },
+            "Long (Mon, Jan 1, 2010) (Snapshot)": {
+              "identifier": "snapshot.date.long",
+              "tags": ""
+            },
+            "dd/mm/yyyy (Snapshot)": {
+              "identifier": "snapshot.date.ddmmyyyy",
+              "tags": ""
+            },
+            "dd-mm-yyyy (Snapshot)": {
+              "identifier": "snapshot.date.eddmmyyyy",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Week (Mon-Sun) (Snapshot)": {
+          "identifier": "snapshot.day.in.euweek",
+          "tags": "date day eu week",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.abU81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Mon) (Snapshot)": {
+              "identifier": "snapshot.abU81lMifn6q",
+              "tags": ""
+            },
+            "Long (Monday) (Snapshot)": {
+              "identifier": "snapshot.abY81lMifn6q",
+              "tags": ""
+            },
+            "Number (1=Monday) (Snapshot)": {
+              "identifier": "snapshot.abW81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month/Year (Snapshot)": {
+          "identifier": "snapshot.month",
+          "tags": "date month",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.act81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Jan 2010) (Snapshot)": {
+              "identifier": "snapshot.act81lMifn6q",
+              "tags": ""
+            },
+            "Long (January 2010) (Snapshot)": {
+              "identifier": "snapshot.acx81lMifn6q",
+              "tags": ""
+            },
+            "Number (1/2010) (Snapshot)": {
+              "identifier": "snapshot.acv81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month (Snapshot)": {
+          "identifier": "snapshot.month.in.year",
+          "tags": "date month year",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.abm81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Jan) (Snapshot)": {
+              "identifier": "snapshot.abm81lMifn6q",
+              "tags": ""
+            },
+            "Long (January) (Snapshot)": {
+              "identifier": "snapshot.abs81lMifn6q",
+              "tags": ""
+            },
+            "Number (M1) (Snapshot)": {
+              "identifier": "snapshot.abq81lMifn6q",
+              "tags": ""
+            },
+            "M/Q (M1/Q1) (Snapshot)": {
+              "identifier": "snapshot.abo81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun) (Snapshot)": {
+          "identifier": "snapshot.euweek.in.year",
+          "tags": "date eu week year",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.aba81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number EU (Snapshot)": {
+              "identifier": "snapshot.aba81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun)/Year (Snapshot)": {
+          "identifier": "snapshot.euweek",
+          "tags": "date eu week",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.aa281lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Week #/Year (W1/2010) (Snapshot)": {
+              "identifier": "snapshot.aa281lMifn6q",
+              "tags": ""
+            },
+            "Week Starting (Snapshot)": {
+              "identifier": "snapshot.aaY81lMifn6q",
+              "tags": ""
+            },
+            "From - To (Snapshot)": {
+              "identifier": "snapshot.aaW81lMifn6q",
+              "tags": ""
+            },
+            "Week #/Year (Cont.) (Snapshot)": {
+              "identifier": "snapshot.aa081lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Cont.) (Snapshot)": {
+              "identifier": "snapshot.aa481lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Snapshot)": {
+              "identifier": "snapshot.aaU81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Quarter/Year (Snapshot)": {
+          "identifier": "snapshot.quarter",
+          "tags": "date quarter",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.aci81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "US Short (Snapshot)": {
+              "identifier": "snapshot.aci81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Month (Snapshot)": {
+          "identifier": "snapshot.day.in.month",
+          "tags": "date day month",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.aca81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Snapshot)": {
+              "identifier": "snapshot.aca81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat) of Qtr (Snapshot)": {
+          "identifier": "snapshot.week.in.quarter",
+          "tags": "date quarter week",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.aaO81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number US (Snapshot)": {
+              "identifier": "snapshot.aaO81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Quarter (Snapshot)": {
+          "identifier": "snapshot.quarter.in.year",
+          "tags": "date quarter year",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.aam81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Snapshot)": {
+              "identifier": "snapshot.aam81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat)/Year (Snapshot)": {
+          "identifier": "snapshot.week",
+          "tags": "date week",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.aaA81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Week #/Year (W1/2010) (Snapshot)": {
+              "identifier": "snapshot.aaA81lMifn6q",
+              "tags": ""
+            },
+            "Week Starting (Snapshot)": {
+              "identifier": "snapshot.aaw81lMifn6q",
+              "tags": ""
+            },
+            "From - To (Snapshot)": {
+              "identifier": "snapshot.aau81lMifn6q",
+              "tags": ""
+            },
+            "Week #/Year (Cont.) (Snapshot)": {
+              "identifier": "snapshot.aay81lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Cont.) (Snapshot)": {
+              "identifier": "snapshot.aaC81lMifn6q",
+              "tags": ""
+            },
+            "Wk/Qtr/Year (Snapshot)": {
+              "identifier": "snapshot.aas81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Year (Snapshot)": {
+          "identifier": "snapshot.day.in.year",
+          "tags": "date day year",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.abE81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Snapshot)": {
+              "identifier": "snapshot.abE81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Week (Sun-Sat) (Snapshot)": {
+          "identifier": "snapshot.day.in.week",
+          "tags": "date day week",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.abK81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Short (Sun) (Snapshot)": {
+              "identifier": "snapshot.abK81lMifn6q",
+              "tags": ""
+            },
+            "Long (Sunday) (Snapshot)": {
+              "identifier": "snapshot.abO81lMifn6q",
+              "tags": ""
+            },
+            "Number (1=Sunday) (Snapshot)": {
+              "identifier": "snapshot.abM81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Sun-Sat) (Snapshot)": {
+          "identifier": "snapshot.week.in.year",
+          "tags": "date week year",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.aaI81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number US (Snapshot)": {
+              "identifier": "snapshot.aaI81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Week (Mon-Sun) of Qtr (Snapshot)": {
+          "identifier": "snapshot.euweek.in.quarter",
+          "tags": "date eu quarter week",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.abg81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number EU (Snapshot)": {
+              "identifier": "snapshot.abg81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Day of Quarter (Snapshot)": {
+          "identifier": "snapshot.day.in.quarter",
+          "tags": "date day quarter",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.ab481lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "default (Snapshot)": {
+              "identifier": "snapshot.ab481lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Year (Snapshot)": {
+          "identifier": "snapshot.year",
+          "tags": "date year",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.aag81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Year (Snapshot)": {
+              "identifier": "snapshot.aag81lMifn6q",
+              "tags": ""
+            }
+          }
+        },
+        "Month of Quarter (Snapshot)": {
+          "identifier": "snapshot.month.in.quarter",
+          "tags": "date month quarter",
+          "defaultDisplayForm": {
+            "identifier": "snapshot.aby81lMifn6q",
+            "tags": ""
+          },
+          "displayForms": {
+            "Number (Snapshot)": {
+              "identifier": "snapshot.aby81lMifn6q",
+              "tags": ""
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.loading, .error {
+  display: none;
+  font-size: smaller;
+  margin-left: 0.5em;
+  padding: 0.1em;
+}
+
+.loading {
+  background-color: #cccccc;
+  color: #333333;
+}
+
+.error {
+  background-color: #ffcccc;
+  border: 1px solid #ff0000;
+  color: #a00000;
+}
+
+.error.active, .loading.active {
+  display: inline;
+}

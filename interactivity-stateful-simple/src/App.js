@@ -1,45 +1,29 @@
-import React, { Component } from 'react';
-import { Kpi } from '@gooddata/react-components';
+import React from 'react'
 
-import '@gooddata/react-components/styles/css/main.css';
-import C from './catalog.json';
+import './App.css';
+import SimpleSwitcherDemo from './SimpleSwitcherDemo'
+import BetterSwitcherDemo from './BetterSwitcherDemo'
 
-const METRIC_1 = 'Avg Activities per Rep'
-const METRIC_2 = 'Avg Created Opps'
+const App = () => (
+  <div className="App">
+    <h2>Simple metric switcher</h2>
+    <p>
+      The following component demonstrates the most simplistic 
+      metric switcher using a stateful React component.
+    </p>
+    <SimpleSwitcherDemo />
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      metric: METRIC_1
-    };
-  }
+    <h2>Better metric switcher</h2>
+    <p>
+      The following component shows the metric name next to the
+      computed value. Since the computed value is retrieved from
+      GoodData API with a small delay, we use the
+      <tt>onLoadingChanged</tt> method to display a loading 
+      indicator and to ensure the metric name is changed after the
+      proper value is loaded.
+    </p>
+    <BetterSwitcherDemo />
+  </div>
+)
 
-  setMetric(metric) {
-    console.log('setMetric, metric = ', metric)
-    this.setState({
-      metric
-    })
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <select onChange={(e) => this.setMetric(e.target.value)}>
-          <option key={METRIC_1}>{METRIC_1}</option>
-          <option key={METRIC_2}>{METRIC_2}</option>
-        </select>
-
-        <div>
-          {this.state.metric} is {' '}
-          <Kpi
-             projectId="la84vcyhrq8jwbu4wpipw66q2sqeb923"
-             measure={C[this.state.metric]}
-             format="#,##0" />
-        </div>
-      </div>
-    );
-  }
-}
-
-export default App;
+export default App

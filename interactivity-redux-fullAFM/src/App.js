@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '@gooddata/react-components/styles/css/main.css';
+import './App.css';
 import C from './catalog.json';
 
 class App extends Component {
