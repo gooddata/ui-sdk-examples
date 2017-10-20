@@ -1,53 +1,27 @@
-import React, { Component } from 'react';
-import { PropTypes } from 'prop-types';
-import { Kpi } from '@gooddata/react-components';
-import { connect } from 'react-redux'
-import { setMetric } from './actions'
+import React from 'react'
 
-import '@gooddata/react-components/styles/css/main.css';
-import C from './catalog.json';
+import './App.css';
+import SimpleSwitcherDemo from './SimpleSwitcherDemo'
+import BetterSwitcherDemo from './BetterSwitcherDemo'
 
-const METRIC_1 = 'Avg Activities per Rep'
-const METRIC_2 = 'Avg Created Opps'
+const App = () => (
+  <div className="App">
+    <h2>Better metric switcher</h2>
+    <p>
+      Unline the stateful component demo, this Redux example only
+      includes the more advanced demo with loading indicator
+      and error handling.
+    </p>
+    <p>
+      The following component shows the metric name next to the
+      computed value. Since the computed value is retrieved from
+      GoodData API with a small delay, we use
+      the <tt>onLoadingChanged</tt> method to display a loading 
+      indicator and to ensure the metric name is changed after the
+      proper value is loaded.
+    </p>
+    <BetterSwitcherDemo />
+  </div>
+)
 
-class App extends Component {
-
-  static propTypes = {
-    metric: PropTypes.string,
-    setMetric: PropTypes.func.isRequired
-  }
-
-  static defaultProps = {
-    metric: METRIC_1
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <select onChange={(e) => this.props.setMetric(e.target.value)}>
-          <option key={METRIC_1}>{METRIC_1}</option>
-          <option key={METRIC_2}>{METRIC_2}</option>
-        </select>
-
-        <div>
-          {this.props.metric} is {' '}
-          <Kpi
-             projectId="la84vcyhrq8jwbu4wpipw66q2sqeb923"
-             measure={C[this.props.metric]}
-             format="#,##0" />
-        </div>
-      </div>
-    );
-  }
-}
-
-const mapStateToProps = (state) => ({
-  metric: state.metric.active
-})
-
-const _App = connect(
-  mapStateToProps,
-  { setMetric }
-)(App)
-
-export default _App;
+export default App
