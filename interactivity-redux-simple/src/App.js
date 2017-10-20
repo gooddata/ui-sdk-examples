@@ -8,7 +8,11 @@ const App = () => (
   <div className="App">
     <h2>Better metric switcher</h2>
     <p>
-      Unline the stateful component demo, this Redux example only
+      This example uses Redux to propagate the selected metric
+      from a drop-down to the <tt>Kpi</tt> component.
+    </p>
+    <p>
+      Unlike the stateful component demo, this Redux example only
       includes the more advanced demo with loading indicator
       and error handling.
     </p>

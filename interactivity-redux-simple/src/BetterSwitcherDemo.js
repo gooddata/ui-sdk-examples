@@ -7,10 +7,8 @@ import { setMetric, onLoadingChanged, onError } from './actions'
 import '@gooddata/react-components/styles/css/main.css';
 import './Better.css';
 import C from './catalog.json';
+import { METRIC_1, METRIC_2, METRIC_3 } from './metrics' // default metric
 
-const METRIC_1 = 'Avg Activities per Rep'
-const METRIC_2 = 'Avg Created Opps'
-const METRIC_3 = 'Non-existing Metric'
 
 class App extends Component {
 

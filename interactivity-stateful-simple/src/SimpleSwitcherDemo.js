@@ -5,7 +5,7 @@ import '@gooddata/react-components/styles/css/main.css';
 import C from './catalog.json';
 
 const METRIC_1 = 'Avg Activities per Rep'
-const METRIC_2 = 'Avg Created Opps'
+const METRIC_2 = '# of Activities'
 const METRIC_3 = 'Non-existing Metric'
 
 class App extends Component {
