@@ -1,4 +1,4 @@
-import * as Types from 'types'
+import * as Types from './types'
 
 /**
  * Replaces all metrics in the metric context with
@@ -26,7 +26,7 @@ export const setMetrics = (metricContext, ...metrics) => ({
  */
 export const addMetric = (metricContext, metric) => ({
   type: Types.ADD_METRIC,
-  metricContext, metricId
+  metricContext, metric
 })
 
 /**
@@ -40,9 +40,9 @@ export const addMetric = (metricContext, metric) => ({
  * are the same as metadata identifiers for metrics added
  * via setMetric or addMetric action creators above).
 */
-export const removeMetrics = (metricContext, ...metricIds) => ({
+export const removeMetrics = (metricContext, ...metrics) => ({
   type: Types.REMOVE_METRIC,
-  metricContext, metricId
+  metricContext, metrics
 })
 
 export const updateAttributeFilter = (filterContext, label, valuesIn ) => ({

@@ -2,6 +2,16 @@
   "name": "interactivity-redux",
   "version": "0.1.0",
   "private": true,
+  "proxy": {
+    "/gdc": {
+      "changeOrigin": true,
+      "cookieDomainRewrite": "localhost",
+      "target": "https://secure.gooddata.com/"
+    },
+    "/*.html": {
+      "target": "https://secure.gooddata.com/"
+    }
+  },
   "dependencies": {
     "@gooddata/react-components": "^2.6.1",
     "prop-types": "^15.6.0",

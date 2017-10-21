@@ -1,6 +1,6 @@
 import * as Types from '../actions/types'
 
-const metrics = (state = {}, action) => {
+const metricGroups = (state = {}, action) => {
   switch (action.type) {
     case Types.SET_METRIC:
       const { metricContext, metrics } = action
@@ -14,7 +14,7 @@ const metrics = (state = {}, action) => {
   }
 }
 
-const filters = (state = {}, action) => {
+const filterGroups = (state = {}, action) => {
   switch (action.type) {
     case Types.UPDATE_ATTRIBUTE_FILTER: {
       const { filterContext, label, valuesIn } = action
@@ -48,6 +48,6 @@ const filters = (state = {}, action) => {
 }
 
 export {
-  metrics,
-  filters
+  metricGroups,
+  filterGroups
 }
