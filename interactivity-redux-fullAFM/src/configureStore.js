@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { createLogger } from 'redux-logger'
 import { measureGroups, filterGroups } from './reducers/afm'
+import { isLoading, error } from './reducers/status'
 
 const configureStore = () => {
   const middlewares = [];
@@ -9,7 +10,7 @@ const configureStore = () => {
   }
 
   const store = createStore(
-    combineReducers({ measureGroups, filterGroups }),
+    combineReducers({ measureGroups, filterGroups, isLoading, error }),
     applyMiddleware(...middlewares)
   );
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '@gooddata/react-components/styles/css/main.css';
 
 import afmConnect from './afmConnect'
-import { Kpi, ColumnChart } from './components/afmConnected'
+import { Kpi, ColumnChart } from './components/smart'
 import './App.css';
 import C from './catalog.json';
 import { MEASURE_1, MEASURE_2, MEASURE_3 } from './measures'

@@ -3,14 +3,16 @@ import {
   setMeasures,
   addMeasure,
   removeMeasures
-} from './actions'
+} from './actions/afm'
 
-const mapStateToProps = (state) => ({
-  measureGroups: state.measureGroups,
-  filterGroups: state.filterGroups,
-  isLoading: state.isLoading,
-  error: state.error
-})
+const mapStateToProps = (state, ownProps) => {
+  const { measureGroups, filterGroups } = state
+  const { measureGroup, filterGroup } = ownProps
+  return {
+    _measures: measureGroup ? measureGroups[measureGroup] : [],
+    _filters: filterGroup ? filterGroups[filterGroup] : []
+  }
+}
 
 export default (component) => (
   connect(

@@ -20,24 +20,20 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
   static propTypes = {
     projectId: PropTypes.string.isRequired,
     measureGroup: PropTypes.string,
-    measureGroups: PropTypes.object.isRequired, // via afmConnect
     filterGroup: PropTypes.string,
-    filterGroups: PropTypes.object.isRequired, // via afmConnect
     afm: PropTypes.object // if no AFM is provided, the component won't be rendered until a measure or an attribute is retrieved from the connected measureGroup or attributeGroup
   }
 
   render() {
-    const { afm, measureGroup, measureGroups, filterGroup, filterGroups } = this.props
-    const dontPass = { measure: true, measureGroup: true, measureGroups: true,
-                     filterGroup: true, filterGroups: true,
-                     attributeGroup: true, attributeGroups: true }
+    const { afm, _measures, _filters, _attributes } = this.props
+    const dontPass = {
+      _measures: true, _filters: true, _attributes: true,
+      measureGroup: true, filterGroup: true, attributeGroup: true
+    }
     const props = withoutKeys(this.props, dontPass)
-    const measures = measureGroup ? measureGroups[measureGroup] : null
-    const attributes = null // TODO
-    const filters = null // TODO
     const newAfm = afm ? { ...afm } : {}
-    if (Array.isArray(measures)) {
-      newAfm.measures = measures.map(measure => (
+    if (Array.isArray(_measures)) {
+      newAfm.measures = _measures.map(measure => (
         (typeof(measure) === "string")
           ? {
             id: measure, // reusing the measure identifier as an AFM specific identifier
@@ -50,13 +46,13 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
           : measure
       ))
     }
-    if (Array.isArray(attributes)) { // It's actually an array of attribute display forms a.k.a. labels
-      newAfm.attributes = attributes.map(attr => ({
+    if (Array.isArray(_attributes)) { // It's actually an array of attribute display forms a.k.a. labels
+      newAfm.attributes = _attributes.map(attr => ({
         id: attr,
         type: 'attribute' // TODO it can be a 'date' too...
       }))
     }
-    if (!Array.isArray(attributes) && !Array.isArray(measures)) {
+    if (!Array.isArray(_attributes) && !Array.isArray(_measures)) {
       return null
     }
     return (
@@ -75,16 +71,17 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
  * 3. If no measure parameter is provided, nothing is rendered (component returns null)
  */
 const KpiWrapper = (props) => {
-  const { measure, measureGroup, measureGroups, filterGroup, filterGroups } = props
-  const dontPass = { measure: true, measureGroup: true, measureGroups: true,
-                     filterGroup: true, filterGroups: true }
+  const { measure, _measures, _filters } = props
+  const dontPass = { measure: true, _measures: true, measureGroup: true, filterGroup: true }
   const kpiProps = withoutKeys(props, dontPass)
-
-  const measures = measureGroup ? measureGroups[measureGroup] : null
-  const measureToPass  = measures ? (measures[0] || measure) : measure
+  if (Array.isArray(_measures) && _measures[0]) {
+    kpiProps.measure = _measures[0]
+  } else {
+    kpiProps.measure = props.measure
+  }
 
   return measure
-    ? <KpiOrig measure={measureToPass} {...kpiProps} />
+    ? <KpiOrig {...kpiProps} />
     : null
 }
 
@@ -92,9 +89,7 @@ KpiWrapper.propTypes = {
   measure: PropTypes.string,
   projectId: PropTypes.string.isRequired,
   measureGroup: PropTypes.string,
-  measureGroups: PropTypes.object.isRequired, // via afmConnect
-  filterGroup: PropTypes.string,
-  filterGroups: PropTypes.object.isRequired, // via afmConnect
+  filterGroup: PropTypes.string
 }
 
 export const Kpi = afmConnect(KpiWrapper)

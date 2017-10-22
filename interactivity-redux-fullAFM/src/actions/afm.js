@@ -1,4 +1,4 @@
-import * as Types from './types'
+import * as Types from './afmTypes'
 
 /**
  * Replaces all measures in the measure context with

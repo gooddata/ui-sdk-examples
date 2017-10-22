@@ -1,4 +1,4 @@
-import * as Types from '../actions/types'
+import * as Types from '../actions/afmTypes'
 
 const measureGroups = (state = {}, action) => {
   switch (action.type) {
