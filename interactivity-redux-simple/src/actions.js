@@ -1,7 +1,7 @@
 // Used by both SimpleSwitcherDemo and BetterSwitcherDemo
-export const setMetric = (metric) => ({
-  type: "SET_METRIC",
-  metric
+export const setMeasure = (measure) => ({
+  type: "SET_MEASURE",
+  measure
 })
 
 // The following action creators are only used by the

@@ -5,29 +5,29 @@ import '@gooddata/react-components/styles/css/main.css';
 import './Better.css';
 import C from './catalog.json';
 
-const METRIC_1 = 'Avg Activities per Rep'
-const METRIC_2 = '# of Activities'
-const METRIC_3 = 'Non-existing Metric'
+const MEASURE_1 = 'Avg Activities per Rep'
+const MEASURE_2 = '# of Activities'
+const MEASURE_3 = 'Non-existing Measure'
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.newMetricName = METRIC_1
+    this.newMeasureName = MEASURE_1
     this.state = {
-      metricName: this.newMetricName,
-      metricId: C[METRIC_1],
+      measureName: this.newMeasureName,
+      measureId: C[MEASURE_1],
       isLoading: false,
       error: null
     };
   }
 
-  setMetric(metricName) {
-    console.log('setMetric, metric = ', metricName)
+  setMeasure(measureName) {
+    console.log('setMeasure ', measureName)
     this.setState({
-      metricId: C[metricName], // triggers refreshing the Kpi component
+      measureId: C[measureName], // triggers refreshing the Kpi component
       error: null // let's start again and forget about previous errors
     })
-    this.newMetricName = metricName
+    this.newMeasureName = measureName
   }
 
   onLoadingChanged(e) {
@@ -36,7 +36,7 @@ class App extends Component {
       ...e,
     }
     if (!e.isLoading && !this.state.error) {
-      state.metricName = this.newMetricName // triggers refreshing the Kpi label
+      state.measureName = this.newMeasureName // triggers refreshing the Kpi label
     }
     this.setState(state)
   }
@@ -57,23 +57,23 @@ class App extends Component {
   render() {
     return (
       <div className="Demo">
-        <select onChange={(e) => this.setMetric(e.target.value)}>
-          <option key={METRIC_1}>{METRIC_1}</option>
-          <option key={METRIC_2}>{METRIC_2}</option>
-          <option key={METRIC_3}>{METRIC_3}</option>
+        <select onChange={(e) => this.setMeasure(e.target.value)}>
+          <option key={MEASURE_1}>{MEASURE_1}</option>
+          <option key={MEASURE_2}>{MEASURE_2}</option>
+          <option key={MEASURE_3}>{MEASURE_3}</option>
         </select>
 
         <div>
-          {this.state.metricName} is {' '}
+          {this.state.measureName} is {' '}
           <Kpi
              onLoadingChanged={this.onLoadingChanged.bind(this)}
              onError={this.onError.bind(this)}
              projectId="la84vcyhrq8jwbu4wpipw66q2sqeb923"
-             measure={this.state.metricId}
+             measure={this.state.measureId}
              format="#,##0" />
           <div className={'loading ' + this.loadingActiveClassName()}>Loading...</div>
           <div className={'error ' + this.errorActiveClassName()}>
-            Error loading <i>{this.state.metricName}</i>!
+            Error loading <i>{this.state.measureName}</i>!
           </div>
         </div>
       </div>

@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
 import {
-  setMetrics,
-  addMetric,
-  removeMetrics
+  setMeasures,
+  addMeasure,
+  removeMeasures
 } from './actions'
 
 const mapStateToProps = (state) => ({
-  metricGroups: state.metricGroups,
+  measureGroups: state.measureGroups,
   filterGroups: state.filterGroups,
   isLoading: state.isLoading,
   error: state.error
@@ -15,6 +15,6 @@ const mapStateToProps = (state) => ({
 export default (component) => (
   connect(
     mapStateToProps,
-    { setMetrics, addMetric, removeMetrics }
+    { setMeasures, addMeasure, removeMeasures }
   )(component)
 )

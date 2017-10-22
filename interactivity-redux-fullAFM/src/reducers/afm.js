@@ -1,12 +1,12 @@
 import * as Types from '../actions/types'
 
-const metricGroups = (state = {}, action) => {
+const measureGroups = (state = {}, action) => {
   switch (action.type) {
-    case Types.SET_METRIC:
-      const { metricContext, metrics } = action
+    case Types.SET_MEASURE:
+      const { measureContext, measures } = action
       return {
         ...state,
-        [metricContext]: metrics
+        [measureContext]: measures
       }
 
     default:
@@ -48,6 +48,6 @@ const filterGroups = (state = {}, action) => {
 }
 
 export {
-  metricGroups,
+  measureGroups,
   filterGroups
 }

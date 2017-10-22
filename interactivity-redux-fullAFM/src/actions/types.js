@@ -1,6 +1,6 @@
-export const ADD_METRIC = 'gd/examples/redux/ADD_METRIC'
-export const REMOVE_METRIC = 'gd/examples/redux/REMOVE_METRIC'
-export const SET_METRIC = 'gd/examples/redux/SET_METRIC'
+export const ADD_MEASURE = 'gd/examples/redux/ADD_MEASURE'
+export const REMOVE_MEASURE = 'gd/examples/redux/REMOVE_MEASURE'
+export const SET_MEASURE = 'gd/examples/redux/SET_MEASURE'
 
 export const UPDATE_ATTRIBUTE_FILTER = 'gd/examples/redux/UPDATE_ATTRIBUTE_FILTER'
 export const REMOVE_ATTRIBUTE_FILTER = 'gd/examples/redux/REMOVE_ATTRIBUTE_FILTER'

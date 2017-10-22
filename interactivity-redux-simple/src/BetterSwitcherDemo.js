@@ -2,31 +2,31 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { Kpi } from '@gooddata/react-components';
 import { connect } from 'react-redux'
-import { setMetric, onLoadingChanged, onError } from './actions'
+import { setMeasure, onLoadingChanged, onError } from './actions'
 
 import '@gooddata/react-components/styles/css/main.css';
 import './Better.css';
 import C from './catalog.json';
-import { METRIC_1, METRIC_2, METRIC_3 } from './metrics'
+import { MEASURE_1, MEASURE_2, MEASURE_3 } from './measures'
 
 
 class App extends Component {
 
   static propTypes = {
-    metricId: PropTypes.string,
-    metricName: PropTypes.string,
-    newMetricName: PropTypes.string,
+    measureId: PropTypes.string,
+    measureName: PropTypes.string,
+    newMeasureName: PropTypes.string,
     isLoading: PropTypes.bool,
     error: PropTypes.object,
-    setMetric: PropTypes.func.isRequired,
+    setMeasure: PropTypes.func.isRequired,
     onLoadingChanged: PropTypes.func.isRequired,
     onError: PropTypes.func.isRequired
   }
 
   static defaultProps = {
-    metricId: C['METRIC_1'],
-    metricName: METRIC_1,
-    newMetricName: METRIC_1,
+    measureId: C['MEASURE_1'],
+    measureName: MEASURE_1,
+    newMeasureName: MEASURE_1,
     isLoading: false
   }
 
@@ -39,26 +39,26 @@ class App extends Component {
   }
 
   render() {
-    const { metricId, metricName } = this.props
+    const { measureId, measureName } = this.props
     return (
       <div className="Demo">
-        <select onChange={(e) => this.props.setMetric(e.target.value)}>
-          <option key={METRIC_1}>{METRIC_1}</option>
-          <option key={METRIC_2}>{METRIC_2}</option>
-          <option key={METRIC_3}>{METRIC_3}</option>
+        <select onChange={(e) => this.props.setMeasure(e.target.value)}>
+          <option key={MEASURE_1}>{MEASURE_1}</option>
+          <option key={MEASURE_2}>{MEASURE_2}</option>
+          <option key={MEASURE_3}>{MEASURE_3}</option>
         </select>
 
         <div>
-          {metricName} is {' '}
+          {measureName} is {' '}
           <Kpi
              onLoadingChanged={this.props.onLoadingChanged}
              onError={this.props.onError}
              projectId="la84vcyhrq8jwbu4wpipw66q2sqeb923"
-             measure={metricId}
+             measure={measureId}
              format="#,##0" />
           <div className={'loading ' + this.loadingActiveClassName()}>Loading...</div>
           <div className={'error ' + this.errorActiveClassName()}>
-            Error loading <i>{metricName}</i>!
+            Error loading <i>{measureName}</i>!
           </div>
         </div>
       </div>
@@ -67,15 +67,15 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  metricId: state.metric.id,
-  metricName: state.metric.name,
+  measureId: state.measure.id,
+  measureName: state.measure.name,
   isLoading: state.isLoading,
   error: state.error
 })
 
 const _App = connect(
   mapStateToProps,
-  { setMetric, onLoadingChanged, onError }
+  { setMeasure, onLoadingChanged, onError }
 )(App)
 
 export default _App;

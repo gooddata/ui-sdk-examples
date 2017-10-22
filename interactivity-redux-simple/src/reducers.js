@@ -1,14 +1,14 @@
-import { METRIC_1 } from './metrics' // default metric
+import { MEASURE_1 } from './measures' // default measure
 import C from './catalog.json'
 
-export const metric = (state = { name: METRIC_1, id: C[METRIC_1] }, action) => {
+export const measure = (state = { name: MEASURE_1, id: C[MEASURE_1] }, action) => {
   switch (action.type) {
     // Used by both SimpleSwitcherDemo and BetterSwitcherDemo
-    case "SET_METRIC":
+    case "SET_MEASURE":
       return {
         ...state,
-        id: C[action.metric],
-        newName: action.metric,
+        id: C[action.measure],
+        newName: action.measure,
         error: false // new request starts, let's clean up errors
       }
 

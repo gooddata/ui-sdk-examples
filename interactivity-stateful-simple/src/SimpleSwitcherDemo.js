@@ -4,39 +4,39 @@ import { Kpi } from '@gooddata/react-components';
 import '@gooddata/react-components/styles/css/main.css';
 import C from './catalog.json';
 
-const METRIC_1 = 'Avg Activities per Rep'
-const METRIC_2 = '# of Activities'
-const METRIC_3 = 'Non-existing Metric'
+const MEASURE_1 = 'Avg Activities per Rep'
+const MEASURE_2 = '# of Activities'
+const MEASURE_3 = 'Non-existing Measure'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      metric: METRIC_1
+      measure: MEASURE_1
     };
   }
 
-  setMetric(metric) {
-    console.log('setMetric, metric = ', metric)
+  setMeasure(measure) {
+    console.log('setMeasure', measure)
     this.setState({
-      metric
+      measure
     })
   }
 
   render() {
     return (
       <div className="Demo">
-        <select onChange={(e) => this.setMetric(e.target.value)}>
-          <option key={METRIC_1}>{METRIC_1}</option>
-          <option key={METRIC_2}>{METRIC_2}</option>
-          <option key={METRIC_3}>{METRIC_3}</option>
+        <select onChange={(e) => this.setMeasure(e.target.value)}>
+          <option key={MEASURE_1}>{MEASURE_1}</option>
+          <option key={MEASURE_2}>{MEASURE_2}</option>
+          <option key={MEASURE_3}>{MEASURE_3}</option>
         </select>
 
         <div>
           The result is {' '}
           <Kpi
              projectId="la84vcyhrq8jwbu4wpipw66q2sqeb923"
-             measure={C[this.state.metric]}
+             measure={C[this.state.measure]}
              format="#,##0" />
         </div>
       </div>

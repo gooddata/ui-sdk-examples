@@ -19,35 +19,35 @@ const withoutKeys = (sourceObject, keysToExclude) => (
 export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends Component {
   static propTypes = {
     projectId: PropTypes.string.isRequired,
-    metricGroup: PropTypes.string,
-    metricGroups: PropTypes.object.isRequired, // via afmConnect
+    measureGroup: PropTypes.string,
+    measureGroups: PropTypes.object.isRequired, // via afmConnect
     filterGroup: PropTypes.string,
     filterGroups: PropTypes.object.isRequired, // via afmConnect
     afm: PropTypes.object // if no AFM is provided, the component won't be rendered until a measure or an attribute is retrieved from the connected measureGroup or attributeGroup
   }
 
   render() {
-    const { afm, metricGroup, metricGroups, filterGroup, filterGroups } = this.props
-    const dontPass = { measure: true, metricGroup: true, metricGroups: true,
+    const { afm, measureGroup, measureGroups, filterGroup, filterGroups } = this.props
+    const dontPass = { measure: true, measureGroup: true, measureGroups: true,
                      filterGroup: true, filterGroups: true,
                      attributeGroup: true, attributeGroups: true }
     const props = withoutKeys(this.props, dontPass)
-    const metrics = metricGroup ? metricGroups[metricGroup] : null
+    const measures = measureGroup ? measureGroups[measureGroup] : null
     const attributes = null // TODO
     const filters = null // TODO
     const newAfm = afm ? { ...afm } : {}
-    if (Array.isArray(metrics)) {
-      newAfm.measures = metrics.map(metric => (
-        (typeof(metric) === "string")
+    if (Array.isArray(measures)) {
+      newAfm.measures = measures.map(measure => (
+        (typeof(measure) === "string")
           ? {
-            id: metric, // reusing the measure identifier as an AFM specific identifier
+            id: measure, // reusing the measure identifier as an AFM specific identifier
             definition: {
               baseObject: {
-                id: metric // here we are referring to the actual measure from a GoodData workspace
+                id: measure // here we are referring to the actual measure from a GoodData workspace
               }
             }
           }
-          : metric
+          : measure
       ))
     }
     if (Array.isArray(attributes)) { // It's actually an array of attribute display forms a.k.a. labels
@@ -56,7 +56,7 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
         type: 'attribute' // TODO it can be a 'date' too...
       }))
     }
-    if (!Array.isArray(attributes) && !Array.isArray(metrics)) {
+    if (!Array.isArray(attributes) && !Array.isArray(measures)) {
       return null
     }
     return (
@@ -70,29 +70,29 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
  * afmConnect method.
  *
  * Depending the parameters, the component renders:
- * 1. First metric from the group identified by the metricGroup parameter
- * 2. If no such metri exists, the metric identified by the measure parameter is used
+ * 1. First measure from the group identified by the measureGroup parameter
+ * 2. If no such metri exists, the measure identified by the measure parameter is used
  * 3. If no measure parameter is provided, nothing is rendered (component returns null)
  */
 const KpiWrapper = (props) => {
-  const { measure, metricGroup, metricGroups, filterGroup, filterGroups } = props
-  const dontPass = { measure: true, metricGroup: true, metricGroups: true,
+  const { measure, measureGroup, measureGroups, filterGroup, filterGroups } = props
+  const dontPass = { measure: true, measureGroup: true, measureGroups: true,
                      filterGroup: true, filterGroups: true }
   const kpiProps = withoutKeys(props, dontPass)
 
-  const metrics = metricGroup ? metricGroups[metricGroup] : null
-  const metric  = metrics ? (metrics[0] || measure) : measure
+  const measures = measureGroup ? measureGroups[measureGroup] : null
+  const measureToPass  = measures ? (measures[0] || measure) : measure
 
-  return metric
-    ? <KpiOrig measure={metric} {...kpiProps} />
+  return measure
+    ? <KpiOrig measure={measureToPass} {...kpiProps} />
     : null
 }
 
 KpiWrapper.propTypes = {
   measure: PropTypes.string,
   projectId: PropTypes.string.isRequired,
-  metricGroup: PropTypes.string,
-  metricGroups: PropTypes.object.isRequired, // via afmConnect
+  measureGroup: PropTypes.string,
+  measureGroups: PropTypes.object.isRequired, // via afmConnect
   filterGroup: PropTypes.string,
   filterGroups: PropTypes.object.isRequired, // via afmConnect
 }

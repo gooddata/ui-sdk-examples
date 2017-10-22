@@ -5,36 +5,38 @@ import afmConnect from './afmConnect'
 import { Kpi, ColumnChart } from './components/afmConnected'
 import './App.css';
 import C from './catalog.json';
-import { METRIC_1, METRIC_2, METRIC_3 } from './metrics'
+import { MEASURE_1, MEASURE_2, MEASURE_3 } from './measures'
 
 const projectId = { projectId: "la84vcyhrq8jwbu4wpipw66q2sqeb923" }
 
-const PureMetricDropdown = ({ metrics, setMetrics, group }) => (
-  <select onChange={e => setMetrics(group, e.target.value)}>
-    {metrics.map(metricName =>
-      <option key={metricName} value={C[metricName]}>{metricName}</option>
+const PureMeasureDropdown = ({ measures, setMeasures, group }) => (
+  <select onChange={e => setMeasures(group, e.target.value)}>
+    {measures.map(measureName =>
+      <option key={measureName} value={C[measureName]}>{measureName}</option>
     )}
   </select>
 )
 
-const MetricDropdown = afmConnect(PureMetricDropdown)
+const MeasureDropdown = afmConnect(PureMeasureDropdown)
 
-const metrics = [ METRIC_1, METRIC_2, METRIC_3 ]
-const metricTransformation = metrics.map(m => ({ id: C[m], title: m }))
+const measures = [ MEASURE_1, MEASURE_2, MEASURE_3 ]
+const measureTransformation = measures.map(measureName =>
+  ({ id: C[measureName], title: measureName })
+)
 
 const App = () => (
   <div className="App">
-    <MetricDropdown group="mg1" metrics={metrics} />
+    <MeasureDropdown group="mg1" measures={measures} />
     <div>
-      <Kpi metricGroup="mg1" 
-        measure={C[METRIC_1]}
+      <Kpi measureGroup="mg1"
+        measure={C[MEASURE_1]}
         format="#,##0"
         { ...projectId } />
     </div>
     <div style={{height: 400, width: 600}}>
-      <ColumnChart metricGroup="mg1"
+      <ColumnChart measureGroup="mg1"
         { ...projectId }
-        transformation={{ measures: metricTransformation }} />
+        transformation={{ measures: measureTransformation }} />
     </div>
   </div>
 )
