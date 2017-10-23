@@ -9,8 +9,8 @@ const mapStateToProps = (state, ownProps) => {
   const { measureGroups, filterGroups } = state
   const { measureGroup, filterGroup } = ownProps
   return {
-    _measures: measureGroup ? measureGroups[measureGroup] : [],
-    _filters: filterGroup ? filterGroups[filterGroup] : []
+    measures: measureGroup ? measureGroups[measureGroup] : [],
+    filters: filterGroup ? filterGroups[filterGroup] : []
   }
 }
 

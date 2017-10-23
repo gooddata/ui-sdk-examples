@@ -25,15 +25,12 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
   }
 
   render() {
-    const { afm, _measures, _filters, _attributes } = this.props
-    const dontPass = {
-      _measures: true, _filters: true, _attributes: true,
-      measureGroup: true, filterGroup: true, attributeGroup: true
-    }
+    const { afm, measures, _filters, _attributes } = this.props
+    const dontPass = { measures: true, _filters: true, _attributes: true }
     const props = withoutKeys(this.props, dontPass)
     const newAfm = afm ? { ...afm } : {}
-    if (Array.isArray(_measures)) {
-      newAfm.measures = _measures.map(measure => (
+    if (Array.isArray(measures)) {
+      newAfm.measures = measures.map(measure => (
         (typeof(measure) === "string")
           ? {
             id: measure, // reusing the measure identifier as an AFM specific identifier
@@ -52,7 +49,7 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
         type: 'attribute' // TODO it can be a 'date' too...
       }))
     }
-    if (!Array.isArray(_attributes) && !Array.isArray(_measures)) {
+    if (!Array.isArray(_attributes) && !Array.isArray(measures)) {
       return null
     }
     return (
@@ -71,11 +68,11 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
  * 3. If no measure parameter is provided, nothing is rendered (component returns null)
  */
 const KpiWrapper = (props) => {
-  const { measure, _measures, _filters } = props
-  const dontPass = { measure: true, _measures: true, measureGroup: true, filterGroup: true }
+  const { measure, measures, _filters } = props
+  const dontPass = { measures: true }
   const kpiProps = withoutKeys(props, dontPass)
-  if (Array.isArray(_measures) && _measures[0]) {
-    kpiProps.measure = _measures[0]
+  if (Array.isArray(measures) && measures[0]) {
+    kpiProps.measure = measures[0]
   } else {
     kpiProps.measure = props.measure
   }
