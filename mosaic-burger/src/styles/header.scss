@@ -1,0 +1,56 @@
+@import 'variables';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 auto;
+    height: 71px;
+    padding: 0 $spacing;
+    color: $color-white;
+    background-color: #000;
+}
+
+.header-logo {
+    height: 49px;
+}
+
+.header-logo-image {
+    width: 49px;
+    height: 49px;
+    vertical-align: middle;
+}
+
+.header-app-name {
+    display: inline-block;
+    margin: 0 0 30px $spacing;
+    font-size: 18px;
+    vertical-align: middle;
+
+    @media #{$small-only} {
+        display: none;
+    }
+}
+
+.header-info {
+    font-size: 14px;
+    text-align: right;
+}
+
+.header-info-row {
+    display: block;
+    line-height: 23px;
+    white-space: nowrap;
+}
+
+.header-username {
+    font-weight: bold;
+
+    &::before {
+        content: 'user';
+        display: inline-block;
+        margin-right: 10px;
+        font-family: 'Indigo';
+        font-weight: normal;
+    }
+}

@@ -1,0 +1,38 @@
+@import 'variables';
+
+.reports {
+    display: flex;
+    flex-wrap: wrap;
+    margin: $spacing (-$spacing) (-$spacing) 0;
+}
+
+.report-wrapper {
+    position: relative;
+    width: 100%;
+    flex: 0 1 auto;
+    margin: 0 $spacing $spacing 0;
+    padding: $spacing;
+    border-radius: $border-radius;
+    box-shadow: $viz-box-shadow;
+    background-color: $viz-box-bg;
+}
+
+.report {
+    height: 200px;
+}
+
+.layout-full {
+    width: calc(100% - #{$spacing});
+}
+
+.layout-half {
+    width: calc(50% - #{$spacing});
+
+    @media #{$small-only} {
+        width: calc(100% - #{$spacing});
+    }
+}
+
+.highcharts-background {
+    fill: transparent !important;
+}

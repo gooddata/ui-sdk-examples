@@ -9,7 +9,8 @@
          "target": "https://secure.gooddata.com/"
       },
       "/*.html": {
-         "target": "https://secure.gooddata.com/"
+        "secure": false,
+        "target": "https://secure.gooddata.com/"
       }
    },
   "dependencies": {

@@ -1,0 +1,71 @@
+@import '~@gooddata/react-components/styles/scss/table.scss';
+@import '~@gooddata/react-components/styles/scss/charts.scss';
+@import 'typo';
+@import 'header';
+@import 'nav';
+@import 'button';
+@import 'report';
+@import 'kpi';
+
+html {
+    height: 100%;
+}
+
+body {
+    // avoid FF flash of unstyled content
+    display: block !important;
+    height: 100%;
+    margin: 0;
+
+    font-family: "Avenir", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.loading {
+    height: 100%;
+    width: 100%;
+    background: url('./assets/computing.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.app-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-container {
+    display: flex;
+    flex: 1 0 auto;
+    overflow: hidden;
+
+    @media #{$small-only} {
+        padding-bottom: 66px;
+    }
+}
+
+.body-nav {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+}
+
+.body-content {
+    flex: 1 1 auto;
+    overflow: hidden;
+    padding: $spacing;
+    text-align: center;
+}
+
+i {
+    display: inline-block;
+}
+
+svg {
+    width: inherit;
+    height: inherit;
+}

@@ -1,0 +1,8 @@
+@import 'variables';
+
+h1 {
+    margin: 0 0 $spacing;
+    font-size: 24px;
+    text-align: center;
+    color: $color-headings;
+}

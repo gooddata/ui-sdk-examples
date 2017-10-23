@@ -1,0 +1,16 @@
+@import 'variables';
+
+.button {
+    height: $button-height;
+    padding: 0 16px;
+    border: none;
+    border-radius: $button-height / 2;
+    outline: none;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: $button-height;
+    text-transform: uppercase;
+    color: $button-color;
+    background-color: $button-bg;
+    cursor: pointer;
+}

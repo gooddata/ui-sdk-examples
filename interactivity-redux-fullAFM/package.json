@@ -9,6 +9,7 @@
       "target": "https://secure.gooddata.com/"
     },
     "/*.html": {
+      "secure": false,
       "target": "https://secure.gooddata.com/"
     }
   },

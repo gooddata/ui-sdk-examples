@@ -1,0 +1,113 @@
+@import 'variables';
+
+.decision {
+    display: flex;
+    justify-content: center;
+    margin: 0 (-$spacing) (-$spacing) 0;
+    font-size: 18px;
+    text-align: center;
+    color: $color-text;
+
+    strong {
+        color: $color-headings;
+    }
+
+    @media #{$small-only} {
+        flex-wrap: wrap;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+.decision-message,
+.decision-action {
+    margin: 0 $spacing $spacing 0;
+}
+
+.decision-action,
+.kpi {
+    white-space: nowrap;
+}
+
+.kpi-triangle {
+    position: relative;
+    top: -1px;
+    margin-right: 3px;
+    fill: currentColor;
+}
+
+.kpi-positive {
+    color: $color-positive;
+}
+
+.kpi-negative {
+    color: $color-negative;
+}
+
+.kpi-triangle-up {
+    transform: rotate(180deg);
+}
+
+.message {
+    position: relative;
+    margin: $spacing 0;
+    padding: ($spacing / 2) ($spacing * 3);
+    border-radius: 100px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    color: $color-text-important;
+    background-color: #E4E4E4;
+}
+
+.message-ico {
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+}
+
+.kpi-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: $spacing 0;
+}
+
+$kpi-blocks-supported: 5;
+
+.kpi-block-item {
+    flex: 1 1 auto;
+    min-width: 150px;
+    padding: 0 $spacing $spacing;
+    color: $color-text-important;
+
+    @for $i from 1 through $kpi-blocks-supported {
+        &:first-child:nth-last-child(#{$i}) {
+            &,
+            ~ .kpi-block-item {
+                width: percentage(1 / $i);
+            }
+        }
+    }
+}
+
+.kpi-block-number,
+.kpi-block-title {
+    display: block;
+}
+
+.kpi-block-number {
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.kpi-block-title {
+    font-size: 14px;
+}
