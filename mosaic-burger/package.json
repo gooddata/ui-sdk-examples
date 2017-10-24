@@ -15,10 +15,12 @@
   },
   "dependencies": {
     "@gooddata/react-components": "^2.7.0",
+    "node-sass-chokidar": "^0.0.3",
     "prop-types": "^15.6.0",
     "react": "15.3.2",
     "react-dom": "15.3.2",
     "react-grid-layout": "^0.16.0",
+    "react-inlinesvg": "^0.6.2",
     "react-scripts": "1.0.14"
   },
   "scripts": {
