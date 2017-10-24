@@ -27,11 +27,11 @@ about running the Angular 4.x demo.
 
 ## Limitations
 
-For the sake of simplicity, all demos are using the GoodSales demo
+For the sake of simplicity, most demos use the GoodSales demo
 project workspace. This project workspace is accessible to all GoodData
 users with an account at https://secure.gooddata.com/. All demos are
 accessing the GoodData platform using a local proxy.
 
-Please refer to TODO TODO documentation to see what needs to be set up
+Please refer to [this documentation](https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/How+to+Access+the+GoodData+API+Directly) to see what needs to be set up
 for your app to be able to call GoodData API directly without a proxy
 (this is necessary to deploy your app in production).
