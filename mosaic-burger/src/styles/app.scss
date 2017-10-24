@@ -1,11 +1,9 @@
-@import '~@gooddata/react-components/styles/scss/table.scss';
-@import '~@gooddata/react-components/styles/scss/charts.scss';
-@import 'typo';
-@import 'header';
-@import 'nav';
-@import 'button';
-@import 'report';
-@import 'kpi';
+@import 'typo.scss';
+@import 'header.scss';
+@import 'nav.scss';
+@import 'button.scss';
+@import 'report.scss';
+@import 'kpi.scss';
 
 html {
     height: 100%;
