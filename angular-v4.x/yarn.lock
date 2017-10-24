@@ -158,9 +158,9 @@
   dependencies:
     tsickle "^0.21.0"
 
-"@gooddata/data-layer@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@gooddata/data-layer/-/data-layer-4.0.1.tgz#8162adcf48d8cc35c9e98b2c018d9e80ea860549"
+"@gooddata/data-layer@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@gooddata/data-layer/-/data-layer-4.0.2.tgz#048825e55233629cc04ef0df408790cf5dd170d2"
   dependencies:
     json-stable-stringify "1.0.1"
     lodash "4.17.4"
@@ -192,9 +192,9 @@
     react-textarea-autosize "4.0.5"
     rxjs "5.4.3"
 
-"@gooddata/indigo-visualizations@0.13.0":
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/indigo-visualizations/-/indigo-visualizations-0.13.0.tgz#26148982da0b74bd965a7c56e0c829200955bb3a"
+"@gooddata/indigo-visualizations@0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/indigo-visualizations/-/indigo-visualizations-0.14.0.tgz#3c1523f9f6ab2f47d96291ad64bc17f0a23a88e6"
   dependencies:
     "@gooddata/goodstrap" "53.0.1"
     "@gooddata/js-utils" "0.7.1"
@@ -229,16 +229,16 @@
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@gooddata/numberjs/-/numberjs-3.0.0.tgz#9d646f1f9c05614d18e08ac5024b2ba2f7139396"
 
-"@gooddata/react-components@^2.6.1":
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-2.6.1.tgz#fb6b81f36070ef9e485d6e6afe19714369a89e99"
+"@gooddata/react-components@2.7.1":
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-2.7.1.tgz#2c2dc42ad23d50a458896945000b267a91204242"
   dependencies:
-    "@gooddata/data-layer" "4.0.1"
+    "@gooddata/data-layer" "4.0.2"
     "@gooddata/goodstrap" "53.0.1"
-    "@gooddata/indigo-visualizations" "0.13.0"
+    "@gooddata/indigo-visualizations" "0.14.0"
     "@gooddata/js-utils" "0.9.0"
     classnames "2.2.5"
-    gooddata "4.1.0"
+    gooddata "4.3.1"
     lodash "4.17.4"
     numeral "2.0.6"
     prop-types "15.6.0"
@@ -2351,9 +2351,9 @@ globule@^1.0.0:
     lodash "~4.17.4"
     minimatch "~3.0.2"
 
-gooddata@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/gooddata/-/gooddata-4.1.0.tgz#48bb8dc35265d027b7458015503157551132bd76"
+gooddata@4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/gooddata/-/gooddata-4.3.1.tgz#d26e399f63c7c266e9be82bc2de6de07ec69c554"
   dependencies:
     es6-promise "3.0.2"
     fetch-cookie "0.4.0"

@@ -2,9 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
 
+## Prerequisites
+
+Unlike other demos that use a local proxy, this project assumes you have a white labelled GoodData domain with CORS set up according to [this tutorial](https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/How+to+Access+the+GoodData+API+Directly).
+
+Before you start, you have to edit the following files to replace values specific to our demo projects with your GoodData URL, your project ID and the identifier of an existing measure in your project:
+- src/main.ts (GoodData URL needs to be changed in the `config.setCustomDomain` call)
+- src/app/app.component.html (project ID and measure identifier have to changed in the `projectId` and `measure` parameters of the `app-kpi` component)
+
+Make sure you are logged into your GoodData domain and you have access to the project specified in your `app-kpi` component.
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `yarn start` for a dev server. Navigate to `http://local.dev:8443/`. The app will automatically reload if you change any of the source files.
+
+Note: `yarn start` calls `ng serve` with extra parameters that set https, hostname and port number. See `package.json` for details.
 
 ## Code scaffolding
 

@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --ssl=true --host=local.dev --port=8443",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,7 +21,7 @@
     "@angular/platform-browser": "^4.4.4",
     "@angular/platform-browser-dynamic": "^4.4.4",
     "@angular/router": "^4.4.4",
-    "@gooddata/react-components": "2.7.0-vaclavbohac-remove-string-enums-2017-10-23T16-20-07-871Z",
+    "@gooddata/react-components": "2.7.1",
     "core-js": "^2.4.1",
     "invariant": "^2.2.2",
     "react": "15.3.2",
