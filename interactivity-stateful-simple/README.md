@@ -1,3 +1,2 @@
-Run `yarn` first to install depedencies.
-
-Then you can start the demo by running `HTTPS=true yarn start`.
+1. Run `yarn` to install depedencies.
+2. Run `HTTPS=true yarn start` to start the demo.
