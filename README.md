@@ -4,7 +4,7 @@ Please see [this documentation](https://help.gooddata.com/display/bHsp5IhQjuz0e6
 
 ## How to run a demo
 
-All React demos must be run via HTTPS.
+All demos must be run via HTTPS. All React demos can be run using `yarn start`:
 
 On Mac or Linux, run
 `HTTPS=true yarn start`
@@ -20,7 +20,8 @@ For details about running the Angular 4.x demo, see the [angular-v4.x demo READM
 
 ## Limitations
 
-For the sake of simplicity, most demos use the GoodSales demo project. This project is accessible to all GoodData users with an account at https://secure.gooddata.com/. All demos access the GoodData platform using a local proxy.
+For the sake of simplicity, most demos use the GoodSales demo project. This project is accessible to all GoodData users with an account at https://secure.gooddata.com/. All React demos access the GoodData platform using a local proxy.
+
 For information on how to configure your app to call the GoodData API directly without a proxy (this is necessary to deploy your app to production), see [this tutorial](https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/How+to+Access+the+GoodData+API+Directly).
 
 # ui-sdk-examples
