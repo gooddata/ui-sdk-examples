@@ -1,16 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Kpi as KpiOrig, Execute as ExecuteOrig, AfmComponents } from '@gooddata/react-components';
+import KpiWrapper from './KpiWrapper'
+import { Execute as ExecuteOrig, AfmComponents } from '@gooddata/react-components';
 import afmConnect from '../afmConnect'
-
-const withoutKeys = (sourceObject, keysToExclude) => (
-  Object.keys(sourceObject)
-    .filter(key => !keysToExclude[key])
-    .reduce((obj, key) => {
-      obj[key] = sourceObject[key]
-      return obj
-    }, {})
-)
+import { withoutKeys } from './util'
 
 /**
  * A wrapper for GoodData AFM Components connected to AFM controls via the
@@ -57,37 +50,6 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
     )
   }
 })
-
-/**
- * A wrapper of GoodData's Kpi component connected to AFM controls via the
- * afmConnect method.
- *
- * Depending the parameters, the component renders:
- * 1. First measure from the group identified by the measureGroup parameter
- * 2. If no such metri exists, the measure identified by the measure parameter is used
- * 3. If no measure parameter is provided, nothing is rendered (component returns null)
- */
-const KpiWrapper = (props) => {
-  const { measure, measures, _filters } = props
-  const dontPass = { measures: true }
-  const kpiProps = withoutKeys(props, dontPass)
-  if (Array.isArray(measures) && measures[0]) {
-    kpiProps.measure = measures[0]
-  } else {
-    kpiProps.measure = props.measure
-  }
-
-  return measure
-    ? <KpiOrig {...kpiProps} />
-    : null
-}
-
-KpiWrapper.propTypes = {
-  measure: PropTypes.string,
-  projectId: PropTypes.string.isRequired,
-  measureGroup: PropTypes.string,
-  filterGroup: PropTypes.string
-}
 
 export const Kpi = afmConnect(KpiWrapper)
 
