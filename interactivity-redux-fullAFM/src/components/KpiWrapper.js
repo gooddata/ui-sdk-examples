@@ -3,6 +3,16 @@ import PropTypes from 'prop-types'
 import { Kpi } from '@gooddata/react-components';
 import { withoutKeys } from './util'
 
+const injectMeasure = (props, measures) => ({
+  measure: (Array.isArray(measures) && measures[0])
+    ? measures[0]
+    : props.measure
+})
+
+const injectFilters = (props, filters) => {
+  
+}
+
 /**
  * A wrapper of GoodData's Kpi component connected to AFM controls via the
  * afmConnect method.
@@ -15,15 +25,12 @@ import { withoutKeys } from './util'
 const KpiWrapper = (props) => {
   const { measure, measures, filters } = props
   const dontPass = { measures: true }
-  const kpiProps = withoutKeys(props, dontPass)
-  if (Array.isArray(measures) && measures[0]) {
-    kpiProps.measure = measures[0]
-  } else {
-    kpiProps.measure = props.measure
-  }
+  const origProps = withoutKeys(props, dontPass)
+  const measureProps = injectMeasure(props, measures)
+  const filterProps = injectFilters(props, filters)
 
   return measure
-    ? <Kpi {...kpiProps} />
+    ? <Kpi {...origProps} {...measureProps} {...filterProps} />
     : null
 }
 

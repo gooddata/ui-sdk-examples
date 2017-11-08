@@ -2,7 +2,9 @@ import { connect } from 'react-redux'
 import {
   setMeasures,
   addMeasure,
-  removeMeasures
+  removeMeasures,
+  updateAttributeFilter,
+  removeAttributeFilter
 } from './actions/afm'
 
 const mapStateToProps = (state, ownProps) => {
@@ -17,6 +19,7 @@ const mapStateToProps = (state, ownProps) => {
 export default (component) => (
   connect(
     mapStateToProps,
-    { setMeasures, addMeasure, removeMeasures }
+    { setMeasures, addMeasure, removeMeasures,
+      updateAttributeFilter, removeAttributeFilter }
   )(component)
 )

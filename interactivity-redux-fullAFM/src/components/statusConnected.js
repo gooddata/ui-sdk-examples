@@ -1,16 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Kpi as KpiOrig, Execute as ExecuteOrig, AfmComponents } from '@gooddata/react-components';
 import statusConnect from '../statusConnect'
-
-const withoutKeys = (sourceObject, keysToExclude) => (
-  Object.keys(sourceObject)
-    .filter(key => !keysToExclude[key])
-    .reduce((obj, key) => {
-      obj[key] = sourceObject[key]
-      return obj
-    }, {})
-)
 
 /**
  * A wrapper for GoodData AFM Components connected to AFM controls via the

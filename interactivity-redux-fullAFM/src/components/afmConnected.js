@@ -18,8 +18,8 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
   }
 
   render() {
-    const { afm, measures, _filters, _attributes } = this.props
-    const dontPass = { measures: true, _filters: true, _attributes: true }
+    const { afm, measures, filters, attributes } = this.props
+    const dontPass = { measures: true }
     const props = withoutKeys(this.props, dontPass)
     const newAfm = afm ? { ...afm } : {}
     if (Array.isArray(measures)) {
@@ -36,13 +36,13 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
           : measure
       ))
     }
-    if (Array.isArray(_attributes)) { // It's actually an array of attribute display forms a.k.a. labels
-      newAfm.attributes = _attributes.map(attr => ({
+    if (Array.isArray(attributes)) { // It's actually an array of attribute display forms a.k.a. labels
+      newAfm.attributes = attributes.map(attr => ({
         id: attr,
         type: 'attribute' // TODO it can be a 'date' too...
       }))
     }
-    if (!Array.isArray(_attributes) && !Array.isArray(measures)) {
+    if (!Array.isArray(attributes) && !Array.isArray(measures)) {
       return null
     }
     return (

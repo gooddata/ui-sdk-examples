@@ -5385,7 +5385,7 @@ react-dev-utils@^3.0.2, react-dev-utils@^3.1.0:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-"react-dnd-touch-backend@github:gooddata/react-dnd-touch-backend#v0.0.1":
+react-dnd-touch-backend@gooddata/react-dnd-touch-backend#v0.0.1:
   version "0.0.1"
   resolved "https://codeload.github.com/gooddata/react-dnd-touch-backend/tar.gz/6136545d1255c484739224525cb9beb2736e20e9"
   dependencies:
