@@ -32,7 +32,8 @@ export class App extends Component {
       super(props);
 
       this.state = {
-          isAuthorized: false
+          isAuthorized: false,
+          activitiesByDropdown: 'Activity Type'
       };
   }
 
@@ -42,6 +43,10 @@ export class App extends Component {
               () => this.setState({ isAuthorized: true }),
               () => window.location.href = getAccountPageUri() // eslint-disable-line no-return-assign
           );
+  }
+
+  setActivitiesBy(attributeName) {
+    this.setState({ activitiesByDropdown: attributeName })
   }
 
   render() {
@@ -127,14 +132,19 @@ export class App extends Component {
                     </div>
                     <div className="reports">
                         <div className="report-wrapper layout-half">
+                            Activities by <select onChange={(e) => this.setActivitiesBy(e.target.value)}>
+                                <option>Activity Type</option>
+                                <option>Activity Status</option>
+                            </select>
                             <div className="report" key="Report1">
                                 <BarChart onLoadingChanged={this.onLoadingChanged} afm={{ measures: [ { id: 'm1', definition: { baseObject: {
-                                    id: catalog['# of Activities'] }}} ], attributes: [ { id: catalog['Activity Type'], type: 'attribute'}]}}
+                                    id: catalog['# of Activities'] }}} ], attributes: [ { id: catalog[this.state.activitiesByDropdown], type: 'attribute'}]}}
                                     {...project}  transformation={{ measures: [ { id: 'm1', title: '# of Activities'}]}} />
                             </div>
                         </div>
 
                         <div className="report-wrapper layout-half">
+                            Win Rate Trend
                             <div className="report" key="Report2">
                                 <Visualization {...project} uri="/gdc/md/la84vcyhrq8jwbu4wpipw66q2sqeb923/obj/349237"/>
                             </div>
