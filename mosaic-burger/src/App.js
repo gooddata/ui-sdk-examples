@@ -92,7 +92,6 @@ export class App extends Component {
                     </ul>
                 </nav>
                 <section className="body-content">
-                    <h1>Smart Business Application Example</h1>
                     <div className="decision">
                         <span className="decision-message">
                             You need to staff <strong>336</strong> man hours this weeks <br/>
