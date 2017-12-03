@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 

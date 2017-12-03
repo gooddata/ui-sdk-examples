@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
 import { connect } from 'react-redux'
 import {
   setMeasures,

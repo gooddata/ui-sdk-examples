@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
 import * as Types from '../actions/afmTypes'
 import { MEASURE_2 } from '../measures'
 import C from '../catalog.json';

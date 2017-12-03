@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
 // In production, we register a service worker to serve assets from local cache.
 
 // This lets the app load faster on subsequent visits in production, and gives

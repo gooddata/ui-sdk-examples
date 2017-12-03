@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 

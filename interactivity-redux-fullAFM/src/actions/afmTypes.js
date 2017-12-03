@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
 export const ADD_MEASURE = 'gd/examples/redux/ADD_MEASURE'
 export const REMOVE_MEASURE = 'gd/examples/redux/REMOVE_MEASURE'
 export const SET_MEASURE = 'gd/examples/redux/SET_MEASURE'

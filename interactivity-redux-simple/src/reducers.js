@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
 import { MEASURE_1 } from './measures' // default measure
 import C from './catalog.json'
 

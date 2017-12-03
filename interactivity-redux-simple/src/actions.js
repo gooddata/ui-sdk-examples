@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
 // Used by both SimpleSwitcherDemo and BetterSwitcherDemo
 export const setMeasure = (measure) => ({
   type: "SET_MEASURE",

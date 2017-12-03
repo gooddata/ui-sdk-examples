@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 

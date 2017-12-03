@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
 import { AppPage } from './app.po';
 
 describe('angular-v4.x App', () => {
