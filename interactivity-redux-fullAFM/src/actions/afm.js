@@ -45,10 +45,22 @@ export const removeMeasures = (measureContext, ...measures) => ({
   measureContext, measures
 })
 
-export const updateAttributeFilter = (filterContext, label, valuesIn ) => ({
-  type: Types.UPDATE_ATTRIBUTE_FILTER,
-  filterContext, label, valuesIn
-})
+/**
+ * Sets the attribute filter for a specified filterContext
+ * to an attribute label being equal to a value (or one in
+ * a list of values).
+ *
+ * If the value is not provided (or is an empty string), the
+ * attribute filter for given attribute label is reset.
+ */
+export const updateAttributeFilter = (filterContext, label, valuesIn ) => (
+  (!valuesIn || (valuesIn === ""))
+    ? removeAttributeFilter(filterContext, label)
+    : {
+      type: Types.UPDATE_ATTRIBUTE_FILTER,
+      filterContext, label, valuesIn
+    }
+)
 
 export const removeAttributeFilter = (filterContext, label) => ({
   type: Types.REMOVE_ATTRIBUTE_FILTER,

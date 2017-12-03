@@ -9,9 +9,9 @@ const injectMeasure = (props, measures) => ({
     : props.measure
 })
 
-const injectFilters = (props, filters) => {
-  
-}
+const injectFilters = (props, filters) => ({
+  filters: []
+})
 
 /**
  * A wrapper of GoodData's Kpi component connected to AFM controls via the
@@ -27,7 +27,10 @@ const KpiWrapper = (props) => {
   const dontPass = { measures: true }
   const origProps = withoutKeys(props, dontPass)
   const measureProps = injectMeasure(props, measures)
-  const filterProps = injectFilters(props, filters)
+  const filterProps = { filters }
+
+  console.log('filters', filters)
+  console.log('filterProps', filterProps)
 
   return measure
     ? <Kpi {...origProps} {...measureProps} {...filterProps} />

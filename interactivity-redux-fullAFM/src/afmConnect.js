@@ -7,12 +7,28 @@ import {
   removeAttributeFilter
 } from './actions/afm'
 
+/**
+ * Transforms { label => definitions } hash of filters
+ * into an array of filters as defined at
+ * https://confluence.intgdc.com/display/VS/AFM#AFM-AttributeFilter
+ */
+const toAfmFilters = (filtersHash) => {
+  if (filtersHash && (typeof(filtersHash) === "object")) {
+    return Object.keys(filtersHash).map(label => ({
+      id: label,
+      type: "attribute",
+      ...filtersHash[label]
+    }))
+  }
+  return []
+} 
+
 const mapStateToProps = (state, ownProps) => {
   const { measureGroups, filterGroups } = state
   const { measureGroup, filterGroup } = ownProps
   return {
     measures: measureGroup ? measureGroups[measureGroup] : [],
-    filters: filterGroup ? filterGroups[filterGroup] : []
+    filters: filterGroup ? toAfmFilters(filterGroups[filterGroup]) : []
   }
 }
 

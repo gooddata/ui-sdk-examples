@@ -28,7 +28,7 @@ const PureMeasureDropdown = ({ measures, available, setMeasures, measureGroup })
 
 const MeasureDropdown = afmConnect(PureMeasureDropdown)
 
-const PureAttributeElements = ({ attributeLabel, filterGroup, updateAttributeFilter, removeAttributeFilter }) => {
+const PureAttributeElements = ({ attributeLabel, filterGroup, updateAttributeFilter }) => {
   const afm = { attributes: [ { id: attributeLabel, type: "attribute" } ]}
   return (
     <Execute {...projectId} afm={afm} onLoadingChanged={e=>{}} onError={e=>{}}>{
@@ -53,8 +53,6 @@ const measures = [ MEASURE_1, MEASURE_2, MEASURE_3 ]
 const measureTransformation = measures.map(measureName =>
   ({ id: C.metric(measureName), title: measureName })
 )
-
-console.log("M1", C.metric(MEASURE_1))
 
 const App = () => (
   <div className="App">

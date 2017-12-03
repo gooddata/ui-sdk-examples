@@ -36,6 +36,9 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
           : measure
       ))
     }
+    if (Array.isArray(filters)) {
+      newAfm.filters = filters
+    }
     if (Array.isArray(attributes)) { // It's actually an array of attribute display forms a.k.a. labels
       newAfm.attributes = attributes.map(attr => ({
         id: attr,

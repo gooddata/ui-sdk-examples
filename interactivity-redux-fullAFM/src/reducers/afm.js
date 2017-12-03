@@ -27,7 +27,7 @@ const filterGroups = (state = {}, action) => {
         ...state,
         [filterContext]: {
           ...filters,
-          [label]: { in: valuesIn }
+          [label]: { in: (typeof(valuesIn) === "array") ? valuesIn : [ valuesIn ] }
         }
       }
     }
