@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import '@gooddata/react-components/styles/css/main.css';
 
-import { CatalogHelper, Execute } from '@gooddata/react-components'
+import { Execute } from '@gooddata/react-components'
 import afmConnect from './afmConnect'
 import { Kpi, ColumnChart } from './components/smart'
 import './App.css';
 
-import { MEASURE_1, MEASURE_2, MEASURE_3 } from './measures'
+import { AVAILABLE_MEASURES } from './measures'
+import C from './catalog'
 
-import catalogJson from './catalog.json';
-const C = new CatalogHelper(catalogJson);
 const projectId = { projectId: "la84vcyhrq8jwbu4wpipw66q2sqeb923" }
 
 const PureMeasureDropdown = ({ measures, available, setMeasures, measureGroup }) => {
-  const selected = (measures && measures.length > 0) ? measures[0] : available[0]
+  const selected = (measures && measures.length > 0) ? measures[0] : AVAILABLE_MEASURES[0]
   return (
     <select onChange={e => setMeasures(measureGroup, e.target.value)}
             defaultValue={selected}>
@@ -50,20 +49,19 @@ const PureAttributeElements = ({ attributeLabel, filterGroup, updateAttributeFil
 
 const AttributeElements = afmConnect(PureAttributeElements)
 
-const measures = [ MEASURE_1, MEASURE_2, MEASURE_3 ]
-const measureTransformation = measures.map(measureName =>
+const measureTransformation = AVAILABLE_MEASURES.map(measureName =>
   ({ id: C.metric(measureName), title: measureName })
 )
 
 const App = () => (
   <div className="App">
     <span>Select measure:</span>
-    <MeasureDropdown measureGroup="mg1" available={measures} />
+    <MeasureDropdown measureGroup="mg1" available={AVAILABLE_MEASURES} />
     <span> AccountRegion:</span>
     <AttributeElements attributeLabel={C.attributeDisplayForm("Account Region")} filterGroup="fg1" />
     <div>
       <Kpi measureGroup="mg1" filterGroup="fg1"
-        measure={C.metric(MEASURE_1)}
+        measure={C.metric(AVAILABLE_MEASURES[0])}
         format="#,##0"
         { ...projectId } />
     </div>
