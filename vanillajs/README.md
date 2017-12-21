@@ -1,7 +1,7 @@
 # UI SDK with vanilla JavaScript
 
-A minimalistic demo of using GoodData React components using plain old
-vanilla JavaScript. You can use this example to integrate the UI SDK with any toolkits such as jQuery that directly manipulate the DOM tree and expect you to provide all libraries via the `<script src>` HTML tag.
+A minimalistic demo of using GoodData React components with just plain old
+vanilla JavaScript - no transpiling, no ES6, no React, no Angular. You can use this example to integrate the UI SDK with other toolkits such as jQuery that directly manipulate the DOM tree and expect you to provide all libraries via the `<script src>` HTML tag.
 
 ## Getting Started
 
