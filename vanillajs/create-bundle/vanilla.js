@@ -18,6 +18,9 @@ exports.ReactContentRenderer = {
     nodes.forEach(node => React.unmountComponentAtNode(node));
     nodes = [];
   },
+  unmount: function(node) {
+    React.unmountComponentAtNode(node)
+  },
   /**
    * Creates, renders and returns a React element created
    * from component class using given props and rendered 
