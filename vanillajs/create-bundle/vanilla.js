@@ -1,17 +1,10 @@
-// 1. get and build gooddata-react-components
-// 2. copy me to gooddata-react-components/dist
-// 3. copy gooddata_react_components_webpack.conf.js to gooddata-react-components
-// 4. cd gooddata-react-components
-// 5. run webpack.js --config gooddata_react_components_webpack
-// 6. copy gooddata_react_components_bundle.js to your non-React project
-
 "use strict";
 exports.__esModule = true;
 var React = require("react");
 var ReactDOM = require("react-dom");
 exports.gooddata = require("gooddata");
 
-var GDRC  = require("./index.js"); // GoodData React Components
+var GDRC  = require("@gooddata/react-components"); // GoodData React Components
 
 // buffer of DOM elements rendering React components
 var nodes = [];
