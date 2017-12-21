@@ -17,7 +17,7 @@ The bundle can be created using the files in the `create-bundle` folder, specifi
 
 ### Configuring your domain
 
-This demo assumes you have a white labelled GoodData domain with CORS set up according to [this tutorial](https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/How+to+Access+the+GoodData+API+Directly).
+This demo assumes you have a white labelled GoodData domain with CORS set up according to [this tutorial](https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/How+to+Access+the+GoodData+API+Directly). The demo code will *only* work if served via HTTPS from a URL explicitely permitted in the CORS configuration of your GoodData domain.
 
 ### Configuring the index.html
 
