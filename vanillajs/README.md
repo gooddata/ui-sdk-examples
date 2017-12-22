@@ -23,6 +23,10 @@ This demo assumes you have a white labelled GoodData domain with CORS set up acc
 
 The JavaScript code within the `index.html` file includes hardcoded references to specific GoodData white labeled domain (whitelabeling.gooddata.com), specific GoodData projectId and specific metric identifiers - you may want to replace these to be able to run the demo in your evironment.
 
+### The result
+
+![Screencast as an animated gif](https://github.com/koles/pokusy/raw/vanillajs/vanillajs/uisdk-vanilla-demo.gif)
+
 ## Using the bundle from your code
 
 When the bundle is included using the `<script src>` tag it exposes a global variable `GDRC` (stands for GoodData React Components) that includes a few utility methods to make to use of the UI SDK easier in a non-React environment:
