@@ -13,6 +13,6 @@
     "webpack": "^3.10.0"
   },
   "scripts": {
-    "bundle": "webpack --config webpack.conf.js"
+    "bundle": "webpack --config webpack.conf.js && cp './node_modules/@gooddata/react-components/styles/css/main.css' dist/gooddata_react_components_bundle.css"
   }
 }

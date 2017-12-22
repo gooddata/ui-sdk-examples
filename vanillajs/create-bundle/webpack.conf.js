@@ -10,6 +10,6 @@ module.exports = {
         libraryTarget: 'window'
     },
     plugins: [
-        new Uglify()
+        new Uglify(),
     ]
 }

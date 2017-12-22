@@ -13,7 +13,7 @@ The bundle can be created using the files in the `create-bundle` folder, specifi
 
 1. `cd create-bundle`
 2. `yarn && yarn bundle` or `npm install && npm bundle`
-3. `cp dist/gooddata_react_components_bundle.js ..`
+3. `cp dist/gooddata_react_components_bundle.* ..`
 
 ### Configuring your domain
 
