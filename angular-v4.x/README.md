@@ -18,7 +18,7 @@ Make sure you are logged into your GoodData domain and you have access to the pr
 
 ### Starting the Development Server
 
-Run `yarn start` for a dev server. Navigate to `http://local.dev:8443/`. The app will automatically reload if you change any of the source files.
+Run `yarn start` for a dev server. Navigate to `https://local.dev:8443/`. The app will automatically reload if you change any of the source files.
 
 Note: `yarn start` calls `ng serve` with extra parameters that set https, hostname and port number. See `package.json` for details.
 
