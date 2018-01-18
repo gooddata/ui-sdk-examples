@@ -138,9 +138,20 @@ export class App extends Component {
                                 <option>Activity Status</option>
                             </select>
                             <div className="report" key="Report1">
-                                <BarChart onLoadingChanged={this.onLoadingChanged} afm={{ measures: [ { id: 'm1', definition: { baseObject: {
-                                    id: catalog['# of Activities'] }}} ], attributes: [ { id: catalog[this.state.activitiesByDropdown], type: 'attribute'}]}}
-                                    {...project}  transformation={{ measures: [ { id: 'm1', title: '# of Activities'}]}} />
+                                <BarChart {...project} onLoadingChanged={this.onLoadingChanged} afm={{
+                                    measures: [ {
+                                        localIdentifier: 'm1',
+                                        definition: {
+                                            measure: { item: { identifier: catalog['# of Activities'] }}
+                                        },
+                                        alias: '# of Activities'
+                                    } ],
+                                    attributes: [ {
+                                        localIdentifier: 'a1',
+                                        displayForm: { identifier: catalog[this.state.activitiesByDropdown] },
+                                    } ]
+                                 }}
+                                />
                             </div>
                         </div>
 

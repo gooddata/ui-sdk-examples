@@ -14,7 +14,7 @@
     }
   },
   "dependencies": {
-    "@gooddata/react-components": "^2.7.0",
+    "@gooddata/react-components": "^3.0.1",
     "node-sass-chokidar": "^0.0.3",
     "prop-types": "^15.6.0",
     "react": "15.3.2",
