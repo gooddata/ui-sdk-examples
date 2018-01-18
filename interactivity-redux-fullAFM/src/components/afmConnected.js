@@ -27,10 +27,12 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
       newAfm.measures = measures.map(measure => (
         (typeof(measure) === "string")
           ? {
-            id: measure, // reusing the measure identifier as an AFM specific identifier
+            localIdentifier: measure, // reusing the measure identifier as an AFM specific identifier
             definition: {
-              baseObject: {
-                id: measure // here we are referring to the actual measure from a GoodData workspace
+              measure: {
+                item: {
+                  identifier: measure // here we are referring to the actual measure from a GoodData workspace
+                }
               }
             }
           }
@@ -41,10 +43,15 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
       newAfm.filters = filters
     }
     if (Array.isArray(attributes)) { // It's actually an array of attribute display forms a.k.a. labels
-      newAfm.attributes = attributes.map(attr => ({
-        id: attr,
-        type: 'attribute' // TODO it can be a 'date' too...
-      }))
+      newAfm.attributes = attributes.map(attr => (
+        (typeof(attr) === "string") ? {
+          localIdentifier: attr,
+          displayForm: {
+            identifier: attr
+          }
+        }
+        : attr
+      ))
     }
     if (!Array.isArray(attributes) && !Array.isArray(measures)) {
       return null
