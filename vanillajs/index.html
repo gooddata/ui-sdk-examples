@@ -1,0 +1,83 @@
+<html>
+<head>
+<script src="gooddata_react_components_bundle.js"></script>
+<link rel="stylesheet" type="text/css" href="gooddata_react_components_bundle.css">
+</head>
+<body>
+
+<h1>UI SDK + Vanilla.js Demo</h1>
+
+<p>This demo uses a UI SDK based bundle that exposes a window variable GDRC which
+  is an object containing:
+  <ul>
+    <li>Top level UI SDK React Components such as <tt><a href="https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/AFM+React+Components">AfmComponents</a></tt> or <tt><a href="https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/React+Components#ReactComponents-KPI">Kpi</a></tt></li>
+    <li>The <tt>gooddata</tt> object providing access to the low level <a href="http://sdk.gooddata.com/gooddata-js/api/modules/sdk.html">GoodDataJS</a> SDK</li>
+    <li><tt>ReactContentRenderer</tt> function inspired by <a href="">this tutorial</a></li>
+  </ul>
+<p>
+<p>
+  The bundle has been created using <a href="https://github.com/gooddata/ui-sdk-examples/tree/vanillajs/vanillajs/create-bundle">this</a> webpack config and a custom entry file.
+</p>
+<p>
+  The drop down below allows you to switch between the Checkouts and Impressions metric from the <a href="https://whitelabeling.gooddata.com/#s=/gdc/projects/kf0vsjlf9mll0osg6hmtppgm1nkjsi9r">SDK Tests</a> project from the <i>whitelabeling.gooddata.com</i> domain.
+</p>
+
+<select id="metricSwitcher">
+  <option value="aqyCuRZbheEx">Checkouts</option>
+  <option value="aaeFKXFYiCc0">Impressions</option>
+</select>
+
+<div id="kpi"></div>
+<div id="column-chart" style="width: 500px; height: 400px;"></div>
+
+<script>
+GDRC.gooddata.config.setCustomDomain('https://whitelabeling.gooddata.com');
+
+function renderKpi(measureId) {
+  GDRC.ReactContentRenderer.render(
+    // Kpi component
+    GDRC.Kpi,
+    // props to be passed to Kpi component
+    {
+      projectId: 'kf0vsjlf9mll0osg6hmtppgm1nkjsi9r', // 'SDK Tests (Consumer Insights)'' project
+      measure: measureId,
+      format: '#,##0'
+    },
+    // target DOM node
+    document.getElementById('kpi')
+  );
+}
+
+function renderColumnChart(measureId) {
+  var afm = {
+    measures: [ {
+      id: 'Value', definition: { baseObject: { id: measureId } }
+    }],
+    attributes: [ { id: "label.store_details.region", type: "attribute" } ]
+  };
+  GDRC.ReactContentRenderer.render(
+    GDRC.AfmComponents.ColumnChart,
+    { projectId: 'kf0vsjlf9mll0osg6hmtppgm1nkjsi9r', afm: afm },
+    document.getElementById('column-chart')
+  );
+}
+
+function renderVisualizations(measureId) {
+  renderKpi(measureId);
+  renderColumnChart(measureId);
+}
+
+document.getElementById('metricSwitcher').onchange = function(event) {
+  if (!event.target.value) {
+    console.error('Nothing selected');
+  } else {
+    renderVisualizations(event.target.value); // re-render the Kpi with the selected metric
+  }
+}
+
+renderVisualizations('aqyCuRZbheEx'); // 'Checkouts' metric - https://whitelabeling.gooddata.com/#s=/gdc/projects/kf0vsjlf9mll0osg6hmtppgm1nkjsi9r|objectPage|/gdc/md/kf0vsjlf9mll0osg6hmtppgm1nkjsi9r/obj/16202
+
+</script>
+
+</body>
+</html>
