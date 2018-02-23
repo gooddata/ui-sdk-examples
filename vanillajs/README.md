@@ -15,7 +15,7 @@ The bundle can be created using the files in the `create-bundle` folder, specifi
 2. `yarn && yarn bundle` or `npm install && npm bundle`
 3. `cp dist/gooddata_react_components_bundle.* ..`
 
-### Configuring your domain
+### Setting up CORS
 
 This demo assumes you have a white labelled GoodData domain with CORS set up according to [this tutorial](https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/How+to+Access+the+GoodData+API+Directly). The demo code will *only* work if served via HTTPS from a URL explicitely permitted in the CORS configuration of your GoodData domain.
 
