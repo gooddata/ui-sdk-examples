@@ -49,13 +49,15 @@
 </div>
 
 <script>
+var projectId = 'kf0vsjlf9mll0osg6hmtppgm1nkjsi9r';
+
 function renderKpi(measureId) {
   GDRC.ReactContentRenderer.render(
     // Kpi component
     GDRC.Kpi,
     // props to be passed to Kpi component
     {
-      projectId: 'kf0vsjlf9mll0osg6hmtppgm1nkjsi9r', // 'SDK Tests (Consumer Insights)'' project
+      projectId: projectId, // 'SDK Tests (Consumer Insights)'' project
       measure: measureId,
       format: '#,##0'
     },
@@ -73,7 +75,7 @@ function renderColumnChart(measureId) {
   };
   GDRC.ReactContentRenderer.render(
     GDRC.AfmComponents.ColumnChart,
-    { projectId: 'kf0vsjlf9mll0osg6hmtppgm1nkjsi9r', afm: afm },
+    { projectId: projectId, afm: afm },
     document.getElementById('column-chart')
   );
 }
