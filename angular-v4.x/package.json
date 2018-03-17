@@ -21,7 +21,7 @@
     "@angular/platform-browser": "^4.4.4",
     "@angular/platform-browser-dynamic": "^4.4.4",
     "@angular/router": "^4.4.4",
-    "@gooddata/react-components": "^3.0.1",
+    "@gooddata/react-components": "^4.1.0",
     "core-js": "^2.4.1",
     "invariant": "^2.2.2",
     "react": "15.3.2",
