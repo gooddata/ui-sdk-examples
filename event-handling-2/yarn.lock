@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@gooddata/data-layer@^5.0.3":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@gooddata/data-layer/-/data-layer-5.0.4.tgz#b166c4ef82a9ff3049094ea6b23dd1bf8583e580"
+"@gooddata/data-layer@6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/data-layer/-/data-layer-6.0.0.tgz#239890e646da449356d064e212e5c7e294cd5c60"
   dependencies:
     json-stable-stringify "^1.0.1"
     lodash "^4.17.4"
@@ -36,9 +36,9 @@
     react-textarea-autosize "4.0.5"
     rxjs "5.4.3"
 
-"@gooddata/goodstrap@^53.0.1":
-  version "53.2.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-53.2.0.tgz#478f8c3b8bb1a5743e65bb927843dddae2562c8e"
+"@gooddata/goodstrap@54.0.0":
+  version "54.0.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-54.0.0.tgz#9c342f568433c25354dcb4f43573e78fe2ae2a3c"
   dependencies:
     "@gooddata/js-utils" "0.7.1"
     classnames "2.2.5"
@@ -62,9 +62,9 @@
     react-textarea-autosize "4.0.5"
     rxjs "5.4.3"
 
-"@gooddata/indigo-visualizations@^1.1.11":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/indigo-visualizations/-/indigo-visualizations-1.2.0.tgz#4ca67d50815b5e43d9ab90d96b29fed039f6cf57"
+"@gooddata/indigo-visualizations@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/indigo-visualizations/-/indigo-visualizations-1.4.0.tgz#648165d0214b537642a762070ed6beb01a6da6ae"
   dependencies:
     "@gooddata/goodstrap" "53.0.1"
     "@gooddata/js-utils" "0.7.1"
@@ -106,25 +106,25 @@
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/@gooddata/numberjs/-/numberjs-3.1.2.tgz#82dd26486edeb21de37cfe538915f93cd403e801"
 
-"@gooddata/react-components@^3.0.1":
-  version "3.0.13"
-  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-3.0.13.tgz#73bf66abda9c456a225d26183b28872022500152"
+"@gooddata/react-components@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-4.1.0.tgz#952665ee4de9b5c64efe42b440d4655dfe07d264"
   dependencies:
-    "@gooddata/data-layer" "^5.0.3"
-    "@gooddata/goodstrap" "^53.0.1"
-    "@gooddata/indigo-visualizations" "^1.1.11"
+    "@gooddata/data-layer" "6.0.0"
+    "@gooddata/goodstrap" "54.0.0"
+    "@gooddata/indigo-visualizations" "1.4.0"
     "@gooddata/js-utils" "^0.9.0"
     "@gooddata/numberjs" "^3.1.2"
     classnames "^2.2.5"
-    gooddata "^4.5.1"
+    gooddata "5.0.0"
     lodash "^4.17.4"
     prop-types "^15.6.0"
     react-intl "^2.2.3"
     rxjs "^5.5.6"
 
-"@gooddata/typings@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@gooddata/typings/-/typings-0.0.4.tgz#cc2a625010a15ee2dbe698caaa35b518dd33f1fd"
+"@gooddata/typings@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@gooddata/typings/-/typings-1.0.1.tgz#ec39e13bfb5ba28ce0f5b558e1745ed9e566f897"
 
 abab@^1.0.3:
   version "1.0.4"
@@ -3002,11 +3002,11 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-gooddata@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/gooddata/-/gooddata-4.5.1.tgz#3cb018496e1d6e2d9f613680822471cd679030b4"
+gooddata@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/gooddata/-/gooddata-5.0.0.tgz#45a0e277c2b9867ebac537388c043f07852be8a2"
   dependencies:
-    "@gooddata/typings" "0.0.4"
+    "@gooddata/typings" "1.0.1"
     es6-promise "3.0.2"
     fetch-cookie "0.4.0"
     invariant "2.2.2"
