@@ -49,6 +49,8 @@ export const error = (state = null, action) => {
   switch (action.type) {
     case "ERROR":
       return action.error
+    case "LOADING_CHANGED":
+      return null
     default:
       return state
   }
