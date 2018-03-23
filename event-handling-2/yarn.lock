@@ -3015,6 +3015,19 @@ gooddata@5.0.0:
     md5 "2.2.1"
     qs "6.5.1"
 
+gooddata@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/gooddata/-/gooddata-5.0.1.tgz#9828534657233aa4a29df2f14ce4de1a9a376318"
+  dependencies:
+    "@gooddata/typings" "1.0.1"
+    es6-promise "3.0.2"
+    fetch-cookie "0.4.0"
+    invariant "2.2.2"
+    isomorphic-fetch "2.2.1"
+    lodash "4.17.4"
+    md5 "2.2.1"
+    qs "6.5.1"
+
 got@^5.0.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/got/-/got-5.7.1.tgz#5f81635a61e4a6589f180569ea4e381680a51f35"
