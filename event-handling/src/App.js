@@ -46,8 +46,8 @@ class App extends Component {
               drillableItems={ [ { identifier: "atSHqCtAePe4" } ] }
             />
           </div>
-          Open the console, click any of the bars above and check the console for callback parameters
-          <tt>drillContext</tt> and <tt>executionContext</tt>.
+          Open the console, click any of the bars above and check the console for callback
+          parameters <tt>drillContext</tt> and <tt>executionContext</tt>.
         </div>
       );
    }
