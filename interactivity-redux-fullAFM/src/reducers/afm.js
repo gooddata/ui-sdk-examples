@@ -21,14 +21,14 @@ const measureGroups = (state = {
 
 const filterGroups = (state = {}, action) => {
   switch (action.type) {
-    case Types.UPDATE_ATTRIBUTE_FILTER: {
-      const { filterContext, label, valuesIn } = action
+    case Types.UPDATE_POSITIVE_ATTRIBUTE_FILTER: {
+      const { filterContext, label, values } = action
       const filters = state[filterContext] || {}
       return {
         ...state,
         [filterContext]: {
           ...filters,
-          [label]: { in: (typeof(valuesIn) === "array") ? valuesIn : [ valuesIn ] }
+          [label]: { in: (typeof(values) === "array") ? values : [ values ] }
         }
       }
     }

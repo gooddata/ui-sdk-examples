@@ -54,12 +54,12 @@ export const removeMeasures = (measureContext, ...measures) => ({
  * If the value is not provided (or is an empty string), the
  * attribute filter for given attribute label is reset.
  */
-export const updateAttributeFilter = (filterContext, label, valuesIn ) => (
-  (!valuesIn || (valuesIn === ""))
+export const updatePositiveAttributeFilter = (filterContext, label, values) => (
+  (!values || (values === ""))
     ? removeAttributeFilter(filterContext, label)
     : {
-      type: Types.UPDATE_ATTRIBUTE_FILTER,
-      filterContext, label, valuesIn
+      type: Types.UPDATE_POSITIVE_ATTRIBUTE_FILTER,
+      filterContext, label, values
     }
 )
 

@@ -4,7 +4,7 @@ import {
   setMeasures,
   addMeasure,
   removeMeasures,
-  updateAttributeFilter,
+  updatePositiveAttributeFilter,
   removeAttributeFilter
 } from './actions/afm'
 
@@ -16,9 +16,10 @@ import {
 const toAfmFilters = (filtersHash) => {
   if (filtersHash && (typeof(filtersHash) === "object")) {
     return Object.keys(filtersHash).map(label => ({
-      id: label,
-      type: "attribute",
-      ...filtersHash[label]
+      positiveAttributeFilter: {
+        displayForm: { identifier: label },
+        ...filtersHash[label]
+      }
     }))
   }
   return []
@@ -37,6 +38,6 @@ export default (component) => (
   connect(
     mapStateToProps,
     { setMeasures, addMeasure, removeMeasures,
-      updateAttributeFilter, removeAttributeFilter }
+      updatePositiveAttributeFilter, removeAttributeFilter }
   )(component)
 )
