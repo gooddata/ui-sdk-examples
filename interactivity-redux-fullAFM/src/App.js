@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import '@gooddata/react-components/styles/css/main.css';
 
-import { Execute } from '@gooddata/react-components'
+import { AttributeElements } from '@gooddata/react-components';
 import afmConnect from './afmConnect'
 import { Kpi, ColumnChart } from './components/smart'
 import './App.css';
@@ -47,22 +47,24 @@ const MeasureDropdown = afmConnect(PureMeasureDropdown)
  * The updateAttributeFilter is analogous to the setMeasures
  * action creator described above.
  */
-const PureAttributeElementsDropdown = ({ attributeLabel, filterGroup, updateAttributeFilter }) => {
-  const afm = { attributes: [ { id: attributeLabel, type: "attribute" } ]}
+const PureAttributeElementsDropdown = ({ attributeLabel, filterGroup, updatePositiveAttributeFilter }) => {
+  // for the sake of simplicity, let's assume no paging is required
+  // to render filter
   return (
-    <Execute {...projectId} afm={afm} onLoadingChanged={e=>{}} onError={e=>{}}>{
+    <AttributeElements identifier={attributeLabel} {...projectId} options={{ limit: 20 }}>{
       (output) => (
-        <select onChange={e => updateAttributeFilter(filterGroup, attributeLabel, e.target.value)}>
+        <select onChange={e => updatePositiveAttributeFilter(filterGroup, attributeLabel, e.target.value)}>
           <option key="-1" value="">All Regions</option>
+          {console.log('output', output)}
           {
-            output.result.rawData.map(row => (
-              <option key={row[0].id} value={row[0].id}>
-                {row[0].name || 'Unknown Region'}
+            (output.validElements == null) ? null : output.validElements.items.map(({ element }) => (
+              <option key={element.uri} value={element.uri}>
+                {element.title || 'Unknown Region'}
               </option>
             ))
           }
         </select>
-    )}</Execute>
+    )}</AttributeElements>
   )
 }
 
