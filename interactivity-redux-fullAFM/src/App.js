@@ -4,7 +4,7 @@ import '@gooddata/react-components/styles/css/main.css';
 
 import { AttributeElements } from '@gooddata/react-components';
 import afmConnect from './afmConnect'
-import { Kpi, ColumnChart } from './components/smart'
+import { Kpi, ColumnChart } from './components/afmConnected'
 import './App.css';
 
 import { AVAILABLE_MEASURES, AVAILABLE_ATTRIBUTES } from './constants'

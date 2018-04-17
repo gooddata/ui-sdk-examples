@@ -1,7 +1,6 @@
 {
-  "name": "interactivity-redux",
+  "name": "demo-gooddata-redux-afm",
   "version": "0.1.0",
-  "private": true,
   "proxy": {
     "/gdc": {
       "changeOrigin": true,

@@ -4,7 +4,6 @@ import { createLogger } from 'redux-logger'
 import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
 
 import { measureGroups, filterGroups, labelGroups } from './reducers/afm'
-import { isLoading, error } from './reducers/status'
 import { AVAILABLE_MEASURES, AVAILABLE_ATTRIBUTES } from './constants'
 import C from './catalog'
 
@@ -24,7 +23,7 @@ const configureStore = () => {
   }
 
   const store = createStore(
-    combineReducers({ measureGroups, labelGroups, filterGroups, isLoading, error }),
+    combineReducers({ measureGroups, labelGroups, filterGroups }),
     initialState,
     composeWithDevTools(
         applyMiddleware(...middlewares)
