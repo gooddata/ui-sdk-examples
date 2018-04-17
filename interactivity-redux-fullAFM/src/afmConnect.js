@@ -9,7 +9,9 @@ import {
   addLabel,
   removeLabels,
   updatePositiveAttributeFilter,
-  removeAttributeFilter
+  removeAttributeFilter,
+  updateDateFilter,
+  removeDateFilter
 } from './actions/afm'
 
 /**
@@ -19,12 +21,7 @@ import {
  */
 const toAfmFilters = (filtersHash) => {
   if (filtersHash && (typeof(filtersHash) === "object")) {
-    return Object.keys(filtersHash).map(label => ({
-      positiveAttributeFilter: {
-        displayForm: { identifier: label },
-        ...filtersHash[label]
-      }
-    }))
+    return Object.keys(filtersHash).map(label => filtersHash[label])
   }
   return []
 } 
@@ -44,6 +41,7 @@ export default (component) => (
     mapStateToProps,
     { setMeasures, addMeasure, removeMeasures,
       setLabels, addLabel, removeLabels,
-      updatePositiveAttributeFilter, removeAttributeFilter }
+      updatePositiveAttributeFilter, removeAttributeFilter,
+      updateDateFilter, removeDateFilter }
   )(component)
 )

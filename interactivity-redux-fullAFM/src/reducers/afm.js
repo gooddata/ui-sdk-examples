@@ -38,7 +38,12 @@ const filterGroups = (state = {}, action) => {
         ...state,
         [filterContext]: {
           ...filters,
-          [label]: { in: (typeof(values) === "array") ? values : [ values ] }
+          [label]: {
+            positiveAttributeFilter: {
+              displayForm: { identifier: label },
+              in: (typeof(values) === "array") ? values : [ values ]
+            }
+          }
         }
       }
     }
@@ -55,6 +60,25 @@ const filterGroups = (state = {}, action) => {
       }
       delete newState[filterContext][label]
       return newState
+    }
+
+    case Types.UPDATE_DATE_FILTER: {
+      const { filterContext, dataSet, grain, start, end } = action
+      const filters = state[filterContext] || {}
+      return {
+        ...state,
+        [filterContext]: {
+          ...filters,
+          [dataSet]: {
+            relativeDateFilter: {
+              dataSet: { identifier: dataSet },
+              granularity: grain,
+              from: start,
+              to: end
+            }
+          }
+        }
+      }
     }
 
     default:
