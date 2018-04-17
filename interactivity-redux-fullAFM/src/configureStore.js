@@ -1,9 +1,11 @@
 // Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { createLogger } from 'redux-logger'
-import { measureGroups, filterGroups } from './reducers/afm'
+import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
+
+import { measureGroups, filterGroups, labelGroups } from './reducers/afm'
 import { isLoading, error } from './reducers/status'
-import { AVAILABLE_MEASURES } from './measures'
+import { AVAILABLE_MEASURES, AVAILABLE_ATTRIBUTES } from './constants'
 import C from './catalog'
 
 const configureStore = () => {
@@ -15,13 +17,18 @@ const configureStore = () => {
   const initialState = {
     measureGroups: {
       mg1: [ C.metric(AVAILABLE_MEASURES[0]) ]
+    },
+    labelGroups: {
+      lg1: [ C.attributeDisplayForm(AVAILABLE_ATTRIBUTES[0])]
     }
   }
 
   const store = createStore(
-    combineReducers({ measureGroups, filterGroups, isLoading, error }),
+    combineReducers({ measureGroups, labelGroups, filterGroups, isLoading, error }),
     initialState,
-    applyMiddleware(...middlewares)
+    composeWithDevTools(
+        applyMiddleware(...middlewares)
+    )
   );
 
   return store;

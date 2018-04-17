@@ -3,6 +3,10 @@ export const ADD_MEASURE = 'gd/examples/redux/ADD_MEASURE'
 export const REMOVE_MEASURE = 'gd/examples/redux/REMOVE_MEASURE'
 export const SET_MEASURE = 'gd/examples/redux/SET_MEASURE'
 
+export const ADD_LABEL = 'gd/examples/redux/ADD_LABEL'
+export const REMOVE_LABEL = 'gd/examples/redux/REMOVE_LABEL'
+export const SET_LABEL = 'gd/examples/redux/SET_LABEL'
+
 export const UPDATE_POSITIVE_ATTRIBUTE_FILTER = 'gd/examples/redux/UPDATE_POSITIVE_ATTRIBUTE_FILTER'
 export const UPDATE_NEGATIVE_ATTRIBUTE_FILTER = 'gd/examples/redux/UPDATE_NEGATIVE_ATTRIBUTE_FILTER'
 export const REMOVE_ATTRIBUTE_FILTER = 'gd/examples/redux/REMOVE_ATTRIBUTE_FILTER'

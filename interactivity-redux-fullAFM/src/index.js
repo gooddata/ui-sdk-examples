@@ -7,7 +7,9 @@ import './index.css';
 import App from './App';
 import configureStore from './configureStore'
 import registerServiceWorker from './registerServiceWorker';
+import gooddata from 'gooddata'
 
+window.gooddata = gooddata
 const store = configureStore()
 
 ReactDOM.render(

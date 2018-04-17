@@ -4,6 +4,9 @@ import {
   setMeasures,
   addMeasure,
   removeMeasures,
+  setLabels,
+  addLabel,
+  removeLabels,
   updatePositiveAttributeFilter,
   removeAttributeFilter
 } from './actions/afm'
@@ -26,11 +29,12 @@ const toAfmFilters = (filtersHash) => {
 } 
 
 const mapStateToProps = (state, ownProps) => {
-  const { measureGroups, filterGroups } = state
-  const { measureGroup, filterGroup } = ownProps
+  const { measureGroups, labelGroups, filterGroups } = state
+  const { measureGroup, labelGroup, filterGroup } = ownProps
   return {
     measures: measureGroup ? measureGroups[measureGroup] : [],
-    filters: filterGroup ? toAfmFilters(filterGroups[filterGroup]) : []
+    labels: labelGroup     ? labelGroups[labelGroup] : [],
+    filters: filterGroup   ? toAfmFilters(filterGroups[filterGroup]) : []
   }
 }
 
@@ -38,6 +42,7 @@ export default (component) => (
   connect(
     mapStateToProps,
     { setMeasures, addMeasure, removeMeasures,
+      setLabels, addLabel, removeLabels,
       updatePositiveAttributeFilter, removeAttributeFilter }
   )(component)
 )

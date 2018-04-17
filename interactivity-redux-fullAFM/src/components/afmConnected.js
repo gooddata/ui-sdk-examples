@@ -15,11 +15,12 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
     projectId: PropTypes.string.isRequired,
     measureGroup: PropTypes.string,
     filterGroup: PropTypes.string,
+    labelsGroup: PropTypes.string,
     afm: PropTypes.object // if no AFM is provided, the component won't be rendered until a measure or an attribute is retrieved from the connected measureGroup or attributeGroup
   }
 
   render() {
-    const { afm, measures, filters, attributes } = this.props
+    const { afm, measures, filters, labels } = this.props
     const dontPass = { measures: true }
     const props = withoutKeys(this.props, dontPass)
     const newAfm = afm ? { ...afm } : {}
@@ -42,18 +43,18 @@ export const AfmComponentWrapper = (InnerComponent) => afmConnect(class extends 
     if (Array.isArray(filters)) {
       newAfm.filters = filters
     }
-    if (Array.isArray(attributes)) { // It's actually an array of attribute display forms a.k.a. labels
-      newAfm.attributes = attributes.map(attr => (
-        (typeof(attr) === "string") ? {
-          localIdentifier: attr,
+    if (Array.isArray(labels)) { // even though they are labels, the corresponding AFM key is actually 'attributes'
+      newAfm.attributes = labels.map(label => (
+        (typeof(label) === "string") ? {
+          localIdentifier: label,
           displayForm: {
-            identifier: attr
+            identifier: label
           }
         }
-        : attr
+        : label
       ))
     }
-    if (!Array.isArray(attributes) && !Array.isArray(measures)) {
+    if (!Array.isArray(labels) && !Array.isArray(measures)) {
       return null
     }
     return (

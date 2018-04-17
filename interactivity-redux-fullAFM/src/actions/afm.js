@@ -40,10 +40,45 @@ export const addMeasure = (measureContext, measure) => ({
  * The measureIds are expected to be AFM identifiers (which
  * are the same as metadata identifiers for measures added
  * via setMeasure or addMeasure action creators above).
-*/
+ */
 export const removeMeasures = (measureContext, ...measures) => ({
   type: Types.REMOVE_MEASURE,
   measureContext, measures
+})
+
+/**
+ * Replaces all labels (a.k.a. attribute display forms)
+ * in the attribute context with the specified ones.
+ *
+ * The attribute context is expected to be injected into
+ * the AFM parameters of AFM components.
+ */
+export const setLabels = (labelContext, ...labels) => ({
+  type: Types.SET_LABEL,
+  labelContext, labels
+})
+
+/**
+ * Adds the specified label into the attribute context.
+ *
+ * The attribute context is expected to be injected into
+ * the AFM parameters of AFM components.
+ */
+export const addLabel = (labelContext, label) => ({
+  type: Types.ADD_MEASURE,
+  labelContext, label
+})
+
+/**
+ * Removes the specified label from the attribute context.
+ *
+ * Consequently, a redux-connected component is expected to
+ * remove the specified label from the AFMs of connected
+ * AFM components.
+ */
+export const removeLabels = (labelContext, ...labels) => ({
+  type: Types.REMOVE_LABEL,
+  labelContext, labels
 })
 
 /**

@@ -1,17 +1,27 @@
 // Copyright (C) 2007-2017, GoodData(R) Corporation. All rights reserved.
 import * as Types from '../actions/afmTypes'
-import { MEASURE_2 } from '../measures'
-import C from '../catalog.json';
 
-const measureGroups = (state = {
-  mg1: [ C[MEASURE_2] ]
-}, action) => {
+const measureGroups = (state = {}, action) => {
   switch (action.type) {
     case Types.SET_MEASURE:
       const { measureContext, measures } = action
       return {
         ...state,
         [measureContext]: measures
+      }
+
+    default:
+      return state
+  }
+}
+
+const labelGroups = (state = {}, action) => {
+  switch (action.type) {
+    case Types.SET_LABEL:
+      const { labelContext, labels } = action
+      return {
+        ...state,
+        [labelContext]: labels
       }
 
     default:
@@ -54,5 +64,6 @@ const filterGroups = (state = {}, action) => {
 
 export {
   measureGroups,
+  labelGroups,
   filterGroups
 }
