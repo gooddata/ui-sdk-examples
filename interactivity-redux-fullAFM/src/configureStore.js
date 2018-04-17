@@ -16,7 +16,7 @@ const configureStore = () => {
 
   const initialState = {
     measureGroups: {
-      mg1: [ C.metric(AVAILABLE_MEASURES[0]) ]
+      mg1: [ C.measure(AVAILABLE_MEASURES[0]) ]
     },
     labelGroups: {
       lg1: [ C.attributeDisplayForm(AVAILABLE_ATTRIBUTES[0])]

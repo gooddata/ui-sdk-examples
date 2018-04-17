@@ -30,7 +30,7 @@ const PureMeasureDropdown = ({ measures, available, setMeasures, measureGroup })
     <select onChange={e => setMeasures(measureGroup, e.target.value)}
             defaultValue={selected}>
       {available.map(measureName =>
-        <option key={measureName} value={C.metric(measureName)}>
+        <option key={measureName} value={C.measure(measureName)}>
           {measureName}
         </option>
       )}
@@ -100,7 +100,7 @@ const PureAttributeElementsDropdown = ({ attributeLabel, filterGroup, updatePosi
 const AttributeElementsDropdown = afmConnect(PureAttributeElementsDropdown)
 
 const measureTransformation = AVAILABLE_MEASURES.map(measureName =>
-  ({ id: C.metric(measureName), title: measureName })
+  ({ id: C.measure(measureName), title: measureName })
 )
 
 /*
@@ -117,12 +117,12 @@ const App = () => (
     <AttributeDropdown labelGroup="lg1" available={AVAILABLE_ATTRIBUTES} />
     <span> AccountRegion:</span>
     <AttributeElementsDropdown attributeLabel={C.attributeDisplayForm("Account Region")} filterGroup="fg1" />
-    <div>
+    <h1>
       <Kpi measureGroup="mg1" filterGroup="fg1"
-        measure={C.metric(AVAILABLE_MEASURES[0])}
+        measure={C.measure(AVAILABLE_MEASURES[0])}
         format="#,##0"
         { ...projectId } />
-    </div>
+    </h1>
     <div style={{height: 400, width: 600}}>
       <ColumnChart measureGroup="mg1" labelGroup="lg1" filterGroup="fg1"
         { ...projectId }
