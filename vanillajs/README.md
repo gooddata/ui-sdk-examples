@@ -7,13 +7,19 @@ vanilla JavaScript - no transpiling, no ES6, no React, no Angular. You can use t
 
 ### Creating the bundle
 
-Before using the demo, you have to create the `gooddata_react_components_bundle.js`bundle and copy it next to the `index.html` file. The bundle will include the UI SDK including all its dependencies and a few utility methods described below. The size of minified bundle is approximately 1.8 MB.
+Before using the demo, you have to create the `gooddata_react_components_bundle.js` bundle and copy it next to the `index.html` file. The bundle will include the UI SDK including all its dependencies and a few utility methods described below. The size of minified bundle is approximately 1.8 MB.
 
-The bundle can be created using the files in the `create-bundle` folder, specifically:
+The bundle can be created using the `vanilla.js` file in the `create-bundle` folder, simply by running:
 
-1. `cd create-bundle`
-2. `yarn && yarn bundle` or `npm install && npm bundle`
-3. `cp dist/gooddata_react_components_bundle.* ..`
+1. `yarn && yarn bundle` or `npm install && npm bundle`
+2. `cp './dist/gooddata_react_components_bundle.js' './demo/gooddata_react_components_bundle.js'`
+3. `cp './node_modules/@gooddata/react-components/styles/css/main.css './demo/gooddata_react_components_bundle.css'`
+
+### Running the demo locally
+
+If you want to run demo on your localhost, make sure you comment out `GDRC.gooddata.config.setCustomDomain('https://whitelabeling.gooddata.com');` in `demo/index.html` and then run:
+
+1. `yarn demo`
 
 ### Setting up CORS
 

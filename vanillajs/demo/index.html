@@ -1,6 +1,6 @@
 <html>
 <head>
-<script src="../dist/gooddata_react_components_bundle.js"></script>
+<script src="./gooddata_react_components_bundle.js"></script>
 <link rel="stylesheet" type="text/css" href="./gooddata_react_components_bundle.css">
 </head>
 <body>
@@ -68,10 +68,22 @@ function renderKpi(measureId) {
 
 function renderColumnChart(measureId) {
   var afm = {
-    measures: [ {
-      id: 'Value', definition: { baseObject: { id: measureId } }
+    measures: [{
+      localIdentifier: 'm1',
+      definition: {
+        measure: {
+          item: {
+            identifier: measureId
+          }
+        }
+      }
     }],
-    attributes: [ { id: "label.store_details.region", type: "attribute" } ]
+    attributes: [{
+      localIdentifier: 'a1',
+      displayForm: {
+        identifier: 'label.store_details.region',
+      }
+    }]
   };
   GDRC.ReactContentRenderer.render(
     GDRC.AfmComponents.ColumnChart,
