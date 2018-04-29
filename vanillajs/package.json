@@ -1,0 +1,20 @@
+{
+  "name": "vanilla-js",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@gooddata/react-components": "^4.1.0",
+    "react": "15.6.2",
+    "react-dom": "15.6.2"
+  },
+  "devDependencies": {
+    "babel-runtime": "^6.26.0",
+    "uglifyjs-webpack-plugin": "^1.1.4",
+    "webpack": "3.5.1",
+    "webpack-dev-server": "2.7.1"
+  },
+  "scripts": {
+    "demo": "webpack-dev-server --open --config webpack.conf.js",
+    "bundle": "webpack --config webpack.conf.js && cp './node_modules/@gooddata/react-components/styles/css/main.css' './demo/gooddata_react_components_bundle.css' && cp './dist/gooddata_react_components_bundle.js' './demo/gooddata_react_components_bundle.js'"
+  }
+}
