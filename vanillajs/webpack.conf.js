@@ -5,7 +5,7 @@ const proxyTarget = 'https://whitelabeling.gooddata.com/';
 module.exports = {
     entry: './create-bundle/vanilla.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'demo'),
         filename: 'gooddata_react_components_bundle.js',
         library: 'GDRC',
         libraryTarget: 'window'
