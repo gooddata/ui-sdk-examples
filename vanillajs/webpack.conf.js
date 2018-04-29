@@ -32,6 +32,27 @@ module.exports = {
                     }
                 }
             },
+            "/packages": {
+                "changeOrigin": true,
+                "cookieDomainRewrite": "localhost",
+                "target": proxyTarget
+            },
+            "/lib": {
+                "changeOrigin": true,
+                "cookieDomainRewrite": "localhost",
+                "target": proxyTarget
+            },
+            "/images": {
+                "changeOrigin": true,
+                "cookieDomainRewrite": "localhost",
+                "target": proxyTarget
+            },
+            "/*.html": {
+                "cookieDomainRewrite": "localhost",
+                "changeOrigin": true,
+                "secure": false,
+                "target": proxyTarget
+            }
         }
     }
 }
