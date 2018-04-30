@@ -15,6 +15,6 @@
   },
   "scripts": {
     "demo": "cp './node_modules/@gooddata/react-components/styles/css/main.css' './demo/gooddata_react_components_bundle.css' && webpack-dev-server --open --config webpack.conf.js",
-    "dist": "webpack --config webpack.conf.js --output-path 'dist/'"
+    "dist": "webpack --config webpack.conf.js --output-path 'dist/' && cp './node_modules/@gooddata/react-components/styles/css/main.css' './dist/gooddata_react_components_bundle.css'"
   }
 }
