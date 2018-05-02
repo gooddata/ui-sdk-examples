@@ -18,6 +18,22 @@
     qs "6.5.1"
     rxjs "^5.5.6"
 
+"@gooddata/gooddata-js@^6.0.0-alpha9":
+  version "6.0.0-alpha9"
+  resolved "https://registry.yarnpkg.com/@gooddata/gooddata-js/-/gooddata-js-6.0.0-alpha9.tgz#e9a9348d212bf5dc5c6a9376c09008a33f585877"
+  dependencies:
+    "@gooddata/typings" "2.0.0-alpha0"
+    es6-promise "3.0.2"
+    fetch-cookie "0.7.0"
+    invariant "2.2.2"
+    isomorphic-fetch "2.2.1"
+    json-stable-stringify "1.0.1"
+    lodash "4.17.4"
+    md5 "2.2.1"
+    node-fetch "1.7.3"
+    qs "6.5.1"
+    rxjs "^5.5.6"
+
 "@gooddata/goodstrap@55.0.0-alpha6":
   version "55.0.0-alpha6"
   resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-55.0.0-alpha6.tgz#f21c6441e0a35c9ae98d450fc81044d867dbf4f7"
@@ -2718,6 +2734,13 @@ fetch-cookie@0.4.0:
     es6-denodeify "^0.1.1"
     tough-cookie "^2.3.1"
 
+fetch-cookie@0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/fetch-cookie/-/fetch-cookie-0.7.0.tgz#a6fc137ad8363aa89125864c6451b86ecb7de802"
+  dependencies:
+    es6-denodeify "^0.1.1"
+    tough-cookie "^2.3.1"
+
 figures@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/figures/-/figures-2.0.0.tgz#3ab1a2d2a62c8bfb431a0c94cb797a2fce27c962"
@@ -4536,16 +4559,16 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-node-fetch@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.1.1.tgz#369ca70b82f50c86496104a6c776d274f4e4a2d4"
-
-node-fetch@^1.0.1:
+node-fetch@1.7.3, node-fetch@^1.0.1:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
+
+node-fetch@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.1.1.tgz#369ca70b82f50c86496104a6c776d274f4e4a2d4"
 
 node-forge@0.6.33:
   version "0.6.33"

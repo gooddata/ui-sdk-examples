@@ -5,15 +5,18 @@
     "/gdc": {
       "changeOrigin": true,
       "secure": false,
-      "cookieDomainRewrite": "local.test",
+      "cookieDomainRewrite": "localhost",
       "target": "https://secure.gooddata.com/"
     },
     "/*.html": {
+      "changeOrigin": true,
       "secure": false,
+      "cookieDomainRewrite": "localhost",
       "target": "https://secure.gooddata.com/"
     }
   },
   "dependencies": {
+    "@gooddata/gooddata-js": "^6.0.0-alpha9",
     "@gooddata/react-components": "^5.0.0-alpha20",
     "prop-types": "^15.6.0",
     "react": "15.6.2",

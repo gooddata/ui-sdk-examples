@@ -7,7 +7,7 @@ import './index.css';
 import App from './App';
 import configureStore from './configureStore'
 import registerServiceWorker from './registerServiceWorker';
-import gooddata from 'gooddata'
+import gooddata from '@gooddata/gooddata-js'
 
 window.gooddata = gooddata
 const store = configureStore()
