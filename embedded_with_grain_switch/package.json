@@ -16,7 +16,7 @@
     }
   },
   "dependencies": {
-    "@gooddata/react-components": "^3.0.13",
+    "@gooddata/react-components": "5.0.1",
     "bootstrap": "^4.0.0",
     "query-string": "^5.1.0",
     "react": "15.3.2",

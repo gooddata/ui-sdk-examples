@@ -1,3 +1,5 @@
+// Copyright (C) 2007-2018, GoodData(R) Corporation. All rights reserved.
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import { Button, ButtonGroup } from 'reactstrap';
@@ -89,19 +91,25 @@ class App extends Component {
     })
   }
 
+  measure(identifier) {
+    const r = {
+      localIdentifier: identifier, // reuse for the sake of simplicity
+      definition: {
+        measure: {
+          item: {
+            identifier
+          }
+        }
+      }
+    }
+    console.log('r', r)
+    return r
+  } 
+
   afm() {
     const { measure, dateDimension } = this.props
     return {
-      measures: [{
-        localIdentifier: 'm1',
-        definition: {
-          measure: {
-            item: {
-              identifier: measure
-            }
-          }
-        }
-      }],
+      measures: [ this.measure(measure) ],
       attributes: [{
         localIdentifier: 'a1',
         displayForm: {
