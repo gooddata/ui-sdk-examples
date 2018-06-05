@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import { Kpi } from '@gooddata/react-components';
+import { CatalogHelper } from '@gooddata/react-components';
+import catalogJson from './catalog.json';
 import logo from './logo.svg';
 import '@gooddata/react-components/styles/css/main.css';
 import './App.css';
+
+const C = new CatalogHelper(catalogJson);
 
 class App extends Component {
   render() {
@@ -13,7 +17,10 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="App-intro">
-          <Kpi projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp" measure="aa7ulGyKhIE5" />
+          <Kpi
+            projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp"
+            measure={C.measure('$ Total Sales')}
+          />
         </div>
       </div>
     );
