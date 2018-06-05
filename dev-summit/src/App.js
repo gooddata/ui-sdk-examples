@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Kpi, Visualization, ColumnChart, Execute } from '@gooddata/react-components';
 import { CatalogHelper } from '@gooddata/react-components';
+import CustomBarChart from './CustomBarChart';
 import catalogJson from './catalog.json';
 import logo from './logo.svg';
 import '@gooddata/react-components/styles/css/main.css';
@@ -86,24 +87,9 @@ class App extends Component {
                 displayForm: {
                   identifier: C.attributeDisplayForm('Location City')
                 }
-              }, {
-                localIdentifier: 'a2',
-                displayForm: {
-                  identifier: C.attributeDisplayForm('Location Name')
-                }
               }]
             }}
-            resultSpec={{
-              dimensions: [{
-                itemIdentifiers: ['a2']
-              }, {
-                itemIdentifiers: ['a1', 'measureGroup']
-              }]
-            }}
-            onLoadingFinish={({ result }) => console.log(result)}
-            children={({error, isLoading, result}) => (
-              result && <pre style={{ textAlign: 'left' }}>{JSON.stringify(result.executionResult, null, 2)}</pre>
-            )}
+            children={CustomBarChart}
           />
         </div>
       </div>
