@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Kpi } from '@gooddata/react-components';
+import { Kpi, Visualization } from '@gooddata/react-components';
 import { CatalogHelper } from '@gooddata/react-components';
 import catalogJson from './catalog.json';
 import logo from './logo.svg';
@@ -21,6 +21,12 @@ class App extends Component {
             projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp"
             measure={C.measure('$ Total Sales')}
           />
+          <div style={{ height: 400 }}>
+            <Visualization
+              projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp"
+              identifier="aby6oS6DbpFX"
+            />
+          </div>
         </div>
       </div>
     );
