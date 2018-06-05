@@ -9,6 +9,20 @@ import './App.css';
 
 const C = new CatalogHelper(catalogJson);
 
+const filters = [{
+  positiveAttributeFilter: {
+    displayForm: {
+      identifier: C.attributeDisplayForm('Location City')
+    },
+    in: [
+      // Dallas
+      '/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/2208/elements?id=6340130',
+      // Daly City
+      '/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/2208/elements?id=6340114'
+    ]
+  }
+}];
+
 class App extends Component {
   render() {
     return (
@@ -20,12 +34,14 @@ class App extends Component {
         <div className="App-intro">
           <Kpi
             projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp"
-            measure={C.measure('$ Total Sales')}
+            measure={C.measure('# Checks')}
+            filters={filters}
           />
           <div style={{ height: 400 }}>
             <Visualization
               projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp"
               identifier="aby6oS6DbpFX"
+              filters={filters}
             />
           </div>
           <div style={{ height: 400 }}>
@@ -67,6 +83,7 @@ class App extends Component {
                   }
                 }
               }}
+              filters={filters}
             />
           </div>
           <Execute
@@ -87,7 +104,8 @@ class App extends Component {
                 displayForm: {
                   identifier: C.attributeDisplayForm('Location City')
                 }
-              }]
+              }],
+              filters: filters
             }}
             children={CustomBarChart}
           />
