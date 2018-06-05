@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@gooddata/react-components": "^5.1.0-alpha9",
+    "html2canvas": "^1.0.0-alpha.12",
     "react": "15.6.2",
     "react-dom": "15.6.2",
     "react-highcharts": "^16.0.2",

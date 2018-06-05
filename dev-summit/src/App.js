@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Kpi, Visualization, ColumnChart, Execute, AttributeElements } from '@gooddata/react-components';
 import { CatalogHelper } from '@gooddata/react-components';
 import Select from 'react-select';
+import html2canvas from 'html2canvas';
 import CustomBarChart from './CustomBarChart';
 import catalogJson from './catalog.json';
 import logo from './logo.svg';
@@ -49,6 +50,14 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
+          <a href="#" style={{ margin: 2, color: 'white' }} onClick={() => {
+            html2canvas(document.querySelector('.App-intro')).then((canvas) => {
+              const link = document.createElement('a');
+              link.setAttribute('href', canvas.toDataURL('image/png'));
+              link.setAttribute('download', 'export.png');
+              link.click();
+            });
+          }}>PNG</a>
         </header>
         <div className="App-intro">
           <div style={{ width: 400, margin: 'auto', marginBottom: 20 }}>
