@@ -1,30 +1,49 @@
 import React, { Component } from 'react';
-import { Kpi, Visualization, ColumnChart, Execute } from '@gooddata/react-components';
+import { Kpi, Visualization, ColumnChart, Execute, AttributeElements } from '@gooddata/react-components';
 import { CatalogHelper } from '@gooddata/react-components';
+import Select from 'react-select';
 import CustomBarChart from './CustomBarChart';
 import catalogJson from './catalog.json';
 import logo from './logo.svg';
 import '@gooddata/react-components/styles/css/main.css';
+import 'react-select/dist/react-select.css';
 import './App.css';
 
 const C = new CatalogHelper(catalogJson);
 
-const filters = [{
-  positiveAttributeFilter: {
-    displayForm: {
-      identifier: C.attributeDisplayForm('Location City')
-    },
-    in: [
-      // Dallas
-      '/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/2208/elements?id=6340130',
-      // Daly City
-      '/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/2208/elements?id=6340114'
-    ]
-  }
-}];
-
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      filters: []
+    };
+
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(options) {
+    if (options.length) {
+      this.setState({
+        filters: [{
+          positiveAttributeFilter: {
+            displayForm: {
+              identifier: C.attributeDisplayForm('Location City')
+            },
+            in: options.map(option => option.value)
+          }
+        }]
+      })
+    } else {
+      this.setState({
+        filters: []
+      });
+    }
+  }
+
   render() {
+    const { filters } = this.state;
+
     return (
       <div className="App">
         <header className="App-header">
@@ -32,6 +51,32 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="App-intro">
+          <div style={{ width: 400, margin: 'auto', marginBottom: 20 }}>
+            <AttributeElements
+              projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp"
+              identifier={C.attributeDisplayForm('Location City')}
+              options={{ limit: 100 }}
+              children={({ validElements, isLoading, error }) => {
+                const options = validElements ? validElements.items.map(item => ({
+                  label: item.element.title,
+                  value: item.element.uri
+                })) : [];
+                const selectedOptions = filters.length ?
+                  filters[0].positiveAttributeFilter.in :
+                  [];
+                return (
+                  <Select
+                    multi
+                    onChange={this.onChange}
+                    options={options}
+                    value={selectedOptions}
+                    isLoading={isLoading}
+                    placeholder="Filter cities"
+                  />
+                );
+              }}
+            />
+          </div>
           <Kpi
             projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp"
             measure={C.measure('# Checks')}

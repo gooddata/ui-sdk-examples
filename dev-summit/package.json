@@ -24,7 +24,8 @@
     "react": "15.6.2",
     "react-dom": "15.6.2",
     "react-highcharts": "^16.0.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-select": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
