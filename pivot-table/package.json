@@ -1,0 +1,33 @@
+{
+  "name": "interactivity-stateful-simple",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": {
+    "/gdc": {
+      "changeOrigin": true,
+      "cookieDomainRewrite": "localhost",
+      "target": "https://developer.na.gooddata.com/"
+    },
+    "/*.html": {
+      "changeOrigin": true,
+      "cookieDomainRewrite": "localhost",
+      "target": "https://developer.na.gooddata.com/"
+    }
+  },
+  "dependencies": {
+    "@gooddata/react-components": "^5.1.0",
+    "fixed-data-table-2": "^0.8.13",
+    "lodash": "^4.17.10",
+    "prop-types": "^15.6.0",
+    "react": "15.6.2",
+    "react-dimensions": "^1.3.1",
+    "react-dom": "15.6.2",
+    "react-scripts": "1.0.14"
+  },
+  "scripts": {
+    "start": "HTTPS=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
