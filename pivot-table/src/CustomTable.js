@@ -13,7 +13,10 @@ class CustomTable extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      pivot: false,
+      afmResultSpec: null
+    };
 
     this.togglePivot = this.togglePivot.bind(this);
     this.renderNormal = this.renderNormal.bind(this);
@@ -41,7 +44,7 @@ class CustomTable extends Component {
       return <p>Loading data...</p>;
     }
 
-    const { executionResult: { data, headerItems } } = result;
+    const { executionResult: { data, headerItems }, executionResponse: { dimensions } } = result;
     const attributesCount = get(headerItems, 0).length;
     const metricsCount = get(headerItems, [1, 0]).length;
     const tableWidth = this.props.containerWidth;
@@ -51,16 +54,23 @@ class CustomTable extends Component {
 
     return (
       <Table
+        headerHeight={rowHeight}
         rowHeight={rowHeight}
         rowsCount={rowCount}
         width={tableWidth}
-        height={rowCount * rowHeight + 2}
+        height={(rowCount + 1) * rowHeight + 2}
       >
         {
           range(columnCount).map(index => {
             return (
               <Column
                 key={index}
+                header={
+                  <Cell>
+                    {index < attributesCount && get(dimensions, [0, 'headers', index, 'attributeHeader', 'formOf', 'name'])}
+                    {index >= attributesCount && get(dimensions, [1, 'headers', 0, 'measureGroupHeader', 'items', index - attributesCount, 'measureHeaderItem', 'name'])}
+                  </Cell>
+                }
                 columnKey={index}
                 cell={({ rowIndex, columnKey }) => {
                   return (
@@ -70,7 +80,11 @@ class CustomTable extends Component {
                     </Cell>
                   );
                 }}
-                width={tableWidth / columnCount}
+                width={
+                  index === columnCount - 1 ?
+                    tableWidth - (Math.round(tableWidth / columnCount) * (columnCount - 1)) :
+                    Math.round(tableWidth / columnCount)
+                }
               />
             );
           })
@@ -84,12 +98,12 @@ class CustomTable extends Component {
       return <p>Loading data...</p>;
     }
 
-    const { executionResult: { data, headerItems } } = result;
+    const { executionResult: { data, headerItems }, executionResponse: { dimensions } } = result;
     const attributesCount = get(headerItems, 0).length;
     const metricsCount = get(headerItems, [1, 0]).length;
     const tableWidth = this.props.containerWidth;
     const rowHeight = 32;
-    const columnCount = data.length;
+    const columnCount = data.length + 1;
     const rowCount = attributesCount + metricsCount;
 
     return (
@@ -106,11 +120,17 @@ class CustomTable extends Component {
                 key={index}
                 cell={({ rowIndex }) => (
                   <Cell>
-                    {rowIndex < attributesCount && get(headerItems, [0, rowIndex, index, 'attributeHeaderItem', 'name'])}
-                    {rowIndex >= attributesCount && get(data, [index, rowIndex - attributesCount])}
+                    <b>{index === 0 && rowIndex < attributesCount && get(dimensions, [0, 'headers', index, 'attributeHeader', 'formOf', 'name'])}</b>
+                    <b>{index === 0 && rowIndex >= attributesCount && get(dimensions, [1, 'headers', 0, 'measureGroupHeader', 'items', rowIndex - attributesCount, 'measureHeaderItem', 'name'])}</b>
+                    {index > 0 && rowIndex < attributesCount && get(headerItems, [0, rowIndex, index - 1, 'attributeHeaderItem', 'name'])}
+                    {index > 0 && rowIndex >= attributesCount && get(data, [index - 1, rowIndex - attributesCount])}
                   </Cell>
                 )}
-                width={tableWidth / columnCount}
+                width={
+                  index === columnCount - 1 ?
+                    tableWidth - (Math.round(tableWidth / columnCount) * (columnCount - 1)) :
+                    Math.round(tableWidth / columnCount)
+                }
               />
             );
           })
@@ -131,7 +151,7 @@ class CustomTable extends Component {
 
     return (
       <div>
-        <label><input type="checkbox" onChange={this.togglePivot} /> pivot</label>
+        <label><input type="checkbox" onChange={this.togglePivot} checked={pivot} /> pivot</label>
         <Execute
           projectId={projectId}
           afm={afmResultSpec.afm}

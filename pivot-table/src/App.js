@@ -7,7 +7,7 @@ import '@gooddata/react-components/styles/css/main.css';
 import './App.css';
 
 const PROJECT_ID = 'xms7ga4tf3g3nzucd8380o2bev8oeknp';
-const VIZ_URI = '/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/8933';
+const VIZ_URI = '/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/8936';
 
 const App = () => (
   <div className="App">
