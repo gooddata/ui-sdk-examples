@@ -10,9 +10,9 @@
 <p>This demo uses a UI SDK based bundle that exposes a window variable GDRC which
   is an object containing:
   <ul>
-    <li>Top level UI SDK React Components such as <tt><a href="https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/AFM+React+Components">AfmComponents</a></tt> or <tt><a href="https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/React+Components#ReactComponents-KPI">Kpi</a></tt></li>
-    <li>The <tt>gooddata</tt> object providing access to the low level <a href="http://sdk.gooddata.com/gooddata-js/api/modules/sdk.html">GoodDataJS</a> SDK</li>
-    <li><tt>ReactContentRenderer</tt> function inspired by <a href="">this tutorial</a></li>
+    <li>Top level GoodData.UI React Components such as <tt><a href="https://sdk.gooddata.com/gooddata-ui/docs/kpi_component.html">KPI</a></tt> or <tt><a href="https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/AFM+React+Components">AfmComponents (deprecated)</a></tt></li>
+    <li>The <tt>gooddata</tt> object providing access to the low level <a href="http://sdk.gooddata.com/gooddata-js/">GoodDataJS</a> SDK</li>
+    <li><tt>ReactContentRenderer</tt> function inspired by <a href="#">this tutorial</a></li>
   </ul>
 <p>
 <p>
@@ -49,6 +49,9 @@
 </div>
 
 <script>
+var gooddata = GDRC.gooddata.factory({
+  domain: 'https://whitelabeling.gooddata.com'
+});
 var projectId = 'kf0vsjlf9mll0osg6hmtppgm1nkjsi9r';
 
 function renderKpi(measureId) {
@@ -57,7 +60,7 @@ function renderKpi(measureId) {
     GDRC.Kpi,
     // props to be passed to Kpi component
     {
-      projectId: projectId, // 'SDK Tests (Consumer Insights)'' project
+      projectId: projectId, // 'SDK Tests (Consumer Insights)' project
       measure: measureId,
       format: '#,##0'
     },
@@ -67,27 +70,29 @@ function renderKpi(measureId) {
 }
 
 function renderColumnChart(measureId) {
-  var afm = {
-    measures: [{
+  var checkouts = {
+    measure: {
       localIdentifier: 'm1',
       definition: {
-        measure: {
+        measureDefinition: {
           item: {
             identifier: measureId
           }
         }
       }
-    }],
-    attributes: [{
+    }
+  };
+  var region = {
+    visualizationAttribute: {
       localIdentifier: 'a1',
       displayForm: {
         identifier: 'label.store_details.region',
       }
-    }]
+    }
   };
   GDRC.ReactContentRenderer.render(
-    GDRC.AfmComponents.ColumnChart,
-    { projectId: projectId, afm: afm },
+    GDRC.ColumnChart,
+    { projectId: projectId, measures: [checkouts], viewBy: region },
     document.getElementById('column-chart')
   );
 }
@@ -98,8 +103,6 @@ function renderVisualizations(measureId) {
 }
 
 function main() {
-  GDRC.gooddata.config.setCustomDomain('https://whitelabeling.gooddata.com');
-
   document.getElementById('metricSwitcher').onchange = function(event) {
     if (!event.target.value) {
       console.error('Nothing selected');
@@ -112,7 +115,7 @@ function main() {
 }
 
 if (window.GDRC) {
-  window.GDRC.gooddata.user.isLoggedIn().then(function(isLoggedIn) {
+  gooddata.user.isLoggedIn().then(function(isLoggedIn) {
     if (isLoggedIn) {
       main();
     } else {
