@@ -1,6 +1,6 @@
 {
-  "name": "dev-summit",
-  "version": "0.1.0",
+  "name": "gd-ui-hackathon",
+  "version": "1.0.0",
   "private": true,
   "proxy": {
     "/gdc": {
