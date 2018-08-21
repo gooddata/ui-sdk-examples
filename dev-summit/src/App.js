@@ -1,16 +1,16 @@
+// Copyright (C) 2007-2018, GoodData(R) Corporation. All rights reserved.
 import React, { Component } from 'react';
 import { Kpi, Visualization, ColumnChart, Execute, AttributeElements } from '@gooddata/react-components';
-import { CatalogHelper } from '@gooddata/react-components';
 import Select from 'react-select';
 import html2canvas from 'html2canvas';
+
+import C from './catalog';
 import CustomBarChart from './CustomBarChart';
-import catalogJson from './catalog.json';
 import logo from './logo.svg';
 import '@gooddata/react-components/styles/css/main.css';
 import 'react-select/dist/react-select.css';
 import './App.css';
 
-const C = new CatalogHelper(catalogJson);
 
 class App extends Component {
   constructor(props) {
