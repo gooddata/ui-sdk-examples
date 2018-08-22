@@ -50,17 +50,17 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
-          <a href="#" style={{ margin: 2, color: 'white' }} onClick={() => {
+          {/* <a href="#" style={{ margin: 2, color: 'white' }} onClick={() => {
             html2canvas(document.querySelector('.App-intro')).then((canvas) => {
               const link = document.createElement('a');
               link.setAttribute('href', canvas.toDataURL('image/png'));
               link.setAttribute('download', 'export.png');
               link.click();
             });
-          }}>PNG</a>
+          }}>PNG</a> */}
         </header>
         <div className="App-intro">
-          <div style={{ width: 400, margin: 'auto', marginBottom: 20 }}>
+          {/* <div style={{ width: 400, margin: 'auto', marginBottom: 20 }}>
             <AttributeElements
               projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp"
               identifier={C.attributeDisplayForm('Location City')}
@@ -85,20 +85,20 @@ class App extends Component {
                 );
               }}
             />
-          </div>
+          </div> */}
           <Kpi
             projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp"
-            measure={C.measure('# Checks')}
+            measure="/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/2341"
             filters={filters}
           />
-          <div style={{ height: 400 }}>
+          {/* <div style={{ height: 400 }}>
             <Visualization
               projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp"
               identifier="aby6oS6DbpFX"
               filters={filters}
             />
-          </div>
-          <div style={{ height: 400 }}>
+          </div> */}
+          {/* <div style={{ height: 400 }}>
             <ColumnChart
               projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp"
               config={{
@@ -139,8 +139,8 @@ class App extends Component {
               }}
               filters={filters}
             />
-          </div>
-          <Execute
+          </div> */}
+          {/* <Execute
             projectId="xms7ga4tf3g3nzucd8380o2bev8oeknp"
             afm={{
               measures: [{
@@ -161,8 +161,11 @@ class App extends Component {
               }],
               filters: filters
             }}
-            children={CustomBarChart}
-          />
+            children={(result) => {
+              console.log(result);
+              return false;
+            }}
+          /> */}
         </div>
       </div>
     );
