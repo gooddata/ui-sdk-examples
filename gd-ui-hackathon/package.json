@@ -2,32 +2,15 @@
   "name": "gd-ui-hackathon",
   "version": "1.0.0",
   "private": true,
-  "proxy": {
-    "/gdc": {
-      "changeOrigin": true,
-      "cookieDomainRewrite": "localhost",
-      "secure": false,
-      "target": "https://developer.na.gooddata.com",
-      "headers": {
-        "host": "developer.na.gooddata.com",
-        "origin": null
-      }
-    },
-    "/*.html": {
-      "changeOrigin": true,
-      "secure": false,
-      "cookieDomainRewrite": "localhost",
-      "target": "https://developer.na.gooddata.com"
-    }
-  },
   "dependencies": {
     "@gooddata/gooddata-js": "^8.0.0",
     "@gooddata/react-components": "^5.2.0",
     "html2canvas": "^1.0.0-alpha.12",
+    "http-proxy-middleware": "^0.19.0",
     "react": "15.6.2",
     "react-dom": "15.6.2",
     "react-highcharts": "^16.0.2",
-    "react-scripts": "1.1.4",
+    "react-scripts": "2.0.4",
     "react-select": "^1.2.1"
   },
   "scripts": {
@@ -35,5 +18,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
