@@ -14,6 +14,8 @@ if (process.env.NODE_ENV === 'production') {
 
 const sdk = sdkFactory(config);
 
+window.gooddata = sdk;
+
 export default {
   projectId: PROJECT_ID,
   sdk,
