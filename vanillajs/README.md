@@ -11,7 +11,7 @@ Before using the demo, you have to create the `gooddata_react_components_bundle.
 
 The bundle can be created using the `vanilla.js` file in the `create-bundle` folder, simply by running:
 
-1. `yarn && yarn bundle` or `npm install && npm bundle`
+1. `yarn && yarn bundle` or `npm install && npm run dist`
 2. `cp './dist/gooddata_react_components_bundle.js' './demo/gooddata_react_components_bundle.js'`
 3. `cp './node_modules/@gooddata/react-components/styles/css/main.css './demo/gooddata_react_components_bundle.css'`
 
