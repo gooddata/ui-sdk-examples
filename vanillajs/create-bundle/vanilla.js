@@ -2,7 +2,7 @@
 exports.__esModule = true;
 var React = require("react");
 var ReactDOM = require("react-dom");
-exports.gooddata = require("gooddata");
+exports.gooddata = require("@gooddata/gooddata-js");
 
 var GDRC  = require("@gooddata/react-components"); // GoodData React Components
 
@@ -23,7 +23,7 @@ exports.ReactContentRenderer = {
   },
   /**
    * Creates, renders and returns a React element created
-   * from component class using given props and rendered 
+   * from component class using given props and rendered
    * into the targetNode.
    */
   render: function(component, props, targetNode, callback) {

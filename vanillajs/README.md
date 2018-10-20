@@ -11,15 +11,17 @@ Before using the demo, you have to create the `gooddata_react_components_bundle.
 
 The bundle can be created using the `vanilla.js` file in the `create-bundle` folder, simply by running:
 
-1. `yarn && yarn bundle` or `npm install && npm bundle`
+1. `yarn && yarn dist` or `npm install && npm dist`
 2. `cp './dist/gooddata_react_components_bundle.js' './demo/gooddata_react_components_bundle.js'`
 3. `cp './node_modules/@gooddata/react-components/styles/css/main.css './demo/gooddata_react_components_bundle.css'`
 
 ### Running the demo locally
 
-If you want to run demo on your localhost, make sure you comment out `GDRC.gooddata.config.setCustomDomain('https://whitelabeling.gooddata.com');` in `demo/index.html` and then run:
+Make sure to have access to https://whitelabeling.gooddata.com/.
 
 1. `yarn demo`
+
+Visit https://localhost:3000/account.html to log in. If redirected away, delete cookies or use anonymous browser window.
 
 ### Setting up CORS
 
@@ -36,8 +38,8 @@ The JavaScript code within the `index.html` file includes hardcoded references t
 ## Using the bundle from your code
 
 When the bundle is included using the `<script src>` tag it exposes a global variable `GDRC` (stands for GoodData React Components) that includes a few utility methods to make to use of the UI SDK easier in a non-React environment:
-- `GDRC.<component-name>` - exposes GoodData React Components (e.g. GDRC.[Kpi](https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/React+Components#ReactComponents-KPI), GDRC.[AfmComponents](https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/AFM+React+Components).[BarChart](https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/AFM+React+Components#AFMReactComponents-Charts) etc.)
-- `GDRC.gooddata` - the low level [GoodData JS API](sdk.gooddata.com/gooddata-js/api) providing a very thin wrapper on the top of GoodData REST API - the GoodData JS documentation is available from http://sdk.gooddata.com/gooddata-js/api/modules/sdk.html (example: use `GDRC.gooddata.config.setCustomDomain('https://whitelabeling.gooddata.com')` to specify a white labeling environment to be used by the following REST API calls)
+- `GDRC.<component-name>` - exposes GoodData React Components (e.g. GDRC.[Kpi](https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/React+Components#ReactComponents-KPI), GDRC.[BarChart](https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/AFM+React+Components#AFMReactComponents-Charts) etc.)
+- `GDJS` - the low level [GoodData JS API](sdk.gooddata.com/gooddata-js/api) providing a very thin wrapper on the top of GoodData REST API - the GoodData JS source is available from https://github.com/gooddata/gooddata-js
 - `GDRC.ReactContentRenderer` is heavily inspired by [this blogpost](http://winterbe.com/posts/2015/08/24/integrate-reactjs-into-jquery-webapps/) by Benjamin Winterberg. It provides two utility methods:
   - `GDRC.ReactContentRenderer.render(component, props, targetNode, callback)` for rendering a React component with given props into a DOM node
   - `GDRC.ReactContentRenderer.unmount(node)` and `GDRC.ReactContentRenderer.unmountAll()` - before a DOM node is removed from the DOM tree, the corresponding React components must be unmounted using to prevent memory leaks. These methods will help you with that.
