@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Kpi, ColumnChart } from './components/afmConnected';
+import { Kpi, ColumnChart, AfmColumnChart } from './components/afmConnected';
 import C from './catalog';
 import config from './config';
 import { FG_MAIN } from './constants';
@@ -29,9 +29,43 @@ class App extends Component {
           <ColumnChart
             {...config}
             filterGroup={FG_MAIN}
+            measures={[{
+              measure: {
+                localIdentifier: 'm-checks',
+                definition: {
+                  measureDefinition: {
+                    item: {
+                      identifier: C.measure('# Checks')
+                    }
+                  }
+                }
+              }
+            }]}
+            viewBy={{
+              visualizationAttribute: {
+                localIdentifier: 'a-city',
+                displayForm: {
+                  identifier: C.attributeDisplayForm('Location City')
+                }
+              }
+            }}
+            stackBy={{
+              visualizationAttribute: {
+                localIdentifier: 'a-name',
+                displayForm: {
+                  identifier: C.attributeDisplayForm('Location Name')
+                }
+              }
+            }}
+          />
+        </div>
+        <div style={{ height: 400 }}>
+          <AfmColumnChart
+            {...config}
+            filterGroup={FG_MAIN}
             afm={{
               measures: [{
-                localIdentifier: 'm1',
+                localIdentifier: 'm-checks',
                 definition: {
                   measure: {
                     item: {
@@ -41,10 +75,22 @@ class App extends Component {
                 }
               }],
               attributes: [{
-                localIdentifier: 'a1',
+                localIdentifier: 'a-city',
                 displayForm: {
                   identifier: C.attributeDisplayForm('Location City')
                 }
+              }, {
+                localIdentifier: 'a-name',
+                displayForm: {
+                  identifier: C.attributeDisplayForm('Location Name')
+                }
+              }]
+            }}
+            resultSpec={{
+              dimensions: [{
+                itemIdentifiers: ['a-name']
+              }, {
+                itemIdentifiers: ['a-city', 'measureGroup']
               }]
             }}
           />

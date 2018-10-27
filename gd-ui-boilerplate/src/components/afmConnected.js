@@ -1,20 +1,45 @@
 // Copyright (C) 2007-2018, GoodData(R) Corporation. All rights reserved.
-import { Kpi as KpiOrig, Execute as ExecuteOrig, AfmComponents } from '@gooddata/react-components';
-import { afmConnect, afmWrapper as AfmComponentWrapper } from '@gooddata/gdc-afm-connect';
+import {
+  Kpi as KpiOrig,
+  BarChart as BarChartOrig,
+  ColumnChart as ColumnChartOrig,
+  LineChart as LineChartOrig,
+  PieChart as PieChartOrig,
+  AreaChart as AreaChartOrig,
+  Table as TableOrig,
+  Execute as ExecuteOrig,
+  AfmComponents
+} from '@gooddata/react-components';
+import { afmConnect, afmWrapper } from '@gooddata/gdc-afm-connect';
 
 
 export const Kpi = afmConnect(KpiOrig);
 
-export const BarChart = AfmComponentWrapper(AfmComponents.BarChart);
 
-export const ColumnChart = AfmComponentWrapper(AfmComponents.ColumnChart);
+export const BarChart = afmConnect(BarChartOrig);
 
-export const LineChart = AfmComponentWrapper(AfmComponents.LineChart);
+export const ColumnChart = afmConnect(ColumnChartOrig);
 
-export const PieChart = AfmComponentWrapper(AfmComponents.PieChart);
+export const LineChart = afmConnect(LineChartOrig);
 
-export const AreaChart = AfmComponentWrapper(AfmComponents.AreaChart)
+export const PieChart = afmConnect(PieChartOrig);
 
-export const Table = AfmComponentWrapper(AfmComponents.Table);
+export const AreaChart = afmConnect(AreaChartOrig)
 
-export const Execute = AfmComponentWrapper(ExecuteOrig);
+export const Table = afmConnect(TableOrig);
+
+
+export const Execute = afmWrapper(ExecuteOrig);
+
+
+export const AfmBarChart = afmWrapper(AfmComponents.BarChart);
+
+export const AfmColumnChart = afmWrapper(AfmComponents.ColumnChart);
+
+export const AfmLineChart = afmWrapper(AfmComponents.LineChart);
+
+export const AfmPieChart = afmWrapper(AfmComponents.PieChart);
+
+export const AfmAreaChart = afmWrapper(AfmComponents.AreaChart)
+
+export const AfmTable = afmWrapper(AfmComponents.Table);
