@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@gooddata/gdc-afm-connect": "1.0.21",
     "@gooddata/react-components": "6.0.0-alpha36",
     "node-sass": "^4.9.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.0.5"
+    "react-redux": "^5.1.0",
+    "react-scripts": "2.0.5",
+    "react-select": "^2.1.1",
+    "redux-devtools-extension": "^2.13.5"
   },
   "scripts": {
     "start": "HTTPS=true react-scripts start",

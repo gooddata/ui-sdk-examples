@@ -1,14 +1,23 @@
 // Copyright (C) 2007-2018, GoodData(R) Corporation. All rights reserved.
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from "react-redux";
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import config from './config';
 import { loginMachinery } from './utils';
+import store from "./store";
+
+import './index.css';
 
 const renderApp = () => {
-  ReactDOM.render(<App />, document.getElementById('root'));
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('root')
+  );
 };
 
 loginMachinery(config.sdk, config.projectId, config.domain, renderApp);
