@@ -878,10 +878,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.2.tgz#576ff7fb1230185b619a75d258cbc98f0867a8dc"
   integrity sha512-rLu3wcBWH4P5q1CGoSSH/i9hrXs7SlbRLkoq9IGuoPYNGQvDJ3pt/wmOM+XgYjIDRMVIdkUWt0RsfzF50JfnCw==
 
-"@gooddata/gdc-afm-connect@1.0.21":
-  version "1.0.21"
-  resolved "https://registry.yarnpkg.com/@gooddata/gdc-afm-connect/-/gdc-afm-connect-1.0.21.tgz#3b8d35ec279cd7436c8426d8bc7c8f5989214f0f"
-  integrity sha512-do3zWzHzsf1KbhlWbGhssf09CleFmskXhYdmmKPh5/sAfGkq3ka7zi8hE3PnmTdzRoZKvQJSa+RJ4BFxZYgloA==
+"@gooddata/gdc-afm-connect@1.0.22":
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/@gooddata/gdc-afm-connect/-/gdc-afm-connect-1.0.22.tgz#dc263c73fc4d6e9af4c66dc0a4afa54074e4f06a"
+  integrity sha512-gW5CaUNfyn9GGpbecZe/R93l2T4I8tSiVdU0jyTHKtxBSbN6itlclcA5p0l3T8HDJ/NWz3A3Ka1en3ZD6ZR5Lg==
   dependencies:
     babel-preset-es2015 "^6.24.1"
     lodash "^4.17.10"

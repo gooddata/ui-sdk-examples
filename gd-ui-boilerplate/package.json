@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@gooddata/gdc-afm-connect": "1.0.21",
+    "@gooddata/gdc-afm-connect": "1.0.22",
     "@gooddata/react-components": "6.0.0-alpha36",
     "node-sass": "^4.9.4",
     "react": "^16.6.0",
