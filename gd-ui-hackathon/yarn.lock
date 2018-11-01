@@ -858,10 +858,10 @@
     qs "6.5.1"
     rxjs "^5.5.6"
 
-"@gooddata/goodstrap@57.1.7":
-  version "57.1.7"
-  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-57.1.7.tgz#656effe6fcc068e7c106018b1571a4c383f84be3"
-  integrity sha512-okPiRojxvXHNkN0cRVvZFXhsEcK7qIAWWOhvojvTSH6kvu3sVtyMAocYHyZQgocoiCJ5HMFdajfXRJ/jcUfPSw==
+"@gooddata/goodstrap@57.1.8":
+  version "57.1.8"
+  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-57.1.8.tgz#f5caaf78b5468a453449e57f0ba5078962eec2ff"
+  integrity sha512-r2uNXQGscJ+3jjQuLgPJqtADhwv09Q5+roBwi3W2ue1A1oUgQmDm2tIt1KURTdy3+z2h/i9yip+sZodQEav2eA==
   dependencies:
     "@gooddata/js-utils" "^2.0.0"
     classnames "2.2.5"
@@ -900,13 +900,13 @@
   resolved "https://registry.yarnpkg.com/@gooddata/numberjs/-/numberjs-3.1.2.tgz#82dd26486edeb21de37cfe538915f93cd403e801"
   integrity sha1-gt0mSG7esh3jfP5TiRX5PNQD6AE=
 
-"@gooddata/react-components@6.0.0-alpha32":
-  version "6.0.0-alpha32"
-  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-6.0.0-alpha32.tgz#d8a92e47ddb4191712b8a704aea6402840dd4eca"
-  integrity sha512-LwDc4Zd4vWGdq66v26l9SKXycJe7oCTAxWKQ7btDyoQScwvrGVRw5IyTNLZ6gjhUgN+RSq+GyuJqfvtfJiQu7Q==
+"@gooddata/react-components@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-6.0.0.tgz#e7cc821c40ed0762bd4ba43ca1112dd13cf5ac57"
+  integrity sha512-kOc3AeobP19mCRuYlBRbCd84O0jVHrvh56B53rk1TvoZ05zaK+iJ8LfVb3BFg1qZpOOBpZ7xQy/D27RZM8Tmmw==
   dependencies:
     "@gooddata/gooddata-js" "8.4.1"
-    "@gooddata/goodstrap" "57.1.7"
+    "@gooddata/goodstrap" "57.1.8"
     "@gooddata/js-utils" "^2.0.1"
     "@gooddata/numberjs" "^3.1.2"
     "@gooddata/typings" "2.4.1"
