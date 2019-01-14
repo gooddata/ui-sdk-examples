@@ -5028,6 +5028,11 @@ highcharts@4.2.5:
   resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-4.2.5.tgz#f18bbda5ca326fdff7d816c94814fe8509cec969"
   integrity sha1-8Yu9pcoyb9/32BbJSBT+hQnOyWk=
 
+highcharts@^6.0.4:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-6.2.0.tgz#2a6d04652eb43c66f462ca7e2d2808f1f2782b61"
+  integrity sha512-A4E89MA+kto8giic7zyLU6ZxfXnVeCUlKOyzFsah3+n4BROx4bgonl92KIBtwLud/mIWir8ahqhuhe2by9LakQ==
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -8827,6 +8832,13 @@ react-error-overlay@^5.0.5:
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.0.5.tgz#716ff1a92fda76bb89a39adf9ce046a5d740e71a"
   integrity sha512-ab0HWBgxdIsngHtMGU8+8gYFdTBXpUGd4AE4lN2VZvOIlBmWx9dtaWEViihuGSIGosCKPeHCnzFoRWB42UtnLg==
+
+react-highcharts@^16.0.2:
+  version "16.0.2"
+  resolved "https://registry.yarnpkg.com/react-highcharts/-/react-highcharts-16.0.2.tgz#7bdae039f9abb3f753ba88b6578d52630c18537a"
+  integrity sha512-RH56Yv1NvBfo6YTVBF7zyT/i4yCXSyDSK6VyaAcAi3SqOkixB9Ac+81EJK4VMbXi2BEXaYkVTYcV7KVAiQSE7w==
+  dependencies:
+    highcharts "^6.0.4"
 
 react-input-autosize@^2.2.1:
   version "2.2.1"

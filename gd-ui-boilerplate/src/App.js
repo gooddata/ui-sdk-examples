@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Kpi, ColumnChart, AfmColumnChart } from './components/afmConnected';
+import { Kpi, ColumnChart, AfmColumnChart, Execute } from './components/afmConnected';
 import C from './catalog';
 import config from './config';
 import { FG_MAIN } from './constants';
 import AttributeDropdown from './components/AttributeDropdown';
+import CustomBarChart from './components/CustomBarChart';
 
 import '@gooddata/react-components/styles/css/main.css';
 import './App.css';
@@ -93,6 +94,31 @@ class App extends Component {
                 itemIdentifiers: ['a-city', 'measureGroup']
               }]
             }}
+          />
+        </div>
+        <div style={{ height: 400 }}>
+          <Execute
+            {...config}
+            filterGroup={FG_MAIN}
+            afm={{
+              measures: [{
+                localIdentifier: 'm1',
+                definition: {
+                  measure: {
+                    item: {
+                      identifier: C.measure('# Checks')
+                    }
+                  }
+                }
+              }],
+              attributes: [{
+                localIdentifier: 'a1',
+                displayForm: {
+                  identifier: C.attributeDisplayForm('Location City')
+                }
+              }]
+            }}
+            children={CustomBarChart}
           />
         </div>
       </div>
