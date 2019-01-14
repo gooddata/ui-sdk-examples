@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Kpi, ColumnChart, AfmColumnChart, Execute } from './components/afmConnected';
+import { Kpi, ColumnChart, Execute } from './components/afmConnected';
 import C from './catalog';
 import config from './config';
 import { FG_MAIN } from './constants';
@@ -57,42 +57,6 @@ class App extends Component {
                   identifier: C.attributeDisplayForm('Location Name')
                 }
               }
-            }}
-          />
-        </div>
-        <div style={{ height: 400 }}>
-          <AfmColumnChart
-            {...config}
-            filterGroup={FG_MAIN}
-            afm={{
-              measures: [{
-                localIdentifier: 'm-checks',
-                definition: {
-                  measure: {
-                    item: {
-                      identifier: C.measure('# Checks')
-                    }
-                  }
-                }
-              }],
-              attributes: [{
-                localIdentifier: 'a-city',
-                displayForm: {
-                  identifier: C.attributeDisplayForm('Location City')
-                }
-              }, {
-                localIdentifier: 'a-name',
-                displayForm: {
-                  identifier: C.attributeDisplayForm('Location Name')
-                }
-              }]
-            }}
-            resultSpec={{
-              dimensions: [{
-                itemIdentifiers: ['a-name']
-              }, {
-                itemIdentifiers: ['a-city', 'measureGroup']
-              }]
             }}
           />
         </div>
