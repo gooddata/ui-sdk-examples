@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Kpi, ColumnChart, Execute, Visualization } from './components/afmConnected';
+import { Model } from '@gooddata/react-components';
 import C from './catalog';
 import config from './config';
 import { FG_MAIN } from './constants';
@@ -37,34 +38,9 @@ class App extends Component {
           <ColumnChart
             {...config}
             filterGroup={FG_MAIN}
-            measures={[{
-              measure: {
-                localIdentifier: 'm-checks',
-                definition: {
-                  measureDefinition: {
-                    item: {
-                      identifier: C.measure('# Checks')
-                    }
-                  }
-                }
-              }
-            }]}
-            viewBy={{
-              visualizationAttribute: {
-                localIdentifier: 'a-city',
-                displayForm: {
-                  identifier: C.attributeDisplayForm('Location City')
-                }
-              }
-            }}
-            stackBy={{
-              visualizationAttribute: {
-                localIdentifier: 'a-name',
-                displayForm: {
-                  identifier: C.attributeDisplayForm('Location Name')
-                }
-              }
-            }}
+            measures={[Model.measure(C.measure('# Checks'))]}
+            viewBy={Model.attribute(C.attributeDisplayForm('Location City'))}
+            stackBy={Model.attribute(C.attributeDisplayForm('Location Name'))}
           />
         </div>
         <div style={{ height: 400 }}>

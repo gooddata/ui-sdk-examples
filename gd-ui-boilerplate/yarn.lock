@@ -889,29 +889,29 @@
     react "15.6.2"
     react-redux "^5.0.7"
 
-"@gooddata/gooddata-js@10.0.1":
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/@gooddata/gooddata-js/-/gooddata-js-10.0.1.tgz#3b8b62fb5f9d63101118a3b4edb7fd6c6ff3354c"
-  integrity sha512-/ya88Q/hwM7KY6bhVEkiVaZnRHR75lnOzl61HcCjKPcZEXdvYLZ7eLb87w+osig4UYKFq5mEn797wNy8Jx6zaQ==
+"@gooddata/gooddata-js@10.1.0":
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/gooddata-js/-/gooddata-js-10.1.0.tgz#de89dec56f3db75a31d2177f1bee5f1e094981de"
+  integrity sha512-q9RcXKObzpUG/pU4jIl3juhEKNnIl4cCVGB4IeZrtIxcaqPS9N1UBaK/iL5xbsJgtjiEHazpo9G/46D/kqRpvA==
   dependencies:
-    "@gooddata/typings" "2.4.1"
+    "@gooddata/typings" "2.6.0"
     es6-promise "3.0.2"
     fetch-cookie "0.7.0"
     invariant "2.2.2"
     isomorphic-fetch "2.2.1"
     json-stable-stringify "1.0.1"
-    lodash "4.17.4"
+    lodash "4.17.11"
     md5 "2.2.1"
     node-fetch "1.7.3"
     qs "6.5.1"
     rxjs "^5.5.6"
 
-"@gooddata/goodstrap@59.0.0":
-  version "59.0.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-59.0.0.tgz#76e09ecdae1d7d2bd80d163a14ec220f13b44e67"
-  integrity sha512-GsHU4hEC8kVjUmMs0rW+FHF1tAzInOsObyZwonJmcOXy3mbkGc4bjN+WCJ30ahRQeZPb2cKruh2Dn1MwxXRg/Q==
+"@gooddata/goodstrap@59.4.0":
+  version "59.4.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-59.4.0.tgz#947df8130124dcdf47cb8baa417e994cc4fcb76b"
+  integrity sha512-C5dtTrGh0GNojxXmlGPHpChH8tZj2ctAsaaY+fJN2V2k4tC9gm+rt59VhxsY+hOx+IlMre3j9ZIsRC1ZwfDrXQ==
   dependencies:
-    "@gooddata/js-utils" "^2.0.0"
+    "@gooddata/js-utils" "3.3.0"
     classnames "2.2.5"
     custom-event "1.0.1"
     fixed-data-table-2 "0.7.17"
@@ -919,9 +919,9 @@
     immutable "3.8.1"
     invariant "2.2.2"
     kefir "3.7.1"
-    lodash "4.17.4"
-    moment "2.18.1"
-    moment-timezone "0.5.11"
+    lodash "4.17.11"
+    moment "2.23.0"
+    moment-timezone "0.5.23"
     prop-types "15.6.0"
     querystringify "2.1.0"
     react-day-picker "7.0.7"
@@ -936,38 +936,30 @@
     rxjs "^5.5.6"
     tinycolor2 "1.4.1"
 
-"@gooddata/js-utils@3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/js-utils/-/js-utils-3.2.0.tgz#d3b221a30423f8ad2c1f3ac22aa4014f29b83aa0"
-  integrity sha512-bvcY263UJSB+7AIWDx+TY8Azw8htnr+5zR7c/nRh2oIhNyAeSWowLqZn9Hfdfn9lMPvyjd28MO2PwT8SEdRpHw==
+"@gooddata/js-utils@3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/js-utils/-/js-utils-3.3.0.tgz#5e6f227be611be5a6d93d1fa8bb5eec7ef357585"
+  integrity sha512-G2GDGZcWj2RbXr197OAc3+XWVf5RLCldzUGxCCaII/osOzZzyelbxJMMnU6qLGtBYJLrVqebnoCn8Pz/rQ48nw==
   dependencies:
     js-cookie "^2.1.4"
-    lodash "^4.17.4"
-    lodash-es "^4.17.4"
-
-"@gooddata/js-utils@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@gooddata/js-utils/-/js-utils-2.0.1.tgz#46290cba9cb1e5f1c5e97e6860b5b1ef943ee779"
-  integrity sha512-Y7Farseie2PVkhLou3ehDSh0NZgKN+OajguSm5KVQbn/hHRHeAfdMNuQd/LQNV/vkPs+T3GpgSvyBtyrq4fBZg==
-  dependencies:
-    js-cookie "^2.1.4"
-    lodash "^4.17.4"
+    lodash "4.17.11"
+    lodash-es "4.17.11"
 
 "@gooddata/numberjs@^3.1.2":
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/@gooddata/numberjs/-/numberjs-3.2.1.tgz#6cb7321233fd353d3383cc76a7d6bd1c9c5cec0a"
   integrity sha512-eTrAOVuca1qDnrS039wew22osRaFvplviW40IgplyZs/nBcGtPObj2wtR5SEfVyCOol5fSb3vfH5b6A0GbG4dg==
 
-"@gooddata/react-components@^6.1.1":
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-6.1.1.tgz#b24016dbf3e525bd9d789cbec3b7294510c30c37"
-  integrity sha512-Pf2avkx9xbc6Kh3cWFGgtAt3B3cKOs7988f/l/KLebhVisLttnPZWey6LERtexuCUhtq1zi5X02tPY1sPrPpTQ==
+"@gooddata/react-components@6.2.0-alpha17":
+  version "6.2.0-alpha17"
+  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-6.2.0-alpha17.tgz#e510f78d82db2344bdf71c8f6ab4e9d4fd8e354a"
+  integrity sha512-8zzPC7ti41nQx2oYOWJRvBWBGJjsrMq7XHMnknS8yfqrmKDcpqECPoFPC8rWb46I2u9a5Z/RHppB4HmKLsCS1Q==
   dependencies:
-    "@gooddata/gooddata-js" "10.0.1"
-    "@gooddata/goodstrap" "59.0.0"
-    "@gooddata/js-utils" "3.2.0"
+    "@gooddata/gooddata-js" "10.1.0"
+    "@gooddata/goodstrap" "59.4.0"
+    "@gooddata/js-utils" "3.3.0"
     "@gooddata/numberjs" "^3.1.2"
-    "@gooddata/typings" "2.5.0"
+    "@gooddata/typings" "2.6.0"
     "@types/highcharts" "4.2.56"
     ag-grid "^18.0.1"
     ag-grid-react "^18.0.0"
@@ -978,7 +970,7 @@
     highcharts-pattern-fill "3.0.3"
     http-status-codes "^1.3.0"
     invariant "^2.2.2"
-    lodash "^4.17.4"
+    lodash "4.17.11"
     nodelist-foreach-polyfill "^1.2.0"
     prop-types "^15.6.0"
     react-dom-factories "^1.0.2"
@@ -986,19 +978,12 @@
     react-measure "^1.4.7"
     rxjs "^5.5.6"
 
-"@gooddata/typings@2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@gooddata/typings/-/typings-2.4.1.tgz#df1e16dd9d72a3fc520ed7716a5c6107a8dd0ecd"
-  integrity sha512-BZlu5eFd8O+Y8AR8PNoXU2ISky+qHmVtnkeJfvuZvNCDgRMxRElx6wXO/LS38BlXNv0a4MdMlycmyF5czt9iog==
+"@gooddata/typings@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/typings/-/typings-2.6.0.tgz#9246b79920d5c30294e0808a63995cef62738eaa"
+  integrity sha512-LLIh6KBUYsNpaOrOjmF9GwaM3YQX9j4DBbf9WH0CeqN1C0oe8ELEpoa/EFVftGgTSGi445MuSl7VSmTfzarjZA==
   dependencies:
-    lodash "4.17.4"
-
-"@gooddata/typings@2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/typings/-/typings-2.5.0.tgz#06fd69781555ee38febe63cf3e0c3b052b5fb290"
-  integrity sha512-zceS2Q1yJVRhB0KXzxdjWaGZgecdygKk9GFNEo09E4CG7O7LrflZ3AmlCI9u1MlzPlhc4HN0do5cccpPyRAmMg==
-  dependencies:
-    lodash "4.17.4"
+    lodash "4.17.11"
 
 "@svgr/core@^2.4.1":
   version "2.4.1"
@@ -6571,7 +6556,7 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
-lodash-es@^4.17.4:
+lodash-es@4.17.11:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.11.tgz#145ab4a7ac5c5e52a3531fb4f310255a152b4be0"
   integrity sha512-DHb1ub+rMjjrxqlB3H56/6MXtm1lSksDp2rA2cNWjG8mlDUYFhUj3Di2Zn5IwSU87xLv8tNIQ7sSwE/YOX/D/Q==
@@ -6641,12 +6626,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@4.17.4:
-  version "4.17.4"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
-  integrity sha1-eCA6TRwyiuHYbcpkYONptX9AVa4=
-
-"lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@~4.17.10:
+lodash@4.17.11, "lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@~4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
@@ -7027,22 +7007,17 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   dependencies:
     minimist "0.0.8"
 
-moment-timezone@0.5.11:
-  version "0.5.11"
-  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.11.tgz#9b76c03d8ef514c7e4249a7bbce649eed39ef29f"
-  integrity sha1-m3bAPY71FMfkJJp7vOZJ7tOe8p8=
+moment-timezone@0.5.23:
+  version "0.5.23"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.23.tgz#7cbb00db2c14c71b19303cb47b0fb0a6d8651463"
+  integrity sha512-WHFH85DkCfiNMDX5D3X7hpNH3/PUhjTGcD0U1SgfBGZxJ3qUmJh5FdvaFjcClxOvB3rzdfj4oRffbI38jEnC1w==
   dependencies:
-    moment ">= 2.6.0"
+    moment ">= 2.9.0"
 
-moment@2.18.1:
-  version "2.18.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
-  integrity sha1-w2GT3Tzhwu7SrbfIAtu8d6gbHA8=
-
-"moment@>= 2.6.0":
-  version "2.22.2"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
-  integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
+moment@2.23.0, "moment@>= 2.9.0":
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.23.0.tgz#759ea491ac97d54bac5ad776996e2a58cc1bc225"
+  integrity sha512-3IE39bHVqFbWWaPOMHZF98Q9c3LDKGTmypMiTM2QygGXXElkFWIH7GxfmlwmY2vwa+wmNsoYZmG2iusf1ZjJoA==
 
 move-concurrently@^1.0.1:
   version "1.0.1"
