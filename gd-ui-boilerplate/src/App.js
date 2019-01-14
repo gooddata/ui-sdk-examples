@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Kpi, ColumnChart, Execute } from './components/afmConnected';
+import { Kpi, ColumnChart, Execute, Visualization } from './components/afmConnected';
 import C from './catalog';
 import config from './config';
 import { FG_MAIN } from './constants';
@@ -26,6 +26,13 @@ class App extends Component {
           filterGroup={FG_MAIN}
           measure={C.measure('# Checks')}
         />
+        <div style={{ height: 400 }}>
+          <Visualization
+            {...config}
+            filterGroup={FG_MAIN}
+            identifier="aby6oS6DbpFX"
+          />
+        </div>
         <div style={{ height: 400 }}>
           <ColumnChart
             {...config}

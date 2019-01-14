@@ -1,5 +1,6 @@
 // Copyright (C) 2007-2018, GoodData(R) Corporation. All rights reserved.
 import {
+  Visualization as VisualizationOrig,
   Kpi as KpiOrig,
   BarChart as BarChartOrig,
   ColumnChart as ColumnChartOrig,
@@ -12,6 +13,8 @@ import {
 } from '@gooddata/react-components';
 import { afmConnect, afmWrapper } from '@gooddata/gdc-afm-connect';
 
+
+export const Visualization = afmConnect(VisualizationOrig);
 
 export const Kpi = afmConnect(KpiOrig);
 
