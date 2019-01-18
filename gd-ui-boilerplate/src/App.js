@@ -11,6 +11,27 @@ import '@gooddata/react-components/styles/css/main.css';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    window.addEventListener('message', message => {
+      // catching postMessages when embedded into pixel-perfect dashboard
+      let data;
+
+      console.log(message);
+
+      if (message.data) {
+        try {
+          data = JSON.parse(message.data);
+        } catch(e) {
+          data = message.data;
+        }
+      }
+
+      if (data && data.gdc && data.gdc.name === 'filter.value.changed') {
+        console.log(data.gdc.data);
+      }
+    });
+  }
+
   render() {
     return (
       <div className="App">
