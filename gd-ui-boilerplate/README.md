@@ -25,8 +25,8 @@ This app is deployed at https://gooddata-demo.s3.amazonaws.com/gd-ui-boilerplate
 
 * `git clone --depth 1 https://github.com/gooddata/ui-sdk-examples.git`
 * `cd ui-sdk-examples/gd-ui-boilerplate/`
-* `yarn install --pure-lockfile`
-* `yarn start`
+* `yarn install --pure-lockfile` (or `npm install`)
+* `HTTPS=true yarn start` (or `set HTTPS=true&&npm start` on Win)
 
 ## How to build for deployment
 
