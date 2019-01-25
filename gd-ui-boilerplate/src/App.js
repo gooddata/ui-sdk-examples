@@ -16,18 +16,19 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.handleCityFilterChanged = this.handleCityFilterChanged.bind(this);
+    this.handleIncomingCityFilterChange = this.handleIncomingCityFilterChange.bind(this);
+    this.handleOutcomingCityFilterChange = this.handleOutcomingCityFilterChange.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener('message', this.handleCityFilterChanged);
+    window.addEventListener('message', this.handleIncomingCityFilterChange);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('message', this.handleCityFilterChanged);
+    window.removeEventListener('message', this.handleIncomingCityFilterChange);
   }
 
-  handleCityFilterChanged(message) {
+  handleIncomingCityFilterChange(message) {
       // catching postMessages when embedded into pixel-perfect dashboard
       let data;
 
@@ -44,10 +45,36 @@ class App extends Component {
       if (data && data.gdc && data.gdc.name === 'filter.value.changed') {
         const values = data.gdc.data;
 
+        console.log(values);
+
         if (values.length && values[0].label === C.attributeDisplayForm('Location City')) {
           this.props.cityFilterChanged(values)
         }
       }
+  }
+
+  handleOutcomingCityFilterChange(payload) {
+    console.log('payload', payload);
+
+    const { label, values } = payload;
+
+    var postMessageStructure = {
+      gdc: {
+        setFilterContext: values.length ? values.map(value => ({
+          label,
+          type: 'attribute',
+          value: value.label
+        })) : [{
+          label,
+          type: 'attribute',
+          value: 'GDC_SELECT_ALL'
+        }]
+      }
+    };
+
+    console.log('sending up', postMessageStructure);
+
+    window.parent.postMessage(JSON.stringify(postMessageStructure), '*');
   }
 
   render() {
@@ -59,13 +86,18 @@ class App extends Component {
             filterGroup={FG_MAIN}
             attribute={C.attributeDisplayForm('Location City')}
             placeholder="Filter cities"
+            onChange={this.handleOutcomingCityFilterChange}
           />
         </div>
-        <Kpi
-          {...config}
-          filterGroup={FG_MAIN}
-          measure={C.measure('# Checks')}
-        />
+        <div>
+          # of Location City: <Kpi
+            {...config}
+            filterGroup={FG_MAIN}
+            measure={C.measure('# Location City')}
+          />
+          <br />
+          <br />
+        </div>
         <div style={{ height: 400 }}>
           <Visualization
             {...config}

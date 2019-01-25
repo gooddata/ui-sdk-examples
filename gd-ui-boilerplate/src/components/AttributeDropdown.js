@@ -15,7 +15,8 @@ class AttributeDropdown extends Component {
       attribute,
       filterGroup,
       removeAttributeFilter,
-      updatePositiveAttributeFilter
+      updatePositiveAttributeFilter,
+      onChange
     } = this.props;
 
     if (options.length) {
@@ -24,11 +25,13 @@ class AttributeDropdown extends Component {
         attribute,
         options.map(option => option.value)
       );
+      onChange({ label: attribute, values: options });
     } else {
       removeAttributeFilter(
         filterGroup,
         attribute
       );
+      onChange({ label: attribute, values: [] });
     }
   }
 
