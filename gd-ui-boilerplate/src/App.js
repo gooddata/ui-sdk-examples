@@ -54,8 +54,6 @@ class App extends Component {
   }
 
   handleOutcomingCityFilterChange(payload) {
-    console.log('payload', payload);
-
     const { label, values } = payload;
 
     var postMessageStructure = {
@@ -71,8 +69,6 @@ class App extends Component {
         }]
       }
     };
-
-    console.log('sending up', postMessageStructure);
 
     window.parent.postMessage(JSON.stringify(postMessageStructure), '*');
   }
