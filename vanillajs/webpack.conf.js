@@ -10,8 +10,24 @@ module.exports = {
         library: 'GDRC',
         libraryTarget: 'window'
     },
+    module: {
+        rules: [
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
+            }
+        ]
+    },
     plugins: [
-        new Uglify(),
+        new Uglify()
     ],
     devServer: {
         contentBase: path.join(__dirname, "demo"),
