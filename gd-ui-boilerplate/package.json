@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@gooddata/gdc-afm-connect": "1.0.22",
-    "@gooddata/react-components": "6.2.0-alpha17",
+    "@gooddata/react-components": "^6.2.0",
     "node-sass": "^4.9.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",

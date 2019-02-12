@@ -889,10 +889,10 @@
     react "15.6.2"
     react-redux "^5.0.7"
 
-"@gooddata/gooddata-js@10.1.0":
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/gooddata-js/-/gooddata-js-10.1.0.tgz#de89dec56f3db75a31d2177f1bee5f1e094981de"
-  integrity sha512-q9RcXKObzpUG/pU4jIl3juhEKNnIl4cCVGB4IeZrtIxcaqPS9N1UBaK/iL5xbsJgtjiEHazpo9G/46D/kqRpvA==
+"@gooddata/gooddata-js@11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/gooddata-js/-/gooddata-js-11.0.0.tgz#cea1ce2a21a17dc6fc2593bf6e8ac335c17f7bb1"
+  integrity sha512-WfplkfCK50OBangU3H2nmKTw5BEZsWDYKdmmEZsQXFYAY8ufHRnAW9rWc9/IDgmIG/z8YBhf2IBxeUT5mxt8AA==
   dependencies:
     "@gooddata/typings" "2.6.0"
     es6-promise "3.0.2"
@@ -950,12 +950,12 @@
   resolved "https://registry.yarnpkg.com/@gooddata/numberjs/-/numberjs-3.2.1.tgz#6cb7321233fd353d3383cc76a7d6bd1c9c5cec0a"
   integrity sha512-eTrAOVuca1qDnrS039wew22osRaFvplviW40IgplyZs/nBcGtPObj2wtR5SEfVyCOol5fSb3vfH5b6A0GbG4dg==
 
-"@gooddata/react-components@6.2.0-alpha17":
-  version "6.2.0-alpha17"
-  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-6.2.0-alpha17.tgz#e510f78d82db2344bdf71c8f6ab4e9d4fd8e354a"
-  integrity sha512-8zzPC7ti41nQx2oYOWJRvBWBGJjsrMq7XHMnknS8yfqrmKDcpqECPoFPC8rWb46I2u9a5Z/RHppB4HmKLsCS1Q==
+"@gooddata/react-components@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-6.2.0.tgz#fcff8550625edf0ca9df35b10758a2029782213b"
+  integrity sha512-anZ1/1STfW4WJxrcyel4OCOdvOeK2FN1rj5FwMU3zwegYAc0ZDeGQIqdz8zIhR3jfwYZ1u6lsUWUrmyBGd3uCw==
   dependencies:
-    "@gooddata/gooddata-js" "10.1.0"
+    "@gooddata/gooddata-js" "11.0.0"
     "@gooddata/goodstrap" "59.4.0"
     "@gooddata/js-utils" "3.3.0"
     "@gooddata/numberjs" "^3.1.2"
