@@ -8,6 +8,7 @@ import config from './config';
 import { FG_MAIN } from './constants';
 import AttributeDropdown from './components/AttributeDropdown';
 import CustomBarChart from './components/CustomBarChart';
+import { loginMachinery } from './utils';
 
 import '@gooddata/react-components/styles/css/main.css';
 import './App.css';
@@ -16,11 +17,17 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      isLogged: false
+    };
+
     this.handleIncomingCityFilterChange = this.handleIncomingCityFilterChange.bind(this);
     this.handleOutcomingCityFilterChange = this.handleOutcomingCityFilterChange.bind(this);
   }
 
   componentDidMount() {
+    loginMachinery({ ...config }, () => this.setState({ isLogged: true }) );
+
     window.addEventListener('message', this.handleIncomingCityFilterChange);
   }
 
@@ -29,28 +36,24 @@ class App extends Component {
   }
 
   handleIncomingCityFilterChange(message) {
-      // catching postMessages when embedded into pixel-perfect dashboard
-      let data;
+    // catching postMessages when embedded into pixel-perfect dashboard
+    let data;
 
-      console.log(message);
-
-      if (message.data) {
-        try {
-          data = JSON.parse(message.data);
-        } catch(e) {
-          data = message.data;
-        }
+    if (message.data) {
+      try {
+        data = JSON.parse(message.data);
+      } catch(e) {
+        data = message.data;
       }
+    }
 
-      if (data && data.gdc && data.gdc.name === 'filter.value.changed') {
-        const values = data.gdc.data;
+    if (data && data.gdc && data.gdc.name === 'filter.value.changed') {
+      const values = data.gdc.data;
 
-        console.log(values);
-
-        if (values.length && values[0].label === C.attributeDisplayForm('Location City')) {
-          this.props.cityFilterChanged(values)
-        }
+      if (values.length && values[0].label === C.attributeDisplayForm('Location City')) {
+        this.props.cityFilterChanged(values)
       }
+    }
   }
 
   handleOutcomingCityFilterChange(payload) {
@@ -74,6 +77,12 @@ class App extends Component {
   }
 
   render() {
+    const { isLogged } = this.state;
+
+    if (!isLogged) {
+      return <span>Checking your credentials, please wait…</span>;
+    }
+
     return (
       <div className="App">
         <div style={{ width: 400, margin: 'auto', marginBottom: 20, marginTop: 20 }}>
@@ -141,11 +150,20 @@ class App extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  cityFilterChanged: (values) => dispatch(AfmActions.updatePositiveAttributeFilter(
-    FG_MAIN,
-    C.attributeDisplayForm('Location City'),
-    values.map(value => value.elementUri)
-  ))
+  cityFilterChanged: (values) => {
+    if (values[0].value === 'GDC_SELECT_ALL') {
+      dispatch(AfmActions.removeAttributeFilter(
+        FG_MAIN,
+        C.attributeDisplayForm('Location City')
+      ));
+    } else {
+      dispatch(AfmActions.updatePositiveAttributeFilter(
+        FG_MAIN,
+        C.attributeDisplayForm('Location City'),
+        values.map(value => value.elementUri)
+      ));
+    }
+  }
 });
 
 export default connect(null, mapDispatchToProps)(App);

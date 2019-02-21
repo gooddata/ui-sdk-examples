@@ -1,23 +1,21 @@
 // Copyright (C) 2007-2018, GoodData(R) Corporation. All rights reserved.
-export const loginMachinery = (gooddata, projectId, domain, renderApp) => {
+export const loginMachinery = ({ sdk, projectId, domain }, callback = () => {}) => {
   const redirectToLogin = () => {
     if (domain) {
       window.location.replace(`${domain}/account.html?lastUrl=${window.location}`);
     } else {
       window.location.replace(`https://${window.location.hostname}:${window.location.port}/account.html`);
     }
-
-    return null;
   };
 
-  gooddata.user.isLoggedIn().then((isLogged) => {
+  sdk.user.isLoggedIn().then((isLogged) => {
     if (isLogged) {
-      gooddata.user.getAccountInfo().then(({ profileUri }) => {
-        gooddata.project.getProjects(profileUri.split('/')[4]).then((projects) => {
+      sdk.user.getAccountInfo().then(({ profileUri }) => {
+        sdk.project.getProjects(profileUri.split('/')[4]).then((projects) => {
           if (projects.find(p => p.links.self === `/gdc/projects/${projectId}`)) {
-            renderApp();
+            callback();
           } else {
-            gooddata.user.logout().then(() => {
+            sdk.user.logout().then(() => {
               redirectToLogin();
             });
           }

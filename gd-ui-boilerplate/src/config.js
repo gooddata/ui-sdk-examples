@@ -10,9 +10,12 @@ if (process.env.NODE_ENV === 'production') {
   config.domain = 'https://developer.na.gooddata.com';
 }
 
-const sdk = factory(config);
+export const sdk = factory(config);
 
 window.gooddata = sdk;
+
+export const projectId = catalogJson.projectId;
+export const domain = config.domain;
 
 export default {
   projectId: catalogJson.projectId,

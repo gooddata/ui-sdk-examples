@@ -31,7 +31,7 @@ This app is deployed at https://gooddata-demo.s3.amazonaws.com/gd-ui-boilerplate
 ## How to build for deployment
 
 * `npm run build` when deploying to root folder
-* `PUBLIC_URL=/gd-ui-boilerplate npm run boilerplate` when deploying to `/gd-ui-boilerplate` folder
+* `PUBLIC_URL=/gd-ui-boilerplate yarn build` when deploying to `/gd-ui-boilerplate` folder
 
 ## Backend/proxy info
 
