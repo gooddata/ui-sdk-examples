@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "@gooddata/react-components": "^6.2.0",
-    "react": "15.6.2",
-    "react-dom": "15.6.2"
+    "react": "16.8",
+    "react-dom": "16.8"
   },
   "devDependencies": {
     "css-loader": "^2.1.0",
