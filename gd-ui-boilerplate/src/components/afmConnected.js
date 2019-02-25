@@ -8,6 +8,7 @@ import {
   PieChart as PieChartOrig,
   AreaChart as AreaChartOrig,
   Table as TableOrig,
+  PivotTable as PivotTableOrig,
   Execute as ExecuteOrig,
   AfmComponents
 } from '@gooddata/react-components';
@@ -24,6 +25,7 @@ export const LineChart = afmConnect(LineChartOrig);
 export const PieChart = afmConnect(PieChartOrig);
 export const AreaChart = afmConnect(AreaChartOrig)
 export const Table = afmConnect(TableOrig);
+export const PivotTable = afmConnect(PivotTableOrig);
 
 export const Execute = afmWrapper(ExecuteOrig);
 
