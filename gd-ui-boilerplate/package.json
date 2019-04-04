@@ -6,8 +6,8 @@
     "@gooddata/gdc-afm-connect": "1.0.22",
     "@gooddata/react-components": "^6.2.0",
     "node-sass": "^4.9.4",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "react": "16.8",
+    "react-dom": "16.8",
     "react-highcharts": "^16.0.2",
     "react-redux": "^5.1.0",
     "react-scripts": "2.0.5",
@@ -18,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "buildgd": "PUBLIC_URL=/gd-ui-boilerplate yarn build",
+    "syncgd": "s3cmd --config .s3cfg sync --delete-removed ./build/ s3://gooddata-demo/gd-ui-boilerplate/"
   },
   "eslintConfig": {
     "extends": "react-app"
