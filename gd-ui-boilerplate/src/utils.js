@@ -10,10 +10,12 @@ export const loginMachinery = ({ sdk, projectId, domain }, callback = () => {}) 
 
   sdk.user.isLoggedIn().then((isLogged) => {
     if (isLogged) {
-      sdk.user.getAccountInfo().then(({ profileUri }) => {
+      sdk.user.getAccountInfo().then((accountInfo) => {
+        const { profileUri } = accountInfo;
+
         sdk.project.getProjects(profileUri.split('/')[4]).then((projects) => {
           if (projects.find(p => p.links.self === `/gdc/projects/${projectId}`)) {
-            callback();
+            callback(accountInfo);
           } else {
             sdk.user.logout().then(() => {
               redirectToLogin();
@@ -24,5 +26,21 @@ export const loginMachinery = ({ sdk, projectId, domain }, callback = () => {}) 
     } else {
       redirectToLogin();
     }
+  });
+};
+
+export const logout = (e, { sdk, domain }) => {
+  e.preventDefault();
+
+  const redirectToLogin = () => {
+    if (domain) {
+      window.location.replace(`${domain}/account.html?lastUrl=${encodeURIComponent(window.location)}`);
+    } else {
+      window.location.replace(`https://${window.location.hostname}:${window.location.port}/account.html`);
+    }
+  };
+
+  sdk.user.logout().then(() => {
+    redirectToLogin();
   });
 };
