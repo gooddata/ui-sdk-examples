@@ -23,6 +23,9 @@ import {
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
 
+import { Kpi } from '@gooddata/react-components';
+import gooddata from './../../gooddata';
+
 const Widget03 = lazy(() => import('../../views/Widgets/Widget03'));
 
 const brandPrimary = getStyle('--primary')
@@ -500,7 +503,9 @@ class Dashboard extends Component {
                     </DropdownMenu>
                   </ButtonDropdown>
                 </ButtonGroup>
-                <div className="text-value">9.823</div>
+                <div className="text-value">
+                  <Kpi {...gooddata} measure="aeOt50ngicOD" />
+                </div>
                 <div>Members online</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
