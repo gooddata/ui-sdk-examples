@@ -29,5 +29,6 @@ This app is configured to run against https://developer.na.gooddata.com/. For ac
 ## TODO
 
 * KPIs
+* KPI trends
 * Custom chart
 * Deployment

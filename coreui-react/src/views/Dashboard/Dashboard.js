@@ -23,7 +23,9 @@ import {
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
 
-import { Kpi } from '@gooddata/react-components';
+import { Kpi, Execute, Visualization } from '@gooddata/react-components';
+// import '@gooddata/react-components/styles/css/main.css';
+import C from './../../catalog.js';
 import gooddata from './../../gooddata';
 
 const Widget03 = lazy(() => import('../../views/Widgets/Widget03'));
@@ -504,12 +506,63 @@ class Dashboard extends Component {
                   </ButtonDropdown>
                 </ButtonGroup>
                 <div className="text-value">
-                  <Kpi {...gooddata} measure="aeOt50ngicOD" />
+                  <Kpi {...gooddata} measure={C.measure('# Checks')} />
                 </div>
-                <div>Members online</div>
+                <div># of Checks</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
-                <Line data={cardChartData2} options={cardChartOpts2} height={70} />
+                <Execute
+                  {...gooddata}
+                  afm={{
+                    measures: [{
+                      localIdentifier: "m1",
+                      definition: {
+                        measure: {
+                          item: {
+                            identifier: C.measure('# Checks')
+                          }
+                        }
+                      }
+                    }],
+                    attributes: [{
+                      displayForm: {
+                        identifier: C.dateDataSetDisplayForm('Date (Date)', 'Quarter/Year (Date)')
+                      },
+                      localIdentifier: "a1"
+                    }]
+                  }}
+                  children={({ error, isLoading, result }) => {
+                    if (isLoading) {
+                      return 'Loading…';
+                    }
+
+                    if (error) {
+                      return 'Error :-(';
+                    }
+
+                    if (!result) {
+                      return 'No data.';
+                    }
+
+                    cardChartData2.datasets[0].label = '# of Checks';
+                    cardChartData2.datasets[0].data =
+                      result.executionResult.data.map(row => parseFloat(row[0]));
+                    cardChartData2.labels = result.executionResult.headerItems[0][0].map(headerItem =>
+                      headerItem.attributeHeaderItem.name);
+                    cardChartOpts2.scales.yAxes[0].ticks.min =
+                      Math.min.apply(Math, cardChartData2.datasets[0].data) - 10000;
+                    cardChartOpts2.scales.yAxes[0].ticks.max =
+                      Math.max.apply(Math, cardChartData2.datasets[0].data) + 50000;
+
+                    return (
+                      <Line
+                        data={cardChartData2}
+                        options={cardChartOpts2}
+                        height={70}
+                      />
+                    )
+                  }}
+                />
               </div>
             </Card>
           </Col>
@@ -529,11 +582,64 @@ class Dashboard extends Component {
                     </DropdownMenu>
                   </Dropdown>
                 </ButtonGroup>
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
+                <div className="text-value">
+                  <Kpi {...gooddata} measure={C.measure('# Items on Check')} format="#,##0" />
+                </div>
+                <div># of Items on Check</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
-                <Line data={cardChartData1} options={cardChartOpts1} height={70} />
+                <Execute
+                  {...gooddata}
+                  afm={{
+                    measures: [{
+                      localIdentifier: "m1",
+                      definition: {
+                        measure: {
+                          item: {
+                            identifier: C.measure('# Items on Check')
+                          }
+                        }
+                      }
+                    }],
+                    attributes: [{
+                      displayForm: {
+                        identifier: C.dateDataSetDisplayForm('Date (Date)', 'Quarter/Year (Date)')
+                      },
+                      localIdentifier: "a1"
+                    }]
+                  }}
+                  children={({ error, isLoading, result }) => {
+                    if (isLoading) {
+                      return 'Loading…';
+                    }
+
+                    if (error) {
+                      return 'Error :-(';
+                    }
+
+                    if (!result) {
+                      return 'No data.';
+                    }
+
+                    cardChartData1.datasets[0].label = '# of Items on Check';
+                    cardChartData1.datasets[0].data =
+                      result.executionResult.data.map(row => parseFloat(row[0]));
+                    cardChartData1.labels = result.executionResult.headerItems[0][0].map(headerItem =>
+                      headerItem.attributeHeaderItem.name);
+                    cardChartOpts1.scales.yAxes[0].ticks.min =
+                      Math.min.apply(Math, cardChartData1.datasets[0].data) - 100000;
+                    cardChartOpts1.scales.yAxes[0].ticks.max =
+                      Math.max.apply(Math, cardChartData1.datasets[0].data) + 500000;
+
+                    return (
+                      <Line
+                        data={cardChartData1}
+                        options={cardChartOpts1}
+                        height={70}
+                      />
+                    )
+                  }}
+                />
               </div>
             </Card>
           </Col>
@@ -553,11 +659,60 @@ class Dashboard extends Component {
                     </DropdownMenu>
                   </Dropdown>
                 </ButtonGroup>
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
+                <div className="text-value">
+                  <Kpi {...gooddata} measure={C.measure('$ Avg Daily Total Sales')} />
+                </div>
+                <div>$ Avg Daily Total Sales</div>
               </CardBody>
               <div className="chart-wrapper" style={{ height: '70px' }}>
-                <Line data={cardChartData3} options={cardChartOpts3} height={70} />
+                <Execute
+                  {...gooddata}
+                  afm={{
+                    measures: [{
+                      localIdentifier: "m1",
+                      definition: {
+                        measure: {
+                          item: {
+                            identifier: C.measure('$ Avg Daily Total Sales')
+                          }
+                        }
+                      }
+                    }],
+                    attributes: [{
+                      displayForm: {
+                        identifier: C.dateDataSetDisplayForm('Date (Date)', 'Quarter/Year (Date)')
+                      },
+                      localIdentifier: "a1"
+                    }]
+                  }}
+                  children={({ error, isLoading, result }) => {
+                    if (isLoading) {
+                      return 'Loading…';
+                    }
+
+                    if (error) {
+                      return 'Error :-(';
+                    }
+
+                    if (!result) {
+                      return 'No data.';
+                    }
+
+                    cardChartData3.datasets[0].label = '$ Avg Daily Total Sales';
+                    cardChartData3.datasets[0].data =
+                      result.executionResult.data.map(row => parseFloat(row[0]));
+                    cardChartData3.labels = result.executionResult.headerItems[0][0].map(headerItem =>
+                      headerItem.attributeHeaderItem.name);
+
+                    return (
+                      <Line
+                        data={cardChartData3}
+                        options={cardChartOpts3}
+                        height={70}
+                      />
+                    )
+                  }}
+                />
               </div>
             </Card>
           </Col>
@@ -577,11 +732,60 @@ class Dashboard extends Component {
                     </DropdownMenu>
                   </ButtonDropdown>
                 </ButtonGroup>
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
+                <div className="text-value">
+                  <Kpi {...gooddata} measure={C.measure('$ Gross Profit')} format="#,##0" />
+                </div>
+                <div>$ Gross Profit</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
-                <Bar data={cardChartData4} options={cardChartOpts4} height={70} />
+                <Execute
+                  {...gooddata}
+                  afm={{
+                    measures: [{
+                      localIdentifier: "m1",
+                      definition: {
+                        measure: {
+                          item: {
+                            identifier: C.measure('$ Gross Profit')
+                          }
+                        }
+                      }
+                    }],
+                    attributes: [{
+                      displayForm: {
+                        identifier: C.dateDataSetDisplayForm('Date (Date)', 'Quarter/Year (Date)')
+                      },
+                      localIdentifier: "a1"
+                    }]
+                  }}
+                  children={({ error, isLoading, result }) => {
+                    if (isLoading) {
+                      return 'Loading…';
+                    }
+
+                    if (error) {
+                      return 'Error :-(';
+                    }
+
+                    if (!result) {
+                      return 'No data.';
+                    }
+
+                    cardChartData4.datasets[0].label = '$ Gross Profit';
+                    cardChartData4.datasets[0].data =
+                      result.executionResult.data.map(row => parseFloat(row[0]));
+                    cardChartData4.labels = result.executionResult.headerItems[0][0].map(headerItem =>
+                      headerItem.attributeHeaderItem.name);
+
+                    return (
+                      <Bar
+                        data={cardChartData4}
+                        options={cardChartOpts4}
+                        height={70}
+                      />
+                    )
+                  }}
+                />
               </div>
             </Card>
           </Col>
@@ -608,6 +812,12 @@ class Dashboard extends Component {
                 </Row>
                 <div className="chart-wrapper" style={{ height: 300 + 'px', marginTop: 40 + 'px' }}>
                   <Line data={mainChart} options={mainChartOpts} height={300} />
+                  {/* <Visualization
+                    {...gooddata}
+                    identifier="aaSMTErxgsQZ"
+                    height={300}
+                    width={300}
+                  /> */}
                 </div>
               </CardBody>
               <CardFooter>
