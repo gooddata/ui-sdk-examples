@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 // import { renderRoutes } from 'react-router-config';
+import { loginMachinery } from './utils';
+import gooddata from './gooddata';
 import './App.scss';
 
 const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
@@ -15,8 +17,27 @@ const Page404 = React.lazy(() => import('./views/Pages/Page404'));
 const Page500 = React.lazy(() => import('./views/Pages/Page500'));
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isLogged: false
+    };
+  }
+
+  componentDidMount() {
+    loginMachinery({ ...gooddata }, () => this.setState({ isLogged: true }) );
+
+    window.addEventListener('message', this.handleIncomingCityFilterChange);
+  }
 
   render() {
+    const { isLogged } = this.state;
+
+    if (!isLogged) {
+      return <span>Checking your credentials, please wait…</span>;
+    }
+
     return (
       <HashRouter>
           <React.Suspense fallback={loading()}>
