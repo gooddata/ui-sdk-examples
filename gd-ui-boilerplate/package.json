@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@gooddata/gdc-afm-connect": "1.0.22",
-    "@gooddata/react-components": "^6.2.0",
+    "@gooddata/gdc-afm-connect": "^1.0.24",
+    "@gooddata/react-components": "^7.0.0",
     "node-sass": "^4.9.4",
-    "react": "16.8",
-    "react-dom": "16.8",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-highcharts": "^16.0.2",
-    "react-redux": "^5.1.0",
+    "react-redux": "^7.1.0",
     "react-scripts": "2.0.5",
     "react-select": "^2.1.1",
     "redux-devtools-extension": "^2.13.5"
