@@ -463,8 +463,11 @@ class Dashboard extends Component {
 
     this.toggle = this.toggle.bind(this);
     this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
+    this.viewBy = Model.attribute(C.dateDataSetDisplayForm('Date (Date)', 'Quarter/Year (Date)'));
 
     this.state = {
+      primaryMeasures: [Model.measure(C.measure('# Checks'))],
+      secondaryMeasures: [Model.measure(C.measure('$ Gross Profit'))],
       dropdownOpen: false,
       radioSelected: 2,
     };
@@ -498,7 +501,12 @@ class Dashboard extends Component {
                       <i className="icon-settings"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
+                      <DropdownItem
+                        onClick={() => this.setState({ primaryMeasures: [Model.measure(C.measure('# Checks'))] })}
+                      >Use this measure as column</DropdownItem>
+                      <DropdownItem
+                        onClick={() => this.setState({ secondaryMeasures: [Model.measure(C.measure('# Checks'))] })}
+                      >Use this measure as line</DropdownItem>
                       <DropdownItem>Another action</DropdownItem>
                       <DropdownItem disabled>Disabled action</DropdownItem>
                       <DropdownItem>Something else here</DropdownItem>
@@ -576,7 +584,12 @@ class Dashboard extends Component {
                       <i className="icon-location-pin"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
+                      <DropdownItem
+                        onClick={() => this.setState({ primaryMeasures: [Model.measure(C.measure('# Items on Check'))] })}
+                      >Use this measure as column</DropdownItem>
+                      <DropdownItem
+                        onClick={() => this.setState({ secondaryMeasures: [Model.measure(C.measure('# Items on Check'))] })}
+                      >Use this measure as line</DropdownItem>
                       <DropdownItem>Another action</DropdownItem>
                       <DropdownItem>Something else here</DropdownItem>
                     </DropdownMenu>
@@ -653,6 +666,12 @@ class Dashboard extends Component {
                       <i className="icon-settings"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
+                      <DropdownItem
+                        onClick={() => this.setState({ primaryMeasures: [Model.measure(C.measure('$ Avg Daily Total Sales'))] })}
+                      >Use this measure as column</DropdownItem>
+                      <DropdownItem
+                        onClick={() => this.setState({ secondaryMeasures: [Model.measure(C.measure('$ Avg Daily Total Sales'))] })}
+                      >Use this measure as line</DropdownItem>
                       <DropdownItem>Action</DropdownItem>
                       <DropdownItem>Another action</DropdownItem>
                       <DropdownItem>Something else here</DropdownItem>
@@ -726,6 +745,12 @@ class Dashboard extends Component {
                       <i className="icon-settings"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
+                      <DropdownItem
+                        onClick={() => this.setState({ primaryMeasures: [Model.measure(C.measure('$ Gross Profit'))] })}
+                      >Use this measure as column</DropdownItem>
+                      <DropdownItem
+                        onClick={() => this.setState({ secondaryMeasures: [Model.measure(C.measure('$ Gross Profit'))] })}
+                      >Use this measure as line</DropdownItem>
                       <DropdownItem>Action</DropdownItem>
                       <DropdownItem>Another action</DropdownItem>
                       <DropdownItem>Something else here</DropdownItem>
@@ -814,9 +839,9 @@ class Dashboard extends Component {
                   {/* <Line data={mainChart} options={mainChartOpts} height={300} /> */}
                   <ComboChart
                     {...gooddata}
-                    primaryMeasures={[Model.measure(C.measure('# Checks'))]}
-                    secondaryMeasures={[Model.measure(C.measure('$ Gross Profit'))]}
-                    viewBy={Model.attribute(C.dateDataSetDisplayForm('Date (Date)', 'Quarter/Year (Date)'))}
+                    primaryMeasures={this.state.primaryMeasures}
+                    secondaryMeasures={this.state.secondaryMeasures}
+                    viewBy={this.viewBy}
                     height={300}
                   />
                 </div>
