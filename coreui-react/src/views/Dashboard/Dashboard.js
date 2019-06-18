@@ -23,7 +23,7 @@ import {
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle } from '@coreui/coreui/dist/js/coreui-utilities'
 
-import { Kpi, Execute, Visualization } from '@gooddata/react-components';
+import { Kpi, Execute, ComboChart, Model } from '@gooddata/react-components';
 import '@gooddata/react-components/styles/css/main.css';
 import C from './../../catalog.js';
 import gooddata from './../../gooddata';
@@ -812,16 +812,12 @@ class Dashboard extends Component {
                 </Row>
                 <div className="chart-wrapper" style={{ height: 300 + 'px', marginTop: 40 + 'px' }}>
                   {/* <Line data={mainChart} options={mainChartOpts} height={300} /> */}
-                  <Visualization
+                  <ComboChart
                     {...gooddata}
-                    config={{
-                      legend: {
-                        enabled: false
-                      }
-                    }}
-                    identifier="aaSMTErxgsQZ"
+                    primaryMeasures={[Model.measure(C.measure('# Checks'))]}
+                    secondaryMeasures={[Model.measure(C.measure('$ Gross Profit'))]}
+                    viewBy={Model.attribute(C.dateDataSetDisplayForm('Date (Date)', 'Quarter/Year (Date)'))}
                     height={300}
-                    width={300}
                   />
                 </div>
               </CardBody>
