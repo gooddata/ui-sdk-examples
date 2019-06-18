@@ -463,7 +463,9 @@ class Dashboard extends Component {
 
     this.toggle = this.toggle.bind(this);
     this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
-    this.viewBy = Model.attribute(C.dateDataSetDisplayForm('Date (Date)', 'Quarter/Year (Date)'));
+    this.viewBy1 = Model.attribute(C.dateDataSetDisplayForm('Date (Date)', 'Month/Year (Date)'));
+    this.viewBy2 = Model.attribute(C.dateDataSetDisplayForm('Date (Date)', 'Quarter/Year (Date)'));
+    this.viewBy3 = Model.attribute(C.dateDataSetDisplayForm('Date (Date)', 'Year (Date)'));
 
     this.state = {
       primaryMeasures: [Model.measure(C.measure('# Checks'))],
@@ -828,8 +830,8 @@ class Dashboard extends Component {
                     <Button color="primary" className="float-right"><i className="icon-cloud-download"></i></Button>
                     <ButtonToolbar className="float-right" aria-label="Toolbar with button groups">
                       <ButtonGroup className="mr-3" aria-label="First group">
-                        <Button color="outline-secondary" onClick={() => this.onRadioBtnClick(1)} active={this.state.radioSelected === 1}>Day</Button>
-                        <Button color="outline-secondary" onClick={() => this.onRadioBtnClick(2)} active={this.state.radioSelected === 2}>Month</Button>
+                        <Button color="outline-secondary" onClick={() => this.onRadioBtnClick(1)} active={this.state.radioSelected === 1}>Month</Button>
+                        <Button color="outline-secondary" onClick={() => this.onRadioBtnClick(2)} active={this.state.radioSelected === 2}>Quarter</Button>
                         <Button color="outline-secondary" onClick={() => this.onRadioBtnClick(3)} active={this.state.radioSelected === 3}>Year</Button>
                       </ButtonGroup>
                     </ButtonToolbar>
@@ -841,7 +843,7 @@ class Dashboard extends Component {
                     {...gooddata}
                     primaryMeasures={this.state.primaryMeasures}
                     secondaryMeasures={this.state.secondaryMeasures}
-                    viewBy={this.viewBy}
+                    viewBy={this[`viewBy${this.state.radioSelected}`]}
                     height={300}
                   />
                 </div>
