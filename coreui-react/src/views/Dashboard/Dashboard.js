@@ -16,9 +16,11 @@ import {
   Row,
 } from 'reactstrap';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
-import { getStyle } from '@coreui/coreui/dist/js/coreui-utilities'
+import { getStyle } from '@coreui/coreui/dist/js/coreui-utilities';
+import { includes } from 'lodash';
 
-import { Kpi, Execute, ComboChart, Model } from '@gooddata/react-components';
+import { Kpi, Execute, Model } from '@gooddata/react-components';
+import ComboChart from '../../ComboChart';
 import '@gooddata/react-components/styles/css/main.css';
 import C from './../../catalog.js';
 import gooddata from './../../gooddata';
@@ -221,47 +223,22 @@ const cardChartOpts4 = {
   },
 };
 
-
-// Main Chart
-
-//Random Numbers
-function random(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-var elements = 27;
-var data1 = [];
-var data2 = [];
-var data3 = [];
-
-for (var i = 0; i <= elements; i++) {
-  data1.push(random(50, 200));
-  data2.push(random(80, 100));
-  data3.push(65);
-}
-
 class Dashboard extends Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
     this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
+    this.toggleMeasure = this.toggleMeasure.bind(this);
     this.viewBy1 = Model.attribute(C.dateDataSetDisplayForm('Date (Date)', 'Month/Year (Date)'));
     this.viewBy2 = Model.attribute(C.dateDataSetDisplayForm('Date (Date)', 'Quarter/Year (Date)'));
     this.viewBy3 = Model.attribute(C.dateDataSetDisplayForm('Date (Date)', 'Year (Date)'));
 
     this.state = {
-      primaryMeasures: [Model.measure(C.measure('# Checks'))],
-      secondaryMeasures: [Model.measure(C.measure('$ Gross Profit'))],
+      primaryMeasures: ['# Checks'],
+      secondaryMeasures: ['$ Gross Profit'],
       dropdownOpen: false,
       radioSelected: 2,
     };
-  }
-
-  toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen,
-    });
   }
 
   onRadioBtnClick(radioSelected) {
@@ -270,28 +247,36 @@ class Dashboard extends Component {
     });
   }
 
+  toggleMeasure(measureCategory, newMeasureTitle) {
+    const measuresKey = [`${measureCategory}Measures`];
+    const currentMeasures = this.state[measuresKey];
+
+    if (includes(currentMeasures, newMeasureTitle)) {
+      this.setState({
+        [measuresKey]: currentMeasures.filter(currentMeasureTitle =>
+          currentMeasureTitle !== newMeasureTitle)
+      });
+    } else {
+      this.setState({ [measuresKey]: currentMeasures.concat(newMeasureTitle) });
+    }
+  }
+
   loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>
 
   render() {
 
     return (
       <div className="animated fadeIn">
-        <Row>
+        <Row className="kpis">
           <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-info">
+            <Card className="text-white bg-info" onClick={() => this.toggleMeasure('primary', '# Checks')}>
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
-                  <ButtonDropdown id='card1' isOpen={this.state.card1} toggle={() => { this.setState({ card1: !this.state.card1 }); }}>
+                  <ButtonDropdown id='card1' isOpen={this.state.card1} toggle={(e) => { e.stopPropagation(); this.setState({ card1: !this.state.card1 }); }}>
                     <DropdownToggle caret className="p-0" color="transparent">
                       <i className="icon-settings"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem
-                        onClick={() => this.setState({ primaryMeasures: [Model.measure(C.measure('# Checks'))] })}
-                      >Use this measure as column</DropdownItem>
-                      <DropdownItem
-                        onClick={() => this.setState({ secondaryMeasures: [Model.measure(C.measure('# Checks'))] })}
-                      >Use this measure as line</DropdownItem>
                       <DropdownItem>Another action</DropdownItem>
                       <DropdownItem disabled>Disabled action</DropdownItem>
                       <DropdownItem>Something else here</DropdownItem>
@@ -361,20 +346,14 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-primary">
+            <Card className="text-white bg-primary" onClick={() => this.toggleMeasure('primary', '# Items on Check')}>
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
-                  <Dropdown id='card2' isOpen={this.state.card2} toggle={() => { this.setState({ card2: !this.state.card2 }); }}>
+                  <Dropdown id='card2' isOpen={this.state.card2} toggle={(e) => { e.stopPropagation(); this.setState({ card2: !this.state.card2 }); }}>
                     <DropdownToggle className="p-0" color="transparent">
                       <i className="icon-location-pin"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem
-                        onClick={() => this.setState({ primaryMeasures: [Model.measure(C.measure('# Items on Check'))] })}
-                      >Use this measure as column</DropdownItem>
-                      <DropdownItem
-                        onClick={() => this.setState({ secondaryMeasures: [Model.measure(C.measure('# Items on Check'))] })}
-                      >Use this measure as line</DropdownItem>
                       <DropdownItem>Another action</DropdownItem>
                       <DropdownItem>Something else here</DropdownItem>
                     </DropdownMenu>
@@ -443,20 +422,14 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-warning">
+            <Card className="text-white bg-warning" onClick={() => this.toggleMeasure('secondary', '$ Avg Daily Total Sales')}>
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
-                  <Dropdown id='card3' isOpen={this.state.card3} toggle={() => { this.setState({ card3: !this.state.card3 }); }}>
+                  <Dropdown id='card3' isOpen={this.state.card3} toggle={(e) => { e.stopPropagation(); this.setState({ card3: !this.state.card3 }); }}>
                     <DropdownToggle caret className="p-0" color="transparent">
                       <i className="icon-settings"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem
-                        onClick={() => this.setState({ primaryMeasures: [Model.measure(C.measure('$ Avg Daily Total Sales'))] })}
-                      >Use this measure as column</DropdownItem>
-                      <DropdownItem
-                        onClick={() => this.setState({ secondaryMeasures: [Model.measure(C.measure('$ Avg Daily Total Sales'))] })}
-                      >Use this measure as line</DropdownItem>
                       <DropdownItem>Action</DropdownItem>
                       <DropdownItem>Another action</DropdownItem>
                       <DropdownItem>Something else here</DropdownItem>
@@ -522,20 +495,14 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-danger">
+            <Card className="text-white bg-danger" onClick={() => this.toggleMeasure('secondary', '$ Gross Profit')}>
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
-                  <ButtonDropdown id='card4' isOpen={this.state.card4} toggle={() => { this.setState({ card4: !this.state.card4 }); }}>
+                  <ButtonDropdown id='card4' isOpen={this.state.card4} toggle={(e) => { e.stopPropagation(); this.setState({ card4: !this.state.card4 }); }}>
                     <DropdownToggle caret className="p-0" color="transparent">
                       <i className="icon-settings"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem
-                        onClick={() => this.setState({ primaryMeasures: [Model.measure(C.measure('$ Gross Profit'))] })}
-                      >Use this measure as column</DropdownItem>
-                      <DropdownItem
-                        onClick={() => this.setState({ secondaryMeasures: [Model.measure(C.measure('$ Gross Profit'))] })}
-                      >Use this measure as line</DropdownItem>
                       <DropdownItem>Action</DropdownItem>
                       <DropdownItem>Another action</DropdownItem>
                       <DropdownItem>Something else here</DropdownItem>
@@ -620,15 +587,11 @@ class Dashboard extends Component {
                     </ButtonToolbar>
                   </Col>
                 </Row>
-                <div className="chart-wrapper" style={{ height: 300 + 'px', marginTop: 40 + 'px' }}>
-                  <ComboChart
-                    {...gooddata}
-                    primaryMeasures={this.state.primaryMeasures}
-                    secondaryMeasures={this.state.secondaryMeasures}
-                    viewBy={this[`viewBy${this.state.radioSelected}`]}
-                    height={300}
-                  />
-                </div>
+                <ComboChart
+                  primaryMeasures={this.state.primaryMeasures}
+                  secondaryMeasures={this.state.secondaryMeasures}
+                  viewBy={this[`viewBy${this.state.radioSelected}`]}
+                />
               </CardBody>
             </Card>
           </Col>
