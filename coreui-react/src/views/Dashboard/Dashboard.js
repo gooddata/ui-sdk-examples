@@ -26,7 +26,7 @@ import C from './../../catalog.js';
 import gooddata from './../../gooddata';
 
 const brandPrimary = getStyle('--primary')
-const brandInfo = getStyle('--info')
+const brandSuccess = getStyle('--success')
 
 // Card Chart 1
 const cardChartData1 = {
@@ -92,7 +92,7 @@ const cardChartData2 = {
   datasets: [
     {
       label: 'My First dataset',
-      backgroundColor: brandInfo,
+      backgroundColor: brandSuccess,
       borderColor: 'rgba(255,255,255,.55)',
       data: [1, 18, 9, 17, 34, 22, 11],
     },
@@ -264,12 +264,16 @@ class Dashboard extends Component {
   loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>
 
   render() {
+    const { primaryMeasures, secondaryMeasures, radioSelected } = this.state;
 
     return (
       <div className="animated fadeIn">
         <Row className="kpis">
           <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-info" onClick={() => this.toggleMeasure('primary', '# Checks')}>
+            <Card
+              className={`text-white bg-success ${includes(primaryMeasures, '# Checks') ? 'active' : ''}`}
+              onClick={() => this.toggleMeasure('primary', '# Checks')}
+            >
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
                   <ButtonDropdown id='card1' isOpen={this.state.card1} toggle={(e) => { e.stopPropagation(); this.setState({ card1: !this.state.card1 }); }}>
@@ -346,7 +350,10 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-primary" onClick={() => this.toggleMeasure('primary', '# Items on Check')}>
+            <Card
+              className={`text-white bg-primary ${includes(primaryMeasures, '# Items on Check') ? 'active' : ''}`}
+              onClick={() => this.toggleMeasure('primary', '# Items on Check')}
+            >
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
                   <Dropdown id='card2' isOpen={this.state.card2} toggle={(e) => { e.stopPropagation(); this.setState({ card2: !this.state.card2 }); }}>
@@ -422,7 +429,10 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-warning" onClick={() => this.toggleMeasure('secondary', '$ Avg Daily Total Sales')}>
+            <Card
+              className={`text-white bg-warning ${includes(secondaryMeasures, '$ Avg Daily Total Sales') ? 'active' : ''}`}
+              onClick={() => this.toggleMeasure('secondary', '$ Avg Daily Total Sales')}
+            >
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
                   <Dropdown id='card3' isOpen={this.state.card3} toggle={(e) => { e.stopPropagation(); this.setState({ card3: !this.state.card3 }); }}>
@@ -495,7 +505,10 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-danger" onClick={() => this.toggleMeasure('secondary', '$ Gross Profit')}>
+            <Card
+              className={`text-white bg-danger ${includes(secondaryMeasures, '$ Gross Profit') ? 'active' : ''}`}
+              onClick={() => this.toggleMeasure('secondary', '$ Gross Profit')}
+            >
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
                   <ButtonDropdown id='card4' isOpen={this.state.card4} toggle={(e) => { e.stopPropagation(); this.setState({ card4: !this.state.card4 }); }}>
@@ -573,24 +586,24 @@ class Dashboard extends Component {
               <CardBody>
                 <Row>
                   <Col sm="5">
-                    <CardTitle className="mb-0">Traffic</CardTitle>
-                    <div className="small text-muted">November 2015</div>
+                    <CardTitle className="mb-0">GoodData.UI ComboChart</CardTitle>
+                    <div className="small text-muted"><a href="https://sdk.gooddata.com/gooddata-ui/docs/combo_chart_component.html" target="_blank" rel="noopener noreferrer">See the docs</a></div>
                   </Col>
                   <Col sm="7" className="d-none d-sm-inline-block">
                     <Button color="primary" className="float-right"><i className="icon-cloud-download"></i></Button>
                     <ButtonToolbar className="float-right" aria-label="Toolbar with button groups">
                       <ButtonGroup className="mr-3" aria-label="First group">
-                        <Button color="outline-secondary" onClick={() => this.onRadioBtnClick(1)} active={this.state.radioSelected === 1}>Month</Button>
-                        <Button color="outline-secondary" onClick={() => this.onRadioBtnClick(2)} active={this.state.radioSelected === 2}>Quarter</Button>
-                        <Button color="outline-secondary" onClick={() => this.onRadioBtnClick(3)} active={this.state.radioSelected === 3}>Year</Button>
+                        <Button color="outline-secondary" onClick={() => this.onRadioBtnClick(1)} active={radioSelected === 1}>Month</Button>
+                        <Button color="outline-secondary" onClick={() => this.onRadioBtnClick(2)} active={radioSelected === 2}>Quarter</Button>
+                        <Button color="outline-secondary" onClick={() => this.onRadioBtnClick(3)} active={radioSelected === 3}>Year</Button>
                       </ButtonGroup>
                     </ButtonToolbar>
                   </Col>
                 </Row>
                 <ComboChart
-                  primaryMeasures={this.state.primaryMeasures}
-                  secondaryMeasures={this.state.secondaryMeasures}
-                  viewBy={this[`viewBy${this.state.radioSelected}`]}
+                  primaryMeasures={primaryMeasures}
+                  secondaryMeasures={secondaryMeasures}
+                  viewBy={this[`viewBy${radioSelected}`]}
                 />
               </CardBody>
             </Card>

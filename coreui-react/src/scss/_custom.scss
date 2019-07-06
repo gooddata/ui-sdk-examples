@@ -3,6 +3,33 @@
   border-width: 2px;
   cursor: pointer;
 }
-.kpis .card:hover {
-  border: 2px solid black;
+
+$success-color: rgb(0, 72, 11);
+$primary-color: rgb(0, 49, 84);
+$warning-color: rgb(122, 73, 0);
+$danger-color: rgb(169, 0, 0);
+
+.kpis .card.bg-success:hover,
+.kpis .card.bg-success.active {
+  border-color: $success-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba($success-color, 0.6);
+}
+.kpis .card.bg-primary:hover,
+.kpis .card.bg-primary.active {
+  border-color: $primary-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba($primary-color, 0.6);
+}
+.kpis .card.bg-warning:hover,
+.kpis .card.bg-warning.active {
+  border-color: $warning-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba($warning-color, 0.6);
+}
+.kpis .card.bg-danger:hover,
+.kpis .card.bg-danger.active {
+  border-color: $danger-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba($danger-color, 0.6);
+}
+
+.kpis .card.active .text-value {
+  text-decoration: underline;
 }
