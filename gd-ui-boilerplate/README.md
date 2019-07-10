@@ -44,7 +44,6 @@ An ES6 [@babel/polyfill](https://babeljs.io/docs/en/babel-polyfill) was added to
 ## Screnshots
 
 ![homepage](https://raw.githubusercontent.com/gooddata/ui-sdk-examples/master/gd-ui-boilerplate/public/screen1.png "Homepage")
-![homepage embedded](https://raw.githubusercontent.com/gooddata/ui-sdk-examples/master/gd-ui-boilerplate/public/screen2.png "Homepage embedded")
 
 ---
 
