@@ -18,7 +18,7 @@ export const projectId = catalogJson.projectId;
 export const domain = config.domain;
 
 export default {
-  projectId: catalogJson.projectId,
+  projectId,
   sdk,
   domain: config.domain
 };
