@@ -952,10 +952,10 @@
   resolved "https://registry.yarnpkg.com/@gooddata/numberjs/-/numberjs-3.2.1.tgz#6cb7321233fd353d3383cc76a7d6bd1c9c5cec0a"
   integrity sha512-eTrAOVuca1qDnrS039wew22osRaFvplviW40IgplyZs/nBcGtPObj2wtR5SEfVyCOol5fSb3vfH5b6A0GbG4dg==
 
-"@gooddata/react-components@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-7.0.0.tgz#8aaab96c07f2f0ff632dd99b7e5137bdcb11efe9"
-  integrity sha512-IifYNqg8i30NS+xHEYjjD9lN/zIjM8iwpq8+T6vlc0msR8kNhQS8kgCqhjrD7WU+W+5S7dc3esT5XAr76eI3vg==
+"@gooddata/react-components@^7.0.1":
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-7.0.1.tgz#a1ebe271a1edc7e497d33b1a147f2ed5c5e7f13a"
+  integrity sha512-hzOrk/g0CNMbY6KRClmJo4xBLhN5hcdIplZI/Q0wwx8mvA8YXDAY99nfrmvJ5u/PGUV2wG/rlfBpjK7astuUMg==
   dependencies:
     "@gooddata/gooddata-js" "11.9.0"
     "@gooddata/goodstrap" "60.5.0"

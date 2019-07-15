@@ -2,6 +2,7 @@
 import {
   Visualization as VisualizationOrig,
   Kpi as KpiOrig,
+  Headline as HeadlineOrig,
   BarChart as BarChartOrig,
   ColumnChart as ColumnChartOrig,
   LineChart as LineChartOrig,
@@ -18,6 +19,7 @@ import { afmConnect, afmWrapper } from '@gooddata/gdc-afm-connect';
 export const Visualization = afmConnect(VisualizationOrig);
 
 export const Kpi = afmConnect(KpiOrig);
+export const Headline = afmConnect(HeadlineOrig);
 
 export const BarChart = afmConnect(BarChartOrig);
 export const ColumnChart = afmConnect(ColumnChartOrig);

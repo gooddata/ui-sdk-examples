@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Kpi, ColumnChart, Execute, Visualization } from './components/afmConnected';
+import { Headline, ColumnChart, Execute, Visualization } from './components/afmConnected';
 import { Model } from '@gooddata/react-components';
 import C from './catalog';
 import config from './config';
@@ -42,10 +42,10 @@ class App extends Component {
           />
         </div>
         <div>
-          # of Location City: <Kpi
+          # of Location City: <Headline
             {...config}
             filterGroup={FG_MAIN}
-            measure={C.measure('# Location City')}
+            primaryMeasure={Model.measure(C.measure('# Location City'))}
           />
           <br />
           <br />

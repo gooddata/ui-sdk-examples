@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@gooddata/gdc-afm-connect": "^1.0.24",
-    "@gooddata/react-components": "^7.0.0",
+    "@gooddata/react-components": "^7.0.1",
     "node-sass": "^4.9.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -15,7 +15,8 @@
     "redux-devtools-extension": "^2.13.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "HTTPS=true react-scripts start",
+    "start-win": "set HTTPS=true&&react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
