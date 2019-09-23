@@ -11,7 +11,7 @@ This app is deployed at https://gooddata-demo.s3.amazonaws.com/kpi-drill/index.h
 * `git clone --depth 1 https://github.com/gooddata/ui-sdk-examples.git`
 * `cd ui-sdk-examples/kpi-drill/`
 * `yarn install --pure-lockfile` (or `npm install`)
-* `HTTPS=true yarn start` (or `set HTTPS=true&&npm start` on Win)
+* `yarn start`
 
 ## How to build for deployment
 
