@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@gooddata/react-components": "^7.0.1",
+    "@gooddata/react-components": "^7.1.1",
     "node-sass": "^4.9.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
