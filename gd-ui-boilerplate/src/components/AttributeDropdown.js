@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { AttributeElements } from '@gooddata/react-components';
-import { afmConnect } from '@gooddata/gdc-afm-connect';
+import { AttributeElements, Model } from '@gooddata/react-components';
 import Select from 'react-select';
 
 class AttributeDropdown extends Component {
@@ -13,32 +12,25 @@ class AttributeDropdown extends Component {
   onChangeFilter(options) {
     const {
       attribute,
-      filterGroup,
-      removeAttributeFilter,
-      updatePositiveAttributeFilter
+      updateFilters
     } = this.props;
 
     if (options.length) {
-      updatePositiveAttributeFilter(
-        filterGroup,
-        attribute,
-        options.map(option => option.value)
-      );
+      updateFilters([
+        Model.positiveAttributeFilter(attribute, options.map(option => option.value))
+      ]);
     } else {
-      removeAttributeFilter(
-        filterGroup,
-        attribute
-      );
+      updateFilters([]);
     }
   }
 
   render() {
     const {
       sdk,
-      filters,
       projectId,
+      placeholder,
       attribute,
-      placeholder
+      filters
     } = this.props;
 
     return (
@@ -70,4 +62,4 @@ class AttributeDropdown extends Component {
   }
 }
 
-export default afmConnect(AttributeDropdown);
+export default AttributeDropdown;

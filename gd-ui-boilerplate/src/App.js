@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Headline, ColumnChart, Execute, Visualization } from './components/afmConnected';
-import { Model } from '@gooddata/react-components';
+import { Headline, ColumnChart, Execute, Visualization, Model } from '@gooddata/react-components';
 import C from './catalog';
 import config from './config';
-import { FG_MAIN } from './constants';
 import AttributeDropdown from './components/AttributeDropdown';
 import CustomBarChart from './components/CustomBarChart';
 import { loginMachinery } from './utils';
@@ -16,16 +14,23 @@ class App extends Component {
     super(props);
 
     this.state = {
-      isLogged: false
+      isLogged: false,
+      filters: []
     };
+
+    this.updateFilters = this.updateFilters.bind(this);
   }
 
   componentDidMount() {
     loginMachinery({ ...config }, () => this.setState({ isLogged: true }) );
   }
 
+  updateFilters(filters) {
+    this.setState({ filters });
+  }
+
   render() {
-    const { isLogged } = this.state;
+    const { isLogged, filters } = this.state;
 
     if (!isLogged) {
       return <span>Checking your credentials, please wait…</span>;
@@ -36,15 +41,16 @@ class App extends Component {
         <div style={{ width: 400, margin: 'auto', marginBottom: 20, marginTop: 20 }}>
           <AttributeDropdown
             {...config}
-            filterGroup={FG_MAIN}
-            attribute={C.attributeDisplayForm('Location City')}
             placeholder="Filter cities"
+            attribute={C.attributeDisplayForm('Location City')}
+            filters={filters}
+            updateFilters={this.updateFilters}
           />
         </div>
         <div>
           # of Location City: <Headline
             {...config}
-            filterGroup={FG_MAIN}
+            filters={filters}
             primaryMeasure={Model.measure(C.measure('# Location City'))}
           />
           <br />
@@ -53,14 +59,14 @@ class App extends Component {
         <div style={{ height: 400 }}>
           <Visualization
             {...config}
-            filterGroup={FG_MAIN}
+            filters={filters}
             identifier="aby6oS6DbpFX"
           />
         </div>
         <div style={{ height: 400 }}>
           <ColumnChart
             {...config}
-            filterGroup={FG_MAIN}
+            filters={filters}
             measures={[Model.measure(C.measure('# Checks'))]}
             viewBy={Model.attribute(C.attributeDisplayForm('Location City'))}
             stackBy={Model.attribute(C.attributeDisplayForm('Location Name'))}
@@ -69,7 +75,6 @@ class App extends Component {
         <div style={{ height: 400 }}>
           <Execute
             {...config}
-            filterGroup={FG_MAIN}
             afm={{
               measures: [{
                 localIdentifier: 'm1',
@@ -86,7 +91,8 @@ class App extends Component {
                 displayForm: {
                   identifier: C.attributeDisplayForm('Location City')
                 }
-              }]
+              }],
+              filters
             }}
             children={CustomBarChart}
           />
