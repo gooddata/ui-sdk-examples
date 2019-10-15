@@ -1,4 +1,5 @@
 const proxy = require('http-proxy-middleware');
+const url = process.env.GD_URL || 'developer.na.gooddata.com';
 
 module.exports = function(app) {
   // when '/packages' route below is removed,
@@ -8,9 +9,9 @@ module.exports = function(app) {
     changeOrigin: true,
     cookieDomainRewrite: "localhost",
     secure: false,
-    target: 'https://developer.na.gooddata.com',
+    target: `https://${url}`,
     headers: {
-      host: 'developer.na.gooddata.com',
+      host: url,
       origin: null
     }
   }));
@@ -18,6 +19,10 @@ module.exports = function(app) {
     changeOrigin: true,
     secure: false,
     cookieDomainRewrite: 'localhost',
-    target: 'https://developer.na.gooddata.com'
+    target: `https://${url}`,
+    headers: {
+      host: url,
+      origin: null
+    }
   }));
 };
