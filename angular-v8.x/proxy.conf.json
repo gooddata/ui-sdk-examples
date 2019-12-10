@@ -1,0 +1,17 @@
+{
+  "/api": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/gdc/*": {
+    "changeOrigin": true,
+    "cookieDomainRewrite": "localhost",
+    "secure": false,
+    "target": "https://developer.na.gooddata.com",
+    "headers": {
+      "host": "developer.na.gooddata.com",
+      "origin": null
+    }
+  }
+}
+
