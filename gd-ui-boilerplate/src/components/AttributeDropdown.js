@@ -4,7 +4,7 @@ import Select from 'react-select';
 
 function AttributeDropdown({ sdk, projectId, placeholder, attribute, filters, updateFilters }) {
   const onChangeFilter = (options) => {
-    if (options.length) {
+    if (options && options.length) {
       updateFilters([
         Model.positiveAttributeFilter(attribute, options.map(option => option.value))
       ]);

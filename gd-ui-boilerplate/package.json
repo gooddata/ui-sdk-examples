@@ -9,7 +9,7 @@
     "react-dom": "^16.8.6",
     "react-highcharts": "^16.0.2",
     "react-scripts": "2.0.5",
-    "react-select": "^2.1.1"
+    "react-select": "^3.1.0"
   },
   "scripts": {
     "start": "cross-env HTTPS=true react-scripts start",
