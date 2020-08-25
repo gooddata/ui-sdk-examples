@@ -3,22 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@gooddata/sdk-backend-bear": "^8.0.0-beta.52",
-    "@gooddata/sdk-model": "^8.0.0-beta.52",
-    "@gooddata/sdk-ui": "^8.0.0-beta.52",
-    "@gooddata/sdk-ui-charts": "^8.0.0-beta.52",
+    "@gooddata/sdk-backend-bear": "^8.0.0-beta.54",
+    "@gooddata/sdk-model": "^8.0.0-beta.54",
+    "@gooddata/sdk-ui": "^8.0.0-beta.54",
+    "@gooddata/sdk-ui-charts": "^8.0.0-beta.54",
+    "@gooddata/sdk-ui-ext": "^8.0.0-beta.54",
+    "@gooddata/sdk-ui-filters": "^8.0.0-beta.54",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-highcharts": "^16.1.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
     "start": "cross-env HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "refresh-ldm": "./scripts/refresh-ldm.sh",
+    "buildgd": "cross-env PUBLIC_URL=/gd-ui-boilerplate-v8 yarn build",
+    "syncgd": "s3cmd --config .s3cfg sync --delete-removed ./build/ s3://gooddata-demo/gd-ui-boilerplate-v8/"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@gooddata/catalog-export": "^8.0.0-beta.55",
     "cross-env": "^7.0.2"
   }
 }

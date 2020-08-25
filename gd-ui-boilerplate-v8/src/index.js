@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2020, GoodData(R) Corporation. All rights reserved.
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";

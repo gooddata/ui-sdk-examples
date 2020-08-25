@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2020, GoodData(R) Corporation. All rights reserved.
 const proxy = require("http-proxy-middleware");
 
 module.exports = function(app) {

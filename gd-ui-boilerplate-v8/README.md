@@ -1,68 +1,46 @@
+# GoodData.UI@v8 Boilerplate App
+
+This app follows steps from https://sdk.gooddata.com/gooddata-ui/docs/next/ht_create_your_first_visualization.html:
+
+* It initializes create-react-app
+* It configures GoodData proxy
+* It adds GoodData.UI dependencies
+
+This app also shows:
+
+* Use of `<AttributeFilter>` component
+* Use of `<Kpi>` component
+
+And finally this app demonstrates 3 approaches how to render visualizations:
+
+* By referencing `<InsightView>` created in Analytical Designer
+* By specifying buckets (measures, viewBy, stackBy) with `<ColumnChart>` component
+* By creating custom column chart using `<Execute>` component and [Highcharts](https://www.highcharts.com/) library
+
+## Live demo
+
+This app is deployed at https://gooddata-demo.s3.amazonaws.com/gd-ui-boilerplate-v8/index.html. For access, you can register at https://gooddata-examples.herokuapp.com/.
+
+## How to run locally
+
+* `git clone --depth 1 https://github.com/gooddata/ui-sdk-examples.git`
+* `cd ui-sdk-examples/gd-ui-boilerplate-v8/`
+* `yarn install`
+* `yarn start`
+
+## How to build for deployment
+
+* `yarn build` when deploying to root folder
+* `PUBLIC_URL=/gd-ui-boilerplate-v8 yarn build` when deploying to `/gd-ui-boilerplate-v8` folder
+
+## Backend/proxy info
+
+This app is configured to run against https://developer.na.gooddata.com/. For access, you can register at https://gooddata-examples.herokuapp.com/.
+
+## Screnshots
+
+![homepage](https://raw.githubusercontent.com/gooddata/ui-sdk-examples/master/gd-ui-boilerplate-v8/public/screen1.png "Homepage")
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
