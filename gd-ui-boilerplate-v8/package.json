@@ -24,7 +24,8 @@
     "eject": "react-scripts eject",
     "refresh-ldm": "./scripts/refresh-ldm.sh",
     "buildgd": "cross-env PUBLIC_URL=/gd-ui-boilerplate-v8 yarn build",
-    "syncgd": "s3cmd --config .s3cfg sync --delete-removed ./build/ s3://gooddata-demo/gd-ui-boilerplate-v8/"
+    "syncgd": "s3cmd --config .s3cfg sync --delete-removed ./build/ s3://gooddata-demo/gd-ui-boilerplate-v8/",
+    "upgrade-sdk": "yarn upgrade --latest --caret -P '@gooddata/(reference-|api-|sdk-|util)'"
   },
   "eslintConfig": {
     "extends": "react-app"
