@@ -1258,12 +1258,12 @@
   resolved "https://registry.yarnpkg.com/@formatjs/intl-utils/-/intl-utils-2.3.0.tgz#2dc8c57044de0340eb53a7ba602e59abf80dc799"
   integrity sha512-KWk80UPIzPmUg+P0rKh6TqspRw0G6eux1PuJr+zz47ftMaZ9QDwbGzHZbtzWkl5hgayM/qrKRutllRC7D/vVXQ==
 
-"@gooddata/api-client-bear@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/api-client-bear/-/api-client-bear-8.0.0-beta.54.tgz#905c8551709108a4f045ad4fd68427cd52889e47"
-  integrity sha512-66U7co5R9V59vHgodx5i8g934QD8UWi5IQ1hiARcKgsTdPlpVdKKYdBwNUtgTu0e/ZW90KaNoPb7bpWASLWRqw==
+"@gooddata/api-client-bear@^8.0.0-beta.55":
+  version "8.0.0-beta.55"
+  resolved "https://registry.yarnpkg.com/@gooddata/api-client-bear/-/api-client-bear-8.0.0-beta.55.tgz#856257b6880cdf7055637256b1815e944f52c9da"
+  integrity sha512-HxNAYt2Ho0KiB9HhMU2a2hM3FcN8zQURG+DgYsA2qECiaQ0aPcme9SUWUwqZrBcEOO8RLbjrvcVqJW9qnPvU2A==
   dependencies:
-    "@gooddata/api-model-bear" "^8.0.0-beta.54"
+    "@gooddata/api-model-bear" "^8.0.0-beta.55"
     fetch-cookie "^0.7.0"
     isomorphic-fetch "^2.2.1"
     lodash "^4.17.19"
@@ -1274,12 +1274,12 @@
     tslib "^2.0.0"
     uuid "^3.3.3"
 
-"@gooddata/api-client-bear@^8.0.0-beta.55":
-  version "8.0.0-beta.55"
-  resolved "https://registry.yarnpkg.com/@gooddata/api-client-bear/-/api-client-bear-8.0.0-beta.55.tgz#856257b6880cdf7055637256b1815e944f52c9da"
-  integrity sha512-HxNAYt2Ho0KiB9HhMU2a2hM3FcN8zQURG+DgYsA2qECiaQ0aPcme9SUWUwqZrBcEOO8RLbjrvcVqJW9qnPvU2A==
+"@gooddata/api-client-bear@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/api-client-bear/-/api-client-bear-8.0.0-beta.83.tgz#eafc3bd30deade64e83c3cf18f1b80e086381d59"
+  integrity sha512-CH0kj3OcT0FQ0oFZrCjSsEWhQYcYCC8J8OGiGcerd8HQO+imS/lPj2VUmEJOjq2OMl8xgzHITiIIsroIQ6mj7Q==
   dependencies:
-    "@gooddata/api-model-bear" "^8.0.0-beta.55"
+    "@gooddata/api-model-bear" "^8.0.0-beta.83"
     fetch-cookie "^0.7.0"
     isomorphic-fetch "^2.2.1"
     lodash "^4.17.19"
@@ -1303,18 +1303,18 @@
     spark-md5 "^3.0.0"
     tslib "^2.0.0"
 
-"@gooddata/api-model-bear@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/api-model-bear/-/api-model-bear-8.0.0-beta.54.tgz#dde8ef5dbdd4794e2b78913cf650ca329c24bce2"
-  integrity sha512-p3mEBjdcYWbI9YekQBXTE8nAP3IbQJQyb5Ol0Ln0DD2HFV6VWwf5vcLpU50yA0FnQ+MGd8lt48+GPFsAAeSh3w==
-  dependencies:
-    lodash "^4.17.19"
-    tslib "^2.0.0"
-
 "@gooddata/api-model-bear@^8.0.0-beta.55":
   version "8.0.0-beta.55"
   resolved "https://registry.yarnpkg.com/@gooddata/api-model-bear/-/api-model-bear-8.0.0-beta.55.tgz#36d98fb1d5c2618b4695009aa822bcdb7aaefdb7"
   integrity sha512-kkZ3L01aK9etU37Z1dKj0l1Uwz6kvjuYvvaVfHsNAIq9MTmPArzwrJv3niEWeLa8Z+hST4DKSs/caHM8GTgZ/Q==
+  dependencies:
+    lodash "^4.17.19"
+    tslib "^2.0.0"
+
+"@gooddata/api-model-bear@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/api-model-bear/-/api-model-bear-8.0.0-beta.83.tgz#c270d01c9cb96f35e2aebd7f2074f2a5fc5ded8b"
+  integrity sha512-Q6USCI2nhiov4QiN47yHAlxEqtMb+ULwEYl6n3q99B3EbFWhm1dMzlFy392l7Va3AgH0gnEBmuBSZSN1K0JtwA==
   dependencies:
     lodash "^4.17.19"
     tslib "^2.0.0"
@@ -1341,10 +1341,10 @@
     ts-morph "^4.2.0"
     tslib "^2.0.0"
 
-"@gooddata/goodstrap@^68.20.1":
-  version "68.20.1"
-  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-68.20.1.tgz#b79c2ab3ac5dfd13964c45bd4b4ee87dff4a4b7f"
-  integrity sha512-+7ak6NzXgaIhBrbSH3Ri15l+vFmARjcxtTKR8YI0sxcbf1zIVLQYZbNXb/hwF827IhHFMSMWVxsySBqmi1JpWw==
+"@gooddata/goodstrap@^68.20.4":
+  version "68.20.5"
+  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-68.20.5.tgz#9ba185153556bfbf528b2e5187dc426611d618b6"
+  integrity sha512-Msb3/kEQt9mfZKsbpsAr2gP9x6ADOXUIlnRHhIvMT5d5cgx/LTyy0N09HIB+7gALjBoxyr7xOCyevin0KfFuew==
   dependencies:
     "@babel/runtime-corejs2" "^7.0.0"
     "@gooddata/js-utils" "^3.10.9"
@@ -1386,13 +1386,13 @@
   resolved "https://registry.yarnpkg.com/@gooddata/numberjs/-/numberjs-3.2.4.tgz#4363751f4a589e9d3f12d185b38b954183dc1c48"
   integrity sha512-v4JO9dIQ9PIJCxjiBkUNCSa40tHGShFsSYBo6B+YuMxpZpslLClvC1tcXRuk7tc9OsCAorcKzcEgtHQTLPtH2A==
 
-"@gooddata/sdk-backend-base@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/sdk-backend-base/-/sdk-backend-base-8.0.0-beta.54.tgz#b3bf087e136cbd21dd0fd3e31bc43dd97120c845"
-  integrity sha512-LUJ3JswWBvZu0NWrIOdUXfhWwcOMNQNYU7YQOyjbwUQCBuoF9dAPuuIIs+DN3dtMjdzhZVoHeyqYKB5caCYHTw==
+"@gooddata/sdk-backend-base@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-backend-base/-/sdk-backend-base-8.0.0-beta.83.tgz#fec5c68d14630b44d56cb0861863442b24d9a9bc"
+  integrity sha512-A5jHy2UmA8SqI3FVcOw0B7GddyFzyQWgVYmKYvrauthh9rq1s3ao00spiy8R+GoTIJfm25XeHdE2Q3P/Elp53g==
   dependencies:
-    "@gooddata/sdk-backend-spi" "^8.0.0-beta.54"
-    "@gooddata/sdk-model" "^8.0.0-beta.54"
+    "@gooddata/sdk-backend-spi" "^8.0.0-beta.83"
+    "@gooddata/sdk-model" "^8.0.0-beta.83"
     json-stable-stringify "^1.0.1"
     lodash "^4.17.19"
     lru-cache "^4.1.5"
@@ -1400,17 +1400,17 @@
     ts-invariant "^0.4.4"
     tslib "^2.0.0"
 
-"@gooddata/sdk-backend-bear@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/sdk-backend-bear/-/sdk-backend-bear-8.0.0-beta.54.tgz#c7828add5f3f1014981f4d1ef85e063f3cfcdabf"
-  integrity sha512-br8SdkTzu/wLcX5Kjbsxkvdv7pB8UrjV9qpmEPTX6Hp1oYmojeofL/rOxHNgXDSPMmvgm756Y786G8e1JdImRQ==
+"@gooddata/sdk-backend-bear@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-backend-bear/-/sdk-backend-bear-8.0.0-beta.83.tgz#b52ed1b632ae163d5595fa417bf01ca377d8ed99"
+  integrity sha512-N92xbN1pWzQMR6Lp5JDn3IMoeYx5MuCzqfqaq6t/aZh0YS7O3DdNih7rSZcQUynN+Um9XsUGa8LNHSHJ9OND7A==
   dependencies:
-    "@gooddata/api-client-bear" "^8.0.0-beta.54"
-    "@gooddata/api-model-bear" "^8.0.0-beta.54"
-    "@gooddata/sdk-backend-base" "^8.0.0-beta.54"
-    "@gooddata/sdk-backend-spi" "^8.0.0-beta.54"
-    "@gooddata/sdk-embedding" "^8.0.0-beta.54"
-    "@gooddata/sdk-model" "^8.0.0-beta.54"
+    "@gooddata/api-client-bear" "^8.0.0-beta.83"
+    "@gooddata/api-model-bear" "^8.0.0-beta.83"
+    "@gooddata/sdk-backend-base" "^8.0.0-beta.83"
+    "@gooddata/sdk-backend-spi" "^8.0.0-beta.83"
+    "@gooddata/sdk-embedding" "^8.0.0-beta.83"
+    "@gooddata/sdk-model" "^8.0.0-beta.83"
     http-status-codes "^1.3.0"
     json-stable-stringify "^1.0.1"
     lodash "^4.17.19"
@@ -1418,17 +1418,6 @@
     ts-invariant "^0.4.4"
     tslib "^2.0.0"
     uuid "^3.3.3"
-
-"@gooddata/sdk-backend-spi@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/sdk-backend-spi/-/sdk-backend-spi-8.0.0-beta.54.tgz#f872a5f7cfdbfdc941af66d008e1a8e5bc0403e3"
-  integrity sha512-6OvncD2nRwhfs1NkP+mcLToj/lFD2Shqk/+8+kwPASiEmko7Rsecx/C+U1kooe1Mj7ckcluAKy0yVGV+jZhSqg==
-  dependencies:
-    "@gooddata/sdk-model" "^8.0.0-beta.54"
-    lodash "^4.17.19"
-    spark-md5 "^3.0.0"
-    ts-invariant "^0.4.4"
-    tslib "^2.0.0"
 
 "@gooddata/sdk-backend-spi@^8.0.0-beta.55":
   version "8.0.0-beta.55"
@@ -1441,25 +1430,24 @@
     ts-invariant "^0.4.4"
     tslib "^2.0.0"
 
-"@gooddata/sdk-embedding@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/sdk-embedding/-/sdk-embedding-8.0.0-beta.54.tgz#285da35c3c7b80e5f72ba0b8b2a67cdc9ce611ca"
-  integrity sha512-m+Am1vevcY5MXegs42NMIBc8CZ0dDzXkycI+2oj4CuJLcw9N4LRWj/wAguyPBsaBRMJP1YTuHbt7quDydEFjtQ==
+"@gooddata/sdk-backend-spi@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-backend-spi/-/sdk-backend-spi-8.0.0-beta.83.tgz#f16ad260f353813b13c3c30ce9e57650f5701409"
+  integrity sha512-1RNerMB0aZemR4aqStWxTbdz+s3p41psKjOQ1iNf3/y56EU6vqtDk/hFviR2Nerx/3bGcKcmaI9rgiWquiXbsw==
   dependencies:
-    "@gooddata/api-model-bear" "^8.0.0-beta.54"
-    lodash "^4.17.19"
-    tslib "^2.0.0"
-
-"@gooddata/sdk-model@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/sdk-model/-/sdk-model-8.0.0-beta.54.tgz#cd4051644e8a643bf89c7e9c64724ba6066e86e8"
-  integrity sha512-6rJlJBdzBZp6v4CsaK3OOQKWDzdm8vqmTVu0AvhvlF3YTrlWC8wRgqBKyTUvxYqYnMcq6MqmFhtiDJBhF7kZkw==
-  dependencies:
-    json-stable-stringify "^1.0.1"
+    "@gooddata/sdk-model" "^8.0.0-beta.83"
     lodash "^4.17.19"
     spark-md5 "^3.0.0"
-    stringify-object "^2.4.0"
     ts-invariant "^0.4.4"
+    tslib "^2.0.0"
+
+"@gooddata/sdk-embedding@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-embedding/-/sdk-embedding-8.0.0-beta.83.tgz#7d034b6d4a58dd9a7fc918d3c75310d8096a1cac"
+  integrity sha512-Aqz3PYk71z9JZhhBQMPYOakI5amYgAtMIskGNXJvmjd2bj4A00rUZHCJtkgcDojZXcOTi5EQFVizsedsjtvgLQ==
+  dependencies:
+    "@gooddata/api-model-bear" "^8.0.0-beta.83"
+    lodash "^4.17.19"
     tslib "^2.0.0"
 
 "@gooddata/sdk-model@^8.0.0-beta.55":
@@ -1474,18 +1462,30 @@
     ts-invariant "^0.4.4"
     tslib "^2.0.0"
 
-"@gooddata/sdk-ui-charts@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui-charts/-/sdk-ui-charts-8.0.0-beta.54.tgz#640766451a3c8504308a39b62909bb320d22237e"
-  integrity sha512-l+Qei95V2cCWFzvVOqn+0eyitcTVZQKJVl1oTcfVHlMBDEc6Yu65fstznNmh4Q9fkmH/zQJZHqByU28QLKlwGg==
+"@gooddata/sdk-model@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-model/-/sdk-model-8.0.0-beta.83.tgz#5e0b59c59250b6c4da67e97e136f36166461dc53"
+  integrity sha512-oG2gtaCimxMLFNTuKoxKr8EGBeHiINZKnXg5zgososF4z6f/uiQdcnlWm0SRZuRU5B5YBg42DCJRpmZhTc4JOw==
   dependencies:
-    "@gooddata/goodstrap" "^68.20.1"
+    json-stable-stringify "^1.0.1"
+    lodash "^4.17.19"
+    spark-md5 "^3.0.0"
+    stringify-object "^2.4.0"
+    ts-invariant "^0.4.4"
+    tslib "^2.0.0"
+
+"@gooddata/sdk-ui-charts@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui-charts/-/sdk-ui-charts-8.0.0-beta.83.tgz#56a7d69a2813339250b996a53a682a5d5ebe714e"
+  integrity sha512-ITnq6oFQOc/ywhooiVgdhdKdFWORVbdjSKvWWvYfiEW43d5GgpWb7hTojSsn7+lOiD36XckCJBNh+rcamNpWNw==
+  dependencies:
+    "@gooddata/goodstrap" "^68.20.4"
     "@gooddata/numberjs" "^3.2.4"
-    "@gooddata/sdk-backend-spi" "^8.0.0-beta.54"
-    "@gooddata/sdk-model" "^8.0.0-beta.54"
-    "@gooddata/sdk-ui" "^8.0.0-beta.54"
-    "@gooddata/sdk-ui-vis-commons" "^8.0.0-beta.54"
-    "@gooddata/util" "^8.0.0-beta.54"
+    "@gooddata/sdk-backend-spi" "^8.0.0-beta.83"
+    "@gooddata/sdk-model" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui-vis-commons" "^8.0.0-beta.83"
+    "@gooddata/util" "^8.0.0-beta.83"
     classnames "^2.2.6"
     custom-event "^1.0.1"
     date-fns "^2.8.1"
@@ -1498,22 +1498,24 @@
     ts-invariant "^0.4.4"
     tslib "^2.0.0"
 
-"@gooddata/sdk-ui-ext@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui-ext/-/sdk-ui-ext-8.0.0-beta.54.tgz#5a4814f4dc07372f3aa285a97c0405f1661cb6c1"
-  integrity sha512-vZM/sIw4tSoNMZk8bqXny6em2p1CYGiOW3xdSycNwuDsiJe3R67iY1xSb9b+i5N/TWtqo6iAYtsVnOJa2Okd/w==
+"@gooddata/sdk-ui-ext@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui-ext/-/sdk-ui-ext-8.0.0-beta.83.tgz#26fdf593f3f633d1c9029a40a6c1184a4e7d3726"
+  integrity sha512-R75Zg75dJPL8Yx2N9QVnxJ5SMrk00xYm406gPPQ/hAOJiaLkXuoe/sn5/zd9K0IwDGuCeQZsb5wTV0wGMXm1GA==
   dependencies:
     "@formatjs/intl-pluralrules" "~1.3.7"
-    "@gooddata/goodstrap" "^68.20.1"
+    "@gooddata/goodstrap" "^68.20.4"
     "@gooddata/numberjs" "^3.2.4"
-    "@gooddata/sdk-backend-spi" "^8.0.0-beta.54"
-    "@gooddata/sdk-embedding" "^8.0.0-beta.54"
-    "@gooddata/sdk-model" "^8.0.0-beta.54"
-    "@gooddata/sdk-ui" "^8.0.0-beta.54"
-    "@gooddata/sdk-ui-charts" "^8.0.0-beta.54"
-    "@gooddata/sdk-ui-geo" "^8.0.0-beta.54"
-    "@gooddata/sdk-ui-pivot" "^8.0.0-beta.54"
-    "@gooddata/util" "^8.0.0-beta.54"
+    "@gooddata/sdk-backend-base" "^8.0.0-beta.83"
+    "@gooddata/sdk-backend-spi" "^8.0.0-beta.83"
+    "@gooddata/sdk-embedding" "^8.0.0-beta.83"
+    "@gooddata/sdk-model" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui-charts" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui-geo" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui-pivot" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui-vis-commons" "^8.0.0-beta.83"
+    "@gooddata/util" "^8.0.0-beta.83"
     classnames "^2.2.6"
     custom-event "^1.0.1"
     fixed-data-table-2 "^0.8.21"
@@ -1524,21 +1526,22 @@
     tslib "^2.0.0"
     uuid "^3.3.3"
 
-"@gooddata/sdk-ui-filters@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui-filters/-/sdk-ui-filters-8.0.0-beta.54.tgz#63ce1d52f168d21d3052cef94ba9598e4abb0d64"
-  integrity sha512-ALOouZBf1S7UakZ8/R5EZL/5HAzGAaMWC/bPEjcbENSmXKJIVbPSn1v3JdwekDdlPLJBf6YRY1zyPFv/lRSHXA==
+"@gooddata/sdk-ui-filters@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui-filters/-/sdk-ui-filters-8.0.0-beta.83.tgz#e0f6137130357d7dc4d91bb3491168462ae761bd"
+  integrity sha512-gvkHUQJAKqimIZOTbdC83XDYl+RrWyAnZ687QeoegJUhgH3+8iCWreH9nIn94GQ3vWUMy4N9nckn89hRxTMiGw==
   dependencies:
-    "@gooddata/goodstrap" "^68.20.1"
+    "@gooddata/goodstrap" "^68.20.4"
     "@gooddata/numberjs" "^3.2.4"
-    "@gooddata/sdk-backend-spi" "^8.0.0-beta.54"
-    "@gooddata/sdk-model" "^8.0.0-beta.54"
-    "@gooddata/sdk-ui" "^8.0.0-beta.54"
-    "@gooddata/util" "^8.0.0-beta.54"
+    "@gooddata/sdk-backend-spi" "^8.0.0-beta.83"
+    "@gooddata/sdk-model" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui" "^8.0.0-beta.83"
+    "@gooddata/util" "^8.0.0-beta.83"
     classnames "^2.2.6"
     downshift "^3.4.7"
     fixed-data-table-2 "^0.8.21"
     hoist-non-react-statics "^3.3.0"
+    json-stable-stringify "^1.0.1"
     lodash "^4.17.19"
     moment "^2.24.0"
     react-day-picker "7.3.0"
@@ -1547,17 +1550,17 @@
     react-window "^1.8.5"
     tslib "^2.0.0"
 
-"@gooddata/sdk-ui-geo@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui-geo/-/sdk-ui-geo-8.0.0-beta.54.tgz#fdc0b0da8f07855ad9ff2069e9331d477ddd38df"
-  integrity sha512-xpsR50+P++K0TOzhB5OK6Yrzmo/EQF9FRFnZMAiXCrrg2QPGQm/rtfE1gE8bu6x66SDnb7T2okkIQzd6RLoStw==
+"@gooddata/sdk-ui-geo@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui-geo/-/sdk-ui-geo-8.0.0-beta.83.tgz#694da95c74526124157083e70ef1710baba6d180"
+  integrity sha512-PA/NXzaQGSXZFcovThGcs4WwJmWwJshcZBQPgBjNxrJqNeWLuqSk/aFhI72WqzOxLz16xADjJynOZGWudrH+pg==
   dependencies:
-    "@gooddata/goodstrap" "^68.20.1"
+    "@gooddata/goodstrap" "^68.20.4"
     "@gooddata/numberjs" "^3.2.4"
-    "@gooddata/sdk-backend-spi" "^8.0.0-beta.54"
-    "@gooddata/sdk-model" "^8.0.0-beta.54"
-    "@gooddata/sdk-ui" "^8.0.0-beta.54"
-    "@gooddata/sdk-ui-vis-commons" "^8.0.0-beta.54"
+    "@gooddata/sdk-backend-spi" "^8.0.0-beta.83"
+    "@gooddata/sdk-model" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui-vis-commons" "^8.0.0-beta.83"
     classnames "^2.2.6"
     custom-event "^1.0.1"
     lodash "^4.17.19"
@@ -1568,20 +1571,20 @@
     ts-invariant "^0.4.4"
     tslib "^2.0.0"
 
-"@gooddata/sdk-ui-pivot@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui-pivot/-/sdk-ui-pivot-8.0.0-beta.54.tgz#af5ecd280fd04309d24ee0e34a9d7ac02c097bf5"
-  integrity sha512-W7K0xCC+pPeXt4JrVIoVbkhhXOGG/rNoLMPkFqTn7k7DEbKXdio67o7RnA35sNN1r96VQO1nEQw65O0W2BaLUA==
+"@gooddata/sdk-ui-pivot@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui-pivot/-/sdk-ui-pivot-8.0.0-beta.83.tgz#1a6785f9607ae39231954c9453b428363f6189ec"
+  integrity sha512-gqR1Sexd1qph51NszasiFCtCzMJBvn3ifeeduDAn9/PDY6/+/HKR9ir4QMysmqg7QqhSjdOvBeC+cBxZR+b+iA==
   dependencies:
     "@ag-grid-community/all-modules" "22.1.1"
     "@ag-grid-community/react" "22.1.2"
     "@formatjs/intl-pluralrules" "~1.3.7"
-    "@gooddata/goodstrap" "^68.20.1"
+    "@gooddata/goodstrap" "^68.20.4"
     "@gooddata/numberjs" "^3.2.4"
-    "@gooddata/sdk-backend-spi" "^8.0.0-beta.54"
-    "@gooddata/sdk-model" "^8.0.0-beta.54"
-    "@gooddata/sdk-ui" "^8.0.0-beta.54"
-    "@gooddata/sdk-ui-vis-commons" "^8.0.0-beta.54"
+    "@gooddata/sdk-backend-spi" "^8.0.0-beta.83"
+    "@gooddata/sdk-model" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui-vis-commons" "^8.0.0-beta.83"
     classnames "^2.2.6"
     custom-event "^1.0.1"
     fixed-data-table-2 "^0.8.21"
@@ -1590,16 +1593,16 @@
     ts-invariant "^0.4.4"
     tslib "^2.0.0"
 
-"@gooddata/sdk-ui-vis-commons@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui-vis-commons/-/sdk-ui-vis-commons-8.0.0-beta.54.tgz#951ba7d47931ac7861556125ff7551a5c1a9a9be"
-  integrity sha512-kBRJWiCAP/OaWKr8MItZ1drYWzZjXiGLzxX9pqsHc8XhGUFYwSKYt1sGCaKxHUM91+DFZTYMI7wUUVBH3Uyu3A==
+"@gooddata/sdk-ui-vis-commons@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui-vis-commons/-/sdk-ui-vis-commons-8.0.0-beta.83.tgz#e2411574c4492a70ef8e8288b4545b7183268dbb"
+  integrity sha512-UgbRrFYbxFzAPZ+hZwSiKoPQ/eF+s0Pgeav+dUKGiQs/g9MCAP4yTi3aK8Z79pK5iS8hbKL3WYuS+Y8DJB677A==
   dependencies:
-    "@gooddata/goodstrap" "^68.20.1"
+    "@gooddata/goodstrap" "^68.20.4"
     "@gooddata/numberjs" "^3.2.4"
-    "@gooddata/sdk-backend-spi" "^8.0.0-beta.54"
-    "@gooddata/sdk-model" "^8.0.0-beta.54"
-    "@gooddata/sdk-ui" "^8.0.0-beta.54"
+    "@gooddata/sdk-backend-spi" "^8.0.0-beta.83"
+    "@gooddata/sdk-model" "^8.0.0-beta.83"
+    "@gooddata/sdk-ui" "^8.0.0-beta.83"
     classnames "^2.2.6"
     lodash "^4.17.19"
     prop-types "^15.6.0"
@@ -1607,17 +1610,17 @@
     react-measure "^2.3.0"
     tslib "^2.0.0"
 
-"@gooddata/sdk-ui@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui/-/sdk-ui-8.0.0-beta.54.tgz#7a827b61d33f0157fa825372e90d398c9cc0d07e"
-  integrity sha512-doxicjtFcCUdVtLqOQL3heSntmhStcumu+D8Bfc0rnbby8PZgMYpXU60XEo/6UghCeZwwZVQqvadpn+c1+nPIw==
+"@gooddata/sdk-ui@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-ui/-/sdk-ui-8.0.0-beta.83.tgz#3509400e5d66ea06fd62674e8620567a2d8f68d0"
+  integrity sha512-ueOIH4UOPF++2CMeIfJZhJ6APVyPZBUqhOkMJyHuuykJFc/WyTw+NUTajWUEUoCgZyjtB4IJ4mf7r6ZvmWkJhg==
   dependencies:
     "@formatjs/intl-pluralrules" "~1.3.7"
-    "@gooddata/goodstrap" "^68.20.1"
+    "@gooddata/goodstrap" "^68.20.4"
     "@gooddata/numberjs" "^3.2.4"
-    "@gooddata/sdk-backend-spi" "^8.0.0-beta.54"
-    "@gooddata/sdk-model" "^8.0.0-beta.54"
-    "@gooddata/util" "^8.0.0-beta.54"
+    "@gooddata/sdk-backend-spi" "^8.0.0-beta.83"
+    "@gooddata/sdk-model" "^8.0.0-beta.83"
+    "@gooddata/util" "^8.0.0-beta.83"
     custom-event "^1.0.1"
     hoist-non-react-statics "^3.3.0"
     http-status-codes "^1.3.0"
@@ -1633,10 +1636,10 @@
   dependencies:
     lodash "^4.17.11"
 
-"@gooddata/util@^8.0.0-beta.54":
-  version "8.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@gooddata/util/-/util-8.0.0-beta.54.tgz#62c7e1a976b56ac67ded50dc85807e85ddeb4875"
-  integrity sha512-fb8nUTWYH8PiSXZsgyJ8VEnXfF7MQ02kM0WTN9jeBxwe7ip1MkjThCosE9xHKTUcqU0VsXE2E0w8BF8h5MLSRA==
+"@gooddata/util@^8.0.0-beta.83":
+  version "8.0.0-beta.83"
+  resolved "https://registry.yarnpkg.com/@gooddata/util/-/util-8.0.0-beta.83.tgz#40459f9643e58bfa695ccf70eca534be38afe7a4"
+  integrity sha512-N/wJgvDLFC/6GrhBcbQsXjInuYprBBb+UTv+AbWsho33sq3AiY33HSE/q/FYJ3qoFsoFCuxViDJJH0kbfXs06Q==
   dependencies:
     lodash "^4.17.19"
     tslib "^2.0.0"
