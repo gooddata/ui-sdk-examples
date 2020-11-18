@@ -49,7 +49,7 @@ function App() {
           >
             <AttributeFilter
               filter={newPositiveAttributeFilter(
-                newAttribute("label.restaurantlocation.locationcity"),
+                Ldm.LocationCity,
                 []
               )}
               onApply={filter => setFilters([filter])}

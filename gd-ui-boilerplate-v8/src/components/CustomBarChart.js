@@ -31,7 +31,7 @@ const CustomBarChart = ({ error, isLoading, result }) => {
     return <ReactHighcharts config={config} />;
   }
 
-  return "🧟‍♂️ UGLY INIT";
+  return <span>Init…</span>;
 };
 
 export default CustomBarChart;
