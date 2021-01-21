@@ -1,7 +1,7 @@
 // Copyright (C) 2007-2020, GoodData(R) Corporation. All rights reserved.
 import React, { useState, useEffect } from "react";
 import { Headline, ColumnChart } from "@gooddata/sdk-ui-charts";
-import { newAttribute, newPositiveAttributeFilter } from "@gooddata/sdk-model";
+import { newPositiveAttributeFilter } from "@gooddata/sdk-model";
 import { BackendProvider, WorkspaceProvider, Execute } from "@gooddata/sdk-ui";
 import { InsightView } from "@gooddata/sdk-ui-ext";
 import { AttributeFilter } from "@gooddata/sdk-ui-filters";
