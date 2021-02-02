@@ -1,5 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<title>Demo</title>
 <script src="./gooddata_react_components_bundle.js"></script>
 <link rel="stylesheet" type="text/css" href="./gooddata_react_components_bundle.css">
 </head>
@@ -7,18 +9,18 @@
 
 <h1>UI SDK + Vanilla.js Demo</h1>
 
-<p>This demo uses a UI SDK based bundle that exposes a window variable <tt>GDRC</tt> which
+<p>This demo uses a UI SDK based bundle that exposes a window variable GDRC which
   is an object containing:
   <ul>
-    <li>Top level UI SDK React Components such as <tt><a href="https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/React+Components#ReactComponents-KPI">Kpi</a></tt></li>
-    <li><tt>ReactContentRenderer</tt> function inspired by <a href="">this tutorial</a></li>
+    <li>Top level UI SDK React Components such as <a href="https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/React+Components#ReactComponents-KPI">Kpi</a></li>
+    <li>ReactContentRenderer function inspired by <a href="">this tutorial</a></li>
   </ul>
 <p>
 <p>
   The bundle has been created using <a href="https://github.com/gooddata/ui-sdk-examples/tree/vanillajs/vanillajs/create-bundle">this</a> webpack config and a custom entry file.
 </p>
 <p>
-  The drop down below allows you to switch between the Checkouts and Impressions metric from the <a href="https://whitelabeling.gooddata.com/#s=/gdc/projects/kf0vsjlf9mll0osg6hmtppgm1nkjsi9r">SDK Tests</a> project from the <i>whitelabeling.gooddata.com</i> domain.
+  The drop down below allows you to switch between the Checkouts and Impressions metric from the <a href="https://whitelabeling.gooddata.com/#s=/gdc/projects/kf0vsjlf9mll0osg6hmtppgm1nkjsi9r">SDK Tests</a> project from the <em>whitelabeling.gooddata.com</em> domain.
 </p>
 
 <p>Please scroll down for troubleshooting.</p>
@@ -32,18 +34,18 @@
 <div id="column-chart" style="width: 500px; height: 400px;"></div>
 
 <div>
-  <b>Troubleshooting:</b>
+  <strong>Troubleshooting:</strong>
   <p>
-  <i>Problem:</i> The demo does not show any number or chart. The console shows an error message mentioning the 'Access-Control-Allow-Origin' header.<br>
-  <i>Solution:</i> Set up CORS by following <a href="https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/How+to+Access+the+GoodData+API+Directly">this tutorial</a>
+  <em>Problem:</em> The demo does not show any number or chart. The console shows an error message mentioning the 'Access-Control-Allow-Origin' header.<br>
+  <em>Solution:</em> Set up CORS by following <a href="https://help.gooddata.com/display/bHsp5IhQjuz0e6HS0s76/How+to+Access+the+GoodData+API+Directly">this tutorial</a>
   </p>
   <p>
-  <i>Problem:</i> The demo does not show any number or chart. The console shows an error message mentioning '401 (Unauthorized)'<br>
-  <i>Solution:</i> Log into your white labelled domain before accessing the demo.
+  <em>Problem:</em> The demo does not show any number or chart. The console shows an error message mentioning '401 (Unauthorized)'<br>
+  <em>Solution:</em> Log into your white labelled domain before accessing the demo.
   </p>
   <p>
-  <i>Problem:</i> The demo does not show any number or chart. The console shows an error message mentioning '403 (Forbidden)'<br>
-  <i>Solution:</i> Follow the instruction in the README file (section "configuring the index.html"). The demo includes a hardcoded reference to a specific GoodData domain, please replace whitelabeling.gooddata.com and specific project workspace and metric identifiers with your domain and your project workspace.
+  <em>Problem:</em> The demo does not show any number or chart. The console shows an error message mentioning '403 (Forbidden)'<br>
+  <em>Solution:</em> Follow the instruction in the README file (section "configuring the index.html"). The demo includes a hardcoded reference to a specific GoodData domain, please replace whitelabeling.gooddata.com and specific project workspace and metric identifiers with your domain and your project workspace.
   </p>
 </div>
 
