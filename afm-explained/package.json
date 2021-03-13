@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@gooddata/react-components": "^7.1.1",
-    "node-sass": "^4.9.4",
+    "node-sass": "^4.13.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-highcharts": "^16.0.2",
