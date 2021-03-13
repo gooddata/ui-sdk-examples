@@ -1,7 +1,6 @@
 // Copyright (C) 2007-2020, GoodData(R) Corporation. All rights reserved.
 import React from "react";
 import ReactHighcharts from "react-highcharts";
-import * as Ldm from "../ldm/full";
 
 const CustomBarChart = ({ error, isLoading, result }) => {
   if (isLoading) {
@@ -22,10 +21,9 @@ const CustomBarChart = ({ error, isLoading, result }) => {
       },
       series: result
         .data()
-        .series()
-        .firstForMeasure(Ldm.NrChecks)
-        .dataPoints()
-        .map((row, i) => ({ data: [parseFloat(row.rawValue)] }))
+        .slices()
+        .toArray()
+        .map(slice => ({ data: [parseFloat(slice.rawData()[0])] }))
     };
 
     return <ReactHighcharts config={config} />;
