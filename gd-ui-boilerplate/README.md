@@ -1,6 +1,6 @@
 # GoodData.UI Boilerplate App
 
-This app follows steps from https://sdk.gooddata.com/gooddata-ui/docs/next/ht_create_your_first_visualization.html:
+This app follows steps from https://sdk.gooddata.com/gooddata-ui/docs/ht_create_your_first_visualization.html:
 
 * It initializes create-react-app
 * It configures GoodData proxy
@@ -39,8 +39,8 @@ This app is configured to run against https://developer.na.gooddata.com/. For ac
 
 ## Screnshots
 
-![homepage](https://raw.githubusercontent.com/gooddata/ui-sdk-examples/master/gd-ui-boilerplate/public/screen1.png "Homepage")
+![homepage](https://raw.githubusercontent.com/gooddata/ui-sdk-examples/master/gd-ui-boilerplate/public/home.png "Homepage")
 
 ---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [GoodData.UI Accelerator Toolkit](https://sdk.gooddata.com/gooddata-ui/docs/ht_create_your_first_visualization_toolkit.html).
