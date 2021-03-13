@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@gooddata/react-components": "^7.1.0",
-    "node-sass": "^4.9.4",
+    "node-sass": "^4.13.1",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-scripts": "2.0.5",
