@@ -1,28 +1,34 @@
-const proxy = require('http-proxy-middleware');
-const url = process.env.GD_URL || 'developer.na.gooddata.com';
+// Copyright (C) 2007-2020, GoodData(R) Corporation. All rights reserved.
+const proxy = require("http-proxy-middleware");
 
 module.exports = function(app) {
-  // when '/packages' route below is removed,
-  // "Uncaught SyntaxError: Unexpected token <" error
-  // prevents https://localhost:3000/account.html from loading correctly
-  app.use(proxy(['/gdc', '/packages'], {
-    changeOrigin: true,
-    cookieDomainRewrite: "localhost",
-    secure: false,
-    target: `https://${url}`,
-    headers: {
-      host: url,
-      origin: null
-    }
-  }));
-  app.use(proxy('/*.html', {
-    changeOrigin: true,
-    secure: false,
-    cookieDomainRewrite: 'localhost',
-    target: `https://${url}`,
-    headers: {
-      host: url,
-      origin: null
-    }
-  }));
+  app.use(
+    proxy("/gdc", {
+      changeOrigin: true,
+      cookieDomainRewrite: "localhost",
+      secure: false,
+      target: "https://developer.na.gooddata.com",
+      headers: {
+        host: "developer.na.gooddata.com",
+        origin: null
+      },
+      onProxyReq: function(proxyReq, req, res) {
+        proxyReq.setHeader("accept-encoding", "identity");
+      }
+    })
+  );
+  app.use(
+    proxy("/*.html", {
+      changeOrigin: true,
+      secure: false,
+      target: "https://developer.na.gooddata.com"
+    })
+  );
+  app.use(
+    proxy("/packages/*.{js,css}", {
+      changeOrigin: true,
+      secure: false,
+      target: "https://developer.na.gooddata.com"
+    })
+  );
 };

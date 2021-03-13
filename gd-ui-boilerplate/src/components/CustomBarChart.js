@@ -1,8 +1,9 @@
-// Copyright (C) 2007-2018, GoodData(R) Corporation. All rights reserved.
-import React from 'react';
-import ReactHighcharts from 'react-highcharts';
+// Copyright (C) 2007-2020, GoodData(R) Corporation. All rights reserved.
+import React from "react";
+import ReactHighcharts from "react-highcharts";
+import * as Ldm from "../ldm/full";
 
-const CustomBarChart = ({error, isLoading, result}) => {
+const CustomBarChart = ({ error, isLoading, result }) => {
   if (isLoading) {
     return <span>Loading…</span>;
   }
@@ -11,22 +12,26 @@ const CustomBarChart = ({error, isLoading, result}) => {
     return <span>Something went wrong :-(</span>;
   }
 
-  const config = {
-    chart: {
-      type: 'column',
-    },
-    title: {
-      text: '🎉🍾🙌 My First Custom Chart 🙌🍾🎉'
-    },
-    series: result.executionResult.data.map((row, i) =>
-      ({ data: [parseFloat(row[0])] }))
-  };
-
   if (result) {
-    return (
-      <ReactHighcharts config={config} />
-    );
+    const config = {
+      chart: {
+        type: "column"
+      },
+      title: {
+        text: "🎉🍾🙌 My First Custom Chart 🙌🍾🎉"
+      },
+      series: result
+        .data()
+        .series()
+        .firstForMeasure(Ldm.NrChecks)
+        .dataPoints()
+        .map((row, i) => ({ data: [parseFloat(row.rawValue)] }))
+    };
+
+    return <ReactHighcharts config={config} />;
   }
+
+  return <span>Init…</span>;
 };
 
 export default CustomBarChart;

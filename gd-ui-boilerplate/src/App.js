@@ -1,20 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { Headline, ColumnChart, Execute, Visualization, Model } from '@gooddata/react-components';
-import C from './catalog';
-import config from './config';
-import AttributeDropdown from './components/AttributeDropdown';
-import CustomBarChart from './components/CustomBarChart';
-import { loginMachinery } from './utils';
+// Copyright (C) 2007-2020, GoodData(R) Corporation. All rights reserved.
+import React, { useState, useEffect } from "react";
+import { Headline, ColumnChart } from "@gooddata/sdk-ui-charts";
+import { newPositiveAttributeFilter } from "@gooddata/sdk-model";
+import { BackendProvider, WorkspaceProvider, Execute } from "@gooddata/sdk-ui";
+import { InsightView } from "@gooddata/sdk-ui-ext";
+import { AttributeFilter } from "@gooddata/sdk-ui-filters";
+import backend from "./backend";
+import CustomBarChart from "./components/CustomBarChart";
+import { loginMachinery } from "./utils";
+import * as Ldm from "./ldm/full";
 
-import '@gooddata/react-components/styles/css/main.css';
-import './App.css';
+import "@gooddata/sdk-ui-charts/styles/css/main.css";
+import "@gooddata/sdk-ui-filters/styles/css/main.css";
+import "./App.css";
+
+const WORKSPACE = "xms7ga4tf3g3nzucd8380o2bev8oeknp";
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
   const [filters, setFilters] = useState([]);
 
   useEffect(() => {
-    loginMachinery({ ...config }, () => setIsLogged(true));
+    loginMachinery(
+      {
+        sdk: backend.sdk,
+        projectId: WORKSPACE,
+        domain: backend.config.hostname
+      },
+      () => setIsLogged(true)
+    );
   });
 
   if (!isLogged) {
@@ -22,67 +36,58 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <div style={{ width: 400, margin: 'auto', marginBottom: 20, marginTop: 20 }}>
-        <AttributeDropdown
-          {...config}
-          placeholder="Filter cities"
-          attribute={C.attributeDisplayForm('Location City')}
-          filters={filters}
-          updateFilters={setFilters}
-        />
-      </div>
-      <div>
-        # of Location City: <Headline
-          {...config}
-          filters={filters}
-          primaryMeasure={Model.measure(C.measure('# Location City'))}
-        />
-        <br />
-        <br />
-      </div>
-      <div style={{ height: 400 }}>
-        <Visualization
-          {...config}
-          filters={filters}
-          identifier="aby6oS6DbpFX"
-        />
-      </div>
-      <div style={{ height: 400 }}>
-        <ColumnChart
-          {...config}
-          filters={filters}
-          measures={[Model.measure(C.measure('# Checks'))]}
-          viewBy={Model.attribute(C.attributeDisplayForm('Location City'))}
-          stackBy={Model.attribute(C.attributeDisplayForm('Location Name'))}
-        />
-      </div>
-      <div style={{ height: 400 }}>
-        <Execute
-          {...config}
-          afm={{
-            measures: [{
-              localIdentifier: 'm1',
-              definition: {
-                measure: {
-                  item: {
-                    identifier: C.measure('# Checks')
-                  }
-                }
-              }
-            }],
-            attributes: [{
-              localIdentifier: 'a1',
-              displayForm: {
-                identifier: C.attributeDisplayForm('Location City')
-              }
-            }],
-            filters
-          }}
-          children={CustomBarChart}
-        />
-      </div>
-    </div>
+    <BackendProvider backend={backend}>
+      <WorkspaceProvider workspace={WORKSPACE}>
+        <div className="App">
+          <div
+            style={{
+              width: 400,
+              margin: "auto",
+              marginBottom: 20,
+              marginTop: 20
+            }}
+          >
+            <AttributeFilter
+              filter={newPositiveAttributeFilter(
+                Ldm.LocationCity,
+                []
+              )}
+              onApply={filter => setFilters([filter])}
+            />
+          </div>
+          <div>
+            # of Location City:{" "}
+            <Headline primaryMeasure={Ldm.NrLocationCity} filters={filters} />
+            <br />
+            <br />
+          </div>
+          <div style={{ height: 400 }}>
+            <InsightView
+              // insight="aby6oS6DbpFX"
+              insight={Ldm.Insights.NrChecksViewedByCityStackedByLocation}
+              filters={filters}
+              config={{ legend: { position: "top" } }}
+            />
+          </div>
+          <div style={{ height: 400 }}>
+            <ColumnChart
+              measures={[Ldm.NrChecks]}
+              viewBy={Ldm.LocationCity}
+              stackBy={Ldm.LocationName.Default}
+              filters={filters}
+            />
+          </div>
+          <div style={{ height: 400 }}>
+            <Execute
+              seriesBy={[Ldm.NrChecks]}
+              slicesBy={[Ldm.LocationCity]}
+              filters={filters}
+              children={CustomBarChart}
+            />
+          </div>
+        </div>
+      </WorkspaceProvider>
+    </BackendProvider>
   );
 }
 

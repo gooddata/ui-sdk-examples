@@ -1,10 +1,10 @@
 # GoodData.UI Boilerplate App
 
-This app follows steps from https://sdk.gooddata.com/gooddata-ui/docs/ht_create_your_first_visualization.html:
+This app follows steps from https://sdk.gooddata.com/gooddata-ui/docs/next/ht_create_your_first_visualization.html:
 
 * It initializes create-react-app
 * It configures GoodData proxy
-* It adds [@gooddata/react-components](https://www.npmjs.com/package/@gooddata/react-components) package
+* It adds GoodData.UI dependencies
 
 This app also shows:
 
@@ -13,7 +13,7 @@ This app also shows:
 
 And finally this app demonstrates 3 approaches how to render visualizations:
 
-* By referencing `<Visualization>` created in Analytical Designer
+* By referencing `<InsightView>` created in Analytical Designer
 * By specifying buckets (measures, viewBy, stackBy) with `<ColumnChart>` component
 * By creating custom column chart using `<Execute>` component and [Highcharts](https://www.highcharts.com/) library
 
@@ -25,8 +25,8 @@ This app is deployed at https://gooddata-demo.s3.amazonaws.com/gd-ui-boilerplate
 
 * `git clone --depth 1 https://github.com/gooddata/ui-sdk-examples.git`
 * `cd ui-sdk-examples/gd-ui-boilerplate/`
-* `yarn install --pure-lockfile` (or `npm install`)
-* `yarn start` (or `GD_URL=developer.na.gooddata.com yarn start`)
+* `yarn install`
+* `yarn start`
 
 ## How to build for deployment
 
@@ -36,10 +36,6 @@ This app is deployed at https://gooddata-demo.s3.amazonaws.com/gd-ui-boilerplate
 ## Backend/proxy info
 
 This app is configured to run against https://developer.na.gooddata.com/. For access, you can register at https://gooddata-examples.herokuapp.com/.
-
-## Compatibility
-
-An ES6 [@babel/polyfill](https://babeljs.io/docs/en/babel-polyfill) was added to support Internet Explorer.
 
 ## Screnshots
 
