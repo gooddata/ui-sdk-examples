@@ -12,10 +12,7 @@ The purpose of running this app on your localhost is that you can alter it to yo
 * [Change the name of the application](#change-the-name-of-the-application)
 * [Change the URL of the embedded dashboard](#change-the-url-of-the-embedded-dashboard)
 * [Change the logo](#change-the-logo)
-* [Show/hide the embedded dashboard navigation](#showhide-the-embedded-dashboard-navigation)
-* [Show/hide the embedded dashboard top bar](#showhide-the-embedded-dashboard-top-bar)
-* [Show/hide the embedded dashboard filter bar](#showhide-the-embedded-dashboard-filter-bar)
-* [Show/hide the embedded dashboard widgets catalogue](#showhide-the-embedded-dashboard-widgets-catalogue)
+* [Change the colors](#change-the-logo)
 * [Integrate an individual insight](#integrate-an-individual-insight)
 * [Integrate a dashboard](#integrate-a-dashboard)
 
@@ -58,18 +55,18 @@ The purpose of running this app on your localhost is that you can alter it to yo
 
 ### Change the URL of the Embedded Dashboard
 
+* In your browser, navigate to the Dashboard that you want to embed
+* Click the three horizontal dots in the top right corner, and select "Embed"
+* After choosing your configuration options (e.g. show/hide Navigation panel), select URL tab and copy the URL (`CMD + C`)
 * [Open sales-embedding-demo in VSCode](#opening-sales-embedding-demo-in-visual-studio-code)
 * Open `src/routes/Home.js` in VSCode
 * Look for the `iframe` tag
-* Change the value of `src` attribute
+* Replace the value of `src` attribute with the URL in your clipboard (`CMD + V`)
 
-`src` attribute of the `iframe` should contain either absolute or relative URL of the dashboard, where there is word `/embedded/` added after `/dashboards/` and before `/#/`. See the example:
+<img src="public/configuration/02-embed-dashboard-01.png" width=800>
+<img src="public/configuration/02-embed-dashboard-02.png" width=800>
 
-Standard dashboard URL: `https://my-domain.com/dashboards/#/project/{projId}/dashboard/{dashId}`
-
-Dashboard URL for emedding: `https://my-domain.com/dashboards/embedded/#/project/{projId}/dashboard/{dashId}`
-
-See the [documentation](https://help.gooddata.com/doc/enterprise/en/expand-your-gooddata-platform/gooddata-integration-into-your-application/embed-gooddata-elements-into-your-applications/embed-a-kpi-dashboard#EmbedaKPIDashboard-Advancedconfigurationoptions) for more.
+See the [embedding documentation](https://help.gooddata.com/doc/enterprise/en/expand-your-gooddata-platform/gooddata-integration-into-your-application/embed-gooddata-elements-into-your-applications/embed-a-kpi-dashboard#EmbedaKPIDashboard-Advancedconfigurationoptions) for more.
 
 ---
 
@@ -79,72 +76,18 @@ TODO
 
 ---
 
-### Show/hide the Embedded Dashboard Navigation
+### Change the Colors
 
-* [Open sales-embedding-demo in VSCode](#opening-sales-embedding-demo-in-visual-studio-code)
-* Open `src/routes/Home.js` in VSCode
-* Look for the `iframe` tag
-* Append `?showNavigation=true` (or `false`) to the value of `src` attribute
-
-Standard dashboard URL: `https://my-domain.com/dashboards/#/project/{projId}/dashboard/{dashId}`
-
-Dashboard URL with navigation: `https://my-domain.com/dashboards/#/project/{projId}/dashboard/{dashId}?showNavigation=true`
-
-See the [documentation](https://help.gooddata.com/doc/enterprise/en/expand-your-gooddata-platform/gooddata-integration-into-your-application/embed-gooddata-elements-into-your-applications/embed-a-kpi-dashboard#EmbedaKPIDashboard-Advancedconfigurationoptions) for more.
-
----
-
-### Show/hide the Embedded Dashboard Top Bar
-
-* [Open sales-embedding-demo in VSCode](#opening-sales-embedding-demo-in-visual-studio-code)
-* Open `src/routes/Home.js` in VSCode
-* Look for the `iframe` tag
-* Append `?hideControl=[topBar]` to the value of `src` attribute
-
-Standard dashboard URL: `https://my-domain.com/dashboards/#/project/{projId}/dashboard/{dashId}`
-
-Dashboard URL without top bar: `https://my-domain.com/dashboards/#/project/{projId}/dashboard/{dashId}?hideControl=[topBar]`
-
-Dashboard URL with navigation without top bar: `https://my-domain.com/dashboards/#/project/{projId}/dashboard/{dashId}?showNavigation=true&hideControl=[topBar]`
-
-See the [documentation](https://help.gooddata.com/doc/enterprise/en/expand-your-gooddata-platform/gooddata-integration-into-your-application/embed-gooddata-elements-into-your-applications/embed-a-kpi-dashboard#EmbedaKPIDashboard-Advancedconfigurationoptions) for more.
-
----
-
-### Show/hide the Embedded Dashboard Filter Bar
-
-* [Open sales-embedding-demo in VSCode](#opening-sales-embedding-demo-in-visual-studio-code)
-* Open `src/routes/Home.js` in VSCode
-* Look for the `iframe` tag
-* Append `?hideControl=[filterBar]` to the value of `src` attribute
-
-Standard dashboard URL: `https://my-domain.com/dashboards/#/project/{projId}/dashboard/{dashId}`
-
-Dashboard URL without filter bar: `https://my-domain.com/dashboards/#/project/{projId}/dashboard/{dashId}?hideControl=[filterBar]`
-
-Dashboard URL with navigation without filter bar: `https://my-domain.com/dashboards/#/project/{projId}/dashboard/{dashId}?showNavigation=true&hideControl=[filterBar]`
-
-Dashboard URL with navigation without filter bar and top bar: `https://my-domain.com/dashboards/#/project/{projId}/dashboard/{dashId}?showNavigation=true&hideControl=[topBar,filterBar]`
-
-See the [documentation](https://help.gooddata.com/doc/enterprise/en/expand-your-gooddata-platform/gooddata-integration-into-your-application/embed-gooddata-elements-into-your-applications/embed-a-kpi-dashboard#EmbedaKPIDashboard-Advancedconfigurationoptions) for more.
-
----
-
-### Show/hide the Embedded Dashboard Widgets Catalogue
-
-* [Open sales-embedding-demo in VSCode](#opening-sales-embedding-demo-in-visual-studio-code)
-* Open `src/routes/Home.js` in VSCode
-* Look for the `iframe` tag
-* Append `?hideControl=[widgetsCatalogue]` to the value of `src` attribute
-
-Standard dashboard URL: `https://my-domain.com/dashboards/#/project/{projId}/dashboard/{dashId}`
-
-Dashboard URL without widgets catalogue: `https://my-domain.com/dashboards/#/project/{projId}/dashboard/{dashId}?hideControl=[widgetsCatalogue]`
-
-See the [documentation](https://help.gooddata.com/doc/enterprise/en/expand-your-gooddata-platform/gooddata-integration-into-your-application/embed-gooddata-elements-into-your-applications/embed-a-kpi-dashboard#EmbedaKPIDashboard-Advancedconfigurationoptions) for more.
+TODO
 
 ---
 
 ### Integrate an Individual Insight
+
+TODO
+
+---
+
+### Integrate a Dashboard
 
 TODO

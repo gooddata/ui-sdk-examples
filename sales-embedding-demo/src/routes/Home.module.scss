@@ -7,6 +7,18 @@
 
     .Nav {
         width: 255px;
+
+        .Link {
+            text-decoration: none;
+
+            &.LinkActive {
+                font-weight: bold;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     .Content {

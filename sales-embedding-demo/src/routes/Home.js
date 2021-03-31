@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import Page from "../components/Page";
 
@@ -9,8 +10,21 @@ const Home = () => {
         <Page mainClassName={styles.Home}>
             <nav className={styles.Nav}>
                 <ul>
-                    <li>Analytics Dashboard</li>
-                    <li>Analytics On Demand</li>
+                    <li>
+                        <NavLink to={"/"} className={styles.Link} activeClassName={styles.LinkActive}>
+                            Analytics Dashboard (iframe)
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={"/"} className={styles.Link}>
+                            DashboardView
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={"/"} className={styles.Link}>
+                            InsightView
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
             <div className={styles.Content}>

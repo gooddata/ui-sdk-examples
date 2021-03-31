@@ -118,6 +118,8 @@ Once the app is started, your browser will most likely warn you that "Your conne
 
 The app should now be running at https://localhost:3000 and you may proceed to [CONFIGURATION](CONFIGURATION.md). Once you're done working with the, you may want to kill it by hitting `CTRL + C` in Terminal.
 
+> Note: Some of the links in the app (e.g. My Work, Settings) are dummy and inactive, only there to make an impression of a fully working app.
+
 <img src="public/instructions/08-kill-01.png" width=800>
 
 ## Instructions for Windows
