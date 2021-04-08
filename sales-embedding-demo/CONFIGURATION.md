@@ -2,7 +2,7 @@
 
 The purpose of running this app on your localhost is that you can alter it to your needs any time you wish. Some places in the code have been designed to make it as easy as possible.
 
-> Please download [Visual Studio Code](https://code.visualstudio.com/) for easy files editing.
+> Please download and install [Visual Studio Code](https://code.visualstudio.com/) for easy files editing before proceeding further.
 
 (Jump back to [INSTRUCTIONS](INSTRUCTIONS.md) or [README](README.md).)
 
@@ -18,10 +18,11 @@ The purpose of running this app on your localhost is that you can alter it to yo
 
 ## Opening sales-embedding-demo in Visual Studio Code
 
-* Open VSCode (if you don't have VSCode, get it at https://code.visualstudio.com/)
-* At the top of your screen, click View --> Explorer
+* Open VSCode
+  * If you don't have VSCode installed, go to https://code.visualstudio.com/, download it and install it
+* While in VSCode, at the top of your screen, click View --> Explorer
 * Click `Open Folder` and select `sales-embedding-demo` folder to be found in `~/Documents/my-projects/ui-sdk-examples/`
-* You can now open files by clicking Go --> Go to File…
+  * Hint: `~` means "home directory", i.e. `~/Documents/…` is the same as `/Users/<your-username>/Documents/…`
 
 <img src="public/configuration/01-vscode-01.png" width=800>
 <img src="public/configuration/01-vscode-02.png" width=800>
@@ -32,20 +33,32 @@ The purpose of running this app on your localhost is that you can alter it to yo
 
 ### Change the Domain and Workspace
 
-* Kill the app (hit `CTRL + C` in the Terminal)
-* [Open sales-embedding-demo in VSCode](#opening-sales-embedding-demo-in-visual-studio-code)
+* Open sales-embedding-demo in VSCode
+  * If you don't know how, click [here](#opening-sales-embedding-demo-in-visual-studio-code) and then return back here
 * While in VSCode, click Go --> Go to File… and type in `constants` to open `src/constants.js` file
-* Change the value of `backend` to your domain (e.g. https://leilani.na.gooddata.com/)
+* Change the value of `backend` to your domain (e.g. https://leilani.internal.gooddata.com)
+  * This can be whatever domain you want this Sales Embedding Demo to work against
+  * By default it is https://e2e-demo28.na.gooddata.com, but you can change it to anything
+  * You most likely want to change it to https://yourname.internal.gooddata.com
 * Change the value of `workspace` to the workspace you'll be working with
-* Save the changes in `src/constants.js` file
-* Restart the app (run `yarn start` again in the Terminal)
-* You'll now need to `Log out` from the application, and then `Log in` again
+  * This can be whatever workspace you want this Sales Embedding Demo to work against
+  * When you log into platform using the domain URL, the workspace id is part of the URL, check the screenshots below
+  * E.g. if you changed your domain to https://leilani.internal.gooddata.com/, when you log in to GoodData platform and navigate to Dashboards, you are redirected to https://leilani.internal.gooddata.com/dashboards/#/project/no6focgukfj3ohfds9dexvkqazugwo, then you want to change worksace to `no6focgukfj3ohfds9dexvkqazugwo`
+* Save the changes in `src/constants.js` file (`CMD + S`)
+* Restart the app by running `yarn start` again in the Terminal
+  * If your app is still running, kill it first with `CTRL + C`, then restart with `yarn start`
+* You'll need to `Log out` from the application, and then `Log in` again for changes to take effect
+  * When you're loggin in, you now need to use the same credentials that you would when logging to your domain and workspace on GoodData platform
+
+<img src="public/configuration/01-vscode-05.png" width=800>
+<img src="public/configuration/01-vscode-06.png" width=800>
 
 ---
 
 ### Change the Name of the Application
 
-* [Open sales-embedding-demo in VSCode](#opening-sales-embedding-demo-in-visual-studio-code)
+* Open sales-embedding-demo in VSCode
+  * If you don't know how, click [here](#opening-sales-embedding-demo-in-visual-studio-code) and then return back here
 * While in VSCode, click Go --> Go to File… and type in `constants` to open `src/constants.js` file
 * Change the value of `appName` to from `sales-embedding-demo` to `ShopBoard Demo`
 * Save the changes in `src/constants.js` file
@@ -56,12 +69,13 @@ The purpose of running this app on your localhost is that you can alter it to yo
 ### Change the URL of the Embedded Dashboard
 
 * In your browser, navigate to the Dashboard that you want to embed
-* Click the three horizontal dots in the top right corner, and select "Embed"
-* After choosing your configuration options (e.g. show/hide Navigation panel), select URL tab and copy the URL (`CMD + C`)
-* [Open sales-embedding-demo in VSCode](#opening-sales-embedding-demo-in-visual-studio-code)
+* Click the three horizontal dots in the top right corner, and select "Embed", check the screenshot below
+* After choosing your configuration options (e.g. show/hide Navigation panel), select the URL tab and click the `Copy URL` button, again check the screenshot below
+* Open sales-embedding-demo in VSCode
+  * If you don't know how, click [here](#opening-sales-embedding-demo-in-visual-studio-code) and then return back here
 * Open `src/routes/Home.js` in VSCode
 * Look for the `iframe` tag
-* Replace the value of `src` attribute with the URL in your clipboard (`CMD + V`)
+* Replace the value of `src` attribute with the URL in your clipboard (`CMD + V` to paste)
 
 <img src="public/configuration/02-embed-dashboard-01.png" width=800>
 <img src="public/configuration/02-embed-dashboard-02.png" width=800>

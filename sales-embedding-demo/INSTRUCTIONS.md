@@ -92,8 +92,11 @@ Once Xcode command line tools are installed, confirm that git is working by runn
 
 First, navigate to the folder where you'd like to have this repository clonned. If the folder does not exist, you can create it first, for example:
 
-1. `mkdir ~/Documents/my-projects` (fyi `mkdir` stands for "make directory")
-1. `cd ~/Documents/my-projects/` (fyi `cd` stands for "change directory")
+1. `mkdir ~/Documents/my-projects`
+  * Hint: `mkdir` stands for "make directory"
+  * Hint: `~` means "home directory", i.e. `~/` is the same as `/Users/<your-username>/`
+1. `cd ~/Documents/my-projects/`
+  * Hint: `cd` stands for "change directory"
 
 <img src="public/instructions/06-mkdir-01.png" width=800>
 
@@ -114,11 +117,13 @@ Once the app is started, your browser will most likely warn you that "Your conne
 <img src="public/instructions/07-start-05-private.png" width=800>
 <img src="public/instructions/07-start-06-advanced.png" width=800>
 <img src="public/instructions/07-start-07-login.png" width=800>
-<img src="public/instructions/07-start-08-login.png" width=800>
+<!-- <img src="public/instructions/07-start-08-login.png" width=800> -->
 
-The app should now be running at https://localhost:3000 and you may proceed to [CONFIGURATION](CONFIGURATION.md). Once you're done working with the, you may want to kill it by hitting `CTRL + C` in Terminal.
+1. The app should now be running at https://localhost:3000, and you should see the log in form.
+1. **At this point, there is no need for you to log in.**
+1. Let's kill the app by hitting `CTRL + C` in Terminal, and proceed to [CONFIGURATION](CONFIGURATION.md).
 
-> Note: Some of the links in the app (e.g. My Work, Settings) are dummy and inactive, only there to make an impression of a fully working app.
+> Note: Some of the links in the app (e.g. My Work, Settings) are dummy and inactive, only there to make an impression of a real application.
 
 <img src="public/instructions/08-kill-01.png" width=800>
 

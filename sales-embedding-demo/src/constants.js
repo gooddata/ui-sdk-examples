@@ -6,7 +6,7 @@ export const appName = "sales-embedding-demo";
 // The URL of analytical GoodData backend with workspaces, insights, metrics, attributes, datasets, and users
 // that will be available to the application.
 
-// EXAMPLE: "https://leilani.internal.gooddata.com/"
+// EXAMPLE: "https://leilani.internal.gooddata.com"
 export const backend = "https://e2e-demo28.na.gooddata.com";
 
 // The ID of workspace that is selected by default in the optional workspace picker component (located in the web
