@@ -3,12 +3,13 @@ import cx from "classnames";
 import { NavLink } from "react-router-dom";
 
 import { appName } from "../../constants";
+import config from "../../config";
 
 import styles from "./Header.module.scss";
 
 const Logo = () => {
     return (
-        <NavLink to="/" className={cx(styles.Link, styles.Logo)}>
+        <NavLink to="/" className={cx(styles.Link, styles.Logo)} style={{ color: config.linkColor }}>
             {appName}
         </NavLink>
     );

@@ -10,6 +10,8 @@ import Logo from "./Logo";
 import Links from "./Links";
 import Aside from "./Aside";
 
+import config from "../../config";
+
 import styles from "./Header.module.scss";
 
 const VerticalDelimiter = ({ ...restProps }) => <div className={styles.VerticalDelimiter} {...restProps} />;
@@ -39,8 +41,8 @@ const BurgerMenu = () => {
                     <ProtectedItems>
                         {/* Uncomment these lines to add a workspace picker into the burger menu */}
                         {/* <div className={styles.Centered}>
-               <WorkspacePicker />
-            </div> */}
+                            <WorkspacePicker />
+                        </div> */}
                     </ProtectedItems>
                 </div>
             )}
@@ -70,7 +72,14 @@ const Header = () => {
     // You need to set this manually to the smallest window width that can still fit all menu items
     const isTooSmall = windowWidth && windowWidth < 666;
     return (
-        <nav className={styles.Header}>
+        <nav
+            className={styles.Header}
+            style={{
+                color: config.linkColor,
+                backgroundColor: config.headerBackgroundColor,
+                borderBottomColor: config.headerBorderBottomColor,
+            }}
+        >
             {isTooSmall ? (
                 <>
                     <BurgerMenu />

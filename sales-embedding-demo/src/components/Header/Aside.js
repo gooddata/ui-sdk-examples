@@ -5,6 +5,7 @@ import cx from "classnames";
 import { useAuth } from "../../contexts/Auth";
 import { AuthStatus } from "../../contexts/Auth/state";
 import InlineLoading from "../InlineLoading";
+import config from "../../config";
 
 import styles from "./Header.module.scss";
 
@@ -17,11 +18,19 @@ const Aside = () => {
             {[LOGGING_IN, LOGGING_OUT, AUTHORIZING].includes(authStatus) ? (
                 <InlineLoading />
             ) : authStatus === AUTHORIZED ? (
-                <Link to="/logout" className={cx(styles.Link, "s-logout-link")}>
+                <Link
+                    to="/logout"
+                    className={cx(styles.Link, "s-logout-link")}
+                    style={{ color: config.linkColor }}
+                >
                     Logout
                 </Link>
             ) : (
-                <Link to="/login" className={cx(styles.Link, "s-login-link")}>
+                <Link
+                    to="/login"
+                    className={cx(styles.Link, "s-login-link")}
+                    style={{ color: config.linkColor }}
+                >
                     Login
                 </Link>
             )}

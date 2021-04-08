@@ -12,7 +12,7 @@ The purpose of running this app on your localhost is that you can alter it to yo
 * [Change the name of the application](#change-the-name-of-the-application)
 * [Change the URL of the embedded dashboard](#change-the-url-of-the-embedded-dashboard)
 * [Change the logo](#change-the-logo)
-* [Change the colors](#change-the-logo)
+* [Change the colors](#change-the-colors)
 * [Integrate an individual insight](#integrate-an-individual-insight)
 * [Integrate a dashboard](#integrate-a-dashboard)
 
@@ -33,10 +33,10 @@ The purpose of running this app on your localhost is that you can alter it to yo
 
 ### Change the Domain and Workspace
 
-* Open sales-embedding-demo in VSCode
+* Open sales-embedding-demo folder in VSCode
   * If you don't know how, click [here](#opening-sales-embedding-demo-in-visual-studio-code) and then return back here
-* While in VSCode, click Go --> Go to File… and type in `constants` to open `src/constants.js` file
-* Change the value of `backend` to your domain (e.g. https://leilani.internal.gooddata.com)
+* Open file `src/config.js` in VSCode
+* Change the value of `domain` to your actual domain (e.g. https://leilani.internal.gooddata.com)
   * This can be whatever domain you want this Sales Embedding Demo to work against
   * By default it is https://e2e-demo28.na.gooddata.com, but you can change it to anything
   * You most likely want to change it to https://yourname.internal.gooddata.com
@@ -44,7 +44,7 @@ The purpose of running this app on your localhost is that you can alter it to yo
   * This can be whatever workspace you want this Sales Embedding Demo to work against
   * When you log into platform using the domain URL, the workspace id is part of the URL, check the screenshots below
   * E.g. if you changed your domain to https://leilani.internal.gooddata.com/, when you log in to GoodData platform and navigate to Dashboards, you are redirected to https://leilani.internal.gooddata.com/dashboards/#/project/no6focgukfj3ohfds9dexvkqazugwo, then you want to change worksace to `no6focgukfj3ohfds9dexvkqazugwo`
-* Save the changes in `src/constants.js` file (`CMD + S`)
+* Save the changes in `src/config.js` file (`CMD + S`)
 * Restart the app by running `yarn start` again in the Terminal
   * If your app is still running, kill it first with `CTRL + C`, then restart with `yarn start`
 * You'll need to `Log out` from the application, and then `Log in` again for changes to take effect
@@ -57,11 +57,11 @@ The purpose of running this app on your localhost is that you can alter it to yo
 
 ### Change the Name of the Application
 
-* Open sales-embedding-demo in VSCode
+* Open sales-embedding-demo folder in VSCode
   * If you don't know how, click [here](#opening-sales-embedding-demo-in-visual-studio-code) and then return back here
-* While in VSCode, click Go --> Go to File… and type in `constants` to open `src/constants.js` file
+* Open file `src/config.js` in VSCode
 * Change the value of `appName` to from `sales-embedding-demo` to `ShopBoard Demo`
-* Save the changes in `src/constants.js` file
+* Save the changes in `src/config.js` file (`CMD + S`)
 * Wait till your app refreshes in your browser (or refresh manually)
 
 ---
@@ -71,11 +71,12 @@ The purpose of running this app on your localhost is that you can alter it to yo
 * In your browser, navigate to the Dashboard that you want to embed
 * Click the three horizontal dots in the top right corner, and select "Embed", check the screenshot below
 * After choosing your configuration options (e.g. show/hide Navigation panel), select the URL tab and click the `Copy URL` button, again check the screenshot below
-* Open sales-embedding-demo in VSCode
+* Open sales-embedding-demo folder in VSCode
   * If you don't know how, click [here](#opening-sales-embedding-demo-in-visual-studio-code) and then return back here
-* Open `src/routes/Home.js` in VSCode
-* Look for the `iframe` tag
-* Replace the value of `src` attribute with the URL in your clipboard (`CMD + V` to paste)
+* Open `src/config.js` in VSCode
+* Replace the value of `dashboardUrl` with the URL in your clipboard (`CMD + V` to paste)
+* Save the changes in `src/config.js` file (`CMD + S`)
+* Wait till your app refreshes in your browser (or refresh manually)
 
 <img src="public/configuration/02-embed-dashboard-01.png" width=800>
 <img src="public/configuration/02-embed-dashboard-02.png" width=800>
@@ -92,7 +93,20 @@ TODO
 
 ### Change the Colors
 
-TODO
+* Open sales-embedding-demo folder in VSCode
+  * If you don't know how, click [here](#opening-sales-embedding-demo-in-visual-studio-code) and then return back here
+* Open `src/config.js` in VSCode
+* Look for the following variables
+  * `headerBackgroundColor`
+  * `headerBorderBottomColor`
+  * `leftPaneBackgroundColor`
+  * `linkColor`
+* Uncomment the lines (delete the preceding `// `) and change HEX values to different colors
+  * To get the HEX value of a color, you can use [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp)
+* Save the changes in `src/config.js` file (`CMD + S`)
+* Wait till your app refreshes in your browser (or refresh manually)
+
+<img src="public/configuration/03-change-colors-01.png" width=800>
 
 ---
 
