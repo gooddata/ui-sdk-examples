@@ -3,7 +3,7 @@
 /************************************************************************/
 /*
 /* Note: Common mistake is to forget the comma at the end of each line.
-/*       Except for lines that are commented out (they start with //).
+/*       Except for lines that are commented out (they start with // ).
 /*
 /* Note: Values must be inside of quotes.
 /*       It doesn't matter if single ' or double ", but they must match.
@@ -25,6 +25,18 @@ export default {
     // URL of the embedded Dashboard
     dashboardUrl:
         "https://e2e-demo28.na.gooddata.com/dashboards/embedded/#/project/gf5ar7e02sth33atdbzpabhvbddaqva3/dashboard/aadPCE04gggj?showNavigation=false",
+
+    // Identifier of the insight
+    insightIdentifier: "abg8hF92fKWg",
+
+    // TODO
+    insightMeasure: "aaWP28vUgl64",
+
+    // TODO
+    insightViewByAttribute: "label.product.productbrand",
+
+    // TODO
+    insightStackByAttribute: "label.product.productcategory",
 
     // Uncomment line below to change the header background color
     // headerBackgroundColor: "#303442",

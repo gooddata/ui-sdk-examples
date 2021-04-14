@@ -8,11 +8,31 @@
 }
 
 .Main {
+    display: flex;
+    padding: 56px 0 0 0;
+    margin: 0;
+    width: 100%;
     flex: 1 0 auto;
-    padding: $spacing * 2 + 56px $spacing $spacing * 2 $spacing;
-    max-width: 1200px;
-    width: calc(100% - (#{$spacing} * 2));
-    margin: 0 auto;
+
+    .Nav {
+        width: 255px;
+
+        .Link {
+            text-decoration: none;
+
+            &.LinkActive {
+                font-weight: bold;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .Content {
+        flex: 1 0 auto;
+    }
 }
 
 .VerticalCenter {

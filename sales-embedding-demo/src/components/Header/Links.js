@@ -28,7 +28,6 @@ const Links = () => {
                 className={styles.Link}
                 style={{ color: config.linkColor }}
                 activeClassName={styles.LinkActive}
-                exact
             >
                 Reports
             </NavLink>
