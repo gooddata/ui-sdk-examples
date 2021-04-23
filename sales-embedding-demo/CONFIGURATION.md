@@ -13,7 +13,7 @@ The purpose of running this app on your localhost is that you can alter it to yo
 * [Change the URL of the embedded dashboard](#change-the-url-of-the-embedded-dashboard)
 * [Change the logo](#change-the-logo)
 * [Change the colors](#change-the-colors)
-* [Integrate an individual insight](#integrate-an-individual-insight)
+* [Integrate individual insights](#integrate-individual-insights)
 * [Integrate a dashboard](#integrate-a-dashboard)
 
 ## Opening sales-embedding-demo in Visual Studio Code
@@ -101,8 +101,8 @@ TODO
   * `headerBorderBottomColor`
   * `leftPaneBackgroundColor`
   * `linkColor`
-* Uncomment the lines (delete the preceding `// `) and change HEX values to different colors
-  * To get the HEX value of a color, you can use [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp)
+* Uncomment the lines (delete the preceding `// `) and change the HEX values to different colors
+  * To get the [HEX value](https://en.wikipedia.org/wiki/Web_colors) of a color (e.g. `#ff0000`), you can use [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp)
 * Save the changes in `src/config.js` file (`CMD + S`)
 * Wait till your app refreshes in your browser (or refresh manually)
 
@@ -110,12 +110,61 @@ TODO
 
 ---
 
-### Integrate an Individual Insight
+### Integrate Individual Insights
 
-TODO
+* Open sales-embedding-demo folder in VSCode
+  * If you don't know how, click [here](#opening-sales-embedding-demo-in-visual-studio-code) and then return back here
+* Open `src/config.js` in VSCode
+* Look for the following variables
+  * `insightIdentifier` - Identifier of the 1st insight
+  * `insightMeasure` - Identifier of a measure for the 2nd and 3rd insight
+  * `insightViewByAttribute` - Identifier of an attribute for the 2nd and 3rd insight
+  * `insightStackByAttribute` - Identifier of an attribute for the 2nd insight
+
+#### Get the Identifier of the First Insight
+
+* In your browser go to `https://<domain>/analyze/#/<workspace>` and create _and save_ an insight
+* In your browser go to `https://<domain>/labs/apps`, click on **Accelerator Toolkit** and then select **Metadata**
+* In the top left, **Pick metadata category** and select **Visualization Objects**
+* Look for your chart and copy its identifier (click the clipboard icon, or select text and `CMD + C`)
+* In the `src/config.js` replace the value of `insightIdentifier` variable with the identifier in your clipboard (`CMD + V`)
+* Save the changes in `src/config.js` file (`CMD + S`)
+* Wait till your app refreshes in your browser (or refresh manually)
+
+<img src="public/configuration/04-integrate-insight-01.png" width=800>
+<img src="public/configuration/04-integrate-insight-02.png" width=800>
+<img src="public/configuration/04-integrate-insight-03.png" width=800>
+<img src="public/configuration/04-integrate-insight-04.png" width=800>
+<img src="public/configuration/04-integrate-insight-05.png" width=800>
+
+#### Get the Identifier of the Metric
+
+* In your browser go to `https://<domain>/labs/apps`, click on **Accelerator Toolkit** and then select **Metadata**
+* In the top left, **Pick metadata category** and select **Measures**
+* Look for your desired measure and copy its identifier (click the clipboard icon, or select text and `CMD + C`)
+* In the `src/config.js` replace the value of `insightMeasure` variable with the identifier in your clipboard (`CMD + V`)
+* Save the changes in `src/config.js` file (`CMD + S`)
+* Wait till your app refreshes in your browser (or refresh manually)
+
+#### Get the Identifiers of Attributes
+
+* In your browser go to `https://<domain>/labs/apps`, click on **Accelerator Toolkit** and then select **Metadata**
+* In the top left, **Pick metadata category** and select **Attributes**
+* Look for your desired view-by attribute and copy its identifier
+* In the `src/config.js` replace the value of `insightViewByAttribute` variable with the identifier in your clipboard
+* Then, look for your desired stack-by attribute and copy its identifier
+* In the `src/config.js` replace the value of `insightStackByAttribute` variable with the identifier in your clipboard
+* Save the changes in `src/config.js` file (`CMD + S`)
+* Wait till your app refreshes in your browser (or refresh manually)
 
 ---
 
 ### Integrate a Dashboard
 
-TODO
+* In your browser go to `https://<domain>/dashboards/#/project/<workspace>` and create _and save_ a dashboard
+* In your browser go to `https://<domain>/labs/apps`, click on **Accelerator Toolkit** and then select **Metadata**
+* In the top left, **Pick metadata category** and select **Analytical Dashboards**
+* Look for your dashboard and copy its identifier (click the clipboard icon, or select text and `CMD + C`)
+* In the `src/config.js` replace the value of `insightIdentifier` variable with the identifier in your clipboard (`CMD + V`)
+* Save the changes in `src/config.js` file (`CMD + S`)
+* Wait till your app refreshes in your browser (or refresh manually)

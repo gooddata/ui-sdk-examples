@@ -26,17 +26,20 @@ export default {
     dashboardUrl:
         "https://e2e-demo28.na.gooddata.com/dashboards/embedded/#/project/gf5ar7e02sth33atdbzpabhvbddaqva3/dashboard/aadPCE04gggj?showNavigation=false",
 
-    // Identifier of the insight
+    // Identifier of the 1st insight
     insightIdentifier: "abg8hF92fKWg",
 
-    // TODO
+    // Identifier of a measure for the 2nd and 3rd insight
     insightMeasure: "aaWP28vUgl64",
 
-    // TODO
+    // Identifier of an attribute for the 2nd and 3rd insight
     insightViewByAttribute: "label.product.productbrand",
 
-    // TODO
+    // Identifier of an attribute for the 2nd insight
     insightStackByAttribute: "label.product.productcategory",
+
+    // Identifier of an integrated dashboard
+    dashboardIdentifier: "aadPCE04gggj",
 
     // Uncomment line below to change the header background color
     // headerBackgroundColor: "#303442",

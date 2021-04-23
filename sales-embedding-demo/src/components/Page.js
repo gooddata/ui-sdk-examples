@@ -46,6 +46,16 @@ const Page = ({
                                 GD.UI Components
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink
+                                to={"/dashboardview"}
+                                className={styles.Link}
+                                activeClassName={styles.LinkActive}
+                                style={{ color: config.linkColor }}
+                            >
+                                Integrated Dashboard
+                            </NavLink>
+                        </li>
                     </ul>
                 </nav>
                 <div className={cx(styles.Content, contentClassName)}>{children}</div>

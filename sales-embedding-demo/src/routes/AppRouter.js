@@ -8,6 +8,7 @@ import Logout from "./Logout";
 import Welcome from "./Welcome";
 import Home from "./Home";
 import GDUIComponents from "./GDUIComponents";
+import DashboardView from "./DashboardView";
 
 import styles from "./AppRouter.module.scss";
 
@@ -27,7 +28,8 @@ const AppRouter = () => {
                 <WorkspaceProvider>
                     <Route exact path="/welcome" component={Welcome} />
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/gduiComponents" component={GDUIComponents} />
+                    <Route exact path="/gduicomponents" component={GDUIComponents} />
+                    <Route exact path="/dashboardview" component={DashboardView} />
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/logout" component={Logout} />
                     <RedirectIfNotLoggedIn />
