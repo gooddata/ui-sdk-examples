@@ -15,7 +15,7 @@ export default {
     appName: "sales-embedding-demo",
 
     // EXAMPLE: 'https://leilani.internal.gooddata.com'
-    domain: "https://e2e-demo28.na.gooddata.com",
+    domain: "https://demos.na.gooddata.com",
 
     // Workspace ID for the customer you are doing the workshop with
     // EXAMPLE: If your URL says https://leilani.internal.gooddata.com/dashboards/#/project/no6focgukfj3ohfds9dexvkqazugwo
@@ -24,7 +24,7 @@ export default {
 
     // URL of the embedded Dashboard
     dashboardUrl:
-        "https://e2e-demo28.na.gooddata.com/dashboards/embedded/#/project/gf5ar7e02sth33atdbzpabhvbddaqva3/dashboard/aadPCE04gggj?showNavigation=false",
+        "https://demos.na.gooddata.com/dashboards/embedded/#/project/gf5ar7e02sth33atdbzpabhvbddaqva3/dashboard/aadPCE04gggj?showNavigation=false",
 
     // Identifier of the 1st insight
     insightIdentifier: "abg8hF92fKWg",

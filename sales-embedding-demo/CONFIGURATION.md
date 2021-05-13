@@ -38,7 +38,7 @@ The purpose of running this app on your localhost is that you can alter it to yo
 * Open file `src/config.js` in VSCode
 * Change the value of `domain` to your actual domain (e.g. https://leilani.internal.gooddata.com)
   * This can be whatever domain you want this Sales Embedding Demo to work against
-  * By default it is https://e2e-demo28.na.gooddata.com, but you can change it to anything
+  * By default it is https://demos.na.gooddata.com, but you can change it to anything
   * You most likely want to change it to https://yourname.internal.gooddata.com
 * Change the value of `workspace` to the workspace you'll be working with
   * This can be whatever workspace you want this Sales Embedding Demo to work against
