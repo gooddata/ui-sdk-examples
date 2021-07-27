@@ -43,14 +43,17 @@ Confirm that brew installed successfully by running `brew -v`, then proceed to [
 Check if you have npm installed on your machine:
 
 * `npm -v`
-* (specific version does not matter)
+* Ideally, you should be running **npm version 6.x.x**
+* Different version of npm may be fine too, but it is known that **npm 7.x.x** does **not** work
 
 <img src="public/instructions/03-npm-01.png" width=800>
 
-If you have npm installed on your machine, proceed to [installing yarn](#install-yarn). Otherwise do:
+If you have npm version 6 installed on your machine, proceed to [installing yarn](#install-yarn). Otherwise do:
 
-* `brew install node`
-* (npm will be installed with Node)
+* `brew install node@12`
+* (npm version 6 will be installed with Node version 12)
+
+> If you have different version of npm installed, you can `brew uninstall node`, and then `brew install node@12` that includes the desired npm version 6.
 
 Confirm that npm installed successfully by running `npm -v`, then proceed to [installing yarn](#install-yarn).
 
@@ -130,6 +133,20 @@ Once the app is started, your browser will most likely warn you that "Your conne
 ## Instructions for Windows
 
 TODO
+
+## Troubleshooting
+
+#### gyp: No Xcode or CLT version detected!
+
+This can happen when operating system update was installed recently. You can try:
+
+1. `xcode-select --print-path` (typically `/Library/Developer/CommandLineTools`), then
+2. `sudo rm -r -f /Library/Developer/CommandLineTools` (or whatever path you got in 1)
+3. `xcode-select --install`
+
+#### Node Sass does not yet support your current environment: OS X 64-bit
+
+This can happen with wrong version of Node/npm. If you installed Node using brew, you can try `brew uninstall node`, and then `brew install node@12` that includes the desired version of npm.
 
 ## Screenshots
 
