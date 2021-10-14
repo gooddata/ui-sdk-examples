@@ -14,6 +14,7 @@
         "classnames": "^2.3.1",
         "formik": "^2.2.9",
         "lodash": "^4.17.15",
+        "mapbox-gl": "^2.5.1",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "react-helmet": "^5.2.1",
@@ -32,7 +33,9 @@
         "testcafe-backend": "rm -R ./build & yarn build & serve -l 5000 build",
         "testcafe": "cross-env TEST_BACKEND=http://localhost:5000 ./scripts/run-testcafe.js",
         "testcafe-visual": "cross-env TEST_MODE=visual ./scripts/run-testcafe.js",
-        "refresh-md": "node ./scripts/refresh-md.js"
+        "refresh-md": "node ./scripts/refresh-md.js",
+        "buildgd": "cross-env PUBLIC_URL=/geochart yarn build-with-explicit-hostname",
+        "syncgd": "s3cmd --config .s3cfg sync --delete-removed ./build/ s3://gooddata-poc/geochart/"
     },
     "eslintConfig": {
         "extends": "react-app"

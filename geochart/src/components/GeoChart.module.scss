@@ -1,0 +1,20 @@
+.Sidebar {
+    background-color: rgba(35, 55, 75, 0.9);
+    color: #fff;
+    padding: 6px 12px;
+    font-family: monospace;
+    z-index: 1;
+    position: absolute;
+    margin: 12px;
+    border-radius: 4px;
+}
+
+.Popup {
+    h3 {
+        margin-top: 0;
+    }
+
+    table {
+        width: 100%;
+    }
+}

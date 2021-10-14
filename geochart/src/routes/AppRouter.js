@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { HashRouter as Router, Route, Redirect } from "react-router-dom";
 
 import { WorkspaceProvider } from "../contexts/Workspace";
 import Page from "../components/Page";
@@ -12,13 +12,13 @@ import Home from "./Home";
 import styles from "./AppRouter.module.scss";
 
 // Uncomment these lines if you want to redirect unauthorized users to login form
-// import { useAuth } from "../contexts/Auth";
-// import { AuthStatus } from "../contexts/Auth/state";
-// const RedirectIfNotLoggedIn = () => {
-//     const auth = useAuth();
-//     const shouldRedirectToLogin = auth.authStatus === AuthStatus.UNAUTHORIZED;
-//     return shouldRedirectToLogin ? <Route component={() => <Redirect to="/login" />} /> : null;
-// };
+import { useAuth } from "../contexts/Auth";
+import { AuthStatus } from "../contexts/Auth/state";
+const RedirectIfNotLoggedIn = () => {
+    const auth = useAuth();
+    const shouldRedirectToLogin = auth.authStatus === AuthStatus.UNAUTHORIZED;
+    return shouldRedirectToLogin ? <Route component={() => <Redirect to="/login" />} /> : null;
+};
 
 const AppRouter = () => {
     return (
@@ -31,9 +31,7 @@ const AppRouter = () => {
                     <Route exact path="/dashboard" component={() => <Page>Dashboard</Page>} />
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/logout" component={Logout} />
-                    {/* DELETE THIS LINE */} <Redirect to="/welcome" />
-                    {/* Uncomment the next line if you want to redirect unauthorized users to login form */}
-                    {/* <RedirectIfNotLoggedIn /> */}
+                    <RedirectIfNotLoggedIn />
                 </WorkspaceProvider>
             </Router>
         </div>
