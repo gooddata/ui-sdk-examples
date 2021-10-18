@@ -1,16 +1,11 @@
 import bearFactory, {
     FixedLoginAndPasswordAuthProvider,
-    ContextDeferredAuthProvider,
+    AnonymousAuthProvider,
 } from "@gooddata/sdk-backend-bear";
+import { backend } from "../../constants";
 
-import { backend as hostname } from "../../constants";
+export const createBackend = () =>
+    bearFactory({ hostname: backend }).withAuthentication(new AnonymousAuthProvider());
 
-const backendConfig = process.env.REACT_APP_SET_HOSTNAME ? { hostname } : {};
-
-export const createBackend = () => {
-    return bearFactory(backendConfig).withAuthentication(new ContextDeferredAuthProvider());
-};
-
-export const backendWithCredentials = (backend, username, password) => {
-    return backend.withAuthentication(new FixedLoginAndPasswordAuthProvider(username, password));
-};
+export const backendWithCredentials = (backend, username, password) =>
+    backend.withAuthentication(new FixedLoginAndPasswordAuthProvider(username, password));

@@ -3,7 +3,7 @@ export const appName = "geochart";
 
 // The URL of analytical GoodData backend with workspaces, insights, metrics, attributes, datasets, and users
 // that will be available to the application.
-export const backend = "https://developer.na.gooddata.com";
+export const backend = "https://live-examples-proxy.herokuapp.com/";
 
 // The ID of workspace that is selected by default in the optional workspace picker component (located in the web
 // application header). It is also a default setting for script that refreshes MD data used by the application.

@@ -8,7 +8,7 @@ import { AuthStatus } from "../../contexts/Auth/state";
 
 import Logo from "./Logo";
 import Links from "./Links";
-import Aside from "./Aside";
+// import Aside from "./Aside";
 
 import styles from "./Header.module.scss";
 
@@ -91,7 +91,7 @@ const Header = () => {
                 </>
             )}
 
-            <Aside />
+            {/* <Aside /> */}
         </nav>
     );
 };

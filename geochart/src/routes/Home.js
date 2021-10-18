@@ -15,7 +15,7 @@ const Home = () => {
                     }
 
                     if (error) {
-                        return <p>Execution failed; {error}</p>;
+                        return <p>Execution failed; {error.toString()}</p>;
                     }
 
                     if (result) {
@@ -28,7 +28,6 @@ const Home = () => {
                             population: parseInt(slice.rawData()[0]),
                             density: parseInt(slice.rawData()[1]),
                         }));
-                        console.log(data);
                         return <GeoChart height={600} data={data} />;
                     }
 

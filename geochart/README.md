@@ -4,9 +4,7 @@ This demonstrates how you can feed data from the [GoodData](https://www.gooddata
 
 ## Backend
 
-This app is designed to connect to domain https://developer.na.gooddata.com/, workspace `xms7ga4tf3g3nzucd8380o2bev8oeknp`.
-
-For access, you can register at https://gooddata-examples.herokuapp.com/.
+This app is designed to connect to workspace `xms7ga4tf3g3nzucd8380o2bev8oeknp` on https://live-examples-proxy.herokuapp.com/ domain, and does not require authentication.
 
 ## Live demo
 
