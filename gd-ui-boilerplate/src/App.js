@@ -1,5 +1,5 @@
-// Copyright (C) 2007-2020, GoodData(R) Corporation. All rights reserved.
-import React, { useState, useEffect } from "react";
+// Copyright (C) 2007-2021, GoodData(R) Corporation. All rights reserved.
+import React, { useState } from "react";
 import { Headline, ColumnChart } from "@gooddata/sdk-ui-charts";
 import { newPositiveAttributeFilter } from "@gooddata/sdk-model";
 import { BackendProvider, WorkspaceProvider, Execute } from "@gooddata/sdk-ui";
@@ -7,7 +7,6 @@ import { InsightView } from "@gooddata/sdk-ui-ext";
 import { AttributeFilter } from "@gooddata/sdk-ui-filters";
 import backend from "./backend";
 import CustomBarChart from "./components/CustomBarChart";
-import { loginMachinery } from "./utils";
 import * as Ldm from "./ldm/full";
 
 import "@gooddata/sdk-ui-charts/styles/css/main.css";
@@ -17,23 +16,7 @@ import "./App.css";
 const WORKSPACE = "xms7ga4tf3g3nzucd8380o2bev8oeknp";
 
 function App() {
-  const [isLogged, setIsLogged] = useState(false);
   const [filters, setFilters] = useState([]);
-
-  useEffect(() => {
-    loginMachinery(
-      {
-        sdk: backend.sdk,
-        projectId: WORKSPACE,
-        domain: backend.config.hostname
-      },
-      () => setIsLogged(true)
-    );
-  });
-
-  if (!isLogged) {
-    return <span>Checking your credentials, please wait…</span>;
-  }
 
   return (
     <BackendProvider backend={backend}>
@@ -48,10 +31,7 @@ function App() {
             }}
           >
             <AttributeFilter
-              filter={newPositiveAttributeFilter(
-                Ldm.LocationCity,
-                []
-              )}
+              filter={newPositiveAttributeFilter(Ldm.LocationCity, [])}
               onApply={filter => setFilters([filter])}
             />
           </div>

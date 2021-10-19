@@ -1,15 +1,9 @@
 # GoodData.UI Boilerplate App
 
-This app follows steps from https://sdk.gooddata.com/gooddata-ui/docs/ht_create_your_first_visualization.html:
-
-* It initializes create-react-app
-* It configures GoodData proxy
-* It adds GoodData.UI dependencies
-
-This app also shows:
+This app shows:
 
 * Use of `<AttributeFilter>` component
-* Use of `<Kpi>` component
+* Use of `<Headline>` component
 
 And finally this app demonstrates 3 approaches how to render visualizations:
 
@@ -19,7 +13,7 @@ And finally this app demonstrates 3 approaches how to render visualizations:
 
 ## Live demo
 
-This app is deployed at https://gooddata-demo.s3.amazonaws.com/gd-ui-boilerplate/index.html. For access, you can register at https://gooddata-examples.herokuapp.com/.
+This app is deployed at https://gooddata-demo.s3.amazonaws.com/gd-ui-boilerplate/index.html.
 
 ## How to run locally
 
@@ -35,11 +29,11 @@ This app is deployed at https://gooddata-demo.s3.amazonaws.com/gd-ui-boilerplate
 
 ## Backend/proxy info
 
-This app is configured to run against https://developer.na.gooddata.com/. For access, you can register at https://gooddata-examples.herokuapp.com/.
+This app is configured to run against https://live-examples-proxy.herokuapp.com/, workspace `xms7ga4tf3g3nzucd8380o2bev8oeknp`. No authentication required.
 
 ## Screnshots
 
-![homepage](https://raw.githubusercontent.com/gooddata/ui-sdk-examples/master/gd-ui-boilerplate/public/home.png "Homepage")
+![homepage](public/home.png)
 
 ---
 

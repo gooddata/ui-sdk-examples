@@ -1,4 +1,4 @@
-// Copyright (C) 2007-2020, GoodData(R) Corporation. All rights reserved.
+// Copyright (C) 2007-2021, GoodData(R) Corporation. All rights reserved.
 import React from "react";
 import ReactHighcharts from "react-highcharts";
 
