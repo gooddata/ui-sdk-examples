@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@gooddata/gooddata-js": "^8.0.0",
     "@gooddata/react-components": "^6.0.0",
     "html2canvas": "^1.0.0-alpha.12",
     "http-proxy-middleware": "^0.19.0",
@@ -18,7 +17,9 @@
     "start": "HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "buildgd": "PUBLIC_URL=/html2canvas yarn build",
+    "syncgd": "s3cmd --config .s3cfg sync --delete-removed ./build/ s3://gooddata-demo/html2canvas/"
   },
   "browserslist": [
     ">0.2%",

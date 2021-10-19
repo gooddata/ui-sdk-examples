@@ -1,6 +1,6 @@
-import { CatalogHelper } from '@gooddata/react-components';
+import { CatalogHelper } from "@gooddata/react-components";
 
-import catalogJson from './catalog.json';
+import catalogJson from "./catalog.json";
 const C = new CatalogHelper(catalogJson);
 
 export const PROJECT_ID = catalogJson.projectId;
