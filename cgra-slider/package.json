@@ -1,0 +1,76 @@
+{
+    "name": "cgra-slider",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@gooddata/sdk-backend-bear": "^8.6.0",
+        "@gooddata/sdk-model": "^8.6.0",
+        "@gooddata/sdk-ui": "^8.6.0",
+        "@gooddata/sdk-ui-charts": "^8.6.0",
+        "@gooddata/sdk-ui-ext": "^8.6.0",
+        "@gooddata/sdk-ui-filters": "^8.6.0",
+        "@gooddata/sdk-ui-geo": "^8.6.0",
+        "@gooddata/sdk-ui-pivot": "^8.6.0",
+        "classnames": "^2.3.1",
+        "formik": "^2.2.9",
+        "lodash": "^4.17.15",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-helmet": "^5.2.1",
+        "react-router-dom": "^5.0.1",
+        "react-router-use-location-state": "^2.3.1",
+        "react-scripts": "4.0.3",
+        "use-location-state": "^2.3.1",
+        "yup": "^0.32.9"
+    },
+    "scripts": {
+        "start": "cross-env HTTPS=true PORT=3000 react-scripts start",
+        "build": "react-scripts build",
+        "build-with-explicit-hostname": "cross-env REACT_APP_SET_HOSTNAME=true npm run build",
+        "eject": "react-scripts eject",
+        "test": "react-scripts test --setupFilesAfterEnv ./jest.setup.js",
+        "testcafe-backend": "rm -R ./build & yarn build & serve -l 5000 build",
+        "testcafe": "cross-env TEST_BACKEND=http://localhost:5000 ./scripts/run-testcafe.js",
+        "testcafe-visual": "cross-env TEST_MODE=visual ./scripts/run-testcafe.js",
+        "refresh-md": "node ./scripts/refresh-md.js"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/core": "^7.13.8",
+        "@babel/plugin-transform-typescript": "^7.9.6",
+        "@babel/preset-env": "^7.13.9",
+        "@babel/preset-typescript": "^7.13.0",
+        "@babel/register": "^7.13.8",
+        "@gooddata/catalog-export": "^8.6.0",
+        "babel-plugin-add-module-exports": "^1.0.4",
+        "cross-env": "^5.2.0",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.14.0",
+        "husky": "^3.0.0",
+        "node-sass": "^6.0.1",
+        "prettier": "^1.18.2",
+        "pretty-quick": "^1.11.1",
+        "serve": "^11.3.2",
+        "testcafe": "^1.5.0",
+        "typescript": "^4.1.5"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged --pattern \"**/*.*(js|jsx|ts|tsx|scss)\""
+        }
+    }
+}
