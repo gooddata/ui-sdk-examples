@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "refresh-ldm": "./scripts/refresh-ldm.sh",
+    "refresh-md": "./scripts/refresh-md.sh",
     "buildgd": "cross-env PUBLIC_URL=/gd-ui-boilerplate yarn build",
     "syncgd": "s3cmd --config .s3cfg sync --delete-removed ./build/ s3://gooddata-demo/gd-ui-boilerplate/",
     "upgrade-sdk": "yarn upgrade --latest --caret -P '@gooddata/(reference-|api-|sdk-|util|catalog-)'"

@@ -7,7 +7,7 @@ import { InsightView } from "@gooddata/sdk-ui-ext";
 import { AttributeFilter } from "@gooddata/sdk-ui-filters";
 import backend from "./backend";
 import CustomBarChart from "./components/CustomBarChart";
-import * as Ldm from "./ldm/full";
+import * as Md from "./md/full";
 
 import "@gooddata/sdk-ui-charts/styles/css/main.css";
 import "@gooddata/sdk-ui-ext/styles/css/main.css";
@@ -34,36 +34,36 @@ function App() {
             }}
           >
             <AttributeFilter
-              filter={newPositiveAttributeFilter(Ldm.LocationCity, [])}
+              filter={newPositiveAttributeFilter(Md.LocationCity, [])}
               onApply={filter => setFilters([filter])}
             />
           </div>
           <div>
             # of Location City:{" "}
-            <Headline primaryMeasure={Ldm.NrLocationCity} filters={filters} />
+            <Headline primaryMeasure={Md.NrLocationCity} filters={filters} />
             <br />
             <br />
           </div>
           <div style={{ height: 400 }}>
             <InsightView
               // insight="aby6oS6DbpFX"
-              insight={Ldm.Insights.NrChecksViewedByCityStackedByLocation}
+              insight={Md.Insights.NrChecksViewedByCityStackedByLocation}
               filters={filters}
               config={{ legend: { position: "top" } }}
             />
           </div>
           <div style={{ height: 400 }}>
             <ColumnChart
-              measures={[Ldm.NrChecks]}
-              viewBy={Ldm.LocationCity}
-              stackBy={Ldm.LocationName.Default}
+              measures={[Md.NrChecks]}
+              viewBy={Md.LocationCity}
+              stackBy={Md.LocationName.Default}
               filters={filters}
             />
           </div>
           <div style={{ height: 400 }}>
             <Execute
-              seriesBy={[Ldm.NrChecks]}
-              slicesBy={[Ldm.LocationCity]}
+              seriesBy={[Md.NrChecks]}
+              slicesBy={[Md.LocationCity]}
               filters={filters}
               children={CustomBarChart}
             />
