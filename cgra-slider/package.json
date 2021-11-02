@@ -20,6 +20,7 @@
         "react-router-dom": "^5.0.1",
         "react-router-use-location-state": "^2.3.1",
         "react-scripts": "4.0.3",
+        "rsuite": "^5.1.0",
         "use-location-state": "^2.3.1",
         "yup": "^0.32.9"
     },
@@ -32,7 +33,9 @@
         "testcafe-backend": "rm -R ./build & yarn build & serve -l 5000 build",
         "testcafe": "cross-env TEST_BACKEND=http://localhost:5000 ./scripts/run-testcafe.js",
         "testcafe-visual": "cross-env TEST_MODE=visual ./scripts/run-testcafe.js",
-        "refresh-md": "node ./scripts/refresh-md.js"
+        "refresh-md": "node ./scripts/refresh-md.js",
+        "buildgd": "cross-env PUBLIC_URL=/cgra-slider yarn build",
+        "syncgd": "s3cmd --config .s3cfg sync --delete-removed ./build/ s3://gooddata-demo/cgra-slider/"
     },
     "eslintConfig": {
         "extends": "react-app"
