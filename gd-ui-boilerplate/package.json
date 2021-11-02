@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@gooddata/sdk-backend-bear": "^8.1.0",
-    "@gooddata/sdk-model": "^8.1.0",
-    "@gooddata/sdk-ui": "^8.1.0",
-    "@gooddata/sdk-ui-charts": "^8.1.0",
-    "@gooddata/sdk-ui-ext": "^8.1.0",
-    "@gooddata/sdk-ui-filters": "^8.1.0",
+    "@gooddata/sdk-backend-bear": "^8.6.0",
+    "@gooddata/sdk-model": "^8.6.0",
+    "@gooddata/sdk-ui": "^8.6.0",
+    "@gooddata/sdk-ui-charts": "^8.6.0",
+    "@gooddata/sdk-ui-ext": "^8.6.0",
+    "@gooddata/sdk-ui-filters": "^8.6.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -25,7 +25,7 @@
     "refresh-ldm": "./scripts/refresh-ldm.sh",
     "buildgd": "cross-env PUBLIC_URL=/gd-ui-boilerplate yarn build",
     "syncgd": "s3cmd --config .s3cfg sync --delete-removed ./build/ s3://gooddata-demo/gd-ui-boilerplate/",
-    "upgrade-sdk": "yarn upgrade --latest --caret -P '@gooddata/(reference-|api-|sdk-|util)'"
+    "upgrade-sdk": "yarn upgrade --latest --caret -P '@gooddata/(reference-|api-|sdk-|util|catalog-)'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,7 +43,7 @@
     ]
   },
   "devDependencies": {
-    "@gooddata/catalog-export": "^8.1.0",
+    "@gooddata/catalog-export": "^8.6.0",
     "cross-env": "^7.0.2"
   }
 }

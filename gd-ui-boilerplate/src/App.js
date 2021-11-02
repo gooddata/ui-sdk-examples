@@ -10,7 +10,10 @@ import CustomBarChart from "./components/CustomBarChart";
 import * as Ldm from "./ldm/full";
 
 import "@gooddata/sdk-ui-charts/styles/css/main.css";
+import "@gooddata/sdk-ui-ext/styles/css/main.css";
 import "@gooddata/sdk-ui-filters/styles/css/main.css";
+import "@gooddata/sdk-ui-geo/styles/css/main.css";
+import "@gooddata/sdk-ui-pivot/styles/css/main.css";
 import "./App.css";
 
 const WORKSPACE = "xms7ga4tf3g3nzucd8380o2bev8oeknp";
