@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@gooddata/sdk-backend-bear": "^8.6.0",
-    "@gooddata/sdk-model": "^8.6.0",
-    "@gooddata/sdk-ui": "^8.6.0",
-    "@gooddata/sdk-ui-charts": "^8.6.0",
-    "@gooddata/sdk-ui-ext": "^8.6.0",
-    "@gooddata/sdk-ui-filters": "^8.6.0",
+    "@gooddata/sdk-backend-bear": "^8.7.0",
+    "@gooddata/sdk-model": "^8.7.0",
+    "@gooddata/sdk-ui": "^8.7.0",
+    "@gooddata/sdk-ui-charts": "^8.7.0",
+    "@gooddata/sdk-ui-ext": "^8.7.0",
+    "@gooddata/sdk-ui-filters": "^8.7.0",
+    "@gooddata/sdk-ui-dashboard": "^8.7.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -43,7 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@gooddata/catalog-export": "^8.6.0",
+    "@gooddata/catalog-export": "^8.7.0",
     "cross-env": "^7.0.2"
   }
 }
