@@ -1,0 +1,33 @@
+@import "../theme.scss";
+
+.Page {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+.Main {
+    flex: 1 0 auto;
+    /**
+    The problem is with chrome recalculation of height if flexbox is used.
+    More info: https://stackoverflow.com/questions/14962468/how-can-i-combine-flexbox-and-vertical-scroll-in-a-full-height-app/14964944#14964944
+     */
+    height: 0;
+    padding: $spacing * 2 + 56px $spacing $spacing * 2 $spacing;
+    max-width: 1200px;
+    width: calc(100% - (#{$spacing} * 2));
+    margin: 0 auto;
+}
+
+.VerticalCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.Inverse {
+    background-color: $color-paper-inverse;
+    color: $color-text-inverse;
+}
