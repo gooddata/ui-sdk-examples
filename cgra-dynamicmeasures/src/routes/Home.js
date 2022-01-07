@@ -5,8 +5,8 @@ import { idRef, insightSetBuckets } from "@gooddata/sdk-model";
 
 import styles from "./Home.module.scss";
 
-// const DASHBOARD_ID = "aaNEDetXTWPh"; // single insight
-const DASHBOARD_ID = "aagCCFA94QP5"; // multiple insights for testing
+const DASHBOARD_ID = "aaNEDetXTWPh"; // single insight
+// const DASHBOARD_ID = "aagCCFA94QP5"; // multiple insights for testing
 
 const CustomInsight = props => {
     const widgetId = props.widget.identifier;
@@ -25,7 +25,7 @@ const CustomInsight = props => {
 
     const newInsight = insightSetBuckets(props.insight, [
         newMeasuresBucket,
-        ...[...originalBuckets].splice(1),
+        ...originalBuckets.filter(b => b.localIdentifier !== "measures"),
     ]);
 
     return (
