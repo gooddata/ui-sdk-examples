@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Snowfall from "react-snowfall";
 import { Dashboard, DefaultDashboardInsight } from "@gooddata/sdk-ui-dashboard";
-import { idRef } from "@gooddata/sdk-model";
+import { idRef, insightSetBuckets } from "@gooddata/sdk-model";
 
 import styles from "./Home.module.scss";
 
@@ -23,16 +23,10 @@ const CustomInsight = props => {
         items: measures,
     };
 
-    const newProps = {
-        ...props,
-        insight: {
-            ...props.insight,
-            insight: {
-                ...props.insight.insight,
-                buckets: [newMeasuresBucket, ...[...originalBuckets].splice(1)],
-            },
-        },
-    };
+    const newInsight = insightSetBuckets(props.insight, [
+        newMeasuresBucket,
+        ...[...originalBuckets].splice(1),
+    ]);
 
     return (
         <div className={styles.CustomInsight}>
@@ -70,7 +64,7 @@ const CustomInsight = props => {
                 })}
             </div>
             <div className={styles.Insight}>
-                <DefaultDashboardInsight {...newProps} />
+                <DefaultDashboardInsight {...props} insight={newInsight} />
             </div>
         </div>
     );
