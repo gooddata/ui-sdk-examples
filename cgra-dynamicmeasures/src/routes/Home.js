@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import Snowfall from "react-snowfall";
 import { Dashboard, DefaultDashboardInsight } from "@gooddata/sdk-ui-dashboard";
 import { idRef, insightBuckets, insightSetBuckets } from "@gooddata/sdk-model";
 
 import styles from "./Home.module.scss";
 
-const DASHBOARD_ID = "aaNEDetXTWPh"; // single insight
-// const DASHBOARD_ID = "aagCCFA94QP5"; // multiple insights for testing
+// const DASHBOARD_ID = "aaNEDetXTWPh"; // single insight
+const DASHBOARD_ID = "aagCCFA94QP5"; // multiple insights for testing
 
 const CustomInsight = props => {
     const widgetId = props.widget.identifier;
@@ -14,15 +14,17 @@ const CustomInsight = props => {
     const originalMeasures = originalBuckets[0].items;
     const [measures, setMeasures] = useState(originalMeasures);
 
-    const newMeasuresBucket = {
-        ...originalBuckets[0],
-        items: measures,
-    };
+    const newInsight = useMemo(() => {
+        const newMeasuresBucket = {
+            ...originalBuckets[0],
+            items: measures,
+        };
 
-    const newInsight = insightSetBuckets(props.insight, [
-        newMeasuresBucket,
-        ...originalBuckets.filter(b => b.localIdentifier !== "measures"),
-    ]);
+        return insightSetBuckets(props.insight, [
+            newMeasuresBucket,
+            ...originalBuckets.filter(b => b.localIdentifier !== "measures"),
+        ]);
+    }, [measures, props.insight, originalBuckets]);
 
     return (
         <div className={styles.CustomInsight}>
