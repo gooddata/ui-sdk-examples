@@ -1,0 +1,25 @@
+.CustomInsight {
+    // border: 1px solid red;
+    height: 100%;
+    display: flex;
+
+    .MetricSwitcher {
+        padding: 20px;
+        // border: 1px solid green;
+        width: 400px;
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+
+            input {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .Insight {
+        // border: 1px solid blue;
+        flex: 1 0 auto;
+    }
+}
