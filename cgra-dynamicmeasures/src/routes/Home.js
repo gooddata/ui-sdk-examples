@@ -8,20 +8,25 @@ import styles from "./Home.module.scss";
 // const DASHBOARD_ID = "aaNEDetXTWPh"; // single insight
 const DASHBOARD_ID = "aagCCFA94QP5"; // multiple insights for testing
 
+// define the custom component at the root, not in another component
 const CustomInsight = props => {
     const widgetId = props.widget.identifier;
     const originalBuckets = props.insight.insight.buckets;
     const originalMeasures = originalBuckets[0].items;
     const [measures, setMeasures] = useState(originalMeasures);
 
+    // memoize the altered insight properly to improve performance and prevent weird race conditions
+    // this makes sure the underlying pluggable visualization is updated only when actually needed
     const newInsight = useMemo(() => {
         const newMeasuresBucket = {
             ...originalBuckets[0],
             items: measures,
         };
 
+        // use the setter to make things a bit cleaner
         return insightSetBuckets(props.insight, [
             newMeasuresBucket,
+            // avoid splice, rather use filter, that is clearer in intent
             ...originalBuckets.filter(b => b.localIdentifier !== "measures"),
         ]);
     }, [measures, props.insight, originalBuckets]);
@@ -36,6 +41,7 @@ const CustomInsight = props => {
                     return (
                         <label
                             htmlFor={`${widgetId}-${localIdentifier}`}
+                            // use key to prevent react warnings
                             key={`${widgetId}-${localIdentifier}`}
                         >
                             <input
