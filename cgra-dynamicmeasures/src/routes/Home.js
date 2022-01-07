@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Snowfall from "react-snowfall";
 import { Dashboard, DefaultDashboardInsight } from "@gooddata/sdk-ui-dashboard";
-import { idRef, insightSetBuckets } from "@gooddata/sdk-model";
+import { idRef, insightBuckets, insightSetBuckets } from "@gooddata/sdk-model";
 
 import styles from "./Home.module.scss";
 
@@ -13,10 +13,6 @@ const CustomInsight = props => {
     const originalBuckets = props.insight.insight.buckets;
     const originalMeasures = originalBuckets[0].items;
     const [measures, setMeasures] = useState(originalMeasures);
-
-    if (originalBuckets[0].localIdentifier !== "measures" || originalBuckets[0].items.length <= 1) {
-        return <DefaultDashboardInsight {...props} />;
-    }
 
     const newMeasuresBucket = {
         ...originalBuckets[0],
@@ -74,7 +70,17 @@ const Home = () => {
     return (
         <>
             <div className={styles.Dashboard}>
-                <Dashboard dashboard={idRef(DASHBOARD_ID)} InsightComponentProvider={() => CustomInsight} />
+                <Dashboard
+                    dashboard={idRef(DASHBOARD_ID)}
+                    InsightComponentProvider={insight => {
+                        const buckets = insightBuckets(insight);
+                        if (buckets[0].localIdentifier !== "measures" || buckets[0].items.length <= 1) {
+                            // fall back to whatever the default is
+                            return undefined;
+                        }
+                        return CustomInsight;
+                    }}
+                />
             </div>
             <Snowfall />
         </>
