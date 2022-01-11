@@ -36,9 +36,11 @@ const MetricSwitcher = props => {
                             htmlFor={`${widgetId}-${localIdentifier}`}
                             // use key to prevent react warnings
                             key={`${widgetId}-${localIdentifier}`}
+                            className="input-checkbox-label"
                         >
                             <input
                                 id={`${widgetId}-${localIdentifier}`}
+                                className="input-checkbox"
                                 value={localIdentifier}
                                 type="checkbox"
                                 defaultChecked={isChecked}
@@ -55,7 +57,9 @@ const MetricSwitcher = props => {
                                     }
                                 }}
                             />
-                            {defaultMeasure.measure.title}
+                            <span className="input-label-text" title={defaultMeasure.measure.title}>
+                                {defaultMeasure.measure.title}
+                            </span>
                         </label>
                     );
                 })}
