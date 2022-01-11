@@ -3,17 +3,46 @@
     height: 100%;
     display: flex;
 
+    @media (max-width: 1280px) {
+        flex-direction: column;
+    }
+
     .MetricSwitcher {
+        display: flex;
+        flex-wrap: wrap;
+        align-self: flex-start;
         padding: 20px;
         // border: 1px solid green;
-        width: 400px;
+        max-width: 250px;
+        text-align: left;
+
+        @media (max-width: 1280px) {
+            max-width: none;
+        }
 
         label {
-            display: block;
-            margin-bottom: 10px;
+            width: 100%;
+            margin-bottom: 8px;
+            cursor: pointer;
 
-            input {
-                margin-right: 10px;
+            @media (max-width: 1280px) {
+                width: 50%;
+            }
+
+            @media (max-width: 970px) {
+                width: 100%;
+            }
+
+            span {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 12px;
+                white-space: nowrap;
+            }
+
+            input:checked ~ span {
+                font-weight: bold;
             }
         }
     }
