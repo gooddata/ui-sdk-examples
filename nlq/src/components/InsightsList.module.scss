@@ -1,0 +1,16 @@
+.InsightsList {
+    width: 400px;
+
+    .ListItem {
+        cursor: pointer;
+
+        &.Active {
+            font-weight: bold;
+            color: #4a90e2;
+        }
+
+        &:hover {
+            color: #4a90e2;
+        }
+    }
+}
