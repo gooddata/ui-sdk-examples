@@ -8,7 +8,7 @@ This app typically runs on https://localhost:8443/.
 
 This app connects to a GoodData.CN instance version 1.6.0 with imported layout [gd-cn-layout.json](gd-cn-layout.json). The GoodData.CN instance typically runs on http://localhost:3000/.
 
-This app also communicates with a Python server stored in https://github.com/gooddata/gdc-appstore-pmm/tree/nlq_integration/nlq_integration. The Python server typically runs on http://localhost:5000/.
+This app also communicates with a Python server stored in https://github.com/gooddata/gdc-appstore-pmm/tree/master/nlq_integration. The Python server typically runs on http://localhost:5000/.
 
 ## How to run
 
@@ -18,7 +18,15 @@ This app also communicates with a Python server stored in https://github.com/goo
     * `python3 app.py`
 1. Run this application
     * `yarn install`
-    * `yarn start`
+    * `REACT_APP_DEV_TIGER_API_TOKEN=<token> yarn start`
+
+### Troubleshooting
+
+**Cannot login to this frontend app**
+Experiencing errors and unwanted redirects when trying to visit https://localhost:8443/? Simply start the app with `REACT_APP_DEV_TIGER_API_TOKEN=<token> yarn start` instead of plain `yarn start`.
+
+**Python server at http://localhost:5000 isn't available.**
+When visiting http://localhost:5000/search/asdf, the browser says: Access to localhost was denied. This may be caused by [AirPlay Receiver running on port 5000](https://stackoverflow.com/questions/69818376/localhost5000-unavailable-in-macos-v12-monterey). Simply change the port to 5001 in both Python server and this frontend app.
 
 ## Examples of use
 

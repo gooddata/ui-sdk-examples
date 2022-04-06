@@ -1,5 +1,5 @@
 // The name of the application. It is rendered in a header of the web application.
-export const appName = "NLQ Demo";
+export const appName = "GoodData.UI";
 
 // The URL of analytical GoodData backend with workspaces, insights, metrics, attributes, datasets, and users
 // that will be available to the application.
