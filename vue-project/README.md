@@ -1,3 +1,11 @@
+# Vue.js + GoodData.UI
+
+This is Vue.js boilerplate with GoodData.UI. The tool library [veaury](https://github.com/devilwjp/veaury) was used to render React components inside a Vue.js project.
+
+![home](public/home.png)
+
+---
+
 # vue-project
 
 This template should help get you started developing with Vue 3 in Vite.
