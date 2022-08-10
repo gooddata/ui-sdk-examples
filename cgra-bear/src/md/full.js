@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-/* THIS FILE WAS AUTO-GENERATED USING CATALOG EXPORTER; YOU SHOULD NOT EDIT THIS FILE; GENERATE TIME: 2022-06-09T10:57:58.575Z; */
+/* THIS FILE WAS AUTO-GENERATED USING CATALOG EXPORTER; YOU SHOULD NOT EDIT THIS FILE; GENERATE TIME: 2022-08-10T13:19:13.378Z; */
 // @ts-ignore ignore unused imports here if they happen (e.g. when there is no measure in the workspace)
 import { newAttribute, newMeasure, idRef } from "@gooddata/sdk-model";
 /**
@@ -168,6 +168,13 @@ export const PercentTotalSalesFromPreviousMonth = newMeasure(idRef("aaoPOljQfRt1
  */
 
 export const AveragePageViews = newMeasure(idRef("aaSdqzqHdNL8", "measure"));
+/**
+ * Metric Title: Average Page Views (Colored)
+ * Metric ID: ab9F5vJuqTdZ
+ * Metric Type: MAQL Metric
+ */
+
+export const AveragePageViewsColored = newMeasure(idRef("ab9F5vJuqTdZ", "measure"));
 /**
  * Metric Title: Average Page Views [computers]
  * Metric ID: aaddocAhfjN5
@@ -4798,6 +4805,26 @@ export const Insights = {
      * Insight ID: accpTuREibqZ
      */
     PageViewsByCategoryByBrand: "accpTuREibqZ",
+    /**
+     * Insight Title: Table (Colored)
+     * Insight ID: abuF8xDvs20l
+     */
+    TableColored: "abuF8xDvs20l",
+    /**
+     * Insight Title: Avg Price by Category
+     * Insight ID: abdPNHOLcHLk
+     */
+    AvgPriceByCategory: "abdPNHOLcHLk",
+    /**
+     * Insight Title: Avg Price by Category — Colored
+     * Insight ID: aaEPYMhnXmFf
+     */
+    AvgPriceByCategoryColored: "aaEPYMhnXmFf",
+    /**
+     * Insight Title: Quantity by Category
+     * Insight ID: aaLgNq53S6VB
+     */
+    QuantityByCategory: "aaLgNq53S6VB",
 };
 export const Dashboards = {
     /**
@@ -4826,11 +4853,6 @@ export const Dashboards = {
      */
     _5Embedding: "aagL8MteaYAo",
     /**
-     * Dashboard Title: Overview
-     * Dashboard ID: abVw0FT8W9Jz
-     */
-    Overview: "abVw0FT8W9Jz",
-    /**
      * Dashboard Title: Dynamic Measures
      * Dashboard ID: aaNEDetXTWPh
      */
@@ -4841,18 +4863,13 @@ export const Dashboards = {
      */
     DynamicMeasuresTesting: "aagCCFA94QP5",
     /**
-     * Dashboard Title: Detail View
-     * Dashboard ID: aejqFk1jN0T5
-     */
-    DetailView: "aejqFk1jN0T5",
-    /**
-     * Dashboard Title: Copy of 1. Overview
-     * Dashboard ID: adcZ7eakBfE4
-     */
-    CopyOf1Overview: "adcZ7eakBfE4",
-    /**
      * Dashboard Title: Recharts Piechart
      * Dashboard ID: aa0mnpTS4siw
      */
     RechartsPiechart: "aa0mnpTS4siw",
+    /**
+     * Dashboard Title: My First Dashboard
+     * Dashboard ID: abUgFDzQoKGW
+     */
+    MyFirstDashboard: "abUgFDzQoKGW",
 };
