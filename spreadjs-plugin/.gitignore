@@ -1,0 +1,4 @@
+.env.secrets
+dist
+node_modules
+.idea
