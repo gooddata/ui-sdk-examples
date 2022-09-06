@@ -1,4 +1,3 @@
-import React from "react";
 import { BackendProvider } from "@gooddata/sdk-ui";
 // import { ThemeProvider } from "@gooddata/sdk-ui-theme-provider";
 

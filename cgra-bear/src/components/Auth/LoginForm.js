@@ -1,7 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import { withRouter } from "react-router-dom";
-import { withFormik } from "formik";
+import { useFormik } from "formik";
 import { string, object } from "yup";
 
 import { backend } from "../../constants";
@@ -16,12 +16,35 @@ import styles from "./LoginForm.module.scss";
 import logoUri from "../../media/logo-new.png";
 
 const LoginFormComponent = (props) => {
-    const { values, touched, errors, isSubmitting, handleChange, handleBlur, handleSubmit, loginError } =
-        props;
+    const { values, touched, errors, isSubmitting, handleChange, handleBlur, handleSubmit } = useFormik({
+        initialValues: {
+            email: props.email,
+            password: props.password,
+        },
+
+        validationSchema: object().shape({
+            email: string().email("Invalid e-mail address").required("E-mail is required"),
+            password: string().required("Password is required"),
+        }),
+
+        onSubmit: ({ email, password }, { setSubmitting, setFieldError }) => {
+            return props.login(email, password).then(
+                () => props.history.push("/"),
+                (error) => {
+                    setSubmitting(false);
+                    if (error.response && error.response.status === 401) {
+                        setFieldError("password", "E-mail or password is invalid");
+                    } else {
+                        setFieldError("password", "Unknown error");
+                    }
+                },
+            );
+        },
+    });
 
     return (
         <>
-            {loginError && <div className={styles.Error}>{loginError}</div>}
+            {props.loginError && <div className={styles.Error}>{props.loginError}</div>}
             <form onSubmit={handleSubmit} className={cx(styles.Login, "s-login-form")}>
                 <div className={styles.LoginLogo}>
                     <img src={logoUri} alt="GoodData" className={styles.LoginLogo} style={{ height: 70 }} />
@@ -96,30 +119,4 @@ const LoginFormComponent = (props) => {
     );
 };
 
-const formikConnector = withFormik({
-    mapPropsToValues: ({ email = "", password = "" }) => ({
-        email,
-        password,
-    }),
-
-    validationSchema: object().shape({
-        email: string().email("Invalid e-mail address").required("E-mail is required"),
-        password: string().required("Password is required"),
-    }),
-
-    handleSubmit: ({ email, password }, { props: { login, history }, setFieldError, setSubmitting }) => {
-        return login(email, password).then(
-            () => history.push("/"),
-            (error) => {
-                setSubmitting(false);
-                if (error.response && error.response.status === 401) {
-                    setFieldError("password", "E-mail or password is invalid");
-                } else {
-                    setFieldError("password", "Unknown error");
-                }
-            },
-        );
-    },
-});
-
-export default withRouter(formikConnector(LoginFormComponent));
+export default withRouter(LoginFormComponent);

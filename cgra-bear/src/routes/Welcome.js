@@ -35,7 +35,7 @@ const Welcome = () => {
 
             <h2>Your new GoodData-powered app is ready!</h2>
             <p>
-                Now, let’s take one more step and set up your home dashboard with a test headline report
+                Now, let's take one more step and set up your home dashboard with a test headline report
                 widget. This will help verify that everything is set up correctly.
             </p>
 
@@ -69,8 +69,13 @@ const Welcome = () => {
                 <li>
                     In <Code>Home.js</Code>, replace <Code>Place your content here</Code> with actual code.
                     <p>
-                        For example, <Code> {`<InsightView insight={Md.Insights.Headline}/>`}</Code>. We
-                        access the <Code>Headline</Code> identifier through the generated <Code>MD</Code>
+                        For example,{" "}
+                        <Code>
+                            {`<div style={{ height: 400, width: 600 }}>
+    <InsightView insight={Md.Insights.Headline}/>
+</div>`}
+                        </Code>
+                        . We access the <Code>Headline</Code> identifier through the generated <Code>MD</Code>
                         objects.
                         <br />
                         The main benefit of utilizing the generated MD objects is that you have the access to
