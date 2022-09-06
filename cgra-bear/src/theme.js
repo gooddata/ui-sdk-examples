@@ -1,6 +1,6 @@
-import { ITheme } from "@gooddata/sdk-model";
+// import { ITheme } from "@gooddata/sdk-model";
 
-export default {
+const Theme = {
     button: {
         borderRadius: "15",
         dropShadow: true,
@@ -43,3 +43,5 @@ export default {
         backgroundColor: "#eeeeee",
     },
 };
+
+export default Theme;
