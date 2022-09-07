@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-/* THIS FILE WAS AUTO-GENERATED USING CATALOG EXPORTER; YOU SHOULD NOT EDIT THIS FILE; GENERATE TIME: 2022-08-22T14:58:46.537Z; */
+/* THIS FILE WAS AUTO-GENERATED USING CATALOG EXPORTER; YOU SHOULD NOT EDIT THIS FILE; GENERATE TIME: 2022-09-07T07:52:08.341Z; */
 // @ts-ignore ignore unused imports here if they happen (e.g. when there is no measure in the workspace)
 import { newAttribute, newMeasure, idRef } from "@gooddata/sdk-model";
 /**
@@ -453,34 +453,6 @@ export const Quantity = {
     Runsum: newMeasure(idRef("quantity", "fact"), (m) => m.aggregation("runsum")),
 };
 /**
- * Attribute Title: Date - Quarter of Year
- * Attribute ID: date.quarterOfYear
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const DateQuarterOfYear = newAttribute("date.quarterOfYear");
-/**
- * Attribute Title: Date - Month of Year
- * Attribute ID: date.monthOfYear
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const DateMonthOfYear = newAttribute("date.monthOfYear");
-/**
- * Attribute Title: Date - Week of Year
- * Attribute ID: date.weekOfYear
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const DateWeekOfYear = newAttribute("date.weekOfYear");
-/**
- * Attribute Title: Date - Day of Year
- * Attribute ID: date.dayOfYear
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const DateDayOfYear = newAttribute("date.dayOfYear");
-/**
  * Attribute Title: Date - Day of Month
  * Attribute ID: date.dayOfMonth
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
@@ -557,6 +529,34 @@ export const DateHour = newAttribute("date.hour");
  */
 
 export const DateMinute = newAttribute("date.minute");
+/**
+ * Attribute Title: Date - Quarter of Year
+ * Attribute ID: date.quarterOfYear
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const DateQuarterOfYear = newAttribute("date.quarterOfYear");
+/**
+ * Attribute Title: Date - Month of Year
+ * Attribute ID: date.monthOfYear
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const DateMonthOfYear = newAttribute("date.monthOfYear");
+/**
+ * Attribute Title: Date - Week of Year
+ * Attribute ID: date.weekOfYear
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const DateWeekOfYear = newAttribute("date.weekOfYear");
+/**
+ * Attribute Title: Date - Day of Year
+ * Attribute ID: date.dayOfYear
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const DateDayOfYear = newAttribute("date.dayOfYear");
 /** Available Date Data Sets */
 
 export const DateDatasets = {
@@ -567,58 +567,6 @@ export const DateDatasets = {
     Date: {
         ref: idRef("date", "dataSet"),
         identifier: "date",
-        /**
-         * Date Attribute: Date - Quarter of Year
-         * Date Attribute ID: date.quarterOfYear
-         */
-        DateQuarterOfYear: {
-            ref: idRef("date.quarterOfYear", "attribute"),
-            identifier: "date.quarterOfYear",
-            /**
-             * Display Form Title: Date - Quarter of Year
-             * Display Form ID: date.quarterOfYear
-             */
-            Default: newAttribute("date.quarterOfYear"),
-        },
-        /**
-         * Date Attribute: Date - Month of Year
-         * Date Attribute ID: date.monthOfYear
-         */
-        DateMonthOfYear: {
-            ref: idRef("date.monthOfYear", "attribute"),
-            identifier: "date.monthOfYear",
-            /**
-             * Display Form Title: Date - Month of Year
-             * Display Form ID: date.monthOfYear
-             */
-            Default: newAttribute("date.monthOfYear"),
-        },
-        /**
-         * Date Attribute: Date - Week of Year
-         * Date Attribute ID: date.weekOfYear
-         */
-        DateWeekOfYear: {
-            ref: idRef("date.weekOfYear", "attribute"),
-            identifier: "date.weekOfYear",
-            /**
-             * Display Form Title: Date - Week of Year
-             * Display Form ID: date.weekOfYear
-             */
-            Default: newAttribute("date.weekOfYear"),
-        },
-        /**
-         * Date Attribute: Date - Day of Year
-         * Date Attribute ID: date.dayOfYear
-         */
-        DateDayOfYear: {
-            ref: idRef("date.dayOfYear", "attribute"),
-            identifier: "date.dayOfYear",
-            /**
-             * Display Form Title: Date - Day of Year
-             * Display Form ID: date.dayOfYear
-             */
-            Default: newAttribute("date.dayOfYear"),
-        },
         /**
          * Date Attribute: Date - Day of Month
          * Date Attribute ID: date.dayOfMonth
@@ -762,6 +710,58 @@ export const DateDatasets = {
              */
             Default: newAttribute("date.minute"),
         },
+        /**
+         * Date Attribute: Date - Quarter of Year
+         * Date Attribute ID: date.quarterOfYear
+         */
+        DateQuarterOfYear: {
+            ref: idRef("date.quarterOfYear", "attribute"),
+            identifier: "date.quarterOfYear",
+            /**
+             * Display Form Title: Date - Quarter of Year
+             * Display Form ID: date.quarterOfYear
+             */
+            Default: newAttribute("date.quarterOfYear"),
+        },
+        /**
+         * Date Attribute: Date - Month of Year
+         * Date Attribute ID: date.monthOfYear
+         */
+        DateMonthOfYear: {
+            ref: idRef("date.monthOfYear", "attribute"),
+            identifier: "date.monthOfYear",
+            /**
+             * Display Form Title: Date - Month of Year
+             * Display Form ID: date.monthOfYear
+             */
+            Default: newAttribute("date.monthOfYear"),
+        },
+        /**
+         * Date Attribute: Date - Week of Year
+         * Date Attribute ID: date.weekOfYear
+         */
+        DateWeekOfYear: {
+            ref: idRef("date.weekOfYear", "attribute"),
+            identifier: "date.weekOfYear",
+            /**
+             * Display Form Title: Date - Week of Year
+             * Display Form ID: date.weekOfYear
+             */
+            Default: newAttribute("date.weekOfYear"),
+        },
+        /**
+         * Date Attribute: Date - Day of Year
+         * Date Attribute ID: date.dayOfYear
+         */
+        DateDayOfYear: {
+            ref: idRef("date.dayOfYear", "attribute"),
+            identifier: "date.dayOfYear",
+            /**
+             * Display Form Title: Date - Day of Year
+             * Display Form ID: date.dayOfYear
+             */
+            Default: newAttribute("date.dayOfYear"),
+        },
     },
 };
 export const Insights = {
@@ -775,11 +775,6 @@ export const Insights = {
      * Insight ID: a44f4077-3ec7-4cfe-adfe-bc6420db0f82
      */
     RevenueByState: "a44f4077-3ec7-4cfe-adfe-bc6420db0f82",
-    /**
-     * Insight Title: Campaign Spend
-     * Insight ID: campaign_spend
-     */
-    CampaignSpend_1: "campaign_spend",
     /**
      * Insight Title: Customers Trend
      * Insight ID: customers_trend
@@ -850,6 +845,11 @@ export const Insights = {
      * Insight ID: top_10_products
      */
     Top10Products: "top_10_products",
+    /**
+     * Insight Title: Campaign Spend
+     * Insight ID: campaign_spend
+     */
+    CampaignSpend_1: "campaign_spend",
 };
 export const Dashboards = {
     /**

@@ -6,18 +6,24 @@ import React from "react";
 
 import Page from "../components/Page";
 import * as Md from "../md/full";
+import CustomBarChart from "../components/CustomBarChart";
 
 const Home = () => {
     return (
         <Page>
-            {/* <Dashboard dashboard="8d47be45-b697-4e6e-bd62-50c93e401854" /> */}
-            {/* <InsightView insight="00afbcbf-8875-48fd-8a50-d89237c9d71b" /> */}
+            <iframe
+                src="http://localhost:3000/dashboards/embedded/#/workspace/demo/dashboard/5de6ce07-6537-4588-8477-e1d0390ee44f?showNavigation=false&setHeight=700"
+                height="700px"
+                width="100%"
+                frameborder="0"
+            ></iframe>
+            <Dashboard dashboard={Md.Dashboards.Overview} />
+            <div style={{ height: 400 }}>
+                <InsightView insight={Md.Insights.PercentRevenuePerProductByCustomerAndCategory} />
+            </div>
             <ColumnChart measures={[Md.Price.Sum]} viewBy={Md.Category_1} stackBy={Md.ProductName} />
             <Execute seriesBy={[Md.Price.Sum]} slicesBy={[Md.Category_1]}>
-                {(result) => {
-                    console.log(result);
-                    return <p>my custom chart</p>;
-                }}
+                {CustomBarChart}
             </Execute>
         </Page>
     );
