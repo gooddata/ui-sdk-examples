@@ -1,6 +1,6 @@
 # Vue.js + GoodData.UI
 
-This is Vue.js boilerplate with GoodData.UI. The tool library [veaury](https://github.com/devilwjp/veaury) was used to render React components inside a Vue.js project.
+This is Vue.js boilerplate with [GoodData.UI](https://sdk.gooddata.com/gooddata-ui/docs/about_gooddataui.html). The tool library [veaury](https://github.com/devilwjp/veaury) was used to render React components inside a Vue.js project.
 
 ![home](public/home.png)
 
