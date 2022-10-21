@@ -15,21 +15,17 @@ const Home = () => {
                 title="dashboard"
                 width="100%"
                 height="600"
-                src="https://demos.na.gooddata.com/dashboards/embedded/#/workspace/gf5ar7e02sth33atdbzpabhvbddaqva3/dashboard/aadPCE04gggj?showNavigation=false"
+                src="https://jirizajic.internal.gooddata.com/dashboards/embedded/#/workspace/tr6skk5lty9d9qcbyg7imneoyew4rwbr/dashboard/afmNlKnLc52i?showNavigation=false"
             />
-            <Dashboard dashboard={"aadPCE04gggj"} />
-            <Headline primaryMeasure={Md.PageViews} />
+            <Dashboard dashboard={"afmNlKnLc52i"} />
+            <Headline primaryMeasure={Md.Revenue} />
             <div style={{ height: 400 }}>
-                <InsightView insight={Md.Insights.PageViewsByCategoryByBrand} />
+                <InsightView insight={Md.Insights.RevenueByProducts} />
             </div>
             <div style={{ height: 400 }}>
-                <ColumnChart
-                    measures={[Md.PageViews]}
-                    viewBy={Md.ProductCategory}
-                    stackBy={Md.ProductBrand}
-                />
+                <ColumnChart measures={[Md.Revenue]} viewBy={Md.ProductCategory} stackBy={Md.ProductName} />
             </div>
-            <Execute seriesBy={[Md.PageViews]} slicesBy={[Md.ProductCategory]}>
+            <Execute seriesBy={[Md.Revenue]} slicesBy={[Md.ProductCategory]}>
                 {CustomBarChart}
             </Execute>
         </Page>
