@@ -1507,6 +1507,26 @@
     tslib "^2.0.0"
     uuid "^8.3.2"
 
+"@gooddata/sdk-backend-bear@^8.11.0":
+  version "8.11.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/sdk-backend-bear/-/sdk-backend-bear-8.11.0.tgz#b81a0f42b55a5b04bffd445b3825ff890010c781"
+  integrity sha512-XEzfWVZia5+x7gNQkutRkJXgfO7ZKxtxeyP2SnNS2ep3cWz2Yzsaccf6HNvmPRm6dEs8Qf5ZaHTGIOfm+vaDxw==
+  dependencies:
+    "@gooddata/api-client-bear" "^8.11.0"
+    "@gooddata/api-model-bear" "^8.11.0"
+    "@gooddata/sdk-backend-base" "^8.11.0"
+    "@gooddata/sdk-backend-spi" "^8.11.0"
+    "@gooddata/sdk-embedding" "^8.11.0"
+    "@gooddata/sdk-model" "^8.11.0"
+    date-fns "^2.22.1"
+    http-status-codes "^2.1.4"
+    json-stable-stringify "^1.0.1"
+    lodash "^4.17.19"
+    spark-md5 "^3.0.0"
+    ts-invariant "^0.7.3"
+    tslib "^2.0.0"
+    uuid "^8.3.2"
+
 "@gooddata/sdk-backend-spi@^8.11.0":
   version "8.11.0"
   resolved "https://registry.yarnpkg.com/@gooddata/sdk-backend-spi/-/sdk-backend-spi-8.11.0.tgz#5260653379ce1e81e873b226927a886b49f1a05d"

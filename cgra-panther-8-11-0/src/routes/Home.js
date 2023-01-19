@@ -1,13 +1,25 @@
 import React from "react";
+import { Headline } from "@gooddata/sdk-ui-charts";
+import { newMeasure, idRef } from "@gooddata/sdk-model";
+import tigerFactory, { TigerTokenAuthProvider } from "@gooddata/sdk-backend-tiger";
 
 import Page from "../components/Page";
-// import * as Md from "../md/full";
-// import CustomBarChart from "../components/CustomBarChart";
 
 const Home = () => {
+    const backend = tigerFactory({
+        hostname: "https://jirizajic.demo.cloud.gooddata.com/"
+    }).withAuthentication(
+        new TigerTokenAuthProvider(process.env.REACT_APP_DEV_TIGER_API_TOKEN),
+    );
+    const measure = newMeasure(idRef("of_orders", "measure"));
+
     return (
         <Page>
-            <p>Start by editing Home.js…</p>
+            <Headline
+                backend={backend}
+                workspace="ecommerce-parent"
+                primaryMeasure={measure}
+            />
         </Page>
     );
 };
