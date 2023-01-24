@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-/* THIS FILE WAS AUTO-GENERATED USING CATALOG EXPORTER; YOU SHOULD NOT EDIT THIS FILE; GENERATE TIME: 2023-01-13T01:07:33.972Z; */
+/* THIS FILE WAS AUTO-GENERATED USING CATALOG EXPORTER; YOU SHOULD NOT EDIT THIS FILE; GENERATE TIME: 2023-01-24T02:33:12.599Z; */
 // @ts-ignore ignore unused imports here if they happen (e.g. when there is no measure in the workspace)
 import { newAttribute, newMeasure, idRef } from "@gooddata/sdk-model";
 /**
@@ -10,16 +10,16 @@ import { newAttribute, newMeasure, idRef } from "@gooddata/sdk-model";
 
 export const CustomerCity = {
   /**
-   * Display Form Title: City pushpin
-   * Display Form ID: CITY_PUSHPIN
-   */
-  CityPushpin: newAttribute("CITY_PUSHPIN")
-  /**
    * Display Form Title: Customer city
    * Display Form ID: CUSTOMER_CITY
    */
-  ,
   Default: newAttribute("CUSTOMER_CITY")
+  /**
+   * Display Form Title: City pushpin
+   * Display Form ID: CITY_PUSHPIN
+   */
+  ,
+  CityPushpin: newAttribute("CITY_PUSHPIN")
 };
 /**
  * Attribute Title: Customer country
@@ -40,16 +40,16 @@ export const CustomerEmail = newAttribute("CUSTOMER_EMAIL");
 
 export const CustomerId = {
   /**
-   * Display Form Title: Customer name
-   * Display Form ID: CUSTOMER_NAME
-   */
-  CustomerName: newAttribute("CUSTOMER_NAME")
-  /**
    * Display Form Title: Customer id
    * Display Form ID: CUSTOMER_ID
    */
-  ,
   Default: newAttribute("CUSTOMER_ID")
+  /**
+   * Display Form Title: Customer name
+   * Display Form ID: CUSTOMER_NAME
+   */
+  ,
+  CustomerName: newAttribute("CUSTOMER_NAME")
 };
 /**
  * Attribute Title: Customer state
@@ -106,16 +106,16 @@ export const ProductCategory = newAttribute("PRODUCT_CATEGORY");
 
 export const ProductId = {
   /**
-   * Display Form Title: Product id image web
-   * Display Form ID: PRODUCT_ID_IMAGE_WEB
-   */
-  ImageWeb: newAttribute("PRODUCT_ID_IMAGE_WEB")
-  /**
    * Display Form Title: Product id
    * Display Form ID: PRODUCT_ID
    */
-  ,
   Default: newAttribute("PRODUCT_ID")
+  /**
+   * Display Form Title: Product id image web
+   * Display Form ID: PRODUCT_ID_IMAGE_WEB
+   */
+  ,
+  ImageWeb: newAttribute("PRODUCT_ID_IMAGE_WEB")
   /**
    * Display Form Title: Product name
    * Display Form ID: PRODUCT_NAME
@@ -844,110 +844,215 @@ export const ReturnUnitQuantity = {
   Runsum: newMeasure(idRef("RETURN_UNIT_QUANTITY", "fact"), m => m.aggregation("runsum"))
 };
 /**
- * Attribute Title: DATE - Quarter of Year
- * Attribute ID: DATE.quarterOfYear
+ * Attribute Title: Inventory month - Quarter of Year
+ * Attribute ID: INVENTORY_MONTH.quarterOfYear
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEQuarterOfYear = newAttribute("DATE.quarterOfYear");
+export const InventoryMonthQuarterOfYear = newAttribute("INVENTORY_MONTH.quarterOfYear");
 /**
- * Attribute Title: DATE - Month of Year
- * Attribute ID: DATE.monthOfYear
+ * Attribute Title: Inventory month - Month of Year
+ * Attribute ID: INVENTORY_MONTH.monthOfYear
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEMonthOfYear = newAttribute("DATE.monthOfYear");
+export const InventoryMonthMonthOfYear = newAttribute("INVENTORY_MONTH.monthOfYear");
 /**
- * Attribute Title: DATE - Week of Year
- * Attribute ID: DATE.weekOfYear
+ * Attribute Title: Inventory month - Week of Year
+ * Attribute ID: INVENTORY_MONTH.weekOfYear
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEWeekOfYear = newAttribute("DATE.weekOfYear");
+export const InventoryMonthWeekOfYear = newAttribute("INVENTORY_MONTH.weekOfYear");
 /**
- * Attribute Title: DATE - Day of Year
- * Attribute ID: DATE.dayOfYear
+ * Attribute Title: Inventory month - Day of Year
+ * Attribute ID: INVENTORY_MONTH.dayOfYear
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEDayOfYear = newAttribute("DATE.dayOfYear");
+export const InventoryMonthDayOfYear = newAttribute("INVENTORY_MONTH.dayOfYear");
 /**
- * Attribute Title: DATE - Day of Month
- * Attribute ID: DATE.dayOfMonth
+ * Attribute Title: Inventory month - Day of Month
+ * Attribute ID: INVENTORY_MONTH.dayOfMonth
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEDayOfMonth = newAttribute("DATE.dayOfMonth");
+export const InventoryMonthDayOfMonth = newAttribute("INVENTORY_MONTH.dayOfMonth");
 /**
- * Attribute Title: DATE - Day of Week
- * Attribute ID: DATE.dayOfWeek
+ * Attribute Title: Inventory month - Day of Week
+ * Attribute ID: INVENTORY_MONTH.dayOfWeek
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEDayOfWeek = newAttribute("DATE.dayOfWeek");
+export const InventoryMonthDayOfWeek = newAttribute("INVENTORY_MONTH.dayOfWeek");
 /**
- * Attribute Title: DATE - Hour of Day
- * Attribute ID: DATE.hourOfDay
+ * Attribute Title: Inventory month - Hour of Day
+ * Attribute ID: INVENTORY_MONTH.hourOfDay
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEHourOfDay = newAttribute("DATE.hourOfDay");
+export const InventoryMonthHourOfDay = newAttribute("INVENTORY_MONTH.hourOfDay");
 /**
- * Attribute Title: DATE - Minute of Hour
- * Attribute ID: DATE.minuteOfHour
+ * Attribute Title: Inventory month - Minute of Hour
+ * Attribute ID: INVENTORY_MONTH.minuteOfHour
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEMinuteOfHour = newAttribute("DATE.minuteOfHour");
+export const InventoryMonthMinuteOfHour = newAttribute("INVENTORY_MONTH.minuteOfHour");
 /**
- * Attribute Title: DATE - Year
- * Attribute ID: DATE.year
+ * Attribute Title: Inventory month - Year
+ * Attribute ID: INVENTORY_MONTH.year
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEYear = newAttribute("DATE.year");
+export const InventoryMonthYear = newAttribute("INVENTORY_MONTH.year");
 /**
- * Attribute Title: DATE - Quarter/Year
- * Attribute ID: DATE.quarter
+ * Attribute Title: Inventory month - Quarter/Year
+ * Attribute ID: INVENTORY_MONTH.quarter
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEQuarterYear = newAttribute("DATE.quarter");
+export const InventoryMonthQuarterYear = newAttribute("INVENTORY_MONTH.quarter");
 /**
- * Attribute Title: DATE - Month/Year
- * Attribute ID: DATE.month
+ * Attribute Title: Inventory month - Month/Year
+ * Attribute ID: INVENTORY_MONTH.month
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEMonthYear = newAttribute("DATE.month");
+export const InventoryMonthMonthYear = newAttribute("INVENTORY_MONTH.month");
 /**
- * Attribute Title: DATE - Week/Year
- * Attribute ID: DATE.week
+ * Attribute Title: Inventory month - Week/Year
+ * Attribute ID: INVENTORY_MONTH.week
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEWeekYear = newAttribute("DATE.week");
+export const InventoryMonthWeekYear = newAttribute("INVENTORY_MONTH.week");
 /**
- * Attribute Title: DATE - Date
- * Attribute ID: DATE.day
+ * Attribute Title: Inventory month - Date
+ * Attribute ID: INVENTORY_MONTH.day
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEDate = newAttribute("DATE.day");
+export const InventoryMonthDate = newAttribute("INVENTORY_MONTH.day");
 /**
- * Attribute Title: DATE - Hour
- * Attribute ID: DATE.hour
+ * Attribute Title: Inventory month - Hour
+ * Attribute ID: INVENTORY_MONTH.hour
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEHour = newAttribute("DATE.hour");
+export const InventoryMonthHour = newAttribute("INVENTORY_MONTH.hour");
 /**
- * Attribute Title: DATE - Minute
- * Attribute ID: DATE.minute
+ * Attribute Title: Inventory month - Minute
+ * Attribute ID: INVENTORY_MONTH.minute
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const DATEMinute = newAttribute("DATE.minute");
+export const InventoryMonthMinute = newAttribute("INVENTORY_MONTH.minute");
+/**
+ * Attribute Title: Order date - Quarter of Year
+ * Attribute ID: ORDER_DATE.quarterOfYear
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateQuarterOfYear = newAttribute("ORDER_DATE.quarterOfYear");
+/**
+ * Attribute Title: Order date - Month of Year
+ * Attribute ID: ORDER_DATE.monthOfYear
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateMonthOfYear = newAttribute("ORDER_DATE.monthOfYear");
+/**
+ * Attribute Title: Order date - Week of Year
+ * Attribute ID: ORDER_DATE.weekOfYear
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateWeekOfYear = newAttribute("ORDER_DATE.weekOfYear");
+/**
+ * Attribute Title: Order date - Day of Year
+ * Attribute ID: ORDER_DATE.dayOfYear
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateDayOfYear = newAttribute("ORDER_DATE.dayOfYear");
+/**
+ * Attribute Title: Order date - Day of Month
+ * Attribute ID: ORDER_DATE.dayOfMonth
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateDayOfMonth = newAttribute("ORDER_DATE.dayOfMonth");
+/**
+ * Attribute Title: Order date - Day of Week
+ * Attribute ID: ORDER_DATE.dayOfWeek
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateDayOfWeek = newAttribute("ORDER_DATE.dayOfWeek");
+/**
+ * Attribute Title: Order date - Hour of Day
+ * Attribute ID: ORDER_DATE.hourOfDay
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateHourOfDay = newAttribute("ORDER_DATE.hourOfDay");
+/**
+ * Attribute Title: Order date - Minute of Hour
+ * Attribute ID: ORDER_DATE.minuteOfHour
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateMinuteOfHour = newAttribute("ORDER_DATE.minuteOfHour");
+/**
+ * Attribute Title: Order date - Year
+ * Attribute ID: ORDER_DATE.year
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateYear = newAttribute("ORDER_DATE.year");
+/**
+ * Attribute Title: Order date - Quarter/Year
+ * Attribute ID: ORDER_DATE.quarter
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateQuarterYear = newAttribute("ORDER_DATE.quarter");
+/**
+ * Attribute Title: Order date - Month/Year
+ * Attribute ID: ORDER_DATE.month
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateMonthYear = newAttribute("ORDER_DATE.month");
+/**
+ * Attribute Title: Order date - Week/Year
+ * Attribute ID: ORDER_DATE.week
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateWeekYear = newAttribute("ORDER_DATE.week");
+/**
+ * Attribute Title: Order date - Date
+ * Attribute ID: ORDER_DATE.day
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateDate = newAttribute("ORDER_DATE.day");
+/**
+ * Attribute Title: Order date - Hour
+ * Attribute ID: ORDER_DATE.hour
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateHour = newAttribute("ORDER_DATE.hour");
+/**
+ * Attribute Title: Order date - Minute
+ * Attribute ID: ORDER_DATE.minute
+ * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
+ */
+
+export const OrderDateMinute = newAttribute("ORDER_DATE.minute");
 /**
  * Attribute Title: Customer created date - Quarter of Year
  * Attribute ID: CUSTOMER_CREATED_DATE.quarterOfYear
@@ -1159,449 +1264,578 @@ export const ReturnDateHour = newAttribute("RETURN_DATE.hour");
 
 export const ReturnDateMinute = newAttribute("RETURN_DATE.minute");
 /**
- * Attribute Title: Order date - Quarter of Year
- * Attribute ID: ORDER_DATE.quarterOfYear
+ * Attribute Title: DATE - Quarter of Year
+ * Attribute ID: DATE.quarterOfYear
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateQuarterOfYear = newAttribute("ORDER_DATE.quarterOfYear");
+export const DATEQuarterOfYear = newAttribute("DATE.quarterOfYear");
 /**
- * Attribute Title: Order date - Month of Year
- * Attribute ID: ORDER_DATE.monthOfYear
+ * Attribute Title: DATE - Month of Year
+ * Attribute ID: DATE.monthOfYear
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateMonthOfYear = newAttribute("ORDER_DATE.monthOfYear");
+export const DATEMonthOfYear = newAttribute("DATE.monthOfYear");
 /**
- * Attribute Title: Order date - Week of Year
- * Attribute ID: ORDER_DATE.weekOfYear
+ * Attribute Title: DATE - Week of Year
+ * Attribute ID: DATE.weekOfYear
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateWeekOfYear = newAttribute("ORDER_DATE.weekOfYear");
+export const DATEWeekOfYear = newAttribute("DATE.weekOfYear");
 /**
- * Attribute Title: Order date - Day of Year
- * Attribute ID: ORDER_DATE.dayOfYear
+ * Attribute Title: DATE - Day of Year
+ * Attribute ID: DATE.dayOfYear
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateDayOfYear = newAttribute("ORDER_DATE.dayOfYear");
+export const DATEDayOfYear = newAttribute("DATE.dayOfYear");
 /**
- * Attribute Title: Order date - Day of Month
- * Attribute ID: ORDER_DATE.dayOfMonth
+ * Attribute Title: DATE - Day of Month
+ * Attribute ID: DATE.dayOfMonth
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateDayOfMonth = newAttribute("ORDER_DATE.dayOfMonth");
+export const DATEDayOfMonth = newAttribute("DATE.dayOfMonth");
 /**
- * Attribute Title: Order date - Day of Week
- * Attribute ID: ORDER_DATE.dayOfWeek
+ * Attribute Title: DATE - Day of Week
+ * Attribute ID: DATE.dayOfWeek
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateDayOfWeek = newAttribute("ORDER_DATE.dayOfWeek");
+export const DATEDayOfWeek = newAttribute("DATE.dayOfWeek");
 /**
- * Attribute Title: Order date - Hour of Day
- * Attribute ID: ORDER_DATE.hourOfDay
+ * Attribute Title: DATE - Hour of Day
+ * Attribute ID: DATE.hourOfDay
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateHourOfDay = newAttribute("ORDER_DATE.hourOfDay");
+export const DATEHourOfDay = newAttribute("DATE.hourOfDay");
 /**
- * Attribute Title: Order date - Minute of Hour
- * Attribute ID: ORDER_DATE.minuteOfHour
+ * Attribute Title: DATE - Minute of Hour
+ * Attribute ID: DATE.minuteOfHour
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateMinuteOfHour = newAttribute("ORDER_DATE.minuteOfHour");
+export const DATEMinuteOfHour = newAttribute("DATE.minuteOfHour");
 /**
- * Attribute Title: Order date - Year
- * Attribute ID: ORDER_DATE.year
+ * Attribute Title: DATE - Year
+ * Attribute ID: DATE.year
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateYear = newAttribute("ORDER_DATE.year");
+export const DATEYear = newAttribute("DATE.year");
 /**
- * Attribute Title: Order date - Quarter/Year
- * Attribute ID: ORDER_DATE.quarter
+ * Attribute Title: DATE - Quarter/Year
+ * Attribute ID: DATE.quarter
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateQuarterYear = newAttribute("ORDER_DATE.quarter");
+export const DATEQuarterYear = newAttribute("DATE.quarter");
 /**
- * Attribute Title: Order date - Month/Year
- * Attribute ID: ORDER_DATE.month
+ * Attribute Title: DATE - Month/Year
+ * Attribute ID: DATE.month
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateMonthYear = newAttribute("ORDER_DATE.month");
+export const DATEMonthYear = newAttribute("DATE.month");
 /**
- * Attribute Title: Order date - Week/Year
- * Attribute ID: ORDER_DATE.week
+ * Attribute Title: DATE - Week/Year
+ * Attribute ID: DATE.week
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateWeekYear = newAttribute("ORDER_DATE.week");
+export const DATEWeekYear = newAttribute("DATE.week");
 /**
- * Attribute Title: Order date - Date
- * Attribute ID: ORDER_DATE.day
+ * Attribute Title: DATE - Date
+ * Attribute ID: DATE.day
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateDate = newAttribute("ORDER_DATE.day");
+export const DATEDate = newAttribute("DATE.day");
 /**
- * Attribute Title: Order date - Hour
- * Attribute ID: ORDER_DATE.hour
+ * Attribute Title: DATE - Hour
+ * Attribute ID: DATE.hour
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateHour = newAttribute("ORDER_DATE.hour");
+export const DATEHour = newAttribute("DATE.hour");
 /**
- * Attribute Title: Order date - Minute
- * Attribute ID: ORDER_DATE.minute
+ * Attribute Title: DATE - Minute
+ * Attribute ID: DATE.minute
  * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
  */
 
-export const OrderDateMinute = newAttribute("ORDER_DATE.minute");
-/**
- * Attribute Title: Inventory month - Quarter of Year
- * Attribute ID: INVENTORY_MONTH.quarterOfYear
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthQuarterOfYear = newAttribute("INVENTORY_MONTH.quarterOfYear");
-/**
- * Attribute Title: Inventory month - Month of Year
- * Attribute ID: INVENTORY_MONTH.monthOfYear
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthMonthOfYear = newAttribute("INVENTORY_MONTH.monthOfYear");
-/**
- * Attribute Title: Inventory month - Week of Year
- * Attribute ID: INVENTORY_MONTH.weekOfYear
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthWeekOfYear = newAttribute("INVENTORY_MONTH.weekOfYear");
-/**
- * Attribute Title: Inventory month - Day of Year
- * Attribute ID: INVENTORY_MONTH.dayOfYear
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthDayOfYear = newAttribute("INVENTORY_MONTH.dayOfYear");
-/**
- * Attribute Title: Inventory month - Day of Month
- * Attribute ID: INVENTORY_MONTH.dayOfMonth
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthDayOfMonth = newAttribute("INVENTORY_MONTH.dayOfMonth");
-/**
- * Attribute Title: Inventory month - Day of Week
- * Attribute ID: INVENTORY_MONTH.dayOfWeek
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthDayOfWeek = newAttribute("INVENTORY_MONTH.dayOfWeek");
-/**
- * Attribute Title: Inventory month - Hour of Day
- * Attribute ID: INVENTORY_MONTH.hourOfDay
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthHourOfDay = newAttribute("INVENTORY_MONTH.hourOfDay");
-/**
- * Attribute Title: Inventory month - Minute of Hour
- * Attribute ID: INVENTORY_MONTH.minuteOfHour
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthMinuteOfHour = newAttribute("INVENTORY_MONTH.minuteOfHour");
-/**
- * Attribute Title: Inventory month - Year
- * Attribute ID: INVENTORY_MONTH.year
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthYear = newAttribute("INVENTORY_MONTH.year");
-/**
- * Attribute Title: Inventory month - Quarter/Year
- * Attribute ID: INVENTORY_MONTH.quarter
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthQuarterYear = newAttribute("INVENTORY_MONTH.quarter");
-/**
- * Attribute Title: Inventory month - Month/Year
- * Attribute ID: INVENTORY_MONTH.month
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthMonthYear = newAttribute("INVENTORY_MONTH.month");
-/**
- * Attribute Title: Inventory month - Week/Year
- * Attribute ID: INVENTORY_MONTH.week
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthWeekYear = newAttribute("INVENTORY_MONTH.week");
-/**
- * Attribute Title: Inventory month - Date
- * Attribute ID: INVENTORY_MONTH.day
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthDate = newAttribute("INVENTORY_MONTH.day");
-/**
- * Attribute Title: Inventory month - Hour
- * Attribute ID: INVENTORY_MONTH.hour
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthHour = newAttribute("INVENTORY_MONTH.hour");
-/**
- * Attribute Title: Inventory month - Minute
- * Attribute ID: INVENTORY_MONTH.minute
- * @deprecated constants generated for date attributes are deprecated in favor of DateDatasets mapping
- */
-
-export const InventoryMonthMinute = newAttribute("INVENTORY_MONTH.minute");
+export const DATEMinute = newAttribute("DATE.minute");
 /** Available Date Data Sets */
 
 export const DateDatasets = {
   /**
-   * Date Data Set Title: DATE
-   * Date Data Set ID: DATE
+   * Date Data Set Title: Inventory month
+   * Date Data Set ID: INVENTORY_MONTH
    */
-  DATE: {
-    ref: idRef("DATE", "dataSet"),
-    identifier: "DATE"
+  InventoryMonth: {
+    ref: idRef("INVENTORY_MONTH", "dataSet"),
+    identifier: "INVENTORY_MONTH"
     /**
-     * Date Attribute: DATE - Quarter of Year
-     * Date Attribute ID: DATE.quarterOfYear
+     * Date Attribute: Inventory month - Quarter of Year
+     * Date Attribute ID: INVENTORY_MONTH.quarterOfYear
      */
     ,
-    DATEQuarterOfYear: {
-      ref: idRef("DATE.quarterOfYear", "attribute"),
-      identifier: "DATE.quarterOfYear"
+    InventoryMonthQuarterOfYear: {
+      ref: idRef("INVENTORY_MONTH.quarterOfYear", "attribute"),
+      identifier: "INVENTORY_MONTH.quarterOfYear"
       /**
-       * Display Form Title: DATE - Quarter of Year
-       * Display Form ID: DATE.quarterOfYear
+       * Display Form Title: Inventory month - Quarter of Year
+       * Display Form ID: INVENTORY_MONTH.quarterOfYear
        */
       ,
-      Default: newAttribute("DATE.quarterOfYear")
+      Default: newAttribute("INVENTORY_MONTH.quarterOfYear")
     }
     /**
-     * Date Attribute: DATE - Month of Year
-     * Date Attribute ID: DATE.monthOfYear
+     * Date Attribute: Inventory month - Month of Year
+     * Date Attribute ID: INVENTORY_MONTH.monthOfYear
      */
     ,
-    DATEMonthOfYear: {
-      ref: idRef("DATE.monthOfYear", "attribute"),
-      identifier: "DATE.monthOfYear"
+    InventoryMonthMonthOfYear: {
+      ref: idRef("INVENTORY_MONTH.monthOfYear", "attribute"),
+      identifier: "INVENTORY_MONTH.monthOfYear"
       /**
-       * Display Form Title: DATE - Month of Year
-       * Display Form ID: DATE.monthOfYear
+       * Display Form Title: Inventory month - Month of Year
+       * Display Form ID: INVENTORY_MONTH.monthOfYear
        */
       ,
-      Default: newAttribute("DATE.monthOfYear")
+      Default: newAttribute("INVENTORY_MONTH.monthOfYear")
     }
     /**
-     * Date Attribute: DATE - Week of Year
-     * Date Attribute ID: DATE.weekOfYear
+     * Date Attribute: Inventory month - Week of Year
+     * Date Attribute ID: INVENTORY_MONTH.weekOfYear
      */
     ,
-    DATEWeekOfYear: {
-      ref: idRef("DATE.weekOfYear", "attribute"),
-      identifier: "DATE.weekOfYear"
+    InventoryMonthWeekOfYear: {
+      ref: idRef("INVENTORY_MONTH.weekOfYear", "attribute"),
+      identifier: "INVENTORY_MONTH.weekOfYear"
       /**
-       * Display Form Title: DATE - Week of Year
-       * Display Form ID: DATE.weekOfYear
+       * Display Form Title: Inventory month - Week of Year
+       * Display Form ID: INVENTORY_MONTH.weekOfYear
        */
       ,
-      Default: newAttribute("DATE.weekOfYear")
+      Default: newAttribute("INVENTORY_MONTH.weekOfYear")
     }
     /**
-     * Date Attribute: DATE - Day of Year
-     * Date Attribute ID: DATE.dayOfYear
+     * Date Attribute: Inventory month - Day of Year
+     * Date Attribute ID: INVENTORY_MONTH.dayOfYear
      */
     ,
-    DATEDayOfYear: {
-      ref: idRef("DATE.dayOfYear", "attribute"),
-      identifier: "DATE.dayOfYear"
+    InventoryMonthDayOfYear: {
+      ref: idRef("INVENTORY_MONTH.dayOfYear", "attribute"),
+      identifier: "INVENTORY_MONTH.dayOfYear"
       /**
-       * Display Form Title: DATE - Day of Year
-       * Display Form ID: DATE.dayOfYear
+       * Display Form Title: Inventory month - Day of Year
+       * Display Form ID: INVENTORY_MONTH.dayOfYear
        */
       ,
-      Default: newAttribute("DATE.dayOfYear")
+      Default: newAttribute("INVENTORY_MONTH.dayOfYear")
     }
     /**
-     * Date Attribute: DATE - Day of Month
-     * Date Attribute ID: DATE.dayOfMonth
+     * Date Attribute: Inventory month - Day of Month
+     * Date Attribute ID: INVENTORY_MONTH.dayOfMonth
      */
     ,
-    DATEDayOfMonth: {
-      ref: idRef("DATE.dayOfMonth", "attribute"),
-      identifier: "DATE.dayOfMonth"
+    InventoryMonthDayOfMonth: {
+      ref: idRef("INVENTORY_MONTH.dayOfMonth", "attribute"),
+      identifier: "INVENTORY_MONTH.dayOfMonth"
       /**
-       * Display Form Title: DATE - Day of Month
-       * Display Form ID: DATE.dayOfMonth
+       * Display Form Title: Inventory month - Day of Month
+       * Display Form ID: INVENTORY_MONTH.dayOfMonth
        */
       ,
-      Default: newAttribute("DATE.dayOfMonth")
+      Default: newAttribute("INVENTORY_MONTH.dayOfMonth")
     }
     /**
-     * Date Attribute: DATE - Day of Week
-     * Date Attribute ID: DATE.dayOfWeek
+     * Date Attribute: Inventory month - Day of Week
+     * Date Attribute ID: INVENTORY_MONTH.dayOfWeek
      */
     ,
-    DATEDayOfWeek: {
-      ref: idRef("DATE.dayOfWeek", "attribute"),
-      identifier: "DATE.dayOfWeek"
+    InventoryMonthDayOfWeek: {
+      ref: idRef("INVENTORY_MONTH.dayOfWeek", "attribute"),
+      identifier: "INVENTORY_MONTH.dayOfWeek"
       /**
-       * Display Form Title: DATE - Day of Week
-       * Display Form ID: DATE.dayOfWeek
+       * Display Form Title: Inventory month - Day of Week
+       * Display Form ID: INVENTORY_MONTH.dayOfWeek
        */
       ,
-      Default: newAttribute("DATE.dayOfWeek")
+      Default: newAttribute("INVENTORY_MONTH.dayOfWeek")
     }
     /**
-     * Date Attribute: DATE - Hour of Day
-     * Date Attribute ID: DATE.hourOfDay
+     * Date Attribute: Inventory month - Hour of Day
+     * Date Attribute ID: INVENTORY_MONTH.hourOfDay
      */
     ,
-    DATEHourOfDay: {
-      ref: idRef("DATE.hourOfDay", "attribute"),
-      identifier: "DATE.hourOfDay"
+    InventoryMonthHourOfDay: {
+      ref: idRef("INVENTORY_MONTH.hourOfDay", "attribute"),
+      identifier: "INVENTORY_MONTH.hourOfDay"
       /**
-       * Display Form Title: DATE - Hour of Day
-       * Display Form ID: DATE.hourOfDay
+       * Display Form Title: Inventory month - Hour of Day
+       * Display Form ID: INVENTORY_MONTH.hourOfDay
        */
       ,
-      Default: newAttribute("DATE.hourOfDay")
+      Default: newAttribute("INVENTORY_MONTH.hourOfDay")
     }
     /**
-     * Date Attribute: DATE - Minute of Hour
-     * Date Attribute ID: DATE.minuteOfHour
+     * Date Attribute: Inventory month - Minute of Hour
+     * Date Attribute ID: INVENTORY_MONTH.minuteOfHour
      */
     ,
-    DATEMinuteOfHour: {
-      ref: idRef("DATE.minuteOfHour", "attribute"),
-      identifier: "DATE.minuteOfHour"
+    InventoryMonthMinuteOfHour: {
+      ref: idRef("INVENTORY_MONTH.minuteOfHour", "attribute"),
+      identifier: "INVENTORY_MONTH.minuteOfHour"
       /**
-       * Display Form Title: DATE - Minute of Hour
-       * Display Form ID: DATE.minuteOfHour
+       * Display Form Title: Inventory month - Minute of Hour
+       * Display Form ID: INVENTORY_MONTH.minuteOfHour
        */
       ,
-      Default: newAttribute("DATE.minuteOfHour")
+      Default: newAttribute("INVENTORY_MONTH.minuteOfHour")
     }
     /**
-     * Date Attribute: DATE - Year
-     * Date Attribute ID: DATE.year
+     * Date Attribute: Inventory month - Year
+     * Date Attribute ID: INVENTORY_MONTH.year
      */
     ,
-    DATEYear: {
-      ref: idRef("DATE.year", "attribute"),
-      identifier: "DATE.year"
+    InventoryMonthYear: {
+      ref: idRef("INVENTORY_MONTH.year", "attribute"),
+      identifier: "INVENTORY_MONTH.year"
       /**
-       * Display Form Title: DATE - Year
-       * Display Form ID: DATE.year
+       * Display Form Title: Inventory month - Year
+       * Display Form ID: INVENTORY_MONTH.year
        */
       ,
-      Default: newAttribute("DATE.year")
+      Default: newAttribute("INVENTORY_MONTH.year")
     }
     /**
-     * Date Attribute: DATE - Quarter/Year
-     * Date Attribute ID: DATE.quarter
+     * Date Attribute: Inventory month - Quarter/Year
+     * Date Attribute ID: INVENTORY_MONTH.quarter
      */
     ,
-    DATEQuarterYear: {
-      ref: idRef("DATE.quarter", "attribute"),
-      identifier: "DATE.quarter"
+    InventoryMonthQuarterYear: {
+      ref: idRef("INVENTORY_MONTH.quarter", "attribute"),
+      identifier: "INVENTORY_MONTH.quarter"
       /**
-       * Display Form Title: DATE - Quarter/Year
-       * Display Form ID: DATE.quarter
+       * Display Form Title: Inventory month - Quarter/Year
+       * Display Form ID: INVENTORY_MONTH.quarter
        */
       ,
-      Default: newAttribute("DATE.quarter")
+      Default: newAttribute("INVENTORY_MONTH.quarter")
     }
     /**
-     * Date Attribute: DATE - Month/Year
-     * Date Attribute ID: DATE.month
+     * Date Attribute: Inventory month - Month/Year
+     * Date Attribute ID: INVENTORY_MONTH.month
      */
     ,
-    DATEMonthYear: {
-      ref: idRef("DATE.month", "attribute"),
-      identifier: "DATE.month"
+    InventoryMonthMonthYear: {
+      ref: idRef("INVENTORY_MONTH.month", "attribute"),
+      identifier: "INVENTORY_MONTH.month"
       /**
-       * Display Form Title: DATE - Month/Year
-       * Display Form ID: DATE.month
+       * Display Form Title: Inventory month - Month/Year
+       * Display Form ID: INVENTORY_MONTH.month
        */
       ,
-      Default: newAttribute("DATE.month")
+      Default: newAttribute("INVENTORY_MONTH.month")
     }
     /**
-     * Date Attribute: DATE - Week/Year
-     * Date Attribute ID: DATE.week
+     * Date Attribute: Inventory month - Week/Year
+     * Date Attribute ID: INVENTORY_MONTH.week
      */
     ,
-    DATEWeekYear: {
-      ref: idRef("DATE.week", "attribute"),
-      identifier: "DATE.week"
+    InventoryMonthWeekYear: {
+      ref: idRef("INVENTORY_MONTH.week", "attribute"),
+      identifier: "INVENTORY_MONTH.week"
       /**
-       * Display Form Title: DATE - Week/Year
-       * Display Form ID: DATE.week
+       * Display Form Title: Inventory month - Week/Year
+       * Display Form ID: INVENTORY_MONTH.week
        */
       ,
-      Default: newAttribute("DATE.week")
+      Default: newAttribute("INVENTORY_MONTH.week")
     }
     /**
-     * Date Attribute: DATE - Date
-     * Date Attribute ID: DATE.day
+     * Date Attribute: Inventory month - Date
+     * Date Attribute ID: INVENTORY_MONTH.day
      */
     ,
-    DATEDate: {
-      ref: idRef("DATE.day", "attribute"),
-      identifier: "DATE.day"
+    InventoryMonthDate: {
+      ref: idRef("INVENTORY_MONTH.day", "attribute"),
+      identifier: "INVENTORY_MONTH.day"
       /**
-       * Display Form Title: DATE - Date
-       * Display Form ID: DATE.day
+       * Display Form Title: Inventory month - Date
+       * Display Form ID: INVENTORY_MONTH.day
        */
       ,
-      Default: newAttribute("DATE.day")
+      Default: newAttribute("INVENTORY_MONTH.day")
     }
     /**
-     * Date Attribute: DATE - Hour
-     * Date Attribute ID: DATE.hour
+     * Date Attribute: Inventory month - Hour
+     * Date Attribute ID: INVENTORY_MONTH.hour
      */
     ,
-    DATEHour: {
-      ref: idRef("DATE.hour", "attribute"),
-      identifier: "DATE.hour"
+    InventoryMonthHour: {
+      ref: idRef("INVENTORY_MONTH.hour", "attribute"),
+      identifier: "INVENTORY_MONTH.hour"
       /**
-       * Display Form Title: DATE - Hour
-       * Display Form ID: DATE.hour
+       * Display Form Title: Inventory month - Hour
+       * Display Form ID: INVENTORY_MONTH.hour
        */
       ,
-      Default: newAttribute("DATE.hour")
+      Default: newAttribute("INVENTORY_MONTH.hour")
     }
     /**
-     * Date Attribute: DATE - Minute
-     * Date Attribute ID: DATE.minute
+     * Date Attribute: Inventory month - Minute
+     * Date Attribute ID: INVENTORY_MONTH.minute
      */
     ,
-    DATEMinute: {
-      ref: idRef("DATE.minute", "attribute"),
-      identifier: "DATE.minute"
+    InventoryMonthMinute: {
+      ref: idRef("INVENTORY_MONTH.minute", "attribute"),
+      identifier: "INVENTORY_MONTH.minute"
       /**
-       * Display Form Title: DATE - Minute
-       * Display Form ID: DATE.minute
+       * Display Form Title: Inventory month - Minute
+       * Display Form ID: INVENTORY_MONTH.minute
        */
       ,
-      Default: newAttribute("DATE.minute")
+      Default: newAttribute("INVENTORY_MONTH.minute")
+    }
+  }
+  /**
+   * Date Data Set Title: Order date
+   * Date Data Set ID: ORDER_DATE
+   */
+  ,
+  OrderDate: {
+    ref: idRef("ORDER_DATE", "dataSet"),
+    identifier: "ORDER_DATE"
+    /**
+     * Date Attribute: Order date - Quarter of Year
+     * Date Attribute ID: ORDER_DATE.quarterOfYear
+     */
+    ,
+    OrderDateQuarterOfYear: {
+      ref: idRef("ORDER_DATE.quarterOfYear", "attribute"),
+      identifier: "ORDER_DATE.quarterOfYear"
+      /**
+       * Display Form Title: Order date - Quarter of Year
+       * Display Form ID: ORDER_DATE.quarterOfYear
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.quarterOfYear")
+    }
+    /**
+     * Date Attribute: Order date - Month of Year
+     * Date Attribute ID: ORDER_DATE.monthOfYear
+     */
+    ,
+    OrderDateMonthOfYear: {
+      ref: idRef("ORDER_DATE.monthOfYear", "attribute"),
+      identifier: "ORDER_DATE.monthOfYear"
+      /**
+       * Display Form Title: Order date - Month of Year
+       * Display Form ID: ORDER_DATE.monthOfYear
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.monthOfYear")
+    }
+    /**
+     * Date Attribute: Order date - Week of Year
+     * Date Attribute ID: ORDER_DATE.weekOfYear
+     */
+    ,
+    OrderDateWeekOfYear: {
+      ref: idRef("ORDER_DATE.weekOfYear", "attribute"),
+      identifier: "ORDER_DATE.weekOfYear"
+      /**
+       * Display Form Title: Order date - Week of Year
+       * Display Form ID: ORDER_DATE.weekOfYear
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.weekOfYear")
+    }
+    /**
+     * Date Attribute: Order date - Day of Year
+     * Date Attribute ID: ORDER_DATE.dayOfYear
+     */
+    ,
+    OrderDateDayOfYear: {
+      ref: idRef("ORDER_DATE.dayOfYear", "attribute"),
+      identifier: "ORDER_DATE.dayOfYear"
+      /**
+       * Display Form Title: Order date - Day of Year
+       * Display Form ID: ORDER_DATE.dayOfYear
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.dayOfYear")
+    }
+    /**
+     * Date Attribute: Order date - Day of Month
+     * Date Attribute ID: ORDER_DATE.dayOfMonth
+     */
+    ,
+    OrderDateDayOfMonth: {
+      ref: idRef("ORDER_DATE.dayOfMonth", "attribute"),
+      identifier: "ORDER_DATE.dayOfMonth"
+      /**
+       * Display Form Title: Order date - Day of Month
+       * Display Form ID: ORDER_DATE.dayOfMonth
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.dayOfMonth")
+    }
+    /**
+     * Date Attribute: Order date - Day of Week
+     * Date Attribute ID: ORDER_DATE.dayOfWeek
+     */
+    ,
+    OrderDateDayOfWeek: {
+      ref: idRef("ORDER_DATE.dayOfWeek", "attribute"),
+      identifier: "ORDER_DATE.dayOfWeek"
+      /**
+       * Display Form Title: Order date - Day of Week
+       * Display Form ID: ORDER_DATE.dayOfWeek
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.dayOfWeek")
+    }
+    /**
+     * Date Attribute: Order date - Hour of Day
+     * Date Attribute ID: ORDER_DATE.hourOfDay
+     */
+    ,
+    OrderDateHourOfDay: {
+      ref: idRef("ORDER_DATE.hourOfDay", "attribute"),
+      identifier: "ORDER_DATE.hourOfDay"
+      /**
+       * Display Form Title: Order date - Hour of Day
+       * Display Form ID: ORDER_DATE.hourOfDay
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.hourOfDay")
+    }
+    /**
+     * Date Attribute: Order date - Minute of Hour
+     * Date Attribute ID: ORDER_DATE.minuteOfHour
+     */
+    ,
+    OrderDateMinuteOfHour: {
+      ref: idRef("ORDER_DATE.minuteOfHour", "attribute"),
+      identifier: "ORDER_DATE.minuteOfHour"
+      /**
+       * Display Form Title: Order date - Minute of Hour
+       * Display Form ID: ORDER_DATE.minuteOfHour
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.minuteOfHour")
+    }
+    /**
+     * Date Attribute: Order date - Year
+     * Date Attribute ID: ORDER_DATE.year
+     */
+    ,
+    OrderDateYear: {
+      ref: idRef("ORDER_DATE.year", "attribute"),
+      identifier: "ORDER_DATE.year"
+      /**
+       * Display Form Title: Order date - Year
+       * Display Form ID: ORDER_DATE.year
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.year")
+    }
+    /**
+     * Date Attribute: Order date - Quarter/Year
+     * Date Attribute ID: ORDER_DATE.quarter
+     */
+    ,
+    OrderDateQuarterYear: {
+      ref: idRef("ORDER_DATE.quarter", "attribute"),
+      identifier: "ORDER_DATE.quarter"
+      /**
+       * Display Form Title: Order date - Quarter/Year
+       * Display Form ID: ORDER_DATE.quarter
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.quarter")
+    }
+    /**
+     * Date Attribute: Order date - Month/Year
+     * Date Attribute ID: ORDER_DATE.month
+     */
+    ,
+    OrderDateMonthYear: {
+      ref: idRef("ORDER_DATE.month", "attribute"),
+      identifier: "ORDER_DATE.month"
+      /**
+       * Display Form Title: Order date - Month/Year
+       * Display Form ID: ORDER_DATE.month
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.month")
+    }
+    /**
+     * Date Attribute: Order date - Week/Year
+     * Date Attribute ID: ORDER_DATE.week
+     */
+    ,
+    OrderDateWeekYear: {
+      ref: idRef("ORDER_DATE.week", "attribute"),
+      identifier: "ORDER_DATE.week"
+      /**
+       * Display Form Title: Order date - Week/Year
+       * Display Form ID: ORDER_DATE.week
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.week")
+    }
+    /**
+     * Date Attribute: Order date - Date
+     * Date Attribute ID: ORDER_DATE.day
+     */
+    ,
+    OrderDateDate: {
+      ref: idRef("ORDER_DATE.day", "attribute"),
+      identifier: "ORDER_DATE.day"
+      /**
+       * Display Form Title: Order date - Date
+       * Display Form ID: ORDER_DATE.day
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.day")
+    }
+    /**
+     * Date Attribute: Order date - Hour
+     * Date Attribute ID: ORDER_DATE.hour
+     */
+    ,
+    OrderDateHour: {
+      ref: idRef("ORDER_DATE.hour", "attribute"),
+      identifier: "ORDER_DATE.hour"
+      /**
+       * Display Form Title: Order date - Hour
+       * Display Form ID: ORDER_DATE.hour
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.hour")
+    }
+    /**
+     * Date Attribute: Order date - Minute
+     * Date Attribute ID: ORDER_DATE.minute
+     */
+    ,
+    OrderDateMinute: {
+      ref: idRef("ORDER_DATE.minute", "attribute"),
+      identifier: "ORDER_DATE.minute"
+      /**
+       * Display Form Title: Order date - Minute
+       * Display Form ID: ORDER_DATE.minute
+       */
+      ,
+      Default: newAttribute("ORDER_DATE.minute")
     }
   }
   /**
@@ -2073,471 +2307,237 @@ export const DateDatasets = {
     }
   }
   /**
-   * Date Data Set Title: Order date
-   * Date Data Set ID: ORDER_DATE
+   * Date Data Set Title: DATE
+   * Date Data Set ID: DATE
    */
   ,
-  OrderDate: {
-    ref: idRef("ORDER_DATE", "dataSet"),
-    identifier: "ORDER_DATE"
+  DATE: {
+    ref: idRef("DATE", "dataSet"),
+    identifier: "DATE"
     /**
-     * Date Attribute: Order date - Quarter of Year
-     * Date Attribute ID: ORDER_DATE.quarterOfYear
+     * Date Attribute: DATE - Quarter of Year
+     * Date Attribute ID: DATE.quarterOfYear
      */
     ,
-    OrderDateQuarterOfYear: {
-      ref: idRef("ORDER_DATE.quarterOfYear", "attribute"),
-      identifier: "ORDER_DATE.quarterOfYear"
+    DATEQuarterOfYear: {
+      ref: idRef("DATE.quarterOfYear", "attribute"),
+      identifier: "DATE.quarterOfYear"
       /**
-       * Display Form Title: Order date - Quarter of Year
-       * Display Form ID: ORDER_DATE.quarterOfYear
+       * Display Form Title: DATE - Quarter of Year
+       * Display Form ID: DATE.quarterOfYear
        */
       ,
-      Default: newAttribute("ORDER_DATE.quarterOfYear")
+      Default: newAttribute("DATE.quarterOfYear")
     }
     /**
-     * Date Attribute: Order date - Month of Year
-     * Date Attribute ID: ORDER_DATE.monthOfYear
+     * Date Attribute: DATE - Month of Year
+     * Date Attribute ID: DATE.monthOfYear
      */
     ,
-    OrderDateMonthOfYear: {
-      ref: idRef("ORDER_DATE.monthOfYear", "attribute"),
-      identifier: "ORDER_DATE.monthOfYear"
+    DATEMonthOfYear: {
+      ref: idRef("DATE.monthOfYear", "attribute"),
+      identifier: "DATE.monthOfYear"
       /**
-       * Display Form Title: Order date - Month of Year
-       * Display Form ID: ORDER_DATE.monthOfYear
+       * Display Form Title: DATE - Month of Year
+       * Display Form ID: DATE.monthOfYear
        */
       ,
-      Default: newAttribute("ORDER_DATE.monthOfYear")
+      Default: newAttribute("DATE.monthOfYear")
     }
     /**
-     * Date Attribute: Order date - Week of Year
-     * Date Attribute ID: ORDER_DATE.weekOfYear
+     * Date Attribute: DATE - Week of Year
+     * Date Attribute ID: DATE.weekOfYear
      */
     ,
-    OrderDateWeekOfYear: {
-      ref: idRef("ORDER_DATE.weekOfYear", "attribute"),
-      identifier: "ORDER_DATE.weekOfYear"
+    DATEWeekOfYear: {
+      ref: idRef("DATE.weekOfYear", "attribute"),
+      identifier: "DATE.weekOfYear"
       /**
-       * Display Form Title: Order date - Week of Year
-       * Display Form ID: ORDER_DATE.weekOfYear
+       * Display Form Title: DATE - Week of Year
+       * Display Form ID: DATE.weekOfYear
        */
       ,
-      Default: newAttribute("ORDER_DATE.weekOfYear")
+      Default: newAttribute("DATE.weekOfYear")
     }
     /**
-     * Date Attribute: Order date - Day of Year
-     * Date Attribute ID: ORDER_DATE.dayOfYear
+     * Date Attribute: DATE - Day of Year
+     * Date Attribute ID: DATE.dayOfYear
      */
     ,
-    OrderDateDayOfYear: {
-      ref: idRef("ORDER_DATE.dayOfYear", "attribute"),
-      identifier: "ORDER_DATE.dayOfYear"
+    DATEDayOfYear: {
+      ref: idRef("DATE.dayOfYear", "attribute"),
+      identifier: "DATE.dayOfYear"
       /**
-       * Display Form Title: Order date - Day of Year
-       * Display Form ID: ORDER_DATE.dayOfYear
+       * Display Form Title: DATE - Day of Year
+       * Display Form ID: DATE.dayOfYear
        */
       ,
-      Default: newAttribute("ORDER_DATE.dayOfYear")
+      Default: newAttribute("DATE.dayOfYear")
     }
     /**
-     * Date Attribute: Order date - Day of Month
-     * Date Attribute ID: ORDER_DATE.dayOfMonth
+     * Date Attribute: DATE - Day of Month
+     * Date Attribute ID: DATE.dayOfMonth
      */
     ,
-    OrderDateDayOfMonth: {
-      ref: idRef("ORDER_DATE.dayOfMonth", "attribute"),
-      identifier: "ORDER_DATE.dayOfMonth"
+    DATEDayOfMonth: {
+      ref: idRef("DATE.dayOfMonth", "attribute"),
+      identifier: "DATE.dayOfMonth"
       /**
-       * Display Form Title: Order date - Day of Month
-       * Display Form ID: ORDER_DATE.dayOfMonth
+       * Display Form Title: DATE - Day of Month
+       * Display Form ID: DATE.dayOfMonth
        */
       ,
-      Default: newAttribute("ORDER_DATE.dayOfMonth")
+      Default: newAttribute("DATE.dayOfMonth")
     }
     /**
-     * Date Attribute: Order date - Day of Week
-     * Date Attribute ID: ORDER_DATE.dayOfWeek
+     * Date Attribute: DATE - Day of Week
+     * Date Attribute ID: DATE.dayOfWeek
      */
     ,
-    OrderDateDayOfWeek: {
-      ref: idRef("ORDER_DATE.dayOfWeek", "attribute"),
-      identifier: "ORDER_DATE.dayOfWeek"
+    DATEDayOfWeek: {
+      ref: idRef("DATE.dayOfWeek", "attribute"),
+      identifier: "DATE.dayOfWeek"
       /**
-       * Display Form Title: Order date - Day of Week
-       * Display Form ID: ORDER_DATE.dayOfWeek
+       * Display Form Title: DATE - Day of Week
+       * Display Form ID: DATE.dayOfWeek
        */
       ,
-      Default: newAttribute("ORDER_DATE.dayOfWeek")
+      Default: newAttribute("DATE.dayOfWeek")
     }
     /**
-     * Date Attribute: Order date - Hour of Day
-     * Date Attribute ID: ORDER_DATE.hourOfDay
+     * Date Attribute: DATE - Hour of Day
+     * Date Attribute ID: DATE.hourOfDay
      */
     ,
-    OrderDateHourOfDay: {
-      ref: idRef("ORDER_DATE.hourOfDay", "attribute"),
-      identifier: "ORDER_DATE.hourOfDay"
+    DATEHourOfDay: {
+      ref: idRef("DATE.hourOfDay", "attribute"),
+      identifier: "DATE.hourOfDay"
       /**
-       * Display Form Title: Order date - Hour of Day
-       * Display Form ID: ORDER_DATE.hourOfDay
+       * Display Form Title: DATE - Hour of Day
+       * Display Form ID: DATE.hourOfDay
        */
       ,
-      Default: newAttribute("ORDER_DATE.hourOfDay")
+      Default: newAttribute("DATE.hourOfDay")
     }
     /**
-     * Date Attribute: Order date - Minute of Hour
-     * Date Attribute ID: ORDER_DATE.minuteOfHour
+     * Date Attribute: DATE - Minute of Hour
+     * Date Attribute ID: DATE.minuteOfHour
      */
     ,
-    OrderDateMinuteOfHour: {
-      ref: idRef("ORDER_DATE.minuteOfHour", "attribute"),
-      identifier: "ORDER_DATE.minuteOfHour"
+    DATEMinuteOfHour: {
+      ref: idRef("DATE.minuteOfHour", "attribute"),
+      identifier: "DATE.minuteOfHour"
       /**
-       * Display Form Title: Order date - Minute of Hour
-       * Display Form ID: ORDER_DATE.minuteOfHour
+       * Display Form Title: DATE - Minute of Hour
+       * Display Form ID: DATE.minuteOfHour
        */
       ,
-      Default: newAttribute("ORDER_DATE.minuteOfHour")
+      Default: newAttribute("DATE.minuteOfHour")
     }
     /**
-     * Date Attribute: Order date - Year
-     * Date Attribute ID: ORDER_DATE.year
+     * Date Attribute: DATE - Year
+     * Date Attribute ID: DATE.year
      */
     ,
-    OrderDateYear: {
-      ref: idRef("ORDER_DATE.year", "attribute"),
-      identifier: "ORDER_DATE.year"
+    DATEYear: {
+      ref: idRef("DATE.year", "attribute"),
+      identifier: "DATE.year"
       /**
-       * Display Form Title: Order date - Year
-       * Display Form ID: ORDER_DATE.year
+       * Display Form Title: DATE - Year
+       * Display Form ID: DATE.year
        */
       ,
-      Default: newAttribute("ORDER_DATE.year")
+      Default: newAttribute("DATE.year")
     }
     /**
-     * Date Attribute: Order date - Quarter/Year
-     * Date Attribute ID: ORDER_DATE.quarter
+     * Date Attribute: DATE - Quarter/Year
+     * Date Attribute ID: DATE.quarter
      */
     ,
-    OrderDateQuarterYear: {
-      ref: idRef("ORDER_DATE.quarter", "attribute"),
-      identifier: "ORDER_DATE.quarter"
+    DATEQuarterYear: {
+      ref: idRef("DATE.quarter", "attribute"),
+      identifier: "DATE.quarter"
       /**
-       * Display Form Title: Order date - Quarter/Year
-       * Display Form ID: ORDER_DATE.quarter
+       * Display Form Title: DATE - Quarter/Year
+       * Display Form ID: DATE.quarter
        */
       ,
-      Default: newAttribute("ORDER_DATE.quarter")
+      Default: newAttribute("DATE.quarter")
     }
     /**
-     * Date Attribute: Order date - Month/Year
-     * Date Attribute ID: ORDER_DATE.month
+     * Date Attribute: DATE - Month/Year
+     * Date Attribute ID: DATE.month
      */
     ,
-    OrderDateMonthYear: {
-      ref: idRef("ORDER_DATE.month", "attribute"),
-      identifier: "ORDER_DATE.month"
+    DATEMonthYear: {
+      ref: idRef("DATE.month", "attribute"),
+      identifier: "DATE.month"
       /**
-       * Display Form Title: Order date - Month/Year
-       * Display Form ID: ORDER_DATE.month
+       * Display Form Title: DATE - Month/Year
+       * Display Form ID: DATE.month
        */
       ,
-      Default: newAttribute("ORDER_DATE.month")
+      Default: newAttribute("DATE.month")
     }
     /**
-     * Date Attribute: Order date - Week/Year
-     * Date Attribute ID: ORDER_DATE.week
+     * Date Attribute: DATE - Week/Year
+     * Date Attribute ID: DATE.week
      */
     ,
-    OrderDateWeekYear: {
-      ref: idRef("ORDER_DATE.week", "attribute"),
-      identifier: "ORDER_DATE.week"
+    DATEWeekYear: {
+      ref: idRef("DATE.week", "attribute"),
+      identifier: "DATE.week"
       /**
-       * Display Form Title: Order date - Week/Year
-       * Display Form ID: ORDER_DATE.week
+       * Display Form Title: DATE - Week/Year
+       * Display Form ID: DATE.week
        */
       ,
-      Default: newAttribute("ORDER_DATE.week")
+      Default: newAttribute("DATE.week")
     }
     /**
-     * Date Attribute: Order date - Date
-     * Date Attribute ID: ORDER_DATE.day
+     * Date Attribute: DATE - Date
+     * Date Attribute ID: DATE.day
      */
     ,
-    OrderDateDate: {
-      ref: idRef("ORDER_DATE.day", "attribute"),
-      identifier: "ORDER_DATE.day"
+    DATEDate: {
+      ref: idRef("DATE.day", "attribute"),
+      identifier: "DATE.day"
       /**
-       * Display Form Title: Order date - Date
-       * Display Form ID: ORDER_DATE.day
+       * Display Form Title: DATE - Date
+       * Display Form ID: DATE.day
        */
       ,
-      Default: newAttribute("ORDER_DATE.day")
+      Default: newAttribute("DATE.day")
     }
     /**
-     * Date Attribute: Order date - Hour
-     * Date Attribute ID: ORDER_DATE.hour
+     * Date Attribute: DATE - Hour
+     * Date Attribute ID: DATE.hour
      */
     ,
-    OrderDateHour: {
-      ref: idRef("ORDER_DATE.hour", "attribute"),
-      identifier: "ORDER_DATE.hour"
+    DATEHour: {
+      ref: idRef("DATE.hour", "attribute"),
+      identifier: "DATE.hour"
       /**
-       * Display Form Title: Order date - Hour
-       * Display Form ID: ORDER_DATE.hour
+       * Display Form Title: DATE - Hour
+       * Display Form ID: DATE.hour
        */
       ,
-      Default: newAttribute("ORDER_DATE.hour")
+      Default: newAttribute("DATE.hour")
     }
     /**
-     * Date Attribute: Order date - Minute
-     * Date Attribute ID: ORDER_DATE.minute
+     * Date Attribute: DATE - Minute
+     * Date Attribute ID: DATE.minute
      */
     ,
-    OrderDateMinute: {
-      ref: idRef("ORDER_DATE.minute", "attribute"),
-      identifier: "ORDER_DATE.minute"
+    DATEMinute: {
+      ref: idRef("DATE.minute", "attribute"),
+      identifier: "DATE.minute"
       /**
-       * Display Form Title: Order date - Minute
-       * Display Form ID: ORDER_DATE.minute
+       * Display Form Title: DATE - Minute
+       * Display Form ID: DATE.minute
        */
       ,
-      Default: newAttribute("ORDER_DATE.minute")
-    }
-  }
-  /**
-   * Date Data Set Title: Inventory month
-   * Date Data Set ID: INVENTORY_MONTH
-   */
-  ,
-  InventoryMonth: {
-    ref: idRef("INVENTORY_MONTH", "dataSet"),
-    identifier: "INVENTORY_MONTH"
-    /**
-     * Date Attribute: Inventory month - Quarter of Year
-     * Date Attribute ID: INVENTORY_MONTH.quarterOfYear
-     */
-    ,
-    InventoryMonthQuarterOfYear: {
-      ref: idRef("INVENTORY_MONTH.quarterOfYear", "attribute"),
-      identifier: "INVENTORY_MONTH.quarterOfYear"
-      /**
-       * Display Form Title: Inventory month - Quarter of Year
-       * Display Form ID: INVENTORY_MONTH.quarterOfYear
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.quarterOfYear")
-    }
-    /**
-     * Date Attribute: Inventory month - Month of Year
-     * Date Attribute ID: INVENTORY_MONTH.monthOfYear
-     */
-    ,
-    InventoryMonthMonthOfYear: {
-      ref: idRef("INVENTORY_MONTH.monthOfYear", "attribute"),
-      identifier: "INVENTORY_MONTH.monthOfYear"
-      /**
-       * Display Form Title: Inventory month - Month of Year
-       * Display Form ID: INVENTORY_MONTH.monthOfYear
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.monthOfYear")
-    }
-    /**
-     * Date Attribute: Inventory month - Week of Year
-     * Date Attribute ID: INVENTORY_MONTH.weekOfYear
-     */
-    ,
-    InventoryMonthWeekOfYear: {
-      ref: idRef("INVENTORY_MONTH.weekOfYear", "attribute"),
-      identifier: "INVENTORY_MONTH.weekOfYear"
-      /**
-       * Display Form Title: Inventory month - Week of Year
-       * Display Form ID: INVENTORY_MONTH.weekOfYear
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.weekOfYear")
-    }
-    /**
-     * Date Attribute: Inventory month - Day of Year
-     * Date Attribute ID: INVENTORY_MONTH.dayOfYear
-     */
-    ,
-    InventoryMonthDayOfYear: {
-      ref: idRef("INVENTORY_MONTH.dayOfYear", "attribute"),
-      identifier: "INVENTORY_MONTH.dayOfYear"
-      /**
-       * Display Form Title: Inventory month - Day of Year
-       * Display Form ID: INVENTORY_MONTH.dayOfYear
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.dayOfYear")
-    }
-    /**
-     * Date Attribute: Inventory month - Day of Month
-     * Date Attribute ID: INVENTORY_MONTH.dayOfMonth
-     */
-    ,
-    InventoryMonthDayOfMonth: {
-      ref: idRef("INVENTORY_MONTH.dayOfMonth", "attribute"),
-      identifier: "INVENTORY_MONTH.dayOfMonth"
-      /**
-       * Display Form Title: Inventory month - Day of Month
-       * Display Form ID: INVENTORY_MONTH.dayOfMonth
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.dayOfMonth")
-    }
-    /**
-     * Date Attribute: Inventory month - Day of Week
-     * Date Attribute ID: INVENTORY_MONTH.dayOfWeek
-     */
-    ,
-    InventoryMonthDayOfWeek: {
-      ref: idRef("INVENTORY_MONTH.dayOfWeek", "attribute"),
-      identifier: "INVENTORY_MONTH.dayOfWeek"
-      /**
-       * Display Form Title: Inventory month - Day of Week
-       * Display Form ID: INVENTORY_MONTH.dayOfWeek
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.dayOfWeek")
-    }
-    /**
-     * Date Attribute: Inventory month - Hour of Day
-     * Date Attribute ID: INVENTORY_MONTH.hourOfDay
-     */
-    ,
-    InventoryMonthHourOfDay: {
-      ref: idRef("INVENTORY_MONTH.hourOfDay", "attribute"),
-      identifier: "INVENTORY_MONTH.hourOfDay"
-      /**
-       * Display Form Title: Inventory month - Hour of Day
-       * Display Form ID: INVENTORY_MONTH.hourOfDay
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.hourOfDay")
-    }
-    /**
-     * Date Attribute: Inventory month - Minute of Hour
-     * Date Attribute ID: INVENTORY_MONTH.minuteOfHour
-     */
-    ,
-    InventoryMonthMinuteOfHour: {
-      ref: idRef("INVENTORY_MONTH.minuteOfHour", "attribute"),
-      identifier: "INVENTORY_MONTH.minuteOfHour"
-      /**
-       * Display Form Title: Inventory month - Minute of Hour
-       * Display Form ID: INVENTORY_MONTH.minuteOfHour
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.minuteOfHour")
-    }
-    /**
-     * Date Attribute: Inventory month - Year
-     * Date Attribute ID: INVENTORY_MONTH.year
-     */
-    ,
-    InventoryMonthYear: {
-      ref: idRef("INVENTORY_MONTH.year", "attribute"),
-      identifier: "INVENTORY_MONTH.year"
-      /**
-       * Display Form Title: Inventory month - Year
-       * Display Form ID: INVENTORY_MONTH.year
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.year")
-    }
-    /**
-     * Date Attribute: Inventory month - Quarter/Year
-     * Date Attribute ID: INVENTORY_MONTH.quarter
-     */
-    ,
-    InventoryMonthQuarterYear: {
-      ref: idRef("INVENTORY_MONTH.quarter", "attribute"),
-      identifier: "INVENTORY_MONTH.quarter"
-      /**
-       * Display Form Title: Inventory month - Quarter/Year
-       * Display Form ID: INVENTORY_MONTH.quarter
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.quarter")
-    }
-    /**
-     * Date Attribute: Inventory month - Month/Year
-     * Date Attribute ID: INVENTORY_MONTH.month
-     */
-    ,
-    InventoryMonthMonthYear: {
-      ref: idRef("INVENTORY_MONTH.month", "attribute"),
-      identifier: "INVENTORY_MONTH.month"
-      /**
-       * Display Form Title: Inventory month - Month/Year
-       * Display Form ID: INVENTORY_MONTH.month
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.month")
-    }
-    /**
-     * Date Attribute: Inventory month - Week/Year
-     * Date Attribute ID: INVENTORY_MONTH.week
-     */
-    ,
-    InventoryMonthWeekYear: {
-      ref: idRef("INVENTORY_MONTH.week", "attribute"),
-      identifier: "INVENTORY_MONTH.week"
-      /**
-       * Display Form Title: Inventory month - Week/Year
-       * Display Form ID: INVENTORY_MONTH.week
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.week")
-    }
-    /**
-     * Date Attribute: Inventory month - Date
-     * Date Attribute ID: INVENTORY_MONTH.day
-     */
-    ,
-    InventoryMonthDate: {
-      ref: idRef("INVENTORY_MONTH.day", "attribute"),
-      identifier: "INVENTORY_MONTH.day"
-      /**
-       * Display Form Title: Inventory month - Date
-       * Display Form ID: INVENTORY_MONTH.day
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.day")
-    }
-    /**
-     * Date Attribute: Inventory month - Hour
-     * Date Attribute ID: INVENTORY_MONTH.hour
-     */
-    ,
-    InventoryMonthHour: {
-      ref: idRef("INVENTORY_MONTH.hour", "attribute"),
-      identifier: "INVENTORY_MONTH.hour"
-      /**
-       * Display Form Title: Inventory month - Hour
-       * Display Form ID: INVENTORY_MONTH.hour
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.hour")
-    }
-    /**
-     * Date Attribute: Inventory month - Minute
-     * Date Attribute ID: INVENTORY_MONTH.minute
-     */
-    ,
-    InventoryMonthMinute: {
-      ref: idRef("INVENTORY_MONTH.minute", "attribute"),
-      identifier: "INVENTORY_MONTH.minute"
-      /**
-       * Display Form Title: Inventory month - Minute
-       * Display Form ID: INVENTORY_MONTH.minute
-       */
-      ,
-      Default: newAttribute("INVENTORY_MONTH.minute")
+      Default: newAttribute("DATE.minute")
     }
   }
 };
@@ -2794,11 +2794,11 @@ export const Insights = {
   ,
   Test: "ffd46c19-7009-43ef-9d5f-90eee91965a4"
   /**
-   * Insight Title: Avg Price of Products by Brand by Category
-   * Insight ID: de36e7b8-5d8c-45bb-8d44-16d301973b68
+   * Insight Title: Avg Price of Products By Brand By Category
+   * Insight ID: b0563506-6445-49bb-b45d-8c564fb08b2e
    */
   ,
-  AvgPriceOfProductsByBrandByCategory: "de36e7b8-5d8c-45bb-8d44-16d301973b68"
+  AvgPriceOfProductsByBrandByCategory: "b0563506-6445-49bb-b45d-8c564fb08b2e"
 };
 export const Dashboards = {
   /**
