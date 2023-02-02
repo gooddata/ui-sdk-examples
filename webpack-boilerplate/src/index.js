@@ -1,3 +1,12 @@
+import {
+    idRef,
+    newMeasure,
+    newAttribute,
+    newTwoDimensional,
+    MeasureGroupIdentifier
+} from "@gooddata/sdk-model";
+import tigerFactory, { TigerTokenAuthProvider } from "@gooddata/sdk-backend-tiger";
+
 // Test import of a JavaScript module
 import { example } from '@/js/example'
 
@@ -24,3 +33,28 @@ imagePublic.src = '/assets/example.png'
 
 const app = document.querySelector('#root')
 app.append(logo, heading, imageBackground, imagePublic)
+
+const backend = tigerFactory({
+    hostname: "https://jirizajic.demo.cloud.gooddata.com/"
+}).withAuthentication(
+    new TigerTokenAuthProvider('getApiToken') // https://use.gd/getApiToken
+);
+
+const metric = newMeasure(idRef("average_price_of_products", "measure"));
+const viewBy = newAttribute("PRODUCT_BRAND");
+const stackBy = newAttribute("PRODUCT_CATEGORY");
+const filters = [];
+
+const execution = backend
+    .workspace('ecommerce-parent')
+    .execution()
+    .forItems([metric, viewBy, stackBy], filters)
+    .withDimensions(
+        ...newTwoDimensional(
+            [viewBy],
+            [MeasureGroupIdentifier, stackBy]
+        )
+    );
+
+execution.execute().then(result =>
+    result.readAll().then(result => console.log(result)));
