@@ -1,7 +1,0 @@
-/* You can add global styles to this file, and also import other style files */
-@import "@gooddata/react-components/styles/css/main.css";
-
-.viz-line-family-chart-wrap,
-.gd-viz-highchart-wrap {
-  height: 300px;
-}
